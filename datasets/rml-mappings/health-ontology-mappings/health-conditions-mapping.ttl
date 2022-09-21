@@ -22,9 +22,11 @@
 @prefix w-mon: <https://w3id.org/environmental-data/onto/water-monitoring-ontology/>.
 @prefix ti: <https://w3id.org/italia/onto/TI/>.
 @prefix inspire-mf: <https://dati.isprambiente.it/ontology/inspire-mf/>.
-@prefix whow-adm: <https://w3id.org/environmental-data/onto/water-observation/water-administration-ontology/>.
-@prefix w-health: <https://w3id.org/environmental-data/data/health-monitoring-ontology/>.
-@base <https://w3id.org/environmental-data/data/health-monitoring-ontology/> .
+@base <https://w3id.org/whow/onto/health-monitoring/> .
+@prefix w-health: <https://w3id.org/whow/onto/health-monitoring/>.
+@prefix w-mon: <https://w3id.org/whow/onto/water-monitoring-ontology/>.
+@prefix hydro: <https://w3id.org/whow/onto/hydrography/>.
+@prefix :        <https://w3id.org/whow/data/UFCPQZ/> .
 
 ##########################################################
 ## LOGICAL SOURCES TO BE USED
@@ -60,19 +62,19 @@ rr:predicateObjectMap [
 ];
 rr:predicateObjectMap [
   rr:predicate w-health:hasDeathCause;
-  rr:objectMap [ rr:template "https://w3id.org/environmental-data/data/death-cause/{CAUSA DI MORTE}" ]
+  rr:objectMap [ rr:template "https://w3id.org/whow/data/UFCPQZ/death-cause/{CAUSA DI MORTE}" ]
 ];
 rr:predicateObjectMap [
   rr:predicate ispra-top:hasLocation;
-  rr:objectMap [ rr:template "https://w3id.org/environmental-data/data/province/{PROVINCIA}" ] #attenzione: deve essere uguale agli altri + come mappi ITALIA...
+  rr:objectMap [ rr:template "https://w3id.org/whow/data/UFCPQZ/province/{PROVINCIA}" ] #attenzione: deve essere uguale agli altri + come mappi ITALIA...
 ];
 rr:predicateObjectMap [
   rr:predicate w-health:genderOfPatient;
-  rr:objectMap [ rr:template "https://w3id.org/environmental-data/data/gender/{GENERE}"; rr:datatype xsd:string ]
+  rr:objectMap [ rr:template "https://w3id.org/whow/data/UFCPQZ/gender/{GENERE}"; rr:datatype xsd:string ]
 ];
 rr:predicateObjectMap [
   rr:predicate ispra-top:time;
-  rr:objectMap [ rr:template "https://w3id.org/environmental-data/data/year/{ANNO}"; rr:datatype xsd:date ]
+  rr:objectMap [ rr:template "https://w3id.org/whow/data/UFCPQZ/year/{ANNO}"; rr:datatype xsd:date ]
 ].
 
 
@@ -80,7 +82,7 @@ rr:predicateObjectMap [
 <#DeathCauseMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceHealthCondition> ;
 rr:subjectMap [
-  rr:template "https://w3id.org/environmental-data/data/death-cause/{CAUSA DI MORTE}";
+  rr:template "https://w3id.org/whow/data/UFCPQZ/death-cause/{CAUSA DI MORTE}";
   rr:termType rr:IRI;
   rr:class w-health:DeathCause
 ] .

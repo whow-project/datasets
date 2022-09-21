@@ -22,8 +22,8 @@
 @prefix w-mon: <https://w3id.org/environmental-data/onto/water-monitoring-ontology/>.
 @prefix ti: <https://w3id.org/italia/onto/TI/>.
 @prefix inspire-mf: <https://dati.isprambiente.it/ontology/inspire-mf/>.
-@prefix whow-adm: <https://w3id.org/environmental-data/onto/water-observation/water-administration-ontology/>.
-@base <https://w3id.org/environmental-data/data/observable-properties/> .
+@prefix w-mon: <https://w3id.org/whow/onto/water-monitoring-ontology/>.
+@prefix :        <https://w3id.org/whow/data/observable-properties/> .
 
 ##########################################################
 ## LOGICAL SOURCES TO BE USED
@@ -67,7 +67,7 @@ rr:predicateObjectMap [
 ];
 rr:predicateObjectMap [
   rr:predicate core:hasUniqueIdentifier;
-  rr:objectMap [   rr:template "https://w3id.org/environmental-data/data/chemical-substances/identifier/{CAS}"; rr:termType rr:IRI;]
+  rr:objectMap [   rr:template "https://w3id.org/whow/data/chemical-substances/identifier/{CAS}"; rr:termType rr:IRI;]
 ];
 #rr:predicateObjectMap [
 #  rr:predicate rdfs:seeAlso;
