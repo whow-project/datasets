@@ -58,7 +58,7 @@ rr:subjectMap [
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label;
-  rr:objectMap [ rr:template "Health condition observation for {ANNO}, {PROVINCIA}" ; rr:language "en" ]
+  rr:objectMap [ rr:template "Health condition observation for {ANNO}" ; rr:language "en" ]
 ];
 rr:predicateObjectMap [
   rr:predicate w-health:hasDeathCause;
