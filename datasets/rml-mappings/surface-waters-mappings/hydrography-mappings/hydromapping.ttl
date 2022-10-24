@@ -117,7 +117,6 @@
     rml:logicalSource <#LogicalSourceAcqueSotterraneePFAS> ;
     rr:subjectMap [
     fnml:functionValue [
-      #rml:logicalSource <#LogicalSourceAcqueSotterraneePFAS>;
      rr:predicateObjectMap [
        rr:predicate fno:executes ;
        rr:objectMap [ rr:constant grel:array_join ]
@@ -145,15 +144,11 @@
     # ## FUNCTIONS:
     # #################################
 
-
-    #<#CreateGroundWaterBodyURI-Function>
-
-
 <#DeleteWhitespacesGroundWaterBodyFunction>
 fnml:functionValue [
   rr:predicateObjectMap [
     rr:predicate fno:executes ;
-    rr:objectMap [ rr:constant grel:string_replaceChars ]
+    rr:objectMap [ rr:constant grel:string_replace ]
  ];
 
  rr:predicateObjectMap [
@@ -166,6 +161,6 @@ fnml:functionValue [
   ];
   rr:predicateObjectMap [
     rr:predicate grel:p_string_replace ;
-    rr:objectMap [ rr:constant "PLACEHOLDERFORWHITESPACE" ] #problema whitespace
+    rr:objectMap [ rr:constant "" ]
 ];
  ].
