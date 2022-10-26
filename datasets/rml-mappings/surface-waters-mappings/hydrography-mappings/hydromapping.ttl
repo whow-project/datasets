@@ -55,6 +55,20 @@
             rml:referenceFormulation ql:CSV .
 
 
+            # #LogicalSourceAcqueSuperficiali (PFAS), corpi idrici fluviali
+            <#LogicalSourceAcqueSuperficialiPFAS> a rml:BaseSource ;
+                rml:source [
+                  a csvw:Table;
+                  csvw:url "Allegato_1_DATI_PFAS_2018_ACQUE_SUP.csv";
+
+                  csvw:dialect [
+                    a csvw:Dialect;
+                    csvw:delimiter ","
+                  ]
+                ];
+                rml:referenceFormulation ql:CSV .
+
+
     ###########################################################
     ##                  MAPPING RULES
     ##########################################################
@@ -97,6 +111,35 @@
       rr:predicate hydro:belongsToWaterBasin;
       rr:objectMap [ rr:template "https://w3id.org/whow/data/hydrography/waterbasin/{BACINO IDROGRAFICO}";
       rr:termType rr:IRI; ]
+    ].
+
+    <#WaterBasinMapping> a rr:TriplesMap ;
+    rr:subjectMap [
+      rr:template "https://w3id.org/whow/data/hydrography/waterbasin/{BACINO IDROGRAFICO}";
+      rr:termType rr:IRI;
+      rr:class hydro:WaterBasin
+    ] ;
+    rr:predicateObjectMap [
+      rr:predicate rdfs:label;
+      rr:objectMap [ rr:template "Waterbasin {BACINO IDROGRAFICO}." ; rr:language "en" ]
+    ].
+
+    ### RIVER MAPPING 2 ###
+
+    <#RiverWaterBodyMapping2> a rr:TriplesMap ;
+    rml:logicalSource <#LogicalSourceAcqueSuperficialiPFAS> ;
+    rr:subjectMap [
+      rr:template "https://w3id.org/whow/data/hydrography/riverwaterbody/{CORPO IDRICO}";
+      rr:termType rr:IRI;
+      rr:class hydro:RiverWaterBody
+    ] ;
+    rr:predicateObjectMap [
+      rr:predicate rdfs:label;
+      rr:objectMap [ rr:template "Waterbody {CORPO IDRICO}: River {CORSO D'ACQUA}." ; rr:language "en" ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate hydro:belongsToWaterBasin;
+      rr:objectMap [ rr:template "https://w3id.org/whow/data/hydrography/waterbasin/{BACINO IDROGRAFICO}" ]
     ].
 
     <#WaterBasinMapping> a rr:TriplesMap ;
