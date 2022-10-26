@@ -12,7 +12,7 @@
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 @prefix crml: <http://w3id.org/stlab/crml#> .
 @prefix hydro: <https://w3id.org/whow/onto/hydrography/>.
-@base <https://w3id.org/whow/onto/hydrography/> .
+@base <https://w3id.org/whow/data/hydrography/> .
 
 # #LogicalSourceLaghi
 <#LogicalSourceLaghi> a rml:BaseSource ;
@@ -66,7 +66,7 @@
     <#LakeWaterBodyMapping> a rr:TriplesMap ;
     rml:logicalSource <#LogicalSourceLaghi> ;
     rr:subjectMap [
-      rr:template "https://w3id.org/whow/onto/hydrography/lakewaterbody/{CORPO IDRICO}";
+      rr:template "https://w3id.org/whow/data/hydrography/lakewaterbody/{CORPO IDRICO}";
       rr:termType rr:IRI;
       rr:class hydro:LakeWaterBody
     ] ;
@@ -76,7 +76,7 @@
     ];
     rr:predicateObjectMap [
       rr:predicate hydro:belongsToWaterBasin ;
-      rr:objectMap [ rr:template "https://w3id.org/whow/onto/hydrography/waterbasin/{BACINO IDROGRAFICO}" ];
+      rr:objectMap [ rr:template "https://w3id.org/whow/data/hydrography/waterbasin/{BACINO IDROGRAFICO}" ];
     ].
 
     # #################################
@@ -85,7 +85,7 @@
     <#RiverWaterBodyMapping> a rr:TriplesMap ;
     rml:logicalSource <#LogicalSourceFiumi> ;
     rr:subjectMap [
-      rr:template "https://w3id.org/whow/onto/hydrography/riverwaterbody/{CORPO IDRICO}";
+      rr:template "https://w3id.org/whow/data/hydrography/riverwaterbody/{CORPO IDRICO}";
       rr:termType rr:IRI;
       rr:class hydro:RiverWaterBody
     ] ;
@@ -95,12 +95,13 @@
     ];
     rr:predicateObjectMap [
       rr:predicate hydro:belongsToWaterBasin;
-      rr:objectMap [ rr:template "https://w3id.org/whow/onto/hydrography/waterbasin/{BACINO IDROGRAFICO}" ]
+      rr:objectMap [ rr:template "https://w3id.org/whow/data/hydrography/waterbasin/{BACINO IDROGRAFICO}";
+      rr:termType rr:IRI; ]
     ].
 
     <#WaterBasinMapping> a rr:TriplesMap ;
     rr:subjectMap [
-      rr:template "https://w3id.org/whow/onto/hydrography/waterbasin/{BACINO IDROGRAFICO}";
+      rr:template "https://w3id.org/whow/data/hydrography/waterbasin/{BACINO IDROGRAFICO}";
       rr:termType rr:IRI;
       rr:class hydro:WaterBasin
     ] ;
@@ -124,7 +125,7 @@
 
       rr:predicateObjectMap [
         rr:predicate grel:p_array_a ;
-        rr:objectMap [ rr:constant "https://w3id.org/whow/onto/hydrography/groundwaterbody/IT03"]
+        rr:objectMap [ rr:constant "https://w3id.org/whow/data/hydrography/groundwaterbody/IT03"]
       ] ;
       rr:predicateObjectMap [
             rr:predicate grel:p_array_a ;
