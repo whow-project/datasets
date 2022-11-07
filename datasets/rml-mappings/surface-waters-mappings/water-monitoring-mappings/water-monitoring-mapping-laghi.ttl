@@ -282,7 +282,7 @@
        ];
       rr:predicateObjectMap [
          rr:predicate core:hasUniqueIdentifier ;
-         rr:objectMap [rr:template "http://w3id.org/whow/data/unique-identifier/{CORPO IDRICO}"; rr:termType rr:IRI]
+         rr:objectMap [rr:template "http://w3id.org/whow/data/unique-identifier/{CAS}"; rr:termType rr:IRI]
        ].
 
 
