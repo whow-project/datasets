@@ -1,13 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix l0: <https://w3id.org/italia/onto/l0/> .
-@prefix iot: <https://w3id.org/italia/onto/IoT/> .
-@prefix mu: <https://w3id.org/italia/onto/MU/> .
-@prefix ti: <https://w3id.org/italia/onto/TI/> .
-@prefix cov: <https://w3id.org/italia/onto/COV/> .
-@prefix clv: <https://w3id.org/italia/onto/CLV/> .
-@prefix indicator: <https://w3id.org/italia/onto/Indicator/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
@@ -17,12 +10,9 @@
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
-@prefix places: <https://w3id.org/stlab/places/> .
-@prefix core: <https://dati.isprambiente.it/ontology/core/> .
-@prefix ti: <https://w3id.org/italia/onto/TI/>.
-@prefix inspire-mf: <https://dati.isprambiente.it/ontology/inspire-mf/>.
-@prefix w-mon: <https://w3id.org/whow/onto/water-monitoring-ontology/>.
-@prefix :        <https://w3id.org/whow/data/chemical-substances/> .
+@prefix top: <https://dati.isprambiente.it/ontology/top/> .
+@prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
+@base      <https://w3id.org/whow/controlled-vocabulary/chemical-substances/> .
 
 ##########################################################
 ## LOGICAL SOURCES TO BE USED
@@ -32,7 +22,6 @@
 <#LogicalSourceChemicalSubstances> a rml:BaseSource ;
     rml:source [
       a csvw:Table;
-      #csvw:url "Monitoraggio_laghi_dati_puliti.csv";
       csvw:url "chemical-substances-complete.csv";
 
       csvw:dialect [
@@ -48,9 +37,10 @@
 <#ChemicalSubstancesMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceChemicalSubstances> ;
 rr:subjectMap [
-  rr:template "chemical-substance/cas-{CAS}";
+  rr:template "https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-{CAS}";
   rr:termType rr:IRI;
-  rr:class w-mon:ChemicalSubstance
+  rr:class w-mon:ChemicalSubstance;
+  rr:class skos:Concept
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label;
@@ -58,23 +48,20 @@ rr:predicateObjectMap [
 ];
 rr:predicateObjectMap [
   rr:predicate skos:prefLabel;
-  rr:objectMap [ rr:template "{EC Name}" ; rr:language "en"]
-];
-rr:predicateObjectMap [
-  rr:predicate skos:altLabel;
   rr:objectMap [ rr:template "{PARAMETER(IT)}" ; rr:language "it"]
 ];
 rr:predicateObjectMap [
-  rr:predicate core:hasUniqueIdentifier;
-  rr:objectMap [   rr:template "https://w3id.org/whow/data/chemical-substances/identifier/{CAS}"; rr:termType rr:IRI;]
+  rr:predicate skos:prefLabel;
+  rr:objectMap [ rr:template "{EC Name}" ; rr:language "en"]
 ];
-#rr:predicateObjectMap [
-#  rr:predicate rdfs:seeAlso;
-#  rr:objectMap [  rr:template "{Infocard URL}";  rr:termType rr:IRI; ] #link EC alla risorsa: non funziona come "valid IRI"
-#];
+rr:predicateObjectMap [
+  rr:predicate top:hasUniqueIdentifier;
+  rr:objectMap [   rr:template "https://w3id.org/whow/data/identifier/{CAS}"; rr:termType rr:IRI;]
+];
+
 rr:predicateObjectMap [
   rr:predicate skos:notation;
-  rr:objectMap [  rr:template "CAS:{CAS}" ]
+  rr:objectMap [  rr:template "CAS:{CAS}"; rr:datatype xsd:string ]
 ].
 
 
@@ -82,19 +69,35 @@ rr:predicateObjectMap [
 <#UniqueIDMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceChemicalSubstances> ;
 rr:subjectMap [
-  rr:template "identifier/{CAS}";
+  rr:template "https://w3id.org/whow/data/identifier/{CAS}";
   rr:termType rr:IRI;
-  rr:class w-mon:UniqueIdentifier
+  rr:class top:UniqueIdentifier
 ] ;
 rr:predicateObjectMap [
-  rr:predicate core:identifier;
+  rr:predicate top:identifier;
   rr:objectMap [ rr:template "{CAS}"; rr:datatype xsd:string ]
 ];
 rr:predicateObjectMap [
-  rr:predicate w-mon:identifierType;
-  rr:objectMap [ rr:template "CAS"; rr:datatype xsd:string ]
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Identificativo CAS — {CAS}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
-  rr:predicate core:isIssuedBy;
-  rr:objectMap [ rr:template "American Chemical Society"; rr:datatype xsd:string ]
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "CAS Identifier — {CAS}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate top:isIssuedBy;
+  rr:objectMap [ rr:template "https://w3id.org/whow/data/organisation/american-chemical-society"; rr:termType rr:IRI; ]
+].
+
+<#AmericanChemicalSocietyMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceChemicalSubstances> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/whow/data/organisation/american-chemical-society";
+  rr:termType rr:IRI;
+  rr:class top:Organisation
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "American Chemical Society."; rr:language "en" ]
 ].
