@@ -11,8 +11,11 @@
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 @prefix crml: <http://w3id.org/stlab/crml#> .
+@prefix csvw: <http://www.w3.org/ns/csvw#>
+@prefix l0:   <    https://w3id.org/italia/onto/l0/>
+@prefix top: <https://dati.isprambiente.it/ontology/top/> .
 @prefix hydro: <https://w3id.org/whow/onto/hydrography/>.
-@base <https://w3id.org/whow/data/hydrography/> .
+@base <https://w3id.org/whow/data/> .
 
 # #LogicalSourceLaghi
 <#LogicalSourceLaghi> a rml:BaseSource ;
@@ -80,7 +83,7 @@
     <#LakeWaterBodyMapping> a rr:TriplesMap ;
     rml:logicalSource <#LogicalSourceLaghi> ;
     rr:subjectMap [
-      rr:template "https://w3id.org/whow/data/hydrography/lakewaterbody/{CORPO IDRICO}";
+      rr:template "https://w3id.org/whow/data/lakewaterbody/{CORPO IDRICO}";
       rr:termType rr:IRI;
       rr:class hydro:LakeWaterBody
     ] ;
@@ -89,8 +92,24 @@
       rr:objectMap [ rr:template "Waterbody {CORPO IDRICO}: Lake {LAGO}." ; rr:language "en" ]
     ];
     rr:predicateObjectMap [
+      rr:predicate top:name ;
+      rr:objectMap [ rr:template "{LAGO}." ; rr:language "it" ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate l0:name ;
+      rr:objectMap [ rr:template "{LAGO}." ; rr:language "it" ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate top:identifier ;
+      rr:objectMap [ rr:template "{CORPO IDRICO}." ; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate l0:identifier ;
+      rr:objectMap [ rr:template "{CORPO IDRICO}." ; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
       rr:predicate hydro:belongsToWaterBasin ;
-      rr:objectMap [ rr:template "https://w3id.org/whow/data/hydrography/waterbasin/{BACINO IDROGRAFICO}" ];
+      rr:objectMap [ rr:template "https://w3id.org/whow/data/waterbasin/{BACINO IDROGRAFICO}"; rr:termType rr:IRI;];
     ].
 
     # #################################
@@ -99,7 +118,7 @@
     <#RiverWaterBodyMapping> a rr:TriplesMap ;
     rml:logicalSource <#LogicalSourceFiumi> ;
     rr:subjectMap [
-      rr:template "https://w3id.org/whow/data/hydrography/riverwaterbody/{CORPO IDRICO}";
+      rr:template "https://w3id.org/whow/data/riverwaterbody/{CORPO IDRICO}";
       rr:termType rr:IRI;
       rr:class hydro:RiverWaterBody
     ] ;
@@ -108,17 +127,41 @@
       rr:objectMap [ rr:template "Waterbody {CORPO IDRICO}: River {CORSO D'ACQUA}." ; rr:language "en" ]
     ];
     rr:predicateObjectMap [
+      rr:predicate top:name ;
+      rr:objectMap [ rr:template "{CORSO D'ACQUA}." ; rr:language "it" ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate l0:name ;
+      rr:objectMap [ rr:template "{CORSO D'ACQUA}." ; rr:language "it" ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate top:identifier ;
+      rr:objectMap [ rr:template "{CORPO IDRICO}." ; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate l0:identifier ;
+      rr:objectMap [ rr:template "{CORPO IDRICO}." ; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
       rr:predicate hydro:belongsToWaterBasin;
-      rr:objectMap [ rr:template "https://w3id.org/whow/data/hydrography/waterbasin/{BACINO IDROGRAFICO}";
+      rr:objectMap [ rr:template "https://w3id.org/whow/data/waterbasin/{BACINO IDROGRAFICO}";
       rr:termType rr:IRI; ]
     ].
 
     <#WaterBasinMapping> a rr:TriplesMap ;
     rr:subjectMap [
-      rr:template "https://w3id.org/whow/data/hydrography/waterbasin/{BACINO IDROGRAFICO}";
+      rr:template "https://w3id.org/whow/data/waterbasin/{BACINO IDROGRAFICO}";
       rr:termType rr:IRI;
       rr:class hydro:WaterBasin
     ] ;
+    rr:predicateObjectMap [
+      rr:predicate top:name ;
+      rr:objectMap [ rr:template "{BACINO IDROGRAFICO}." ; rr:language "it" ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate l0:name ;
+      rr:objectMap [ rr:template "{BACINO IDROGRAFICO}." ; rr:language "it" ]
+    ];
     rr:predicateObjectMap [
       rr:predicate rdfs:label;
       rr:objectMap [ rr:template "Waterbasin {BACINO IDROGRAFICO}." ; rr:language "en" ]
@@ -129,7 +172,7 @@
     <#RiverWaterBodyMapping2> a rr:TriplesMap ;
     rml:logicalSource <#LogicalSourceAcqueSuperficialiPFAS> ;
     rr:subjectMap [
-      rr:template "https://w3id.org/whow/data/hydrography/riverwaterbody/{CORPO IDRICO}";
+      rr:template "https://w3id.org/whow/data/riverwaterbody/{CORPO IDRICO}";
       rr:termType rr:IRI;
       rr:class hydro:RiverWaterBody
     ] ;
@@ -138,16 +181,55 @@
       rr:objectMap [ rr:template "Waterbody {CORPO IDRICO}: River {CORSO D'ACQUA}." ; rr:language "en" ]
     ];
     rr:predicateObjectMap [
+      rr:predicate top:name ;
+      rr:objectMap [ rr:template "{CORSO D'ACQUA}." ; rr:language "it" ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate l0:name ;
+      rr:objectMap [ rr:template "{CORSO D'ACQUA}." ; rr:language "it" ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate top:identifier ;
+      rr:objectMap [ rr:template "{CORPO IDRICO}." ; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate l0:identifier ;
+      rr:objectMap [ rr:template "{CORPO IDRICO}." ; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
       rr:predicate hydro:belongsToWaterBasin;
-      rr:objectMap [ rr:template "https://w3id.org/whow/data/hydrography/waterbasin/{BACINO IDROGRAFICO}" ]
+      rr:objectMap [ rr:template "https://w3id.org/whow/data/waterbasin/{BACINO IDROGRAFICO}" ]
     ].
 
     <#WaterBasinMapping> a rr:TriplesMap ;
+    rml:logicalSource <#LogicalSourceAcqueSuperficialiPFAS> ;
     rr:subjectMap [
-      rr:template "https://w3id.org/whow/data/hydrography/waterbasin/{BACINO IDROGRAFICO}";
-      rr:termType rr:IRI;
-      rr:class hydro:WaterBasin
-    ] ;
+    fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:array_join ]
+     ];
+
+      rr:predicateObjectMap [
+        rr:predicate grel:p_array_a ;
+        rr:objectMap [ rr:constant "https://w3id.org/whow/data/waterbasin/{BACINO IDROGRAFICO}"]
+      ] ;
+      rr:predicateObjectMap [
+            rr:predicate grel:p_array_a ;
+            rr:objectMap
+                    <#DeleteWhitespacesGroundWaterBodyFunction>
+      ];
+    ];
+    rr:termType rr:IRI;
+    rr:class hydro:WaterBasin;
+    rr:predicateObjectMap [
+      rr:predicate top:name ;
+      rr:objectMap [ rr:template "{BACINO IDROGRAFICO}." ; rr:language "it" ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate l0:name ;
+      rr:objectMap [ rr:template "{BACINO IDROGRAFICO}." ; rr:language "it" ]
+    ];
     rr:predicateObjectMap [
       rr:predicate rdfs:label;
       rr:objectMap [ rr:template "Waterbasin {BACINO IDROGRAFICO}." ; rr:language "en" ]
@@ -168,7 +250,7 @@
 
       rr:predicateObjectMap [
         rr:predicate grel:p_array_a ;
-        rr:objectMap [ rr:constant "https://w3id.org/whow/data/hydrography/groundwaterbody/IT03"]
+        rr:objectMap [ rr:constant "https://w3id.org/whow/data/groundwaterbody/IT03"]
       ] ;
       rr:predicateObjectMap [
             rr:predicate grel:p_array_a ;
@@ -178,7 +260,14 @@
     ];
     rr:class hydro:GroundWaterBody;
     rr:termType rr:IRI ] ;
-
+    rr:predicateObjectMap [
+      rr:predicate top:identifier ;
+      rr:objectMap [ rr:template "IT03{GWB}." ; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate l0:identifier ;
+      rr:objectMap [ rr:template "IT03{GWB}." ; rr:datatype xsd:string ]
+    ];
     rr:predicateObjectMap [
       rr:predicate rdfs:label;
       rr:objectMap [ rr:template "Ground waterbody IT03{GWB}." ; rr:language "en" ] #sistemare spazi codice
@@ -208,3 +297,24 @@ fnml:functionValue [
     rr:objectMap [ rr:constant "" ]
 ];
  ].
+
+ <#DeleteWhitespacesWaterBasinFunction>
+ fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:string_replace ]
+  ];
+
+  rr:predicateObjectMap [
+      rr:predicate grel:valueParameter ;
+      rr:objectMap [ rml:reference "BACINO IDROGRAFICO"]
+      ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_find ;
+     rr:objectMap [ rr:constant " " ]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_replace ;
+     rr:objectMap [ rr:constant "" ]
+ ];
+  ].
