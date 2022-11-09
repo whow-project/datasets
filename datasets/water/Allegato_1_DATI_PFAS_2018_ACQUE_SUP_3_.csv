@@ -1,16 +1,3 @@
-"","","","","","","","","","","","",""
-"","","","","","","","","","","","",""
-"","","","","","","","","","","","",""
-"","","","","","","","","","","","",""
-"","","","","","","","","","","","",""
-"DATO:
-DATI ANALITICI CORPI IDRICI FLUVIALI","","FONTE DATI:
-ARPA Lombardia","ANNO DI RIFERIMENTO:
-2018","","Sostanze Perfluoroalchiliche 
-– PFAS – ","","","","","","",""
-"","","","","","","","","","","","",""
-"","","","","","","","","","","","",""
-"","","","","","","","","","","","",""
 "BACINO IDROGRAFICO","CORSO D'ACQUA","CORPO IDRICO","PROVINCIA","COMUNE","COORD X","COORD Y","Codice Stazione","DATA CAMPIONAMENTO","SOSTANZA","CAS","UM","CONCENTRAZIONE"
 "ADDA PRELACUALE","Adda (Fiume)","IT03N0080017LO","CO","Gera Lario","531884","5110769","N0080017lo1","3/21/2018","PFBA (Perfluoro Butanoic Acid)","375-22-4","µg/l","<0,005"
 "ADDA PRELACUALE","Adda (Fiume)","IT03N0080017LO","CO","Gera Lario","531884","5110769","N0080017lo1","3/21/2018","PFBS (Perfluoro Butane Sulfonate)","375-73-5","µg/l","<0,005"

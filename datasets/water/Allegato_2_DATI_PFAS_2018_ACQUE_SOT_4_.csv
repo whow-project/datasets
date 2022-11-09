@@ -1,16 +1,3 @@
-"","","","","","","","","","",""
-"","","","","","","","","","",""
-"","","","","","","","","","",""
-"","","","","","","","","","",""
-"","","","","","","","","","",""
-"DATO:
-DATI ANALITICI ACQUE SOTTERRANEE","","FONTE DATI:
-ARPA Lombardia","ANNO DI RIFERIMENTO:
-2018","","","Sostanze Perfluoroalchiliche 
-– PFAS – ","","","",""
-"","","","","","","","","","",""
-"","","","","","","","","","",""
-"","","","","","","","","","",""
 "GWB","PROVINCIA","COMUNE","CODICE PP","COORD X","COORD Y","DATA CAMPIONAMENTO","SOSTANZA","CAS","UM","CONCENTRAZIONE"
 "GWB ISS APTA","CO","Fenegrò","PO0131000U0002","500053","5061924","3/27/2018","PFBA (Perfluoro Butanoic Acid)","375-22-4","µg/l","<0,005"
 "GWB ISS APTA","CO","Fenegrò","PO0131000U0002","500053","5061924","3/27/2018","PFBS (Perfluoro Butane Sulfonate)","375-73-5","µg/l","<0,005"
