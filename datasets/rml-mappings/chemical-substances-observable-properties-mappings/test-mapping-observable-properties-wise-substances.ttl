@@ -1,13 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix l0: <https://w3id.org/italia/onto/l0/> .
-@prefix iot: <https://w3id.org/italia/onto/IoT/> .
-@prefix mu: <https://w3id.org/italia/onto/MU/> .
-@prefix ti: <https://w3id.org/italia/onto/TI/> .
-@prefix cov: <https://w3id.org/italia/onto/COV/> .
-@prefix clv: <https://w3id.org/italia/onto/CLV/> .
-@prefix indicator: <https://w3id.org/italia/onto/Indicator/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
@@ -17,13 +10,9 @@
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
-@prefix places: <https://w3id.org/stlab/places/> .
-@prefix core: <https://dati.isprambiente.it/ontology/core/> .
-@prefix w-mon: <https://w3id.org/environmental-data/onto/water-monitoring-ontology/>.
-@prefix ti: <https://w3id.org/italia/onto/TI/>.
-@prefix inspire-mf: <https://dati.isprambiente.it/ontology/inspire-mf/>.
-@prefix w-mon: <https://w3id.org/whow/onto/water-monitoring-ontology/>.
-@prefix :        <https://w3id.org/whow/data/observable-properties/> .
+@prefix top: <https://dati.isprambiente.it/ontology/top/> .
+@prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
+@prefix :        <https://w3id.org/whow/controlled-vocabularies/observable-properties/> .
 
 ##########################################################
 ## LOGICAL SOURCES TO BE USED
@@ -49,7 +38,7 @@
 <#WISECodesMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceWISECodes> ;
 rr:subjectMap [
-  rr:template "observable-property/wise-{WISE}";
+  rr:template "https://w3id.org/whow/controlled-vocabularies/observable-properties/wise-{WISE}";
   rr:termType rr:IRI;
   rr:class w-mon:WaterObservableProperty
 ] ;
@@ -59,7 +48,11 @@ rr:predicateObjectMap [
 ];
 rr:predicateObjectMap [
   rr:predicate skos:prefLabel;
-  rr:objectMap [ rr:constant "N/A" ]
+  rr:objectMap [ rr:constant "{PARAMETER (IT)}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate top:hasUniqueIdentifier;
+  rr:objectMap [   rr:template "https://w3id.org/whow/data/identifier/{WISE}"; rr:termType rr:IRI;]
 ];
 rr:predicateObjectMap [
   rr:predicate skos:notation;
@@ -71,15 +64,23 @@ rr:predicateObjectMap [
 <#UniqueWISEIDMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceWISECodes> ;
 rr:subjectMap [
-  rr:template "identifier/{WISE}";
+  rr:template "https://w3id.org/whow/data/identifier/{WISE}";
   rr:termType rr:IRI;
-  rr:class w-mon:UniqueIdentifier
+  rr:class top:UniqueIdentifier
 ] ;
 rr:predicateObjectMap [
-  rr:predicate core:identifier;
+  rr:predicate top:identifier;
   rr:objectMap [ rr:template "{WISE}"; rr:datatype xsd:string ]
 ];
 rr:predicateObjectMap [
-  rr:predicate w-mon:identifierType;
-  rr:objectMap [ rr:template "WISE"; rr:datatype xsd:string ]
-];.
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Identificativo WISE — {WISE}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "WISE Identifier — {WISE}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate top:isIssuedBy;
+  rr:objectMap [ rr:template "https://w3id.org/whow/data/organisation/european-environmental-agency"; rr:termType rr:IRI; ]
+].

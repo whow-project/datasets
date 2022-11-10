@@ -58,7 +58,6 @@ rr:predicateObjectMap [
   rr:predicate top:hasUniqueIdentifier;
   rr:objectMap [   rr:template "https://w3id.org/whow/data/identifier/{CAS}"; rr:termType rr:IRI;]
 ];
-
 rr:predicateObjectMap [
   rr:predicate skos:notation;
   rr:objectMap [  rr:template "CAS:{CAS}"; rr:datatype xsd:string ]
