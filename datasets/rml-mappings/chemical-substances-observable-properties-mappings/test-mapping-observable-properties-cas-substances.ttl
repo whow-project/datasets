@@ -14,6 +14,8 @@
 @prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
 @base        <https://w3id.org/whow/controlled-vocabulary/observable-properties/> .
 
+#java -jar .\rmlmapper-4.15.0-r361-all.jar -m .\test-mapping-observable-properties-cas-substances.ttl -o output-cas-observable-properties-mapping.ttl -s turtle
+
 ##########################################################
 ## LOGICAL SOURCES TO BE USED
 ##########################################################
