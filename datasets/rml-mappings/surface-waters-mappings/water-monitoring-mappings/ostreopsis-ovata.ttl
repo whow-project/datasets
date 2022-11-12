@@ -74,7 +74,7 @@
 
   rr:predicateObjectMap [
     rr:predicate w-mon:hasResult ;
-    rr:objectMap [rr:template "https://w3id.org/whow/data/observation-result/{Ostreopsisovatacelll}";
+    rr:objectMap [rr:template "https://w3id.org/whow/data/observation-result/{Ostreopsisovatacelll}-cell-l";
     rr:termType rr:IRI;]
   ];
   rr:predicateObjectMap [
@@ -95,7 +95,7 @@
   ];
   rr:predicateObjectMap [
     rr:predicate w-mon:hasResult ;
-    rr:objectMap [rr:template "https://w3id.org/whow/data/observation-result/{Ostreopsisovatacellgfw}";
+    rr:objectMap [rr:template "https://w3id.org/whow/data/observation-result/{Ostreopsisovatacellgfw}cell-g-fw";
     rr:termType rr:IRI;]
   ];
 
