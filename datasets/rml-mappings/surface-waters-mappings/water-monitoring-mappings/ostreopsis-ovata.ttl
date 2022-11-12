@@ -270,7 +270,7 @@ rr:predicateObjectMap [
 rr:predicateObjectMap [
    rr:predicate skos:altLabel ;
    rr:objectMap [
-      rr:template "Ostreopsis ovata." ; rr:datatype xsd:string]
+      rr:template "Ostreopsis ovata."]
  ].
 
  #ProvincesMapping
@@ -301,7 +301,7 @@ rr:predicateObjectMap [
    rr:predicateObjectMap [
       rr:predicate rdfs:label ;
       rr:objectMap [
-         rr:template "Municipality {Comune}" ; rr:language "en"] 
+         rr:template "Municipality {Comune}" ; rr:language "en"]
     ].
 
     #Regionmapping
