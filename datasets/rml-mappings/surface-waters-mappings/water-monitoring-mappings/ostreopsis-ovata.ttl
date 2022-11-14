@@ -63,53 +63,52 @@
      rr:objectMap [ rr:constant "/" ]
    ];
   ];
-  rr:class w-mon:MarineWaterObservation;
+  rr:class w-mon:SurfaceOrGroundWaterObservation, w-mon:WaterBiologicalQualityParameterObservation, w-mon:WaterObservation;
   #rr:termType rr:IRI;
   ];
   rr:predicateObjectMap [
    rr:predicate rdfs:label ;
    rr:objectMap [
        rr:template "Observation for the water feature {Codice Sito} for the date {Data}." ; rr:language "en" ]
-       ];
-
+       ]; #ita
   rr:predicateObjectMap [
     rr:predicate w-mon:hasResult ;
-    rr:objectMap [rr:template "https://w3id.org/whow/data/observation-result/{Ostreopsisovatacelll}";
+    rr:objectMap [rr:template "https://w3id.org/whow/data/observation-result/{Ostreopsisovatacelll}-cell-l"; #cond
     rr:termType rr:IRI;]
   ];
-  rr:predicateObjectMap [
-    rr:predicate places:hasMunicipality ;
-    rr:objectMap  <#MunicipalityFunction>
-  ];
+  #rr:predicateObjectMap [
+#    rr:predicate places:hasMunicipality ;
+  #  rr:objectMap  <#MunicipalityFunction>
+#  ];
   rr:predicateObjectMap [
     rr:predicate places:hasRegion ;
-    rr:objectMap [ rr:template "https://w3id.org/whow/data/municipality/{Regione}";
+    rr:objectMap [ rr:template "https://w3id.org/whow/data/municipality/{Regione}"; #funzione specifica
     rr:termType rr:IRI
     ]
   ];
   rr:predicateObjectMap [
     rr:predicate places:hasProvince ;
-    rr:objectMap [ rr:template "https://w3id.org/whow/data/municipality/{Provincia}";
+    rr:objectMap [ rr:template "https://w3id.org/whow/data/municipality/{Provincia}"; #funzione specifica
     rr:termType rr:IRI
     ]
   ];
   rr:predicateObjectMap [
     rr:predicate w-mon:hasResult ;
-    rr:objectMap [rr:template "https://w3id.org/whow/data/observation-result/{Ostreopsisovatacellgfw}";
+    rr:objectMap [rr:template "https://w3id.org/whow/data/observation-result/{Ostreopsisovatacellgfw}-cell-g-fw"; #cond
     rr:termType rr:IRI;]
   ];
 
   rr:predicateObjectMap [
      rr:predicate w-mon:hasWaterObservableProperty ;
      rr:objectMap [
-        rr:template "http://w3id.org/whow/data/observable-property/concentrazione-di-ostreopsis-ovata";
+        rr:template "http://w3id.org/whow/data/observable-property/concentration-of-ostreopsis-ovata"; #voc contr
         rr:termType rr:IRI;]
    ];
 
    rr:predicateObjectMap [
       rr:predicate inspire-mf:generationTime ;
       rr:objectMap [
-         rr:template "http://w3id.org/whow/data/time/{Data}";
+         rr:template "http://w3id.org/whow/data/time/{Data}"; #normalizzare data
          rr:termType rr:IRI;]
     ].
 
