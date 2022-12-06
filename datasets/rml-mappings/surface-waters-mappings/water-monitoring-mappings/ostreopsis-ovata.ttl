@@ -101,7 +101,7 @@
   rr:predicateObjectMap [
      rr:predicate w-mon:hasWaterObservableProperty ;
      rr:objectMap [
-        rr:template "http://w3id.org/whow/data/observable-property/concentration-of-ostreopsis-ovata"; #voc contr
+        rr:template "http://w3id.org/whow/data/observable-property/concentrazione-di-ostreopsis-ovata"; #voc contr
         rr:termType rr:IRI;]
    ];
 
@@ -216,12 +216,41 @@
          rr:predicateObjectMap [
             rr:predicate rdfs:label ;
             rr:objectMap [
-               rr:constant "Concentrazione di ostreopsis ovata." ; rr:language "it"]
+               rr:constant "Concentrazione di ostreopsis ovata. Codice AlgaeBase: 52502; Codice Worms: 110068." ; rr:language "it"]
           ];
+          rr:predicateObjectMap [
+             rr:predicate skos:prefLabel ;
+             rr:objectMap [
+                rr:constant "Concentrazione di ostreopsis ovata." ; rr:language "it"]
+           ];
+          rr:predicateObjectMap [
+         rr:predicate skos:notation ;
+         rr:objectMap [
+            rr:constant "AlgaeBase:52502"; rr:datatype xsd:string]
+       ];
+       rr:predicateObjectMap [
+      rr:predicate skos:notation ;
+      rr:objectMap [
+         rr:constant "Worms:110068"; rr:datatype xsd:string]
+    ];
+    rr:predicateObjectMap [
+   rr:predicate top:hasUniqueIdentifier ;
+   rr:objectMap [
+      rr:template "https://w3id.org/whow/data/identifier/52502"; rr:termType rr:IRI]
+ ];
+ rr:predicateObjectMap [
+rr:predicate top:hasUniqueIdentifier ;
+rr:objectMap [
+   rr:template "https://w3id.org/whow/data/identifier/110068"; rr:termType rr:IRI]
+];
          rr:predicateObjectMap [
             rr:predicate w-mon:hasBiologicalAgent ;
             rr:objectMap [rr:template "http://w3id.org/whow/data/biological-agents/biological-agent/ostreopsis-ovata"; rr:termType rr:IRI]
-            ].
+            ];
+            rr:predicateObjectMap [
+               rr:predicate owl:sameAs ;
+               rr:objectMap [rr:template "http://www.wikidata.org/entity/Q1462884"; rr:termType rr:IRI]
+               ].
 #water feature (sea) mapping
             <#WaterFeatureBasinMapping> a rr:TriplesMap;
             rml:logicalSource <#LogicalSourceOstreopsis>;
