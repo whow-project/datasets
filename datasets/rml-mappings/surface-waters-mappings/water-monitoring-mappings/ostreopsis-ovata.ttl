@@ -104,7 +104,6 @@
         rr:template "http://w3id.org/whow/data/observable-property/concentrazione-di-ostreopsis-ovata"; #voc contr
         rr:termType rr:IRI;]
    ];
-
    rr:predicateObjectMap [
       rr:predicate inspire-mf:generationTime ;
       rr:objectMap [
