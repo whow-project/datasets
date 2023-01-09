@@ -10,27 +10,27 @@
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
-@prefix inspire-mf: <https://dati.isprambiente.it/ontology/inspire-mf/>.
+@prefix ispra-mf: <https://dati.isprambiente.it/ontology/ispra-mf/>.
 @prefix places: <https://w3id.org/stlab/places/> .
-@prefix core: <https://dati.isprambiente.it/ontology/core/> .
+@prefix top: <https://dati.isprambiente.it/ontology/top/> .
 @prefix crml: <http://w3id.org/stlab/crml#> .
 @prefix hydro: <https://w3id.org/whow/onto/hydrography/>.
 @prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
 @base <https://w3id.org/whow/data/water-monitoring/> .
 
 
-#java -jar .\rmlmapper-4.15.0-r361-all.jar -m ostreopsis-ovata-rinominati.ttl -o ostreopsis-ovata-output.ttl -s turtle
+#java -jar .\rmlmapper-4.15.0-r361-all.jar -m ostreopsis-ovata.ttl -o ostreopsis-ovata-output.ttl -s turtle
 
 
 # #LogicalSourceOstreopsis
 <#LogicalSourceOstreopsis> a rml:BaseSource ;
     rml:source [
       a csvw:Table;
-      csvw:url "ostreopsis-ovata-tutte-le-regioni.csv";
+      csvw:url "Ostreopsis_Ovata_AllRegions_withISTATcode.csv";
 
       csvw:dialect [
         a csvw:Dialect;
-        csvw:delimiter ","
+        csvw:delimiter ";"
       ]
     ];
     rml:referenceFormulation ql:CSV .
@@ -70,32 +70,33 @@
    rr:predicate rdfs:label ;
    rr:objectMap [
        rr:template "Observation for the water feature {Codice Sito} for the date {Data}." ; rr:language "en" ]
-       ]; #ita
+       ];
+       rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rr:template "Osservazione per la water feature {Codice Sito} in data {Data}." ; rr:language "it" ]
+            ];
   rr:predicateObjectMap [
     rr:predicate w-mon:hasResult ;
-    rr:objectMap [rr:template "https://w3id.org/whow/data/observation-result/{Ostreopsisovatacelll}-cell-l"; #cond
-    rr:termType rr:IRI;]
+    rr:objectMap <#ResultsCleaningMapping>;
   ];
-  #rr:predicateObjectMap [
-#    rr:predicate places:hasMunicipality ;
-  #  rr:objectMap  <#MunicipalityFunction>
-#  ];
+  rr:predicateObjectMap [
+    rr:predicate places:hasMunicipality ;
+    rr:objectMap  <#MunicipalityFunction>
+  ];
   rr:predicateObjectMap [
     rr:predicate places:hasRegion ;
-    rr:objectMap [ rr:template "https://w3id.org/whow/data/municipality/{Regione}"; #funzione specifica
+    rr:objectMap [ rr:template "https://w3id.org/whow/data/region/{Regione}"; #funzione specifica
     rr:termType rr:IRI
     ]
   ];
   rr:predicateObjectMap [
     rr:predicate places:hasProvince ;
-    rr:objectMap [ rr:template "https://w3id.org/whow/data/municipality/{Provincia}"; #funzione specifica
-    rr:termType rr:IRI
-    ]
+    rr:objectMap <#ProvincesCleanURIMapping>;
   ];
   rr:predicateObjectMap [
     rr:predicate w-mon:hasResult ;
-    rr:objectMap [rr:template "https://w3id.org/whow/data/observation-result/{Ostreopsisovatacellgfw}-cell-g-fw"; #cond
-    rr:termType rr:IRI;]
+    rr:objectMap <#ResultsCleaningMapping2>;
   ];
 
   rr:predicateObjectMap [
@@ -105,11 +106,51 @@
         rr:termType rr:IRI;]
    ];
    rr:predicateObjectMap [
-      rr:predicate inspire-mf:generationTime ;
+      rr:predicate w-mon:hasObservationSample ;
+      rr:objectMap [
+         rr:template "http://w3id.org/whow/data/water-sample/{Ostreopsis cf. ovata (cell/l)}-cell-l-{LAT}-{LONG}"; #voc contr
+         rr:termType rr:IRI;]
+    ];
+    rr:predicateObjectMap [
+       rr:predicate w-mon:hasObservationSample ;
+       rr:objectMap [
+          rr:template "http://w3id.org/whow/data/water-sample/{Ostreopsis cf. ovata (cell/ g fw)}-cell-g-fw-{LAT}-{LONG}"; #voc contr
+          rr:termType rr:IRI;]
+     ];
+   rr:predicateObjectMap [
+      rr:predicate ispra-mf:generationTime ;
       rr:objectMap [
          rr:template "http://w3id.org/whow/data/time/{Data}"; #normalizzare data
          rr:termType rr:IRI;]
     ].
+
+## water sample mapping
+<#WaterSampleMapping> a rr:TriplesMap;
+rml:logicalSource <#LogicalSourceOstreopsis>;
+rr:subjectMap [
+        rr:template "http://w3id.org/whow/data/water-sample/{Ostreopsis cf. ovata (cell/l)}-cell-l-{LAT}-{LONG}";
+        rr:class w-mon:WaterSample
+                    ];
+         rr:predicateObjectMap [
+            rr:predicate rdfs:label ;
+            rr:objectMap [
+   rr:constant "Water sample for {Ostreopsis cf. ovata (cell/l)} cell/l." ; rr:language "en"]
+          ].
+
+<#WaterSampleMapping2> a rr:TriplesMap;
+rml:logicalSource <#LogicalSourceOstreopsis>;
+rr:subjectMap [
+        rr:template "http://w3id.org/whow/data/water-sample/{Ostreopsis cf. ovata (cell/ g fw)}-cell-g-fw-{LAT}-{LONG}";
+        rr:class w-mon:WaterSample
+                    ];
+         rr:predicateObjectMap [
+            rr:predicate rdfs:label ;
+            rr:objectMap [
+   rr:constant "Water sample for {Ostreopsis cf. ovata (cell/ g fw)} cell/g fw." ; rr:language "en"]
+          ].
+
+
+
 
 ## result mapping
 
@@ -129,7 +170,7 @@
       rr:predicateObjectMap [
             rr:predicate grel:p_array_a ;
            rr:objectMap
-                   [rml:reference "Ostreopsisovatacelll"]
+                   [rml:reference "Ostreopsis cf. ovata (cell/l)"]
 
       ];
       rr:predicateObjectMap [
@@ -148,11 +189,11 @@
      rr:predicateObjectMap [
         rr:predicate rdfs:label ;
         rr:objectMap [
-           rr:template "Observation value {Ostreopsisovatacelll}" ; rr:language "en" ] #agg datatype property
+           rr:template "Observation value {Ostreopsis cf. ovata (cell/l)}" ; rr:language "en" ] #agg datatype property
       ];
 
       rr:predicateObjectMap [
-        rr:predicate core:hasUnitOfMeasure;
+        rr:predicate top:hasUnitOfMeasure;
         rr:objectMap [rr:template "http://w3id.org/whow/data/um/cell-l";
         rr:termType rr:IRI;]
 
@@ -175,7 +216,7 @@
           rr:predicateObjectMap [
                 rr:predicate grel:p_array_a ;
                 rr:objectMap
-                        [rml:reference "Ostreopsisovatacellgfw"]
+                        [rml:reference "Ostreopsis cf. ovata (cell/ g fw)"]
 
           ];
           rr:predicateObjectMap [
@@ -194,11 +235,11 @@
          rr:predicateObjectMap [
             rr:predicate rdfs:label ;
             rr:objectMap [
-               rr:template "Observation value {Ostreopsisovatacellgfw}" ; rr:language "en" ] #agg datatype property
+               rr:template "Observation value {Ostreopsis cf. ovata (cell/ g fw)}" ; rr:language "en" ] #agg datatype property
           ];
 
           rr:predicateObjectMap [
-            rr:predicate core:hasUnitOfMeasure;
+            rr:predicate top:hasUnitOfMeasure;
             rr:objectMap [rr:template "http://w3id.org/whow/data/um/cell-g-fw";
             rr:termType rr:IRI;]
 
@@ -263,7 +304,7 @@ rr:objectMap [
                    rr:template "Marine water feature {Codice Sito}, {Nome Sito}." ; rr:language "en"]
               ];
               rr:predicateObjectMap [
-                 rr:predicate core:hasUniqueIdentifier ;
+                 rr:predicate top:hasUniqueIdentifier ;
                  rr:objectMap [rr:template "http://w3id.org/whow/data/identifier/{Codice Sito}"; rr:termType rr:IRI]
                ].
 
@@ -271,7 +312,7 @@ rr:objectMap [
               rml:logicalSource <#LogicalSourceOstreopsis>;
               rr:subjectMap [
               rr:template "http://w3id.org/whow/data/um/cell-l";
-              rr:class core:UnitOfMeasure
+              rr:class top:UnitOfMeasure
                           ];
                rr:predicateObjectMap [
                   rr:predicate rdfs:label ;
@@ -279,7 +320,7 @@ rr:objectMap [
                      rr:template "Unit of measure cell/l." ; rr:language "en"]
                 ].
 
-#bbiological agents mappingoutput
+#biological agents mappingoutput
 <#BiologicalAgentMapping> a rr:TriplesMap;
 rml:logicalSource <#LogicalSourceOstreopsis>;
 rr:subjectMap [
@@ -297,13 +338,26 @@ rr:predicateObjectMap [
       rr:template "Ostreopsis ovata."; rr:language "it"]
  ].
 
+
+##Municipality MAPPING
+
+<#MunicipalityMapping> a rr:TriplesMap;
+rml:logicalSource <#LogicalSourceOstreopsis>;
+rr:subjectMap [
+rr:template "http://w3id.org/whow/data/municipality/{PRO_COM_T}";
+rr:class places:Province
+];
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [
+      rr:template "Municipality of {Comune}" ; rr:language "en"]
+ ].
+
+
  #ProvincesMapping
  <#ProvincesMapping> a rr:TriplesMap;
  rml:logicalSource <#LogicalSourceOstreopsis>;
- rr:subjectMap [
- rr:template "http://w3id.org/whow/data/provinces/{Provincia}";
- rr:class places:Province
-             ];
+ rr:subjectMap <#ProvincesCleanURIMapping>;
   rr:predicateObjectMap [
      rr:predicate rdfs:label ;
      rr:objectMap [
@@ -315,36 +369,7 @@ rr:predicateObjectMap [
          rr:template "Provincia di {Provincia}" ; rr:language "it"] #controllare voc contr
     ];
    .
-   #municipalitymapping
-   <#MunicipalityMapping> a rr:TriplesMap;
-   rml:logicalSource <#LogicalSourceOstreopsis>;
-   rr:subjectMap [
-   fnml:functionValue [
-    rr:predicateObjectMap [
-    rr:predicate fno:executes ;
-    rr:objectMap [ rr:constant grel:array_join ]
-   ] ;
-   rr:predicateObjectMap [
-    rr:predicate grel:p_array_a ;
-    rr:objectMap  [ rr:constant "http://w3id.org/whow/data/municipality"]
-   ];
 
-   rr:predicateObjectMap [
-    rr:predicate grel:p_array_a ;
-    rr:objectMap  <#ReplaceWhitespacesWithDashMunicipality>
-   ];
-   rr:predicateObjectMap [
-    rr:predicate grel:p_string_sep ;
-    rr:objectMap [ rr:constant "/" ]
-   ];
-   rr:termtype rr:IRI
-   ]
-   ];
-   rr:predicateObjectMap [
-      rr:predicate rdfs:label ;
-      rr:objectMap [
-         rr:template "Municipality {Comune}" ; rr:language "en"]
-    ].
 
     #Regionmapping
     <#RegionMapping> a rr:TriplesMap;
@@ -363,7 +388,7 @@ rr:predicateObjectMap [
      <#ProvinceMapping> a rr:TriplesMap;
      rml:logicalSource <#LogicalSourceOstreopsis>;
      rr:subjectMap [
-     rr:template "https://w3id.org/whow/data/region/{Provincia}";
+     rr:template "https://w3id.org/whow/data/province/{Provincia}";
      rr:termType rr:IRI
      ];
      rr:predicateObjectMap [
@@ -418,11 +443,11 @@ rr:predicateObjectMap [
 ];
 rr:predicateObjectMap [
   rr:predicate grel:p_array_a ;
-  rr:objectMap  [ rr:template "{LONG }"]
+  rr:objectMap  [ rr:template "{LONG}"]
 ];
 rr:predicateObjectMap [
   rr:predicate grel:p_array_a ;
-  rr:objectMap  [ rr:template "{LAT }"]
+  rr:objectMap  [ rr:template "{LAT}"]
 ];
 rr:predicateObjectMap [
   rr:predicate grel:p_array_a ;
@@ -430,7 +455,7 @@ rr:predicateObjectMap [
 ];
 rr:predicateObjectMap [
   rr:predicate grel:p_array_a ;
-  rr:objectMap  [ rr:template "{Ostreopsisovatacelll}"]
+  rr:objectMap  [ rr:template "{Ostreopsis cf. ovata (cell/l)}"]
 ];
 rr:predicateObjectMap [
   rr:predicate grel:p_string_sep ;
@@ -451,7 +476,7 @@ rr:predicateObjectMap [
 
 rr:predicateObjectMap [
  rr:predicate grel:p_array_a ;
- rr:objectMap  <#ReplaceWhitespacesWithDashMunicipality>
+ rr:objectMap  [rr:template "{PRO_COM_T}"]
 ];
 rr:predicateObjectMap [
  rr:predicate grel:p_string_sep ;
@@ -460,24 +485,146 @@ rr:predicateObjectMap [
 rr:termtype rr:IRI
 ].
 
-<#ReplaceWhitespacesWithDashMunicipality>
+<#ResultsCleaningMapping>
+#se c'è lo slash come risultato, esplicito che il monitoraggio non è stato effettuato
+rr:termType rr:IRI ;
 fnml:functionValue [
-  rml:logicalSource <#LogicalSourceLaghi>;
-  rr:predicateObjectMap [
-    rr:predicate fno:executes ;
-    rr:objectMap [ rr:constant grel:string_replaceChars ]
+rml:logicalSource <#LogicalSourceOstreopsis>;
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant idlab-fn:trueCondition ]
  ];
 
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:strBoolean ;
+    rr:objectMap <#isSlash>
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap <#ResultURI>
+  ]
+].
+
+<#isSlash>
+fnml:functionValue [
+rml:logicalSource <#LogicalSourceOstreopsis>;
+   rr:predicateObjectMap [
+  rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:string_contains ]
+   ];
+
+   rr:predicateObjectMap [
+   rr:predicate grel:valueParameter ;
+     rr:objectMap [ rml:reference "Ostreopsis cf. ovata (cell/l)" ]
+   ] ;
+rr:predicateObjectMap [
+rr:predicate grel:string_sub ;
+rr:objectMap [ rr:constant "/" ]
+     ];
+   ].
+
+ <#ResultURI>
+ rr:termType rr:IRI ;
+fnml:functionValue [
+rml:logicalSource <#LogicalSourceOstreopsis>;
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+rr:objectMap [ rr:constant grel:array_join ]
+     ] ;
+   rr:predicateObjectMap [
+ rr:predicate grel:p_array_a ;
+   rr:objectMap  [ rr:constant "https://w3id.org/whow/data/observation-result"]
+                     ];
+ rr:predicateObjectMap [
+ rr:predicate grel:p_array_a ;
+ rr:objectMap [rr:constant "monitoring-not-made"]
+ ];
+ rr:predicateObjectMap [
+rr:predicate grel:p_string_sep ;
+ rr:objectMap [ rr:constant "/" ]
+ ];
+ ].
+
+
+ <#ResultsCleaningMapping2>
+ #se c'è lo slash come risultato, esplicito che il monitoraggio non è stato effettuato
+ rr:termType rr:IRI ;
+ fnml:functionValue [
+ rml:logicalSource <#LogicalSourceOstreopsis>;
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant idlab-fn:trueCondition ]
+  ];
+
+   rr:predicateObjectMap [
+     rr:predicate idlab-fn:strBoolean ;
+     rr:objectMap <#isSlash2>
+   ] ;
+
+   rr:predicateObjectMap [
+     rr:predicate idlab-fn:str ;
+     rr:objectMap <#ResultURI>
+   ]
+ ].
+
+ <#isSlash2>
+ fnml:functionValue [
+ rml:logicalSource <#LogicalSourceOstreopsis>;
+    rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:string_contains ]
+    ];
+
+    rr:predicateObjectMap [
+    rr:predicate grel:valueParameter ;
+      rr:objectMap [ rml:reference "Ostreopsis cf. ovata (cell/ g fw)" ]
+    ] ;
+ rr:predicateObjectMap [
+ rr:predicate grel:string_sub ;
+ rr:objectMap [ rr:constant "/" ]
+      ];
+    ].
+
+#provinces clean URI
+<#ProvincesCleanURIMapping>
+fnml:functionValue [
+  rml:logicalSource <#LogicalSourceOstreopsis>;
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ];
  rr:predicateObjectMap [
      rr:predicate grel:valueParameter ;
-     rr:objectMap [ rml:reference "Comune"]
+     rr:objectMap [ rml:reference "Provincia"]
      ];
   rr:predicateObjectMap [
-    rr:predicate grel:p_string_find ;
-    rr:objectMap [ rr:constant " " ]
-  ];
+    rr:predicate grel:p_array_a ;
+    rr:objectMap [ rr:constant "https://w3id.org/whow/data/province/"]
+  ] ;
   rr:predicateObjectMap [
-    rr:predicate grel:p_string_replace ;
-    rr:objectMap [ rr:constant "-" ]
+        rr:predicate grel:p_array_a ;
+        rr:objectMap
+                <#ReplaceWhitespacesWithDashProvince>
+
+  ];
 ];
- ].
+rr:class places:Province;
+rr:termType rr:IRI .
+
+    <#ReplaceWhitespacesWithDashProvince>
+    fnml:functionValue [
+      rml:logicalSource <#LogicalSourceOstreopsis>;
+      rr:predicateObjectMap [
+        rr:predicate fno:executes ;
+        rr:objectMap [ rr:constant grel:string_replaceChars ]
+     ];
+      rr:predicateObjectMap [
+        rr:predicate grel:p_string_find ;
+        rr:objectMap [ rr:constant " " ]
+      ];
+      rr:predicateObjectMap [
+        rr:predicate grel:p_string_replace ;
+        rr:objectMap [ rr:constant "-" ]
+];
+     ].
