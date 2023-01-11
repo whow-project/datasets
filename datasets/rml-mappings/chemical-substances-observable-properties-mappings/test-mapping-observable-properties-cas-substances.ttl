@@ -10,7 +10,7 @@
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
-@prefix top: <https://dati.isprambiente.it/ontology/top/> .
+@prefix ispra-top: <https://dati.isprambiente.it/ontology/ispra-top/> .
 @prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
 @base        <https://w3id.org/whow/controlled-vocabulary/observable-properties/> .
 

@@ -13,9 +13,9 @@
 @prefix crml: <http://w3id.org/stlab/crml#> .
 @prefix csvw: <http://www.w3.org/ns/csvw#> .
 @prefix l0:  <https://w3id.org/italia/onto/l0/> .
-@prefix top: <https://dati.isprambiente.it/ontology/top/> .
+@prefix ispra-top: <https://dati.isprambiente.it/ontology/ispra-top/> .
 @prefix hydro: <https://w3id.org/whow/onto/hydrography/> .
-@prefix ispra-mf: <https://dati.isprambiente.it/ontology/inspire-mf/>.
+@prefix ispra-emf: <https://dati.isprambiente.it/ontology/inspire-mf/>.
 @base <https://w3id.org/whow/data/> .
 
 # #LogicalSourceLaghi
@@ -38,7 +38,7 @@ rml:logicalSource <#LogicalSourceLaghi> ;
 rr:subjectMap [
   rr:template "https://w3id.org/whow/data/lakewaterbody/{CORPO IDRICO}";
   rr:termType rr:IRI;
-  rr:class hydro:LakeWaterBody , hydro:WaterBody , hydro:WaterFeature , ispra-mf:FeatureOfInterest
+  rr:class hydro:LakeWaterBody , hydro:WaterBody , hydro:WaterFeature , ispra-emf:FeatureOfInterest
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
@@ -49,7 +49,7 @@ rr:predicateObjectMap [
   rr:objectMap [ rr:template "Lago {LAGO}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
-  rr:predicate top:name ;
+  rr:predicate ispra-top:name ;
   rr:objectMap [ rr:template "{LAGO}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
@@ -57,7 +57,7 @@ rr:predicateObjectMap [
   rr:objectMap [ rr:template "{LAGO}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
-  rr:predicate top:identifier ;
+  rr:predicate ispra-top:identifier ;
   rr:objectMap [ rml:reference "CORPO IDRICO" ]
 ];
 rr:predicateObjectMap [
@@ -168,10 +168,10 @@ rr:subjectMap [
        rr:objectMap [ rr:constant "/" ]
     ];
  ];
-rr:class hydro:WaterBasin , hydro:WaterFeature , ispra-mf:FeatureOfInterest
+rr:class hydro:WaterBasin , hydro:WaterFeature , ispra-emf:FeatureOfInterest
 ] ;
 rr:predicateObjectMap [
-  rr:predicate top:name ;
+  rr:predicate ispra-top:name ;
   rr:objectMap [ rr:template "{BACINO IDROGRAFICO}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [

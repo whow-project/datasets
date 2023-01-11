@@ -10,7 +10,7 @@
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
-@prefix top: <https://dati.isprambiente.it/ontology/top/> .
+@prefix ispra-top: <https://dati.isprambiente.it/ontology/ispra-top/> .
 @prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
 @base         <https://w3id.org/whow/controlled-vocabularies/observable-properties/> .
 
@@ -54,7 +54,7 @@ rr:predicateObjectMap [
   rr:objectMap [ rr:template "{PARAMETER (IT)}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
-  rr:predicate top:hasUniqueIdentifier;
+  rr:predicate ispra-top:hasUniqueIdentifier;
   rr:objectMap [   rr:template "https://w3id.org/whow/data/identifier/{WISE}"; rr:termType rr:IRI;]
 ];
 rr:predicateObjectMap [
@@ -69,10 +69,10 @@ rml:logicalSource <#LogicalSourceWISECodes> ;
 rr:subjectMap [
   rr:template "https://w3id.org/whow/data/identifier/{WISE}";
   rr:termType rr:IRI;
-  rr:class top:UniqueIdentifier
+  rr:class ispra-top:UniqueIdentifier
 ] ;
 rr:predicateObjectMap [
-  rr:predicate top:identifier;
+  rr:predicate ispra-top:identifier;
   rr:objectMap [ rr:template "{WISE}"; rr:datatype xsd:string ]
 ];
 rr:predicateObjectMap [
@@ -84,6 +84,6 @@ rr:predicateObjectMap [
   rr:objectMap [ rr:template "WISE Identifier — {WISE}" ; rr:language "en" ]
 ];
 rr:predicateObjectMap [
-  rr:predicate top:isIssuedBy;
+  rr:predicate ispra-top:isIssuedBy;
   rr:objectMap [ rr:template "https://w3id.org/whow/data/organisation/european-environmental-agency"; rr:termType rr:IRI; ]
 ].

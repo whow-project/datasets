@@ -10,9 +10,9 @@
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
-@prefix ispra-mf: <https://dati.isprambiente.it/ontology/ispra-mf/>.
-@prefix places: <https://w3id.org/stlab/places/> .
-@prefix top: <https://dati.isprambiente.it/ontology/top/> .
+@prefix ispra-emf: <https://dati.isprambiente.it/ontology/ispra-emf/>.
+@prefix ispra-plc: <https://w3id.org/stlab/ispra-plc/> .
+@prefix ispra-top: <https://dati.isprambiente.it/ontology/ispra-top/> .
 @prefix crml: <http://w3id.org/stlab/crml#> .
 @prefix hydro: <https://w3id.org/whow/onto/hydrography/>.
 @prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
@@ -81,17 +81,17 @@
     rr:objectMap <#ResultsCleaningMapping>;
   ];
   rr:predicateObjectMap [
-    rr:predicate places:hasMunicipality ;
+    rr:predicate ispra-plc:hasMunicipality ;
     rr:objectMap  <#MunicipalityFunction>
   ];
   rr:predicateObjectMap [
-    rr:predicate places:hasRegion ;
+    rr:predicate ispra-plc:hasRegion ;
     rr:objectMap [ rr:template "https://w3id.org/whow/data/region/{Regione}"; #funzione specifica
     rr:termType rr:IRI
     ]
   ];
   rr:predicateObjectMap [
-    rr:predicate places:hasProvince ;
+    rr:predicate ispra-plc:hasProvince ;
     rr:objectMap <#ProvincesCleanURIMapping>;
   ];
   rr:predicateObjectMap [
@@ -118,7 +118,7 @@
           rr:termType rr:IRI;]
      ];
    rr:predicateObjectMap [
-      rr:predicate ispra-mf:generationTime ;
+      rr:predicate ispra-emf:generationTime ;
       rr:objectMap [
          rr:template "http://w3id.org/whow/data/time/{Data}"; #normalizzare data
          rr:termType rr:IRI;]
@@ -193,7 +193,7 @@ rr:subjectMap [
       ];
 
       rr:predicateObjectMap [
-        rr:predicate top:hasUnitOfMeasure;
+        rr:predicate ispra-top:hasUnitOfMeasure;
         rr:objectMap [rr:template "http://w3id.org/whow/data/um/cell-l";
         rr:termType rr:IRI;]
 
@@ -239,7 +239,7 @@ rr:subjectMap [
           ];
 
           rr:predicateObjectMap [
-            rr:predicate top:hasUnitOfMeasure;
+            rr:predicate ispra-top:hasUnitOfMeasure;
             rr:objectMap [rr:template "http://w3id.org/whow/data/um/cell-g-fw";
             rr:termType rr:IRI;]
 
@@ -274,12 +274,12 @@ rr:subjectMap [
          rr:constant "Worms:110068"; rr:datatype xsd:string]
     ];
     rr:predicateObjectMap [
-   rr:predicate top:hasUniqueIdentifier ;
+   rr:predicate ispra-top:hasUniqueIdentifier ;
    rr:objectMap [
       rr:template "https://w3id.org/whow/data/identifier/52502"; rr:termType rr:IRI]
  ];
  rr:predicateObjectMap [
-rr:predicate top:hasUniqueIdentifier ;
+rr:predicate ispra-top:hasUniqueIdentifier ;
 rr:objectMap [
    rr:template "https://w3id.org/whow/data/identifier/110068"; rr:termType rr:IRI]
 ];
@@ -304,7 +304,7 @@ rr:objectMap [
                    rr:template "Marine water feature {Codice Sito}, {Nome Sito}." ; rr:language "en"]
               ];
               rr:predicateObjectMap [
-                 rr:predicate top:hasUniqueIdentifier ;
+                 rr:predicate ispra-top:hasUniqueIdentifier ;
                  rr:objectMap [rr:template "http://w3id.org/whow/data/identifier/{Codice Sito}"; rr:termType rr:IRI]
                ].
 
@@ -312,7 +312,7 @@ rr:objectMap [
               rml:logicalSource <#LogicalSourceOstreopsis>;
               rr:subjectMap [
               rr:template "http://w3id.org/whow/data/um/cell-l";
-              rr:class top:UnitOfMeasure
+              rr:class ispra-top:UnitOfMeasure
                           ];
                rr:predicateObjectMap [
                   rr:predicate rdfs:label ;
@@ -345,7 +345,7 @@ rr:predicateObjectMap [
 rml:logicalSource <#LogicalSourceOstreopsis>;
 rr:subjectMap [
 rr:template "http://w3id.org/whow/data/municipality/{PRO_COM_T}";
-rr:class places:Province
+rr:class ispra-plc:Province
 ];
 rr:predicateObjectMap [
    rr:predicate rdfs:label ;
@@ -609,7 +609,7 @@ fnml:functionValue [
 
   ];
 ];
-rr:class places:Province;
+rr:class ispra-plc:Province;
 rr:termType rr:IRI .
 
     <#ReplaceWhitespacesWithDashProvince>
