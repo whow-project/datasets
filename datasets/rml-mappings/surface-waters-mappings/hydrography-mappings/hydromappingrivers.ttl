@@ -46,7 +46,7 @@ rr:predicateObjectMap [
 ];
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
-  rr:objectMap [ rr:template "River {CORSO D'ACQUA}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "Fiume {CORSO D'ACQUA}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
   rr:predicate ispra-top:name ;
