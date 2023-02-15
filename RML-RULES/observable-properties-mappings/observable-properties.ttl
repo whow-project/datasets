@@ -1,0 +1,1477 @@
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix idlab-fn: <http://example.com/idlab/function/> .
+@prefix iot: <https://w3id.org/italia/onto/IoT/> .
+@prefix ispra-emf: <https://w3id.org/italia/env/onto/inspire-mf/> .
+@prefix ispra-top: <https://w3id.org/italia/env/onto/top/> .
+@prefix l0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/whow/data/identifier/10050> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identifier 10050"@en, "Identificativo 10050"@it;
+  ispra-top:identifier "10050" .
+
+<https://w3id.org/whow/data/identifier/10062> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identifier 10062"@en, "Identificativo 10062"@it;
+  ispra-top:identifier "10062" .
+
+<https://w3id.org/whow/data/identifier/10313> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identifier 10313"@en, "Identificativo 10313"@it;
+  ispra-top:identifier "10313" .
+
+<https://w3id.org/whow/data/identifier/12408-02-5> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identifier 12408-02-5"@en, "Identificativo 12408-02-5"@it;
+  ispra-top:identifier "12408-02-5" .
+
+<https://w3id.org/whow/data/identifier/20001> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identifier 20001"@en, "Identificativo 20001"@it;
+  ispra-top:identifier "20001" .
+
+<https://w3id.org/whow/data/identifier/31-02-7> a ispra-top:UniqueIdentifier;
+  rdfs:label "WISE Identifier — 31-02-7"@en, "Identificativo WISE — 31-02-7"@it;
+  ispra-top:identifier "31-02-7";
+  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+
+<https://w3id.org/whow/data/identifier/3121-01-5> a ispra-top:UniqueIdentifier;
+  rdfs:label "WISE Identifier — 3121-01-5"@en, "Identificativo WISE — 3121-01-5"@it;
+  ispra-top:identifier "3121-01-5";
+  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+
+<https://w3id.org/whow/data/identifier/3131-01-9> a ispra-top:UniqueIdentifier;
+  rdfs:label "WISE Identifier — 3131-01-9"@en, "Identificativo WISE — 3131-01-9"@it;
+  ispra-top:identifier "3131-01-9";
+  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+
+<https://w3id.org/whow/data/identifier/3133-01-5> a ispra-top:UniqueIdentifier;
+  rdfs:label "WISE Identifier — 3133-01-5"@en, "Identificativo WISE — 3133-01-5"@it;
+  ispra-top:identifier "3133-01-5";
+  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+
+<https://w3id.org/whow/data/identifier/3133-05-9> a ispra-top:UniqueIdentifier;
+  rdfs:label "WISE Identifier — 3133-05-9"@en, "Identificativo WISE — 3133-05-9"@it;
+  ispra-top:identifier "3133-05-9";
+  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+
+<https://w3id.org/whow/data/identifier/3142-01-6> a ispra-top:UniqueIdentifier;
+  rdfs:label "WISE Identifier — 3142-01-6"@en, "Identificativo WISE — 3142-01-6"@it;
+  ispra-top:identifier "3142-01-6";
+  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+
+<https://w3id.org/whow/data/identifier/32-02-0> a ispra-top:UniqueIdentifier;
+  rdfs:label "WISE Identifier — 32-02-0"@en, "Identificativo WISE — 32-02-0"@it;
+  ispra-top:identifier "32-02-0";
+  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+
+<https://w3id.org/whow/data/identifier/33-28-3> a ispra-top:UniqueIdentifier;
+  rdfs:label "WISE Identifier — 33-28-3"@en, "Identificativo WISE — 33-28-3"@it;
+  ispra-top:identifier "33-28-3";
+  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+
+<https://w3id.org/whow/data/identifier/33-29-4> a ispra-top:UniqueIdentifier;
+  rdfs:label "WISE Identifier — 33-29-4"@en, "Identificativo WISE — 33-29-4"@it;
+  ispra-top:identifier "33-29-4";
+  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+
+<https://w3id.org/whow/data/identifier/71-52-3> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identifier 71-52-3"@en, "Identificativo 71-52-3"@it;
+  ispra-top:identifier "71-52-3" .
+
+<https://w3id.org/whow/data/identifier/LT-00-0> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identifier LT-00-0"@en, "Identificativo LT-00-0"@it;
+  ispra-top:identifier "LT-00-0" .
+
+<https://w3id.org/whow/data/identifier/M-PRT-0> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identifier M-PRT-0"@en, "Identificativo M-PRT-0"@it;
+  ispra-top:identifier "M-PRT-0" .
+
+<https://w3id.org/whow/data/observable-properties/100-00-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1-chloro-4-nitro-"@en, "Concentrazione di 1-Cloro-4-nitrobenzene"@it;
+  ispra-top:name "Concentration of Benzene, 1-chloro-4-nitro-"@en, "Concentrazione di 1-Cloro-4-nitrobenzene"@it;
+  l0:name "Concentration of Benzene, 1-chloro-4-nitro-"@en, "Concentrazione di 1-Cloro-4-nitrobenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-100-00-5> .
+
+<https://w3id.org/whow/data/observable-properties/100-02-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 4-nitro-"@en, "Concentrazione di 4-Nitrofenolo"@it;
+  ispra-top:name "Concentration of Phenol, 4-nitro-"@en, "Concentrazione di 4-Nitrofenolo"@it;
+  l0:name "Concentration of Phenol, 4-nitro-"@en, "Concentrazione di 4-Nitrofenolo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-100-02-7> .
+
+<https://w3id.org/whow/data/observable-properties/100-41-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, ethyl-"@en, "Concentrazione di Etilbenzene"@it;
+  ispra-top:name "Concentration of Benzene, ethyl-"@en, "Concentrazione di Etilbenzene"@it;
+  l0:name "Concentration of Benzene, ethyl-"@en, "Concentrazione di Etilbenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-100-41-4> .
+
+<https://w3id.org/whow/data/observable-properties/100-42-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, ethenyl-"@en, "Concentrazione di Stirene"@it;
+  ispra-top:name "Concentration of Benzene, ethenyl-"@en, "Concentrazione di Stirene"@it;
+  l0:name "Concentration of Benzene, ethenyl-"@en, "Concentrazione di Stirene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-100-42-5> .
+
+<https://w3id.org/whow/data/observable-properties/100-61-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, N-methyl-"@en, "Concentrazione di N-metil Anilina"@it;
+  ispra-top:name "Concentration of Benzenamine, N-methyl-"@en, "Concentrazione di N-metil Anilina"@it;
+  l0:name "Concentration of Benzenamine, N-methyl-"@en, "Concentrazione di N-metil Anilina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-100-61-8> .
+
+<https://w3id.org/whow/data/observable-properties/10050> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: Settleable solids"@en, "Parametro Osservato: Solidi sedimentabili"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/10050>;
+  ispra-top:name "Settleable solids"@en, "Solidi sedimentabili"@it;
+  l0:name "Settleable solids"@en, "Solidi sedimentabili"@it .
+
+<https://w3id.org/whow/data/observable-properties/10062> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: Transparency (Secchi disk)"@en, "Parametro Osservato: Trasparenza (disco di Secchi)"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/10062>;
+  ispra-top:name "Transparency (Secchi disk)"@en, "Trasparenza (disco di Secchi)"@it;
+  l0:name "Transparency (Secchi disk)"@en, "Trasparenza (disco di Secchi)"@it .
+
+<https://w3id.org/whow/data/observable-properties/103-69-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, N-ethyl-"@en, "Concentrazione di N-etil Anilina"@it;
+  ispra-top:name "Concentration of Benzenamine, N-ethyl-"@en, "Concentrazione di N-etil Anilina"@it;
+  l0:name "Concentration of Benzenamine, N-ethyl-"@en, "Concentrazione di N-etil Anilina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-103-69-5> .
+
+<https://w3id.org/whow/data/observable-properties/10313> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: COD"@en, "Parametro Osservato: COD"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/10313>;
+  ispra-top:name "COD"@en, "COD"@it;
+  l0:name "COD"@en, "COD"@it .
+
+<https://w3id.org/whow/data/observable-properties/104-40-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 4-nonyl-"@en, "Concentrazione di p-nonilfenolo"@it;
+  ispra-top:name "Concentration of Phenol, 4-nonyl-"@en, "Concentrazione di p-nonilfenolo"@it;
+  l0:name "Concentration of Phenol, 4-nonyl-"@en, "Concentrazione di p-nonilfenolo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-104-40-5> .
+
+<https://w3id.org/whow/data/observable-properties/105-67-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 2,4-dimethyl-"@en, "Concentrazione di Dimetilfenolo 2,4"@it;
+  ispra-top:name "Concentration of Phenol, 2,4-dimethyl-"@en, "Concentrazione di Dimetilfenolo 2,4"@it;
+  l0:name "Concentration of Phenol, 2,4-dimethyl-"@en, "Concentrazione di Dimetilfenolo 2,4"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-105-67-9> .
+
+<https://w3id.org/whow/data/observable-properties/106-42-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1,4-dimethyl-"@en, "Concentrazione di Xilene para"@it;
+  ispra-top:name "Concentration of Benzene, 1,4-dimethyl-"@en, "Concentrazione di Xilene para"@it;
+  l0:name "Concentration of Benzene, 1,4-dimethyl-"@en, "Concentrazione di Xilene para"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-106-42-3> .
+
+<https://w3id.org/whow/data/observable-properties/106-43-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1-chloro-4-methyl-"@en, "Concentrazione di 4-Clorotoluene"@it;
+  ispra-top:name "Concentration of Benzene, 1-chloro-4-methyl-"@en, "Concentrazione di 4-Clorotoluene"@it;
+  l0:name "Concentration of Benzene, 1-chloro-4-methyl-"@en, "Concentrazione di 4-Clorotoluene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-106-43-4> .
+
+<https://w3id.org/whow/data/observable-properties/106-46-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1,4-dichloro-"@en, "Concentrazione di 1,4-diclorobenzene"@it;
+  ispra-top:name "Concentration of Benzene, 1,4-dichloro-"@en, "Concentrazione di 1,4-diclorobenzene"@it;
+  l0:name "Concentration of Benzene, 1,4-dichloro-"@en, "Concentrazione di 1,4-diclorobenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-106-46-7> .
+
+<https://w3id.org/whow/data/observable-properties/106-47-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, 4-chloro-"@en, "Concentrazione di 4-cloroanilina"@it;
+  ispra-top:name "Concentration of Benzenamine, 4-chloro-"@en, "Concentrazione di 4-cloroanilina"@it;
+  l0:name "Concentration of Benzenamine, 4-chloro-"@en, "Concentrazione di 4-cloroanilina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-106-47-8> .
+
+<https://w3id.org/whow/data/observable-properties/106-48-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 4-chloro-"@en, "Concentrazione di 4-Clorofenolo"@it;
+  ispra-top:name "Concentration of Phenol, 4-chloro-"@en, "Concentrazione di 4-Clorofenolo"@it;
+  l0:name "Concentration of Phenol, 4-chloro-"@en, "Concentrazione di 4-Clorofenolo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-106-48-9> .
+
+<https://w3id.org/whow/data/observable-properties/106-49-0> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, 4-methyl-"@en, "Concentrazione di p-toluidina"@it;
+  ispra-top:name "Concentration of Benzenamine, 4-methyl-"@en, "Concentrazione di p-toluidina"@it;
+  l0:name "Concentration of Benzenamine, 4-methyl-"@en, "Concentrazione di p-toluidina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-106-49-0> .
+
+<https://w3id.org/whow/data/observable-properties/106-93-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethane, 1,2-dibromo-"@en, "Concentrazione di 1,2-dibromoetano"@it;
+  ispra-top:name "Concentration of Ethane, 1,2-dibromo-"@en, "Concentrazione di 1,2-dibromoetano"@it;
+  l0:name "Concentration of Ethane, 1,2-dibromo-"@en, "Concentrazione di 1,2-dibromoetano"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-106-93-4> .
+
+<https://w3id.org/whow/data/observable-properties/107-06-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethane, 1,2-dichloro-"@en, "Concentrazione di Dicloroetano 1,2"@it;
+  ispra-top:name "Concentration of Ethane, 1,2-dichloro-"@en, "Concentrazione di Dicloroetano 1,2"@it;
+  l0:name "Concentration of Ethane, 1,2-dichloro-"@en, "Concentrazione di Dicloroetano 1,2"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-107-06-2> .
+
+<https://w3id.org/whow/data/observable-properties/108-38-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1,3-dimethyl-"@en, "Concentrazione di Xilene meta"@it;
+  ispra-top:name "Concentration of Benzene, 1,3-dimethyl-"@en, "Concentrazione di Xilene meta"@it;
+  l0:name "Concentration of Benzene, 1,3-dimethyl-"@en, "Concentrazione di Xilene meta"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-108-38-3> .
+
+<https://w3id.org/whow/data/observable-properties/108-41-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1-chloro-3-methyl-"@en, "Concentrazione di 3-Clorotoluene"@it;
+  ispra-top:name "Concentration of Benzene, 1-chloro-3-methyl-"@en, "Concentrazione di 3-Clorotoluene"@it;
+  l0:name "Concentration of Benzene, 1-chloro-3-methyl-"@en, "Concentrazione di 3-Clorotoluene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-108-41-8> .
+
+<https://w3id.org/whow/data/observable-properties/108-42-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, 3-chloro-"@en, "Concentrazione di 3-cloroanilina"@it;
+  ispra-top:name "Concentration of Benzenamine, 3-chloro-"@en, "Concentrazione di 3-cloroanilina"@it;
+  l0:name "Concentration of Benzenamine, 3-chloro-"@en, "Concentrazione di 3-cloroanilina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-108-42-9> .
+
+<https://w3id.org/whow/data/observable-properties/108-43-0> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 3-chloro-"@en, "Concentrazione di 3-Clorofenolo"@it;
+  ispra-top:name "Concentration of Phenol, 3-chloro-"@en, "Concentrazione di 3-Clorofenolo"@it;
+  l0:name "Concentration of Phenol, 3-chloro-"@en, "Concentrazione di 3-Clorofenolo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-108-43-0> .
+
+<https://w3id.org/whow/data/observable-properties/108-44-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, 3-methyl-"@en, "Concentrazione di m-Toluidina"@it;
+  ispra-top:name "Concentration of Benzenamine, 3-methyl-"@en, "Concentrazione di m-Toluidina"@it;
+  l0:name "Concentration of Benzenamine, 3-methyl-"@en, "Concentrazione di m-Toluidina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-108-44-1> .
+
+<https://w3id.org/whow/data/observable-properties/108-70-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1,3,5-trichloro-"@en, "Concentrazione di Triclorobenzene 1,3,5"@it;
+  ispra-top:name "Concentration of Benzene, 1,3,5-trichloro-"@en, "Concentrazione di Triclorobenzene 1,3,5"@it;
+  l0:name "Concentration of Benzene, 1,3,5-trichloro-"@en, "Concentrazione di Triclorobenzene 1,3,5"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-108-70-3> .
+
+<https://w3id.org/whow/data/observable-properties/108-88-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, methyl-"@en, "Concentrazione di Toluene"@it;
+  ispra-top:name "Concentration of Benzene, methyl-"@en, "Concentrazione di Toluene"@it;
+  l0:name "Concentration of Benzene, methyl-"@en, "Concentrazione di Toluene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-108-88-3> .
+
+<https://w3id.org/whow/data/observable-properties/108-90-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, chloro-"@en, "Concentrazione di Monoclorobenzene"@it;
+  ispra-top:name "Concentration of Benzene, chloro-"@en, "Concentrazione di Monoclorobenzene"@it;
+  l0:name "Concentration of Benzene, chloro-"@en, "Concentrazione di Monoclorobenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-108-90-7> .
+
+<https://w3id.org/whow/data/observable-properties/108-95-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol"@en, "Concentrazione di Fenoli"@it;
+  ispra-top:name "Concentration of Phenol"@en, "Concentrazione di Fenoli"@it;
+  l0:name "Concentration of Phenol"@en, "Concentrazione di Fenoli"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-108-95-2> .
+
+<https://w3id.org/whow/data/observable-properties/115-96-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethanol, 2-chloro-, 1,1',1''-phosphate"@en, "Concentrazione di TCEP (tris-2cloroetil-fosfato)"@it;
+  ispra-top:name "Concentration of Ethanol, 2-chloro-, 1,1',1''-phosphate"@en, "Concentrazione di TCEP (tris-2cloroetil-fosfato)"@it;
+  l0:name "Concentration of Ethanol, 2-chloro-, 1,1',1''-phosphate"@en, "Concentrazione di TCEP (tris-2cloroetil-fosfato)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-115-96-8> .
+
+<https://w3id.org/whow/data/observable-properties/117-81-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-bis(2-ethylhexyl) ester"@en,
+    "Concentrazione di Di-2-etilesilftalato"@it;
+  ispra-top:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-bis(2-ethylhexyl) ester"@en,
+    "Concentrazione di Di-2-etilesilftalato"@it;
+  l0:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-bis(2-ethylhexyl) ester"@en,
+    "Concentrazione di Di-2-etilesilftalato"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-117-81-7> .
+
+<https://w3id.org/whow/data/observable-properties/118-74-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1,2,3,4,5,6-hexachloro-"@en, "Concentrazione di Esaclorobenzene"@it;
+  ispra-top:name "Concentration of Benzene, 1,2,3,4,5,6-hexachloro-"@en, "Concentrazione di Esaclorobenzene"@it;
+  l0:name "Concentration of Benzene, 1,2,3,4,5,6-hexachloro-"@en, "Concentrazione di Esaclorobenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-118-74-1> .
+
+<https://w3id.org/whow/data/observable-properties/120-12-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Anthracene"@en, "Concentrazione di Antracene"@it;
+  ispra-top:name "Concentration of Anthracene"@en, "Concentrazione di Antracene"@it;
+  l0:name "Concentration of Anthracene"@en, "Concentrazione di Antracene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-120-12-7> .
+
+<https://w3id.org/whow/data/observable-properties/120-82-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1,2,4-trichloro-"@en, "Concentrazione di 1,2,4-Triclorobenzene"@it;
+  ispra-top:name "Concentration of Benzene, 1,2,4-trichloro-"@en, "Concentrazione di 1,2,4-Triclorobenzene"@it;
+  l0:name "Concentration of Benzene, 1,2,4-trichloro-"@en, "Concentrazione di 1,2,4-Triclorobenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-120-82-1> .
+
+<https://w3id.org/whow/data/observable-properties/120-83-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 2,4-dichloro-"@en, "Concentrazione di 2,4-Diclorofenolo"@it;
+  ispra-top:name "Concentration of Phenol, 2,4-dichloro-"@en, "Concentrazione di 2,4-Diclorofenolo"@it;
+  l0:name "Concentration of Phenol, 2,4-dichloro-"@en, "Concentrazione di 2,4-Diclorofenolo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-120-83-2> .
+
+<https://w3id.org/whow/data/observable-properties/12002-48-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, trichloro-"@en, "Concentrazione di Triclorobenzeni"@it;
+  ispra-top:name "Concentration of Benzene, trichloro-"@en, "Concentrazione di Triclorobenzeni"@it;
+  l0:name "Concentration of Benzene, trichloro-"@en, "Concentrazione di Triclorobenzeni"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-12002-48-1> .
+
+<https://w3id.org/whow/data/observable-properties/121-73-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1-chloro-3-nitro-"@en, "Concentrazione di 3 Cloronitrobenzene"@it;
+  ispra-top:name "Concentration of Benzene, 1-chloro-3-nitro-"@en, "Concentrazione di 3 Cloronitrobenzene"@it;
+  l0:name "Concentration of Benzene, 1-chloro-3-nitro-"@en, "Concentrazione di 3 Cloronitrobenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-121-73-3> .
+
+<https://w3id.org/whow/data/observable-properties/122-34-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2,N4-diethyl-"@en,
+    "Concentrazione di Simazina"@it;
+  ispra-top:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2,N4-diethyl-"@en,
+    "Concentrazione di Simazina"@it;
+  l0:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2,N4-diethyl-"@en,
+    "Concentrazione di Simazina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-122-34-9> .
+
+<https://w3id.org/whow/data/observable-properties/122-39-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, N-phenyl-"@en, "Concentrazione di Difenilammina"@it;
+  ispra-top:name "Concentration of Benzenamine, N-phenyl-"@en, "Concentrazione di Difenilammina"@it;
+  l0:name "Concentration of Benzenamine, N-phenyl-"@en, "Concentrazione di Difenilammina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-122-39-4> .
+
+<https://w3id.org/whow/data/observable-properties/124-48-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Methane, dibromochloro-"@en, "Concentrazione di Dibromoclorometano"@it;
+  ispra-top:name "Concentration of Methane, dibromochloro-"@en, "Concentrazione di Dibromoclorometano"@it;
+  l0:name "Concentration of Methane, dibromochloro-"@en, "Concentrazione di Dibromoclorometano"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-124-48-1> .
+
+<https://w3id.org/whow/data/observable-properties/12408-02-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: pH"@en, "Parametro Osservato: pH"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/12408-02-5>;
+  ispra-top:name "pH"@en, "pH"@it;
+  l0:name "pH"@en, "pH"@it .
+
+<https://w3id.org/whow/data/observable-properties/127-18-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethene, 1,1,2,2-tetrachloro-"@en, "Concentrazione di Tetracloroetilene"@it;
+  ispra-top:name "Concentration of Ethene, 1,1,2,2-tetrachloro-"@en, "Concentrazione di Tetracloroetilene"@it;
+  l0:name "Concentration of Ethene, 1,1,2,2-tetrachloro-"@en, "Concentrazione di Tetracloroetilene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-127-18-4> .
+
+<https://w3id.org/whow/data/observable-properties/129-00-0> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Pyrene"@en, "Concentrazione di Pirene"@it;
+  ispra-top:name "Concentration of Pyrene"@en, "Concentrazione di Pirene"@it;
+  l0:name "Concentration of Pyrene"@en, "Concentrazione di Pirene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-129-00-0> .
+
+<https://w3id.org/whow/data/observable-properties/131-11-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-dimethyl ester"@en,
+    "Concentrazione di Dimetil-ftalato (DMP)"@it;
+  ispra-top:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-dimethyl ester"@en,
+    "Concentrazione di Dimetil-ftalato (DMP)"@it;
+  l0:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-dimethyl ester"@en, "Concentrazione di Dimetil-ftalato (DMP)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-131-11-3> .
+
+<https://w3id.org/whow/data/observable-properties/1330-20-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, dimethyl-"@en, "Concentrazione di Xilene (somma isomeri)"@it;
+  ispra-top:name "Concentration of Benzene, dimethyl-"@en, "Concentrazione di Xilene (somma isomeri)"@it;
+  l0:name "Concentration of Benzene, dimethyl-"@en, "Concentrazione di Xilene (somma isomeri)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-1330-20-7> .
+
+<https://w3id.org/whow/data/observable-properties/134-32-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1-Naphthalenamine"@en, "Concentrazione di 1-Naftilammina"@it;
+  ispra-top:name "Concentration of 1-Naphthalenamine"@en, "Concentrazione di 1-Naftilammina"@it;
+  l0:name "Concentration of 1-Naphthalenamine"@en, "Concentrazione di 1-Naftilammina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-134-32-7> .
+
+<https://w3id.org/whow/data/observable-properties/1344-09-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Silicic acid, sodium salt"@en, "Concentrazione di Silicati reattivi"@it;
+  ispra-top:name "Concentration of Silicic acid, sodium salt"@en, "Concentrazione di Silicati reattivi"@it;
+  l0:name "Concentration of Silicic acid, sodium salt"@en, "Concentrazione di Silicati reattivi"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-1344-09-8> .
+
+<https://w3id.org/whow/data/observable-properties/139-40-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2,N4-bis(1-methylethyl)-"@en,
+    "Concentrazione di Propazina"@it;
+  ispra-top:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2,N4-bis(1-methylethyl)-"@en,
+    "Concentrazione di Propazina"@it;
+  l0:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2,N4-bis(1-methylethyl)-"@en,
+    "Concentrazione di Propazina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-139-40-2> .
+
+<https://w3id.org/whow/data/observable-properties/140-66-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 4-(1,1,3,3-tetramethylbutyl)-"@en, "Concentrazione di para-terz-ottilfenolo"@it;
+  ispra-top:name "Concentration of Phenol, 4-(1,1,3,3-tetramethylbutyl)-"@en, "Concentrazione di para-terz-ottilfenolo"@it;
+  l0:name "Concentration of Phenol, 4-(1,1,3,3-tetramethylbutyl)-"@en, "Concentrazione di para-terz-ottilfenolo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-140-66-9> .
+
+<https://w3id.org/whow/data/observable-properties/14265-44-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phosphate"@en, "Concentrazione di Ortofosfato"@it;
+  ispra-top:name "Concentration of Phosphate"@en, "Concentrazione di Ortofosfato"@it;
+  l0:name "Concentration of Phosphate"@en, "Concentrazione di Ortofosfato"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-14265-44-2> .
+
+<https://w3id.org/whow/data/observable-properties/156-59-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethene, 1,2-dichloro-, (1Z)-"@en, "Concentrazione di Dicloroetilene cis"@it;
+  ispra-top:name "Concentration of Ethene, 1,2-dichloro-, (1Z)-"@en, "Concentrazione di Dicloroetilene cis"@it;
+  l0:name "Concentration of Ethene, 1,2-dichloro-, (1Z)-"@en, "Concentrazione di Dicloroetilene cis"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-156-59-2> .
+
+<https://w3id.org/whow/data/observable-properties/156-60-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethene, 1,2-dichloro-, (1E)-"@en, "Concentrazione di Dicloroetilene trans"@it;
+  ispra-top:name "Concentration of Ethene, 1,2-dichloro-, (1E)-"@en, "Concentrazione di Dicloroetilene trans"@it;
+  l0:name "Concentration of Ethene, 1,2-dichloro-, (1E)-"@en, "Concentrazione di Dicloroetilene trans"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-156-60-5> .
+
+<https://w3id.org/whow/data/observable-properties/1634-04-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Propane, 2-methoxy-2-methyl-"@en, "Concentrazione di MTBE (metil terbutil etere)"@it;
+  ispra-top:name "Concentration of Propane, 2-methoxy-2-methyl-"@en, "Concentrazione di MTBE (metil terbutil etere)"@it;
+  l0:name "Concentration of Propane, 2-methoxy-2-methyl-"@en, "Concentrazione di MTBE (metil terbutil etere)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-1634-04-4> .
+
+<https://w3id.org/whow/data/observable-properties/1698-60-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 3(2H)-Pyridazinone, 5-amino-4-chloro-2-phenyl-"@en, "Concentrazione di Chloridazon"@it;
+  ispra-top:name "Concentration of 3(2H)-Pyridazinone, 5-amino-4-chloro-2-phenyl-"@en,
+    "Concentrazione di Chloridazon"@it;
+  l0:name "Concentration of 3(2H)-Pyridazinone, 5-amino-4-chloro-2-phenyl-"@en, "Concentrazione di Chloridazon"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-1698-60-8> .
+
+<https://w3id.org/whow/data/observable-properties/1717-00-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethane, 1,1-dichloro-1-fluoro-"@en, "Concentrazione di 1,1-Dicloro-1-fluoro-etano (Freon 141)"@it;
+  ispra-top:name "Concentration of Ethane, 1,1-dichloro-1-fluoro-"@en, "Concentrazione di 1,1-Dicloro-1-fluoro-etano (Freon 141)"@it;
+  l0:name "Concentration of Ethane, 1,1-dichloro-1-fluoro-"@en, "Concentrazione di 1,1-Dicloro-1-fluoro-etano (Freon 141)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-1717-00-6> .
+
+<https://w3id.org/whow/data/observable-properties/1763-23-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1-Octanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluoro-"@en,
+    "Concentrazione di PFOS (Perfluoro Octane Sulfonate)"@it;
+  ispra-top:name "Concentration of 1-Octanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluoro-"@en,
+    "Concentrazione di PFOS (Perfluoro Octane Sulfonate)"@it;
+  l0:name "Concentration of 1-Octanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluoro-"@en,
+    "Concentrazione di PFOS (Perfluoro Octane Sulfonate)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-1763-23-1> .
+
+<https://w3id.org/whow/data/observable-properties/1912-24-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-ethyl-N4-(1-methylethyl)-"@en,
+    "Concentrazione di Atrazina"@it;
+  ispra-top:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-ethyl-N4-(1-methylethyl)-"@en,
+    "Concentrazione di Atrazina"@it;
+  l0:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-ethyl-N4-(1-methylethyl)-"@en,
+    "Concentrazione di Atrazina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-1912-24-9> .
+
+<https://w3id.org/whow/data/observable-properties/193-39-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Indeno[1,2,3-cd]pyrene"@en, "Concentrazione di Indeno(1,2,3-cd)pirene"@it;
+  ispra-top:name "Concentration of Indeno[1,2,3-cd]pyrene"@en, "Concentrazione di Indeno(1,2,3-cd)pirene"@it;
+  l0:name "Concentration of Indeno[1,2,3-cd]pyrene"@en, "Concentrazione di Indeno(1,2,3-cd)pirene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-193-39-5> .
+
+<https://w3id.org/whow/data/observable-properties/20001> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: Hardness (total)"@en, "Parametro Osservato: Durezza (totale)"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/20001>;
+  ispra-top:name "Hardness (total)"@en, "Durezza (totale)"@it;
+  l0:name "Hardness (total)"@en, "Durezza (totale)"@it .
+
+<https://w3id.org/whow/data/observable-properties/206-44-0> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Fluoranthene"@en, "Concentrazione di Fluorantene"@it;
+  ispra-top:name "Concentration of Fluoranthene"@en, "Concentrazione di Fluorantene"@it;
+  l0:name "Concentration of Fluoranthene"@en, "Concentrazione di Fluorantene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-206-44-0> .
+
+<https://w3id.org/whow/data/observable-properties/208-96-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Acenaphthylene"@en, "Concentrazione di Acenaftilene"@it;
+  ispra-top:name "Concentration of Acenaphthylene"@en, "Concentrazione di Acenaftilene"@it;
+  l0:name "Concentration of Acenaphthylene"@en, "Concentrazione di Acenaftilene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-208-96-8> .
+
+<https://w3id.org/whow/data/observable-properties/218-01-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Chrysene"@en, "Concentrazione di Crisene"@it;
+  ispra-top:name "Concentration of Chrysene"@en, "Concentrazione di Crisene"@it;
+  l0:name "Concentration of Chrysene"@en, "Concentrazione di Crisene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-218-01-9> .
+
+<https://w3id.org/whow/data/observable-properties/25057-89-0> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1H-2,1,3-Benzothiadiazin-4(3H)-one, 3-(1-methylethyl)-, 2,2-dioxide"@en,
+    "Concentrazione di Bentazone"@it;
+  ispra-top:name "Concentration of 1H-2,1,3-Benzothiadiazin-4(3H)-one, 3-(1-methylethyl)-, 2,2-dioxide"@en,
+    "Concentrazione di Bentazone"@it;
+  l0:name "Concentration of 1H-2,1,3-Benzothiadiazin-4(3H)-one, 3-(1-methylethyl)-, 2,2-dioxide"@en,
+    "Concentrazione di Bentazone"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-25057-89-0> .
+
+<https://w3id.org/whow/data/observable-properties/2706-90-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Pentanoic acid, 2,2,3,3,4,4,5,5,5-nonafluoro-"@en, "Concentrazione di PFPeA (Perfluoro Pentanoic Acid)"@it;
+  ispra-top:name "Concentration of Pentanoic acid, 2,2,3,3,4,4,5,5,5-nonafluoro-"@en,
+    "Concentrazione di PFPeA (Perfluoro Pentanoic Acid)"@it;
+  l0:name "Concentration of Pentanoic acid, 2,2,3,3,4,4,5,5,5-nonafluoro-"@en, "Concentrazione di PFPeA (Perfluoro Pentanoic Acid)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-2706-90-3> .
+
+<https://w3id.org/whow/data/observable-properties/288-88-0> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1H-1,2,4-Triazole"@en, "Concentrazione di M.Mt.T.D."@it;
+  ispra-top:name "Concentration of 1H-1,2,4-Triazole"@en, "Concentrazione di M.Mt.T.D."@it;
+  l0:name "Concentration of 1H-1,2,4-Triazole"@en, "Concentrazione di M.Mt.T.D."@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-288-88-0> .
+
+<https://w3id.org/whow/data/observable-properties/307-24-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Hexanoic acid, 2,2,3,3,4,4,5,5,6,6,6-undecafluoro-"@en,
+    "Concentrazione di PFHxA (Perfluoro Hexanoic Acid)"@it;
+  ispra-top:name "Concentration of Hexanoic acid, 2,2,3,3,4,4,5,5,6,6,6-undecafluoro-"@en,
+    "Concentrazione di PFHxA (Perfluoro Hexanoic Acid)"@it;
+  l0:name "Concentration of Hexanoic acid, 2,2,3,3,4,4,5,5,6,6,6-undecafluoro-"@en,
+    "Concentrazione di PFHxA (Perfluoro Hexanoic Acid)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-307-24-4> .
+
+<https://w3id.org/whow/data/observable-properties/307-55-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Dodecanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-tricosafluoro-"@en,
+    "Concentrazione di PFDoA (Perfluoro Dodecanoic Acid)"@it;
+  ispra-top:name "Concentration of Dodecanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-tricosafluoro-"@en,
+    "Concentrazione di PFDoA (Perfluoro Dodecanoic Acid)"@it;
+  l0:name "Concentration of Dodecanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-tricosafluoro-"@en,
+    "Concentrazione di PFDoA (Perfluoro Dodecanoic Acid)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-307-55-1> .
+
+<https://w3id.org/whow/data/observable-properties/319-84-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.beta.,4.alpha.,5.beta.,6.beta.)-"@en,
+    "Concentrazione di HCH alfa"@it;
+  ispra-top:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.beta.,4.alpha.,5.beta.,6.beta.)-"@en,
+    "Concentrazione di HCH alfa"@it;
+  l0:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.beta.,4.alpha.,5.beta.,6.beta.)-"@en,
+    "Concentrazione di HCH alfa"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-319-84-6> .
+
+<https://w3id.org/whow/data/observable-properties/319-85-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.beta.,3.alpha.,4.beta.,5.alpha.,6.beta.)-"@en,
+    "Concentrazione di HCH-beta"@it;
+  ispra-top:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.beta.,3.alpha.,4.beta.,5.alpha.,6.beta.)-"@en,
+    "Concentrazione di HCH-beta"@it;
+  l0:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.beta.,3.alpha.,4.beta.,5.alpha.,6.beta.)-"@en,
+    "Concentrazione di HCH-beta"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-319-85-7> .
+
+<https://w3id.org/whow/data/observable-properties/319-86-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.alpha.,4.beta.,5.alpha.,6.beta.)-"@en,
+    "Concentrazione di HCH delta"@it;
+  ispra-top:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.alpha.,4.beta.,5.alpha.,6.beta.)-"@en,
+    "Concentrazione di HCH delta"@it;
+  l0:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.alpha.,4.beta.,5.alpha.,6.beta.)-"@en,
+    "Concentrazione di HCH delta"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-319-86-8> .
+
+<https://w3id.org/whow/data/observable-properties/330-54-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Urea, N'-(3,4-dichlorophenyl)-N,N-dimethyl-"@en, "Concentrazione di Diuron"@it;
+  ispra-top:name "Concentration of Urea, N'-(3,4-dichlorophenyl)-N,N-dimethyl-"@en,
+    "Concentrazione di Diuron"@it;
+  l0:name "Concentration of Urea, N'-(3,4-dichlorophenyl)-N,N-dimethyl-"@en, "Concentrazione di Diuron"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-330-54-1> .
+
+<https://w3id.org/whow/data/observable-properties/330-55-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Urea, N'-(3,4-dichlorophenyl)-N-methoxy-N-methyl-"@en,
+    "Concentrazione di Linuron"@it;
+  ispra-top:name "Concentration of Urea, N'-(3,4-dichlorophenyl)-N-methoxy-N-methyl-"@en,
+    "Concentrazione di Linuron"@it;
+  l0:name "Concentration of Urea, N'-(3,4-dichlorophenyl)-N-methoxy-N-methyl-"@en, "Concentrazione di Linuron"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-330-55-2> .
+
+<https://w3id.org/whow/data/observable-properties/333-41-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phosphorothioic acid, O,O-diethyl O-[6-methyl-2-(1-methylethyl)-4-pyrimidinyl] ester"@en,
+    "Concentrazione di Diazinone"@it;
+  ispra-top:name "Concentration of Phosphorothioic acid, O,O-diethyl O-[6-methyl-2-(1-methylethyl)-4-pyrimidinyl] ester"@en,
+    "Concentrazione di Diazinone"@it;
+  l0:name "Concentration of Phosphorothioic acid, O,O-diethyl O-[6-methyl-2-(1-methylethyl)-4-pyrimidinyl] ester"@en,
+    "Concentrazione di Diazinone"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-333-41-5> .
+
+<https://w3id.org/whow/data/observable-properties/335-67-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Octanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-pentadecafluoro-"@en,
+    "Concentrazione di PFOA (Perfluoro Octanoic Acid)"@it;
+  ispra-top:name "Concentration of Octanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-pentadecafluoro-"@en,
+    "Concentrazione di PFOA (Perfluoro Octanoic Acid)"@it;
+  l0:name "Concentration of Octanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-pentadecafluoro-"@en,
+    "Concentrazione di PFOA (Perfluoro Octanoic Acid)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-335-67-1> .
+
+<https://w3id.org/whow/data/observable-properties/335-76-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Decanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-nonadecafluoro-"@en,
+    "Concentrazione di PFDA (Perfluoro Decanoic Acid)"@it;
+  ispra-top:name "Concentration of Decanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-nonadecafluoro-"@en,
+    "Concentrazione di PFDA (Perfluoro Decanoic Acid)"@it;
+  l0:name "Concentration of Decanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-nonadecafluoro-"@en,
+    "Concentrazione di PFDA (Perfluoro Decanoic Acid)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-335-76-2> .
+
+<https://w3id.org/whow/data/observable-properties/355-46-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1-Hexanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,6-tridecafluoro-"@en,
+    "Concentrazione di PFHxS (Perfluoro Hexane Sulfonate)"@it;
+  ispra-top:name "Concentration of 1-Hexanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,6-tridecafluoro-"@en,
+    "Concentrazione di PFHxS (Perfluoro Hexane Sulfonate)"@it;
+  l0:name "Concentration of 1-Hexanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,6-tridecafluoro-"@en,
+    "Concentrazione di PFHxS (Perfluoro Hexane Sulfonate)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-355-46-4> .
+
+<https://w3id.org/whow/data/observable-properties/375-22-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Butanoic acid, 2,2,3,3,4,4,4-heptafluoro-"@en, "Concentrazione di PFBA (Perfluoro Butanoic Acid)"@it;
+  ispra-top:name "Concentration of Butanoic acid, 2,2,3,3,4,4,4-heptafluoro-"@en, "Concentrazione di PFBA (Perfluoro Butanoic Acid)"@it;
+  l0:name "Concentration of Butanoic acid, 2,2,3,3,4,4,4-heptafluoro-"@en, "Concentrazione di PFBA (Perfluoro Butanoic Acid)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-375-22-4> .
+
+<https://w3id.org/whow/data/observable-properties/375-73-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1-Butanesulfonic acid, 1,1,2,2,3,3,4,4,4-nonafluoro-"@en,
+    "Concentrazione di PFBS (Perfluoro Butane Sulfonate)"@it;
+  ispra-top:name "Concentration of 1-Butanesulfonic acid, 1,1,2,2,3,3,4,4,4-nonafluoro-"@en,
+    "Concentrazione di PFBS (Perfluoro Butane Sulfonate)"@it;
+  l0:name "Concentration of 1-Butanesulfonic acid, 1,1,2,2,3,3,4,4,4-nonafluoro-"@en,
+    "Concentrazione di PFBS (Perfluoro Butane Sulfonate)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-375-73-5> .
+
+<https://w3id.org/whow/data/observable-properties/375-85-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Heptanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,7-tridecafluoro-"@en,
+    "Concentrazione di PFHpA (Perfluoro Heptanoic Acid)"@it;
+  ispra-top:name "Concentration of Heptanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,7-tridecafluoro-"@en,
+    "Concentrazione di PFHpA (Perfluoro Heptanoic Acid)"@it;
+  l0:name "Concentration of Heptanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,7-tridecafluoro-"@en,
+    "Concentrazione di PFHpA (Perfluoro Heptanoic Acid)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-375-85-9> .
+
+<https://w3id.org/whow/data/observable-properties/375-95-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Nonanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,9-heptadecafluoro-"@en,
+    "Concentrazione di PFNA (Perfluoro Nonanoic Acid)"@it;
+  ispra-top:name "Concentration of Nonanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,9-heptadecafluoro-"@en,
+    "Concentrazione di PFNA (Perfluoro Nonanoic Acid)"@it;
+  l0:name "Concentration of Nonanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,9-heptadecafluoro-"@en,
+    "Concentrazione di PFNA (Perfluoro Nonanoic Acid)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-375-95-1> .
+
+<https://w3id.org/whow/data/observable-properties/465-73-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,4:5,8-Dimethanonaphthalene, 1,2,3,4,10,10-hexachloro-1,4,4a,5,8,8a-hexahydro-, (1R,4S,4aS,5R,8S,8aR)-rel-"@en,
+    "Concentrazione di Isodrin"@it;
+  ispra-top:name "Concentration of 1,4:5,8-Dimethanonaphthalene, 1,2,3,4,10,10-hexachloro-1,4,4a,5,8,8a-hexahydro-, (1R,4S,4aS,5R,8S,8aR)-rel-"@en,
+    "Concentrazione di Isodrin"@it;
+  l0:name "Concentration of 1,4:5,8-Dimethanonaphthalene, 1,2,3,4,10,10-hexachloro-1,4,4a,5,8,8a-hexahydro-, (1R,4S,4aS,5R,8S,8aR)-rel-"@en,
+    "Concentrazione di Isodrin"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-465-73-6> .
+
+<https://w3id.org/whow/data/observable-properties/479-61-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Magnesium, [(2E,7R,11R)-3,7,11,15-tetramethyl-2-hexadecenyl (3S,4S,21R)-9-ethenyl-14-ethyl-21-(methoxycarbonyl)-4,8,13,18-tetramethyl-20-oxo-3-phorbinepropanoato(2-)-.kappa.N23,.kappa.N24,.kappa.N25,.kappa.N26]-, (SP-4-2)-"@en,
+    "Concentrazione di Clorofilla \"a\""@it;
+  ispra-top:name "Concentration of Magnesium, [(2E,7R,11R)-3,7,11,15-tetramethyl-2-hexadecenyl (3S,4S,21R)-9-ethenyl-14-ethyl-21-(methoxycarbonyl)-4,8,13,18-tetramethyl-20-oxo-3-phorbinepropanoato(2-)-.kappa.N23,.kappa.N24,.kappa.N25,.kappa.N26]-, (SP-4-2)-"@en,
+    "Concentrazione di Clorofilla \"a\""@it;
+  l0:name "Concentration of Magnesium, [(2E,7R,11R)-3,7,11,15-tetramethyl-2-hexadecenyl (3S,4S,21R)-9-ethenyl-14-ethyl-21-(methoxycarbonyl)-4,8,13,18-tetramethyl-20-oxo-3-phorbinepropanoato(2-)-.kappa.N23,.kappa.N24,.kappa.N25,.kappa.N26]-, (SP-4-2)-"@en,
+    "Concentrazione di Clorofilla \"a\""@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-479-61-8> .
+
+<https://w3id.org/whow/data/observable-properties/50-29-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1,1'-(2,2,2-trichloroethylidene)bis[4-chloro-"@en,
+    "Concentrazione di p,p'-DDT"@it;
+  ispra-top:name "Concentration of Benzene, 1,1'-(2,2,2-trichloroethylidene)bis[4-chloro-"@en,
+    "Concentrazione di p,p'-DDT"@it;
+  l0:name "Concentration of Benzene, 1,1'-(2,2,2-trichloroethylidene)bis[4-chloro-"@en,
+    "Concentrazione di p,p'-DDT"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-50-29-3> .
+
+<https://w3id.org/whow/data/observable-properties/50-32-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzo[a]pyrene"@en, "Concentrazione di Benzo (a) pirene"@it;
+  ispra-top:name "Concentration of Benzo[a]pyrene"@en, "Concentrazione di Benzo (a) pirene"@it;
+  l0:name "Concentration of Benzo[a]pyrene"@en, "Concentrazione di Benzo (a) pirene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-50-32-8> .
+
+<https://w3id.org/whow/data/observable-properties/51-28-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 2,4-dinitro-"@en, "Concentrazione di 2,4-Dinitrofenolo"@it;
+  ispra-top:name "Concentration of Phenol, 2,4-dinitro-"@en, "Concentrazione di 2,4-Dinitrofenolo"@it;
+  l0:name "Concentration of Phenol, 2,4-dinitro-"@en, "Concentrazione di 2,4-Dinitrofenolo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-51-28-5> .
+
+<https://w3id.org/whow/data/observable-properties/51235-04-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,3,5-Triazine-2,4(1H,3H)-dione, 3-cyclohexyl-6-(dimethylamino)-1-methyl-"@en,
+    "Concentrazione di Esazinone"@it;
+  ispra-top:name "Concentration of 1,3,5-Triazine-2,4(1H,3H)-dione, 3-cyclohexyl-6-(dimethylamino)-1-methyl-"@en,
+    "Concentrazione di Esazinone"@it;
+  l0:name "Concentration of 1,3,5-Triazine-2,4(1H,3H)-dione, 3-cyclohexyl-6-(dimethylamino)-1-methyl-"@en,
+    "Concentrazione di Esazinone"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-51235-04-2> .
+
+<https://w3id.org/whow/data/observable-properties/53-70-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Dibenz[a,h]anthracene"@en, "Concentrazione di Dibenzo(a,h)antracene"@it;
+  ispra-top:name "Concentration of Dibenz[a,h]anthracene"@en, "Concentrazione di Dibenzo(a,h)antracene"@it;
+  l0:name "Concentration of Dibenz[a,h]anthracene"@en, "Concentrazione di Dibenzo(a,h)antracene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-53-70-3> .
+
+<https://w3id.org/whow/data/observable-properties/534-52-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 2-methyl-4,6-dinitro-"@en, "Concentrazione di 2-Metil-4,6-dinitrofenolo (DNOC)"@it;
+  ispra-top:name "Concentration of Phenol, 2-methyl-4,6-dinitro-"@en, "Concentrazione di 2-Metil-4,6-dinitrofenolo (DNOC)"@it;
+  l0:name "Concentration of Phenol, 2-methyl-4,6-dinitro-"@en, "Concentrazione di 2-Metil-4,6-dinitrofenolo (DNOC)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-534-52-1> .
+
+<https://w3id.org/whow/data/observable-properties/540-59-0> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethene, 1,2-dichloro-"@en, "Concentrazione di 1,2-dicloroetilene"@it;
+  ispra-top:name "Concentration of Ethene, 1,2-dichloro-"@en, "Concentrazione di 1,2-dicloroetilene"@it;
+  l0:name "Concentration of Ethene, 1,2-dichloro-"@en, "Concentrazione di 1,2-dicloroetilene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-540-59-0> .
+
+<https://w3id.org/whow/data/observable-properties/541-73-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1,3-dichloro-"@en, "Concentrazione di 1,3 Diclorobenzene"@it;
+  ispra-top:name "Concentration of Benzene, 1,3-dichloro-"@en, "Concentrazione di 1,3 Diclorobenzene"@it;
+  l0:name "Concentration of Benzene, 1,3-dichloro-"@en, "Concentrazione di 1,3 Diclorobenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-541-73-1> .
+
+<https://w3id.org/whow/data/observable-properties/56-23-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Methane, tetrachloro-"@en, "Concentrazione di Tetracloruro di carbonio"@it;
+  ispra-top:name "Concentration of Methane, tetrachloro-"@en, "Concentrazione di Tetracloruro di carbonio"@it;
+  l0:name "Concentration of Methane, tetrachloro-"@en, "Concentrazione di Tetracloruro di carbonio"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-56-23-5> .
+
+<https://w3id.org/whow/data/observable-properties/56-55-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benz[a]anthracene"@en, "Concentrazione di Benzo(a)antracene"@it;
+  ispra-top:name "Concentration of Benz[a]anthracene"@en, "Concentrazione di Benzo(a)antracene"@it;
+  l0:name "Concentration of Benz[a]anthracene"@en, "Concentrazione di Benzo(a)antracene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-56-55-3> .
+
+<https://w3id.org/whow/data/observable-properties/57-12-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Cyanide"@en, "Concentrazione di Cianuri liberi"@it;
+  ispra-top:name "Concentration of Cyanide"@en, "Concentrazione di Cianuri liberi"@it;
+  l0:name "Concentration of Cyanide"@en, "Concentrazione di Cianuri liberi"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-57-12-5> .
+
+<https://w3id.org/whow/data/observable-properties/57-63-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 19-Norpregna-1,3,5(10)-trien-20-yne-3,17-diol, (17.alpha.)-"@en,
+    "Concentrazione di 17-alfa-etinilestradiolo"@it;
+  ispra-top:name "Concentration of 19-Norpregna-1,3,5(10)-trien-20-yne-3,17-diol, (17.alpha.)-"@en,
+    "Concentrazione di 17-alfa-etinilestradiolo"@it;
+  l0:name "Concentration of 19-Norpregna-1,3,5(10)-trien-20-yne-3,17-diol, (17.alpha.)-"@en,
+    "Concentrazione di 17-alfa-etinilestradiolo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-57-63-6> .
+
+<https://w3id.org/whow/data/observable-properties/58-89-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.beta.,4.alpha.,5.alpha.,6.beta.)-"@en,
+    "Concentrazione di HCH gamma (lindano)"@it;
+  ispra-top:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.beta.,4.alpha.,5.alpha.,6.beta.)-"@en,
+    "Concentrazione di HCH gamma (lindano)"@it;
+  l0:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.beta.,4.alpha.,5.alpha.,6.beta.)-"@en,
+    "Concentrazione di HCH gamma (lindano)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-58-89-9> .
+
+<https://w3id.org/whow/data/observable-properties/59-50-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 4-chloro-3-methyl-"@en, "Concentrazione di 4-Cloro-3-metilfenolo"@it;
+  ispra-top:name "Concentration of Phenol, 4-chloro-3-methyl-"@en, "Concentrazione di 4-Cloro-3-metilfenolo"@it;
+  l0:name "Concentration of Phenol, 4-chloro-3-methyl-"@en, "Concentrazione di 4-Cloro-3-metilfenolo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-59-50-7> .
+
+<https://w3id.org/whow/data/observable-properties/5915-41-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-(1,1-dimethylethyl)-N4-ethyl-"@en,
+    "Concentrazione di Terbutilazina"@it;
+  ispra-top:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-(1,1-dimethylethyl)-N4-ethyl-"@en,
+    "Concentrazione di Terbutilazina"@it;
+  l0:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-(1,1-dimethylethyl)-N4-ethyl-"@en,
+    "Concentrazione di Terbutilazina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-5915-41-3> .
+
+<https://w3id.org/whow/data/observable-properties/60-51-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phosphorodithioic acid, O,O-dimethyl S-[2-(methylamino)-2-oxoethyl] ester"@en,
+    "Concentrazione di Dimetoato"@it;
+  ispra-top:name "Concentration of Phosphorodithioic acid, O,O-dimethyl S-[2-(methylamino)-2-oxoethyl] ester"@en,
+    "Concentrazione di Dimetoato"@it;
+  l0:name "Concentration of Phosphorodithioic acid, O,O-dimethyl S-[2-(methylamino)-2-oxoethyl] ester"@en,
+    "Concentrazione di Dimetoato"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-60-51-5> .
+
+<https://w3id.org/whow/data/observable-properties/608-27-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, 2,3-dichloro-"@en, "Concentrazione di 2,3-Dicloroanilina"@it;
+  ispra-top:name "Concentration of Benzenamine, 2,3-dichloro-"@en, "Concentrazione di 2,3-Dicloroanilina"@it;
+  l0:name "Concentration of Benzenamine, 2,3-dichloro-"@en, "Concentrazione di 2,3-Dicloroanilina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-608-27-5> .
+
+<https://w3id.org/whow/data/observable-properties/608-93-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1,2,3,4,5-pentachloro-"@en, "Concentrazione di Pentaclorobenzene"@it;
+  ispra-top:name "Concentration of Benzene, 1,2,3,4,5-pentachloro-"@en, "Concentrazione di Pentaclorobenzene"@it;
+  l0:name "Concentration of Benzene, 1,2,3,4,5-pentachloro-"@en, "Concentrazione di Pentaclorobenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-608-93-5> .
+
+<https://w3id.org/whow/data/observable-properties/62-53-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine"@en, "Concentrazione di Anilina"@it;
+  ispra-top:name "Concentration of Benzenamine"@en, "Concentrazione di Anilina"@it;
+  l0:name "Concentration of Benzenamine"@en, "Concentrazione di Anilina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-62-53-3> .
+
+<https://w3id.org/whow/data/observable-properties/62-73-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phosphoric acid, 2,2-dichloroethenyl dimethyl ester"@en,
+    "Concentrazione di Diclorvos"@it;
+  ispra-top:name "Concentration of Phosphoric acid, 2,2-dichloroethenyl dimethyl ester"@en,
+    "Concentrazione di Diclorvos"@it;
+  l0:name "Concentration of Phosphoric acid, 2,2-dichloroethenyl dimethyl ester"@en,
+    "Concentrazione di Diclorvos"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-62-73-7> .
+
+<https://w3id.org/whow/data/observable-properties/635-22-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, 4-chloro-3-nitro-"@en, "Concentrazione di 4-Cloro-3-Nitroanolina"@it;
+  ispra-top:name "Concentration of Benzenamine, 4-chloro-3-nitro-"@en, "Concentrazione di 4-Cloro-3-Nitroanolina"@it;
+  l0:name "Concentration of Benzenamine, 4-chloro-3-nitro-"@en, "Concentrazione di 4-Cloro-3-Nitroanolina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-635-22-3> .
+
+<https://w3id.org/whow/data/observable-properties/636-30-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, 2,4,5-trichloro-"@en, "Concentrazione di 2,4,5-Tricloroanilina"@it;
+  ispra-top:name "Concentration of Benzenamine, 2,4,5-trichloro-"@en, "Concentrazione di 2,4,5-Tricloroanilina"@it;
+  l0:name "Concentration of Benzenamine, 2,4,5-trichloro-"@en, "Concentrazione di 2,4,5-Tricloroanilina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-636-30-6> .
+
+<https://w3id.org/whow/data/observable-properties/637-92-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Propane, 2-ethoxy-2-methyl-"@en, "Concentrazione di ETBE ( etil terbutil etere )"@it;
+  ispra-top:name "Concentration of Propane, 2-ethoxy-2-methyl-"@en, "Concentrazione di ETBE ( etil terbutil etere )"@it;
+  l0:name "Concentration of Propane, 2-ethoxy-2-methyl-"@en, "Concentrazione di ETBE ( etil terbutil etere )"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-637-92-3> .
+
+<https://w3id.org/whow/data/observable-properties/67-66-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Methane, trichloro-"@en, "Concentrazione di Triclorometano"@it;
+  ispra-top:name "Concentration of Methane, trichloro-"@en, "Concentrazione di Triclorometano"@it;
+  l0:name "Concentration of Methane, trichloro-"@en, "Concentrazione di Triclorometano"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-67-66-3> .
+
+<https://w3id.org/whow/data/observable-properties/71-43-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene"@en, "Concentrazione di Benzene"@it;
+  ispra-top:name "Concentration of Benzene"@en, "Concentrazione di Benzene"@it;
+  l0:name "Concentration of Benzene"@en, "Concentrazione di Benzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-71-43-2> .
+
+<https://w3id.org/whow/data/observable-properties/71-52-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: Alkalinity"@en, "Parametro Osservato: Alcalinità"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/71-52-3>;
+  ispra-top:name "Alkalinity"@en, "Alcalinità"@it;
+  l0:name "Alkalinity"@en, "Alcalinità"@it .
+
+<https://w3id.org/whow/data/observable-properties/71-55-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethane, 1,1,1-trichloro-"@en, "Concentrazione di Tricloroetano 1,1,1"@it;
+  ispra-top:name "Concentration of Ethane, 1,1,1-trichloro-"@en, "Concentrazione di Tricloroetano 1,1,1"@it;
+  l0:name "Concentration of Ethane, 1,1,1-trichloro-"@en, "Concentrazione di Tricloroetano 1,1,1"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-71-55-6> .
+
+<https://w3id.org/whow/data/observable-properties/7286-69-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-ethyl-N4-(1-methylpropyl)-"@en,
+    "Concentrazione di Secbutilazina"@it;
+  ispra-top:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-ethyl-N4-(1-methylpropyl)-"@en,
+    "Concentrazione di Secbutilazina"@it;
+  l0:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-ethyl-N4-(1-methylpropyl)-"@en,
+    "Concentrazione di Secbutilazina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7286-69-3> .
+
+<https://w3id.org/whow/data/observable-properties/7439-89-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Iron"@en, "Concentrazione di Ferro"@it;
+  ispra-top:name "Concentration of Iron"@en, "Concentrazione di Ferro"@it;
+  l0:name "Concentration of Iron"@en, "Concentrazione di Ferro"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7439-89-6> .
+
+<https://w3id.org/whow/data/observable-properties/7439-92-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Lead"@en, "Concentrazione di Piombo"@it;
+  ispra-top:name "Concentration of Lead"@en, "Concentrazione di Piombo"@it;
+  l0:name "Concentration of Lead"@en, "Concentrazione di Piombo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7439-92-1> .
+
+<https://w3id.org/whow/data/observable-properties/7439-95-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Magnesium"@en, "Concentrazione di Magnesio"@it;
+  ispra-top:name "Concentration of Magnesium"@en, "Concentrazione di Magnesio"@it;
+  l0:name "Concentration of Magnesium"@en, "Concentrazione di Magnesio"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7439-95-4> .
+
+<https://w3id.org/whow/data/observable-properties/7439-97-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Mercury"@en, "Concentrazione di Mercurio"@it;
+  ispra-top:name "Concentration of Mercury"@en, "Concentrazione di Mercurio"@it;
+  l0:name "Concentration of Mercury"@en, "Concentrazione di Mercurio"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7439-97-6> .
+
+<https://w3id.org/whow/data/observable-properties/7440-02-0> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Nickel"@en, "Concentrazione di Nichel"@it;
+  ispra-top:name "Concentration of Nickel"@en, "Concentrazione di Nichel"@it;
+  l0:name "Concentration of Nickel"@en, "Concentrazione di Nichel"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7440-02-0> .
+
+<https://w3id.org/whow/data/observable-properties/7440-09-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Potassium"@en, "Concentrazione di Potassio"@it;
+  ispra-top:name "Concentration of Potassium"@en, "Concentrazione di Potassio"@it;
+  l0:name "Concentration of Potassium"@en, "Concentrazione di Potassio"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7440-09-7> .
+
+<https://w3id.org/whow/data/observable-properties/7440-23-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Sodium"@en, "Concentrazione di Sodio"@it;
+  ispra-top:name "Concentration of Sodium"@en, "Concentrazione di Sodio"@it;
+  l0:name "Concentration of Sodium"@en, "Concentrazione di Sodio"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7440-23-5> .
+
+<https://w3id.org/whow/data/observable-properties/7440-36-0> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Antimony"@en, "Concentrazione di Antimonio"@it;
+  ispra-top:name "Concentration of Antimony"@en, "Concentrazione di Antimonio"@it;
+  l0:name "Concentration of Antimony"@en, "Concentrazione di Antimonio"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7440-36-0> .
+
+<https://w3id.org/whow/data/observable-properties/7440-38-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Arsenic"@en, "Concentrazione di Arsenico"@it;
+  ispra-top:name "Concentration of Arsenic"@en, "Concentrazione di Arsenico"@it;
+  l0:name "Concentration of Arsenic"@en, "Concentrazione di Arsenico"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7440-38-2> .
+
+<https://w3id.org/whow/data/observable-properties/7440-42-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Boron"@en, "Concentrazione di Boro"@it;
+  ispra-top:name "Concentration of Boron"@en, "Concentrazione di Boro"@it;
+  l0:name "Concentration of Boron"@en, "Concentrazione di Boro"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7440-42-8> .
+
+<https://w3id.org/whow/data/observable-properties/7440-43-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Cadmium"@en, "Concentrazione di Cadmio"@it;
+  ispra-top:name "Concentration of Cadmium"@en, "Concentrazione di Cadmio"@it;
+  l0:name "Concentration of Cadmium"@en, "Concentrazione di Cadmio"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7440-43-9> .
+
+<https://w3id.org/whow/data/observable-properties/7440-47-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Chromium"@en, "Concentrazione di Cromo totale"@it;
+  ispra-top:name "Concentration of Chromium"@en, "Concentrazione di Cromo totale"@it;
+  l0:name "Concentration of Chromium"@en, "Concentrazione di Cromo totale"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7440-47-3> .
+
+<https://w3id.org/whow/data/observable-properties/7440-50-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Copper"@en, "Concentrazione di Rame"@it;
+  ispra-top:name "Concentration of Copper"@en, "Concentrazione di Rame"@it;
+  l0:name "Concentration of Copper"@en, "Concentrazione di Rame"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7440-50-8> .
+
+<https://w3id.org/whow/data/observable-properties/7440-62-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Vanadium"@en, "Concentrazione di Vanadio"@it;
+  ispra-top:name "Concentration of Vanadium"@en, "Concentrazione di Vanadio"@it;
+  l0:name "Concentration of Vanadium"@en, "Concentrazione di Vanadio"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7440-62-2> .
+
+<https://w3id.org/whow/data/observable-properties/7440-66-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Zinc"@en, "Concentrazione di Zinco"@it;
+  ispra-top:name "Concentration of Zinc"@en, "Concentrazione di Zinco"@it;
+  l0:name "Concentration of Zinc"@en, "Concentrazione di Zinco"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7440-66-6> .
+
+<https://w3id.org/whow/data/observable-properties/7440-70-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Calcium"@en, "Concentrazione di Calcio"@it;
+  ispra-top:name "Concentration of Calcium"@en, "Concentrazione di Calcio"@it;
+  l0:name "Concentration of Calcium"@en, "Concentrazione di Calcio"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7440-70-2> .
+
+<https://w3id.org/whow/data/observable-properties/75-01-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethene, chloro-"@en, "Concentrazione di Cloruro di Vinile"@it;
+  ispra-top:name "Concentration of Ethene, chloro-"@en, "Concentrazione di Cloruro di Vinile"@it;
+  l0:name "Concentration of Ethene, chloro-"@en, "Concentrazione di Cloruro di Vinile"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-75-01-4> .
+
+<https://w3id.org/whow/data/observable-properties/75-09-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Methane, dichloro-"@en, "Concentrazione di Diclorometano"@it;
+  ispra-top:name "Concentration of Methane, dichloro-"@en, "Concentrazione di Diclorometano"@it;
+  l0:name "Concentration of Methane, dichloro-"@en, "Concentrazione di Diclorometano"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-75-09-2> .
+
+<https://w3id.org/whow/data/observable-properties/75-25-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Methane, tribromo-"@en, "Concentrazione di Tribromometano"@it;
+  ispra-top:name "Concentration of Methane, tribromo-"@en, "Concentrazione di Tribromometano"@it;
+  l0:name "Concentration of Methane, tribromo-"@en, "Concentrazione di Tribromometano"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-75-25-2> .
+
+<https://w3id.org/whow/data/observable-properties/75-27-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Methane, bromodichloro-"@en, "Concentrazione di Bromodiclorometano"@it;
+  ispra-top:name "Concentration of Methane, bromodichloro-"@en, "Concentrazione di Bromodiclorometano"@it;
+  l0:name "Concentration of Methane, bromodichloro-"@en, "Concentrazione di Bromodiclorometano"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-75-27-4> .
+
+<https://w3id.org/whow/data/observable-properties/75-34-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethane, 1,1-dichloro-"@en, "Concentrazione di Dicloroetano 1,1"@it;
+  ispra-top:name "Concentration of Ethane, 1,1-dichloro-"@en, "Concentrazione di Dicloroetano 1,1"@it;
+  l0:name "Concentration of Ethane, 1,1-dichloro-"@en, "Concentrazione di Dicloroetano 1,1"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-75-34-3> .
+
+<https://w3id.org/whow/data/observable-properties/75-35-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethene, 1,1-dichloro-"@en, "Concentrazione di 1,1-Dicloroetilene"@it;
+  ispra-top:name "Concentration of Ethene, 1,1-dichloro-"@en, "Concentrazione di 1,1-Dicloroetilene"@it;
+  l0:name "Concentration of Ethene, 1,1-dichloro-"@en, "Concentrazione di 1,1-Dicloroetilene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-75-35-4> .
+
+<https://w3id.org/whow/data/observable-properties/7664-41-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ammonia"@en, "Concentrazione di Ammoniaca (non ionizzata)"@it;
+  ispra-top:name "Concentration of Ammonia"@en, "Concentrazione di Ammoniaca (non ionizzata)"@it;
+  l0:name "Concentration of Ammonia"@en, "Concentrazione di Ammoniaca (non ionizzata)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7664-41-7> .
+
+<https://w3id.org/whow/data/observable-properties/7723-14-0> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phosphorus"@en, "Concentrazione di Fosforo Totale"@it;
+  ispra-top:name "Concentration of Phosphorus"@en, "Concentrazione di Fosforo Totale"@it;
+  l0:name "Concentration of Phosphorus"@en, "Concentrazione di Fosforo Totale"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7723-14-0> .
+
+<https://w3id.org/whow/data/observable-properties/7782-44-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Oxygen"@en, "Concentrazione di Ossigeno disciolto"@it;
+  ispra-top:name "Concentration of Oxygen"@en, "Concentrazione di Ossigeno disciolto"@it;
+  l0:name "Concentration of Oxygen"@en, "Concentrazione di Ossigeno disciolto"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7782-44-7> .
+
+<https://w3id.org/whow/data/observable-properties/7782-49-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Selenium"@en, "Concentrazione di Selenio"@it;
+  ispra-top:name "Concentration of Selenium"@en, "Concentrazione di Selenio"@it;
+  l0:name "Concentration of Selenium"@en, "Concentrazione di Selenio"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-7782-49-2> .
+
+<https://w3id.org/whow/data/observable-properties/78-87-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Propane, 1,2-dichloro-"@en, "Concentrazione di 1,2-dicloropropano"@it;
+  ispra-top:name "Concentration of Propane, 1,2-dichloro-"@en, "Concentrazione di 1,2-dicloropropano"@it;
+  l0:name "Concentration of Propane, 1,2-dichloro-"@en, "Concentrazione di 1,2-dicloropropano"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-78-87-5> .
+
+<https://w3id.org/whow/data/observable-properties/79-00-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethane, 1,1,2-trichloro-"@en, "Concentrazione di Tricloroetano 1,1,2"@it;
+  ispra-top:name "Concentration of Ethane, 1,1,2-trichloro-"@en, "Concentrazione di Tricloroetano 1,1,2"@it;
+  l0:name "Concentration of Ethane, 1,1,2-trichloro-"@en, "Concentrazione di Tricloroetano 1,1,2"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-79-00-5> .
+
+<https://w3id.org/whow/data/observable-properties/79-01-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethene, 1,1,2-trichloro-"@en, "Concentrazione di Tricloroetilene"@it;
+  ispra-top:name "Concentration of Ethene, 1,1,2-trichloro-"@en, "Concentrazione di Tricloroetilene"@it;
+  l0:name "Concentration of Ethene, 1,1,2-trichloro-"@en, "Concentrazione di Tricloroetilene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-79-01-6> .
+
+<https://w3id.org/whow/data/observable-properties/79-34-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Ethane, 1,1,2,2-tetrachloro-"@en, "Concentrazione di Tetracloroetano 1,1,2,2"@it;
+  ispra-top:name "Concentration of Ethane, 1,1,2,2-tetrachloro-"@en, "Concentrazione di Tetracloroetano 1,1,2,2"@it;
+  l0:name "Concentration of Ethane, 1,1,2,2-tetrachloro-"@en, "Concentrazione di Tetracloroetano 1,1,2,2"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-79-34-5> .
+
+<https://w3id.org/whow/data/observable-properties/80-05-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 4,4'-(1-methylethylidene)bis-"@en, "Concentrazione di Bisfenolo A"@it;
+  ispra-top:name "Concentration of Phenol, 4,4'-(1-methylethylidene)bis-"@en, "Concentrazione di Bisfenolo A"@it;
+  l0:name "Concentration of Phenol, 4,4'-(1-methylethylidene)bis-"@en, "Concentrazione di Bisfenolo A"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-80-05-7> .
+
+<https://w3id.org/whow/data/observable-properties/83-32-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Acenaphthylene, 1,2-dihydro-"@en, "Concentrazione di Acenaftene"@it;
+  ispra-top:name "Concentration of Acenaphthylene, 1,2-dihydro-"@en, "Concentrazione di Acenaftene"@it;
+  l0:name "Concentration of Acenaphthylene, 1,2-dihydro-"@en, "Concentrazione di Acenaftene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-83-32-9> .
+
+<https://w3id.org/whow/data/observable-properties/84-66-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-diethyl ester"@en,
+    "Concentrazione di Dietil-Ftalato (DEP)"@it;
+  ispra-top:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-diethyl ester"@en,
+    "Concentrazione di Dietil-Ftalato (DEP)"@it;
+  l0:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-diethyl ester"@en, "Concentrazione di Dietil-Ftalato (DEP)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-84-66-2> .
+
+<https://w3id.org/whow/data/observable-properties/84-69-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-bis(2-methylpropyl) ester"@en,
+    "Concentrazione di Bis(2-metilpropil)ftalato"@it;
+  ispra-top:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-bis(2-methylpropyl) ester"@en,
+    "Concentrazione di Bis(2-metilpropil)ftalato"@it;
+  l0:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-bis(2-methylpropyl) ester"@en,
+    "Concentrazione di Bis(2-metilpropil)ftalato"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-84-69-5> .
+
+<https://w3id.org/whow/data/observable-properties/84-74-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-dibutyl ester"@en,
+    "Concentrazione di Dibutil-ftalato"@it;
+  ispra-top:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-dibutyl ester"@en,
+    "Concentrazione di Dibutil-ftalato"@it;
+  l0:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-dibutyl ester"@en, "Concentrazione di Dibutil-ftalato"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-84-74-2> .
+
+<https://w3id.org/whow/data/observable-properties/85-01-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenanthrene"@en, "Concentrazione di Fenantrene"@it;
+  ispra-top:name "Concentration of Phenanthrene"@en, "Concentrazione di Fenantrene"@it;
+  l0:name "Concentration of Phenanthrene"@en, "Concentrazione di Fenantrene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-85-01-8> .
+
+<https://w3id.org/whow/data/observable-properties/85-68-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,2-Benzenedicarboxylic acid, 1-butyl 2-(phenylmethyl) ester"@en,
+    "Concentrazione di Benzil-butil-ftalato"@it;
+  ispra-top:name "Concentration of 1,2-Benzenedicarboxylic acid, 1-butyl 2-(phenylmethyl) ester"@en,
+    "Concentrazione di Benzil-butil-ftalato"@it;
+  l0:name "Concentration of 1,2-Benzenedicarboxylic acid, 1-butyl 2-(phenylmethyl) ester"@en,
+    "Concentrazione di Benzil-butil-ftalato"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-85-68-7> .
+
+<https://w3id.org/whow/data/observable-properties/86-73-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 9H-Fluorene"@en, "Concentrazione di Fluorene"@it;
+  ispra-top:name "Concentration of 9H-Fluorene"@en, "Concentrazione di Fluorene"@it;
+  l0:name "Concentration of 9H-Fluorene"@en, "Concentrazione di Fluorene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-86-73-7> .
+
+<https://w3id.org/whow/data/observable-properties/87-61-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1,2,3-trichloro-"@en, "Concentrazione di 1,2,3-Triclorobenzene"@it;
+  ispra-top:name "Concentration of Benzene, 1,2,3-trichloro-"@en, "Concentrazione di 1,2,3-Triclorobenzene"@it;
+  l0:name "Concentration of Benzene, 1,2,3-trichloro-"@en, "Concentrazione di 1,2,3-Triclorobenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-87-61-6> .
+
+<https://w3id.org/whow/data/observable-properties/87-68-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of 1,3-Butadiene, 1,1,2,3,4,4-hexachloro-"@en, "Concentrazione di Esaclorobutadiene"@it;
+  ispra-top:name "Concentration of 1,3-Butadiene, 1,1,2,3,4,4-hexachloro-"@en, "Concentrazione di Esaclorobutadiene"@it;
+  l0:name "Concentration of 1,3-Butadiene, 1,1,2,3,4,4-hexachloro-"@en, "Concentrazione di Esaclorobutadiene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-87-68-3> .
+
+<https://w3id.org/whow/data/observable-properties/87-86-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 2,3,4,5,6-pentachloro-"@en, "Concentrazione di Pentaclorofenolo"@it;
+  ispra-top:name "Concentration of Phenol, 2,3,4,5,6-pentachloro-"@en, "Concentrazione di Pentaclorofenolo"@it;
+  l0:name "Concentration of Phenol, 2,3,4,5,6-pentachloro-"@en, "Concentrazione di Pentaclorofenolo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-87-86-5> .
+
+<https://w3id.org/whow/data/observable-properties/88-06-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 2,4,6-trichloro-"@en, "Concentrazione di 2,4,6-Triclorofenolo"@it;
+  ispra-top:name "Concentration of Phenol, 2,4,6-trichloro-"@en, "Concentrazione di 2,4,6-Triclorofenolo"@it;
+  l0:name "Concentration of Phenol, 2,4,6-trichloro-"@en, "Concentrazione di 2,4,6-Triclorofenolo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-88-06-2> .
+
+<https://w3id.org/whow/data/observable-properties/88-73-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1-chloro-2-nitro-"@en, "Concentrazione di 1-Cloro-2-nitrobenzene"@it;
+  ispra-top:name "Concentration of Benzene, 1-chloro-2-nitro-"@en, "Concentrazione di 1-Cloro-2-nitrobenzene"@it;
+  l0:name "Concentration of Benzene, 1-chloro-2-nitro-"@en, "Concentrazione di 1-Cloro-2-nitrobenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-88-73-3> .
+
+<https://w3id.org/whow/data/observable-properties/88-75-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 2-nitro-"@en, "Concentrazione di 2-Nitrofenolo"@it;
+  ispra-top:name "Concentration of Phenol, 2-nitro-"@en, "Concentrazione di 2-Nitrofenolo"@it;
+  l0:name "Concentration of Phenol, 2-nitro-"@en, "Concentrazione di 2-Nitrofenolo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-88-75-5> .
+
+<https://w3id.org/whow/data/observable-properties/89-63-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, 4-chloro-2-nitro-"@en, "Concentrazione di 4-cloro-2-nitroanilina"@it;
+  ispra-top:name "Concentration of Benzenamine, 4-chloro-2-nitro-"@en, "Concentrazione di 4-cloro-2-nitroanilina"@it;
+  l0:name "Concentration of Benzenamine, 4-chloro-2-nitro-"@en, "Concentrazione di 4-cloro-2-nitroanilina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-89-63-4> .
+
+<https://w3id.org/whow/data/observable-properties/91-20-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Naphthalene"@en, "Concentrazione di Naftalene"@it;
+  ispra-top:name "Concentration of Naphthalene"@en, "Concentrazione di Naftalene"@it;
+  l0:name "Concentration of Naphthalene"@en, "Concentrazione di Naftalene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-91-20-3> .
+
+<https://w3id.org/whow/data/observable-properties/93-65-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Propanoic acid, 2-(4-chloro-2-methylphenoxy)-"@en, "Concentrazione di Mecoprop"@it;
+  ispra-top:name "Concentration of Propanoic acid, 2-(4-chloro-2-methylphenoxy)-"@en,
+    "Concentrazione di Mecoprop"@it;
+  l0:name "Concentration of Propanoic acid, 2-(4-chloro-2-methylphenoxy)-"@en, "Concentrazione di Mecoprop"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-93-65-2> .
+
+<https://w3id.org/whow/data/observable-properties/93-76-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Acetic acid, 2-(2,4,5-trichlorophenoxy)-"@en, "Concentrazione di 2,4,5-T"@it;
+  ispra-top:name "Concentration of Acetic acid, 2-(2,4,5-trichlorophenoxy)-"@en, "Concentrazione di 2,4,5-T"@it;
+  l0:name "Concentration of Acetic acid, 2-(2,4,5-trichlorophenoxy)-"@en, "Concentrazione di 2,4,5-T"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-93-76-5> .
+
+<https://w3id.org/whow/data/observable-properties/94-74-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Acetic acid, 2-(4-chloro-2-methylphenoxy)-"@en, "Concentrazione di (MCPA) Acido 2,4 meticlorofenossi acetico"@it;
+  ispra-top:name "Concentration of Acetic acid, 2-(4-chloro-2-methylphenoxy)-"@en, "Concentrazione di (MCPA) Acido 2,4 meticlorofenossi acetico"@it;
+  l0:name "Concentration of Acetic acid, 2-(4-chloro-2-methylphenoxy)-"@en, "Concentrazione di (MCPA) Acido 2,4 meticlorofenossi acetico"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-94-74-6> .
+
+<https://w3id.org/whow/data/observable-properties/94-75-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Acetic acid, 2-(2,4-dichlorophenoxy)-"@en, "Concentrazione di Acido 2,4 diclorofenossi acetico (2,4 D)"@it;
+  ispra-top:name "Concentration of Acetic acid, 2-(2,4-dichlorophenoxy)-"@en, "Concentrazione di Acido 2,4 diclorofenossi acetico (2,4 D)"@it;
+  l0:name "Concentration of Acetic acid, 2-(2,4-dichlorophenoxy)-"@en, "Concentrazione di Acido 2,4 diclorofenossi acetico (2,4 D)"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-94-75-7> .
+
+<https://w3id.org/whow/data/observable-properties/95-47-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1,2-dimethyl-"@en, "Concentrazione di Xilene orto"@it;
+  ispra-top:name "Concentration of Benzene, 1,2-dimethyl-"@en, "Concentrazione di Xilene orto"@it;
+  l0:name "Concentration of Benzene, 1,2-dimethyl-"@en, "Concentrazione di Xilene orto"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-95-47-6> .
+
+<https://w3id.org/whow/data/observable-properties/95-49-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1-chloro-2-methyl-"@en, "Concentrazione di 2-Clorotoluene"@it;
+  ispra-top:name "Concentration of Benzene, 1-chloro-2-methyl-"@en, "Concentrazione di 2-Clorotoluene"@it;
+  l0:name "Concentration of Benzene, 1-chloro-2-methyl-"@en, "Concentrazione di 2-Clorotoluene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-95-49-8> .
+
+<https://w3id.org/whow/data/observable-properties/95-50-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1,2-dichloro-"@en, "Concentrazione di 1,2-Diclorobenzene"@it;
+  ispra-top:name "Concentration of Benzene, 1,2-dichloro-"@en, "Concentrazione di 1,2-Diclorobenzene"@it;
+  l0:name "Concentration of Benzene, 1,2-dichloro-"@en, "Concentrazione di 1,2-Diclorobenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-95-50-1> .
+
+<https://w3id.org/whow/data/observable-properties/95-51-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, 2-chloro-"@en, "Concentrazione di 2-cloroanilina"@it;
+  ispra-top:name "Concentration of Benzenamine, 2-chloro-"@en, "Concentrazione di 2-cloroanilina"@it;
+  l0:name "Concentration of Benzenamine, 2-chloro-"@en, "Concentrazione di 2-cloroanilina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-95-51-2> .
+
+<https://w3id.org/whow/data/observable-properties/95-53-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, 2-methyl-"@en, "Concentrazione di 2-Metilanilina [o-Toluidina]"@it,
+    "Concentrazione di 2-Metilanina [o-Toluidina]"@it;
+  ispra-top:name "Concentration of Benzenamine, 2-methyl-"@en, "Concentrazione di 2-Metilanilina [o-Toluidina]"@it,
+    "Concentrazione di 2-Metilanina [o-Toluidina]"@it;
+  l0:name "Concentration of Benzenamine, 2-methyl-"@en, "Concentrazione di 2-Metilanilina [o-Toluidina]"@it,
+    "Concentrazione di 2-Metilanina [o-Toluidina]"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-95-53-4> .
+
+<https://w3id.org/whow/data/observable-properties/95-57-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Phenol, 2-chloro-"@en, "Concentrazione di 2-Clorofenolo"@it;
+  ispra-top:name "Concentration of Phenol, 2-chloro-"@en, "Concentrazione di 2-Clorofenolo"@it;
+  l0:name "Concentration of Phenol, 2-chloro-"@en, "Concentrazione di 2-Clorofenolo"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-95-57-8> .
+
+<https://w3id.org/whow/data/observable-properties/95-69-2> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, 4-chloro-2-methyl-"@en, "Concentrazione di 4-cloro-2-metilanilina"@it;
+  ispra-top:name "Concentration of Benzenamine, 4-chloro-2-methyl-"@en, "Concentrazione di 4-cloro-2-metilanilina"@it;
+  l0:name "Concentration of Benzenamine, 4-chloro-2-methyl-"@en, "Concentrazione di 4-cloro-2-metilanilina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-95-69-2> .
+
+<https://w3id.org/whow/data/observable-properties/95-76-1> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, 3,4-dichloro-"@en, "Concentrazione di 3,4-dicloroanilina"@it;
+  ispra-top:name "Concentration of Benzenamine, 3,4-dichloro-"@en, "Concentrazione di 3,4-dicloroanilina"@it;
+  l0:name "Concentration of Benzenamine, 3,4-dichloro-"@en, "Concentrazione di 3,4-dicloroanilina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-95-76-1> .
+
+<https://w3id.org/whow/data/observable-properties/95-82-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzenamine, 2,5-dichloro-"@en, "Concentrazione di 2,5-dicloroanilina"@it;
+  ispra-top:name "Concentration of Benzenamine, 2,5-dichloro-"@en, "Concentrazione di 2,5-dicloroanilina"@it;
+  l0:name "Concentration of Benzenamine, 2,5-dichloro-"@en, "Concentrazione di 2,5-dicloroanilina"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-95-82-9> .
+
+<https://w3id.org/whow/data/observable-properties/95-94-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, 1,2,4,5-tetrachloro-"@en, "Concentrazione di 1,2,4,5-Tetraclorobenzene"@it;
+  ispra-top:name "Concentration of Benzene, 1,2,4,5-tetrachloro-"@en, "Concentrazione di 1,2,4,5-Tetraclorobenzene"@it;
+  l0:name "Concentration of Benzene, 1,2,4,5-tetrachloro-"@en, "Concentrazione di 1,2,4,5-Tetraclorobenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-95-94-3> .
+
+<https://w3id.org/whow/data/observable-properties/96-18-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Propane, 1,2,3-trichloro-"@en, "Concentrazione di 1,2,3-Tricloropropano"@it;
+  ispra-top:name "Concentration of Propane, 1,2,3-trichloro-"@en, "Concentrazione di 1,2,3-Tricloropropano"@it;
+  l0:name "Concentration of Propane, 1,2,3-trichloro-"@en, "Concentrazione di 1,2,3-Tricloropropano"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-96-18-4> .
+
+<https://w3id.org/whow/data/observable-properties/98-82-8> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Benzene, (1-methylethyl)-"@en, "Concentrazione di Isopropilbenzene"@it;
+  ispra-top:name "Concentration of Benzene, (1-methylethyl)-"@en, "Concentrazione di Isopropilbenzene"@it;
+  l0:name "Concentration of Benzene, (1-methylethyl)-"@en, "Concentrazione di Isopropilbenzene"@it;
+  w-mon:hasChemicalSubstance <https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-98-82-8> .
+
+<https://w3id.org/whow/data/observable-properties/LT-00-0> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: Hydrometric height"@en, "Parametro Osservato: Altezza idrometrica"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/LT-00-0>;
+  ispra-top:name "Hydrometric height"@en, "Altezza idrometrica"@it;
+  l0:name "Hydrometric height"@en, "Altezza idrometrica"@it .
+
+<https://w3id.org/whow/data/observable-properties/M-PRT-0> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: Flow rate"@en, "Parametro Osservato: Portata"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/M-PRT-0>;
+  ispra-top:name "Flow rate"@en, "Portata"@it;
+  l0:name "Flow rate"@en, "Portata"@it .
+
+<https://w3id.org/whow/data/observable-properties/wise-31-02-7> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable property: Total suspended solids"@en, "Parametro osservato: Solidi sospesi totali"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/31-02-7>;
+  ispra-top:name "Total suspended solids"@en, "Solidi sospesi totali"@it;
+  l0:name "Total suspended solids"@en, "Solidi sospesi totali"@it .
+
+<https://w3id.org/whow/data/observable-properties/wise-3121-01-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable property: Water temperature"@en, "Parametro osservato: Temperatura acqua"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/3121-01-5>;
+  ispra-top:name "Water temperature"@en, "Temperatura acqua"@it;
+  l0:name "Water temperature"@en, "Temperatura acqua"@it .
+
+<https://w3id.org/whow/data/observable-properties/wise-3131-01-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable property: Oxygen % saturation"@en, "Parametro osservato: Ossigeno % di saturazione"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/3131-01-9>;
+  ispra-top:name "Oxygen % saturation"@en, "Ossigeno % di saturazione"@it;
+  l0:name "Oxygen % saturation"@en, "Ossigeno % di saturazione"@it .
+
+<https://w3id.org/whow/data/observable-properties/wise-3133-01-5> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable property: BOD-5"@en, "Parametro osservato: BOD-5"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/3133-01-5>;
+  ispra-top:name "BOD-5"@en, "BOD-5"@it;
+  l0:name "BOD-5"@en, "BOD-5"@it .
+
+<https://w3id.org/whow/data/observable-properties/wise-3133-05-9> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable property: DOC"@en, "Parametro osservato: DOC"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/3133-05-9>;
+  ispra-top:name "DOC"@en, "DOC"@it;
+  l0:name "DOC"@en, "DOC"@it .
+
+<https://w3id.org/whow/data/observable-properties/wise-3142-01-6> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable property: Electrical conductivity at 20°C"@en, "Parametro osservato: Conducibilità elettrica a 20°C"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/3142-01-6>;
+  ispra-top:name "Electrical conductivity at 20°C"@en, "Conducibilità elettrica a 20°C"@it;
+  l0:name "Electrical conductivity at 20°C"@en, "Conducibilità elettrica a 20°C"@it .
+
+<https://w3id.org/whow/data/observable-properties/wise-32-02-0> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Parametro osservato: Sommatoria Antiparassitari ciclodiene"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/32-02-0>;
+  ispra-top:name "Sommatoria Antiparassitari ciclodiene"@it;
+  l0:name "Sommatoria Antiparassitari ciclodiene"@it .
+
+<https://w3id.org/whow/data/observable-properties/wise-33-28-3> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable property: Total surfactants"@en, "Parametro osservato: Tensioattivi totali"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/33-28-3>;
+  ispra-top:name "Total surfactants"@en, "Tensioattivi totali"@it;
+  l0:name "Total surfactants"@en, "Tensioattivi totali"@it .
+
+<https://w3id.org/whow/data/observable-properties/wise-33-29-4> a <http://www.w3.org/ns/sosa/ObservableProperty>,
+    ispra-emf:ObservationParameter, iot:ObservationParameter, w-mon:WaterObservableProperty;
+  rdfs:label "Observable property: Anionic surfactants (MBAS)"@en, "Parametro osservato: Tensioattivi anionici (MBAS)"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/33-29-4>;
+  ispra-top:name "Anionic surfactants (MBAS)"@en, "Tensioattivi anionici (MBAS)"@it;
+  l0:name "Anionic surfactants (MBAS)"@en, "Tensioattivi anionici (MBAS)"@it .
+
+<https://w3id.org/whow/data/organisation/european-environmental-agency> a ispra-top:Organisation;
+  rdfs:label "European Environmental Agency"@en, "Agenzia Ambientale Europea"@it;
+  ispra-top:name "American Chemical Society"@en, "Agenzia Ambientale Europea"@it .

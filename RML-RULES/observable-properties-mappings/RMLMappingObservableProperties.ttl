@@ -1,0 +1,215 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix idlab-fn: <http://example.com/idlab/function/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix ispra-top: <https://w3id.org/italia/env/onto/top/> .
+@prefix ispra-emf: <https://w3id.org/italia/env/onto/inspire-mf/> .
+@prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
+@prefix l0: <https://w3id.org/italia/onto/l0/> .
+@prefix iot: <https://w3id.org/italia/onto/IoT/> .
+@base   <https://w3id.org/whow/controlled-vocabulary/observable-properties/> .
+
+#java -jar .\rmlmapper-4.15.0-r361-all.jar -m .\test-mapping-observable-properties-cas-substances.ttl -o output-cas-observable-properties-mapping.ttl -s turtle
+
+##########################################################
+## LOGICAL SOURCES TO BE USED
+##########################################################
+
+# #LogicalSourceSostanzeChimiche
+<#LogicalSourceConcentrationOfChemicalSubstances> a rml:BaseSource ;
+    rml:source "concentration-observable-properties-dataset.csv";
+    rml:referenceFormulation ql:CSV .
+
+<#LogicalSourceWISECodes> a rml:BaseSource ;
+    rml:source "wise-codes-dataset.csv";
+    rml:referenceFormulation ql:CSV .
+
+<#LogicalSourceOtherProperties> a rml:BaseSource ;
+    rml:source "other-codes-observable-properties.csv";
+    rml:referenceFormulation ql:CSV .
+
+############# MAPPING RULES ###########
+
+#Concentration of substances
+<#ChemicalSubstancesConcentrationMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceConcentrationOfChemicalSubstances> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/whow/data/observable-properties/{CAS}";
+  rr:class w-mon:WaterObservableProperty , ispra-emf:ObservationParameter , iot:ObservationParameter , sosa:ObservableProperty ;
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Concentrazione di {PARAMETER (IT)}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Concentration of {CHEMICAL SUBSTANCE}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate l0:name;
+  rr:objectMap [ rr:template "Concentration of {CHEMICAL SUBSTANCE}" ; rr:language "en"]
+];
+rr:predicateObjectMap [
+  rr:predicate l0:name;
+  rr:objectMap [ rr:template "Concentrazione di {PARAMETER (IT)}" ; rr:language "it"]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name;
+  rr:objectMap [ rr:template "Concentrazione di {PARAMETER (IT)}" ; rr:language "it"]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name;
+  rr:objectMap [ rr:template "Concentration of {CHEMICAL SUBSTANCE}" ; rr:language "en"]
+];
+rr:predicateObjectMap [
+  rr:predicate w-mon:hasChemicalSubstance;
+  rr:objectMap [ rr:template "https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-{CAS}" ; rr:termType rr:IRI ]
+].
+
+#WISE CODES
+<#WISECodesMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWISECodes> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/whow/data/observable-properties/wise-{WISE}";
+  rr:class w-mon:WaterObservableProperty, ispra-emf:ObservationParameter , iot:ObservationParameter , sosa:ObservableProperty ;
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Parametro osservato: {PARAMETER (IT)}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Observable property: {EC Name}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate l0:name;
+  rr:objectMap [ rr:template "{PARAMETER (IT)}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate l0:name;
+  rr:objectMap [ rr:template "{EC Name}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name;
+  rr:objectMap [ rr:template "{PARAMETER (IT)}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name;
+  rr:objectMap [ rr:template "{EC Name}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:hasUniqueIdentifier;
+  rr:objectMap [ rr:template "https://w3id.org/whow/data/identifier/{WISE}"; rr:termType rr:IRI]
+].
+
+
+<#UniqueWISEIDMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWISECodes> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/whow/data/identifier/{WISE}";
+  rr:class ispra-top:UniqueIdentifier
+] ;
+rr:predicateObjectMap [
+  rr:predicate ispra-top:identifier;
+  rr:objectMap [ rr:template "{WISE}"; rr:datatype xsd:string ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Identificativo WISE — {WISE}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "WISE Identifier — {WISE}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:isIssuedBy;
+  rr:objectMap [ rr:constant "https://w3id.org/whow/data/organisation/european-environmental-agency"; rr:termType rr:IRI; ]
+].
+
+<#EuropeanEnvironmentalAgencyMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWISECodes> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/whow/data/organisation/european-environmental-agency";
+  rr:class ispra-top:Organisation
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:constant "European Environmental Agency"; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:constant "Agenzia Ambientale Europea"; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name;
+  rr:objectMap [ rr:constant "American Chemical Society"; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name;
+  rr:objectMap [ rr:constant "Agenzia Ambientale Europea"; rr:language "it" ]
+].
+
+
+### OTHER Properties
+<#OtherPropertiesMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceOtherProperties> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/whow/data/observable-properties/{CODE}";
+  rr:class w-mon:WaterObservableProperty , ispra-emf:ObservationParameter , iot:ObservationParameter , sosa:ObservableProperty ;
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Parametro Osservato: {PARAMETER}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Observable Property: {PARAMETER_EN}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:hasUniqueIdentifier;
+  rr:objectMap [   rr:template "https://w3id.org/whow/data/identifier/{CODE}"; rr:termType rr:IRI;]
+];
+rr:predicateObjectMap [
+  rr:predicate l0:name;
+  rr:objectMap [ rr:template "{PARAMETER}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate l0:name;
+  rr:objectMap [ rr:template "{PARAMETER_EN}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name;
+  rr:objectMap [ rr:template "{PARAMETER}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name;
+  rr:objectMap [ rr:template "{PARAMETER_EN}" ; rr:language "en" ]
+].
+
+
+<#OTHERCODEMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceOtherProperties> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/whow/data/identifier/{CODE}";
+  rr:class ispra-top:UniqueIdentifier
+] ;
+rr:predicateObjectMap [
+  rr:predicate ispra-top:identifier;
+  rr:objectMap [ rr:template "{CODE}"; rr:datatype xsd:string ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Identificativo {CODE}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Identifier {CODE}" ; rr:language "en" ]
+].
