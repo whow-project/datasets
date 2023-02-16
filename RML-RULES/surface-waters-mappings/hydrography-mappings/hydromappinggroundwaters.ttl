@@ -18,9 +18,11 @@
 @prefix ispra-emf: <https://dati.isprambiente.it/ontology/inspire-mf/>.
 @base <https://w3id.org/whow/data/> .
 
+#java -jar .\rmlmapper-4.15.0-r361-all.jar -m hydromappinggroundwaters.ttl -o hydromappinggroundwaters-output.ttl -s turtle
+
 # #LogicalSourceAcqueSotterranee
 <#LogicalSourceAcqueSotterranee> a rml:BaseSource ;
-    rml:source "Allegato_2_DATI_PFAS_2018_ACQUE_SOT.csv";
+    rml:source "Allegato_2_DATI_PFAS_2018_ACQUE_SOT_4_.csv";
     rml:referenceFormulation ql:CSV .
 
 
