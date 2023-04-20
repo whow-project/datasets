@@ -17,247 +17,229 @@
 @prefix top: <https://dati.isprambiente.it/ontology/top/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/whow/data/lake-water-body/alserio> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/alserio> a hydro:LakeWaterBody;
   rdfs:label "Lago ALSERIO"@it, "Lake water body ALSERIO"@en;
   owl:sameAs <http://www.wikidata.org/entity/Q1110115>;
   top:name "ALSERIO"@it;
   l0:name "ALSERIO"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/lambro> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/lambro> .
 
-<https://w3id.org/whow/data/lake-water-body/annone-est> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/annone-est> a hydro:LakeWaterBody;
   rdfs:label "Lago ANNONE EST"@it, "Lake water body ANNONE EST"@en;
   owl:sameAs <http://www.wikidata.org/entity/Q63172>;
   top:name "ANNONE EST"@it;
   l0:name "ANNONE EST"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/adda> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/adda> .
 
-<https://w3id.org/whow/data/lake-water-body/annone-ovest> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/annone-ovest> a hydro:LakeWaterBody;
   rdfs:label "Lago ANNONE OVEST"@it, "Lake water body ANNONE OVEST"@en;
   owl:sameAs <http://www.wikidata.org/entity/Q63172>;
   top:name "ANNONE OVEST"@it;
   l0:name "ANNONE OVEST"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/adda> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/adda> .
 
-<https://w3id.org/whow/data/lake-water-body/castellaro> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
-  rdfs:label "Lago CASTELLARO"@it, "Lake water body CASTELLARO"@en;
-  top:name "CASTELLARO"@it;
-  l0:name "CASTELLARO"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/mincio> .
-
-<https://w3id.org/whow/data/lake-water-body/comabbio> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/comabbio> a hydro:LakeWaterBody;
   rdfs:label "Lago COMABBIO"@it, "Lake water body COMABBIO"@en;
   owl:sameAs <http://www.wikidata.org/entity/Q1094718>;
   top:name "COMABBIO"@it;
   l0:name "COMABBIO"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/ticino> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/ticino> .
 
-<https://w3id.org/whow/data/lake-water-body/como> a ispra-mf:FeatureOfInterest, hydro:LakeWaterBody,
-    hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/como> a hydro:LakeWaterBody;
   rdfs:label "Lago COMO"@it, "Lake water body COMO"@en;
   owl:sameAs <http://dbpedia.org/resource/Lake_Como>, <http://www.wikidata.org/entity/Q15523>;
   top:name "COMO"@it;
   l0:name "COMO"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/adda> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/adda> .
 
-<https://w3id.org/whow/data/lake-water-body/del-gallo> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
-  rdfs:label "Lago DEL GALLO"@it, "Lake water body DEL GALLO"@en;
-  top:name "DEL GALLO"@it;
-  l0:name "DEL GALLO"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/adda-prelacuale> .
-
-<https://w3id.org/whow/data/lake-water-body/di-mezzola> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/di-mezzola> a hydro:LakeWaterBody;
   rdfs:label "Lago DI MEZZOLA"@it, "Lake water body DI MEZZOLA"@en;
   owl:sameAs <http://www.wikidata.org/entity/Q1502960>;
   top:name "DI MEZZOLA"@it;
   l0:name "DI MEZZOLA"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/adda-prelacuale> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/adda-prelacuale> .
 
-<https://w3id.org/whow/data/lake-water-body/di-piano> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/di-piano> a hydro:LakeWaterBody;
   rdfs:label "Lago DI PIANO"@it, "Lake water body DI PIANO"@en;
   owl:sameAs <http://dbpedia.org/resource/Lago_di_Piano>, <http://www.wikidata.org/entity/Q1131376>;
   top:name "DI PIANO"@it;
   l0:name "DI PIANO"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/ticino> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/ticino> .
 
-<https://w3id.org/whow/data/lake-water-body/endine> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/endine> a hydro:LakeWaterBody;
   rdfs:label "Lago ENDINE"@it, "Lake water body ENDINE"@en;
   owl:sameAs <http://www.wikidata.org/entity/Q917288>;
   top:name "ENDINE"@it;
   l0:name "ENDINE"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/oglio> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/oglio> .
 
-<https://w3id.org/whow/data/lake-water-body/ganna> a ispra-mf:FeatureOfInterest, hydro:LakeWaterBody,
-    hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/ganna> a hydro:LakeWaterBody;
   rdfs:label "Lago GANNA"@it, "Lake water body GANNA"@en;
   owl:sameAs <http://www.wikidata.org/entity/Q1089655>;
   top:name "GANNA"@it;
   l0:name "GANNA"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/ticino> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/ticino> .
 
-<https://w3id.org/whow/data/lake-water-body/garda> a ispra-mf:FeatureOfInterest, hydro:LakeWaterBody,
-    hydro:WaterBody, hydro:WaterFeature;
-  rdfs:label "Lago GARDA"@it, "Lake water body GARDA"@en;
-  owl:sameAs <http://dbpedia.org/resource/Lake_Garda>, <http://www.wikidata.org/entity/Q6414>;
-  top:name "GARDA"@it;
-  l0:name "GARDA"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/mincio> .
-
-<https://w3id.org/whow/data/lake-water-body/garlate> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/garlate> a hydro:LakeWaterBody;
   rdfs:label "Lago GARLATE"@it, "Lake water body GARLATE"@en;
   owl:sameAs <http://www.wikidata.org/entity/Q63161>;
   top:name "GARLATE"@it;
   l0:name "GARLATE"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/adda> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/adda> .
 
-<https://w3id.org/whow/data/lake-water-body/ghirla> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/ghirla> a hydro:LakeWaterBody;
   rdfs:label "Lago GHIRLA"@it, "Lake water body GHIRLA"@en;
   owl:sameAs <http://dbpedia.org/resource/Lago_di_Ghirla>, <http://www.wikidata.org/entity/Q1081290>;
   top:name "GHIRLA"@it;
   l0:name "GHIRLA"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/ticino> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/ticino> .
 
-<https://w3id.org/whow/data/lake-water-body/idro> a ispra-mf:FeatureOfInterest, hydro:LakeWaterBody,
-    hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/idro> a hydro:LakeWaterBody;
   rdfs:label "Lago IDRO"@it, "Lake water body IDRO"@en;
   owl:sameAs <http://dbpedia.org/resource/Lake_Idro>, <http://www.wikidata.org/entity/Q63148>;
   top:name "IDRO"@it;
   l0:name "IDRO"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/oglio> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/oglio> .
 
-<https://w3id.org/whow/data/lake-water-body/iseo> a ispra-mf:FeatureOfInterest, hydro:LakeWaterBody,
-    hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/idroscalo> a hydro:LakeWaterBody;
+  rdfs:label "Lago IDROSCALO"@it, "Lake water body IDROSCALO"@en;
+  top:name "IDROSCALO"@it;
+  l0:name "IDROSCALO"@it;
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/lambro> .
+
+<https://w3id.org/italia/lombardia/data/lake-water-body/iseo> a hydro:LakeWaterBody;
   rdfs:label "Lago ISEO"@it, "Lake water body ISEO"@en;
   owl:sameAs <http://dbpedia.org/resource/Lake_Iseo>, <http://www.wikidata.org/entity/Q15648>;
   top:name "ISEO"@it;
   l0:name "ISEO"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/oglio> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/oglio> .
 
-<https://w3id.org/whow/data/lake-water-body/lugano> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/lugano> a hydro:LakeWaterBody;
   rdfs:label "Lago LUGANO"@it, "Lake water body LUGANO"@en;
   owl:sameAs <http://dbpedia.org/resource/Lake_Lugano>, <http://www.wikidata.org/entity/Q14418>;
   top:name "LUGANO"@it;
   l0:name "LUGANO"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/ticino> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/ticino> .
 
-<https://w3id.org/whow/data/lake-water-body/maggiore> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/maggiore> a hydro:LakeWaterBody;
   rdfs:label "Lago MAGGIORE"@it, "Lake water body MAGGIORE"@en;
   owl:sameAs <http://dbpedia.org/resource/Lake_Maggiore>, <http://www.wikidata.org/entity/Q14379>;
   top:name "MAGGIORE"@it;
   l0:name "MAGGIORE"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/ticino> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/ticino> .
 
-<https://w3id.org/whow/data/lake-water-body/mantova-di-mezzo> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/mantova-di-mezzo> a hydro:LakeWaterBody;
   rdfs:label "Lago MANTOVA DI MEZZO"@it, "Lake water body MANTOVA DI MEZZO"@en;
   top:name "MANTOVA DI MEZZO"@it;
   l0:name "MANTOVA DI MEZZO"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/mincio> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/mincio> .
 
-<https://w3id.org/whow/data/lake-water-body/mantova-inferiore> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/mantova-inferiore> a hydro:LakeWaterBody;
   rdfs:label "Lago MANTOVA INFERIORE"@it, "Lake water body MANTOVA INFERIORE"@en;
   top:name "MANTOVA INFERIORE"@it;
   l0:name "MANTOVA INFERIORE"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/mincio> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/mincio> .
 
-<https://w3id.org/whow/data/lake-water-body/mantova-superiore> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/mantova-superiore> a hydro:LakeWaterBody;
   rdfs:label "Lago MANTOVA SUPERIORE"@it, "Lake water body MANTOVA SUPERIORE"@en;
   top:name "MANTOVA SUPERIORE"@it;
   l0:name "MANTOVA SUPERIORE"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/mincio> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/mincio> .
 
-<https://w3id.org/whow/data/lake-water-body/montorfano> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/monate> a hydro:LakeWaterBody;
+  rdfs:label "Lago MONATE"@it, "Lake water body MONATE"@en;
+  owl:sameAs <http://dbpedia.org/resource/Lago_di_Monate>, <http://www.wikidata.org/entity/Q2259119>;
+  top:name "MONATE"@it;
+  l0:name "MONATE"@it;
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/ticino> .
+
+<https://w3id.org/italia/lombardia/data/lake-water-body/montorfano> a hydro:LakeWaterBody;
   rdfs:label "Lago MONTORFANO"@it, "Lake water body MONTORFANO"@en;
   owl:sameAs <http://www.wikidata.org/entity/Q3825985>;
   top:name "MONTORFANO"@it;
   l0:name "MONTORFANO"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/lambro> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/lambro> .
 
-<https://w3id.org/whow/data/lake-water-body/palu> a ispra-mf:FeatureOfInterest, hydro:LakeWaterBody,
-    hydro:WaterBody, hydro:WaterFeature;
-  rdfs:label "Lago PALU'"@it, "Lake water body PALU'"@en;
-  top:name "PALU'"@it;
-  l0:name "PALU'"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/adda-prelacuale> .
+<https://w3id.org/italia/lombardia/data/lake-water-body/palabione> a hydro:LakeWaterBody;
+  rdfs:label "Lago PALABIONE"@it, "Lake water body PALABIONE"@en;
+  top:name "PALABIONE"@it;
+  l0:name "PALABIONE"@it;
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/adda-prelacuale> .
 
-<https://w3id.org/whow/data/lake-water-body/pozzo-di-riva> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/palu> a hydro:LakeWaterBody;
+  rdfs:label "Lago PALÙ"@it, "Lake water body PALÙ"@en;
+  owl:sameAs <http://www.wikidata.org/entity/Q62027816>;
+  top:name "PALÙ"@it;
+  l0:name "PALÙ"@it;
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/adda-prelacuale> .
+
+<https://w3id.org/italia/lombardia/data/lake-water-body/pozzo-di-riva> a hydro:LakeWaterBody;
   rdfs:label "Lago POZZO DI RIVA"@it, "Lake water body POZZO DI RIVA"@en;
   top:name "POZZO DI RIVA"@it;
   l0:name "POZZO DI RIVA"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/adda> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/adda> .
 
-<https://w3id.org/whow/data/lake-water-body/pusiano> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/pusiano> a hydro:LakeWaterBody;
   rdfs:label "Lago PUSIANO"@it, "Lake water body PUSIANO"@en;
   owl:sameAs <http://www.wikidata.org/entity/Q63177>;
   top:name "PUSIANO"@it;
   l0:name "PUSIANO"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/lambro> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/lambro> .
 
-<https://w3id.org/whow/data/lake-water-body/sartirana> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/lake-water-body/sartirana> a hydro:LakeWaterBody;
   rdfs:label "Lago SARTIRANA"@it, "Lake water body SARTIRANA"@en;
   owl:sameAs <http://www.wikidata.org/entity/Q2323272>;
   top:name "SARTIRANA"@it;
   l0:name "SARTIRANA"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/adda> .
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/adda> .
 
-<https://w3id.org/whow/data/lake-water-body/varese> a ispra-mf:FeatureOfInterest,
-    hydro:LakeWaterBody, hydro:WaterBody, hydro:WaterFeature;
-  rdfs:label "Lago VARESE"@it, "Lake water body VARESE"@en;
+<https://w3id.org/italia/lombardia/data/lake-water-body/segrino> a hydro:LakeWaterBody;
+  rdfs:label "Lago SEGRINO"@it, "Lake water body SEGRINO"@en;
+  owl:sameAs <http://dbpedia.org/resource/Lago_del_Segrino>, <http://www.wikidata.org/entity/Q3825864>;
+  top:name "SEGRINO"@it;
+  l0:name "SEGRINO"@it;
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/lambro> .
+
+<https://w3id.org/italia/lombardia/data/lake-water-body/truzzo> a hydro:LakeWaterBody;
+  rdfs:label "Lago TRUZZO"@it, "Lake water body TRUZZO"@en;
+  owl:sameAs <http://www.wikidata.org/entity/Q98803977>;
+  top:name "TRUZZO"@it;
+  l0:name "TRUZZO"@it;
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/adda> .
+
+<https://w3id.org/italia/lombardia/data/lake-water-body/varese> a hydro:LakeWaterBody;
+  rdfs:label "Lago VARESE"@it, "Lago Varese"@it, "Lake water body VARESE"@en, "Lake water body Varese"@en;
   owl:sameAs <http://dbpedia.org/resource/Lake_Varese>, <http://www.wikidata.org/entity/Q47477245>;
-  top:name "VARESE"@it;
-  l0:name "VARESE"@it;
-  hydro:belongsToWaterBasin <https://w3id.org/whow/data/water-basin/ticino> .
+  top:name "VARESE"@it, "Varese"@it;
+  l0:name "VARESE"@it, "Varese"@it;
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/ticino> .
 
-<https://w3id.org/whow/data/water-basin/adda> a ispra-mf:FeatureOfInterest, hydro:WaterBasin,
-    hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/water-basin/adda> a hydro:WaterBasin;
   rdfs:label "Bacino idrografico Adda"@it, "Water basin Adda"@en;
   top:name "Adda"@it;
   l0:name "Adda"@it .
 
-<https://w3id.org/whow/data/water-basin/adda-prelacuale> a ispra-mf:FeatureOfInterest,
-    hydro:WaterBasin, hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/water-basin/adda-prelacuale> a hydro:WaterBasin;
   rdfs:label "Bacino idrografico Adda prelacuale"@it, "Water basin Adda prelacuale"@en;
   top:name "Adda prelacuale"@it;
   l0:name "Adda prelacuale"@it .
 
-<https://w3id.org/whow/data/water-basin/lambro> a ispra-mf:FeatureOfInterest, hydro:WaterBasin,
-    hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/water-basin/lambro> a hydro:WaterBasin;
   rdfs:label "Bacino idrografico Lambro"@it, "Water basin Lambro"@en;
   top:name "Lambro"@it;
   l0:name "Lambro"@it .
 
-<https://w3id.org/whow/data/water-basin/mincio> a ispra-mf:FeatureOfInterest, hydro:WaterBasin,
-    hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/water-basin/mincio> a hydro:WaterBasin;
   rdfs:label "Bacino idrografico Mincio"@it, "Water basin Mincio"@en;
   top:name "Mincio"@it;
   l0:name "Mincio"@it .
 
-<https://w3id.org/whow/data/water-basin/oglio> a ispra-mf:FeatureOfInterest, hydro:WaterBasin,
-    hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/water-basin/oglio> a hydro:WaterBasin;
   rdfs:label "Bacino idrografico Oglio"@it, "Water basin Oglio"@en;
   top:name "Oglio"@it;
   l0:name "Oglio"@it .
 
-<https://w3id.org/whow/data/water-basin/ticino> a ispra-mf:FeatureOfInterest, hydro:WaterBasin,
-    hydro:WaterFeature;
+<https://w3id.org/italia/lombardia/data/water-basin/ticino> a hydro:WaterBasin;
   rdfs:label "Bacino idrografico Ticino"@it, "Water basin Ticino"@en;
   top:name "Ticino"@it;
   l0:name "Ticino"@it .

@@ -20,7 +20,8 @@
 
 # #LogicalSourceLaghi
 <#LogicalSourceLaghi> a rml:BaseSource ;
-    rml:source "Dato_analitico_puntuale_relativo_a_ciascun_punto_della_rete_di_monitoraggio_dei_laghi.csv";
+    rml:source "Dati_analitici_corpi_idrici_lacustri.csv";
+    #rml:source "Dato_analitico_puntuale_relativo_a_ciascun_punto_della_rete_di_monitoraggio_dei_laghi.csv";
     #rml:source "023-ACQUE-SUPERFICIALI-DATI-Laghi.csv" ;
     rml:referenceFormulation ql:CSV .
 
@@ -48,7 +49,7 @@ rr:subjectMap [
    ] ;
    rr:predicateObjectMap [
      rr:predicate grel:p_array_a ;
-     rr:objectMap  [ rr:constant "https://w3id.org/whow/data/lake-water-body"]
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/lake-water-body"]
    ];
    rr:predicateObjectMap [
      rr:predicate grel:p_array_a ;
@@ -59,30 +60,30 @@ rr:subjectMap [
      rr:objectMap [ rr:constant "/" ]
    ];
   ];
-  rr:class hydro:LakeWaterBody , hydro:WaterBody , hydro:WaterFeature , ispra-mf:FeatureOfInterest
+  rr:class hydro:LakeWaterBody
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
-  rr:objectMap [ rr:template "Lake water body {NOME_CORPO_IDRICO}" ; rr:language "en" ]
+  rr:objectMap [ rr:template "Lake water body {LAGO}" ; rr:language "en" ]
 ];
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
-  rr:objectMap [ rr:template "Lago {NOME_CORPO_IDRICO}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "Lago {LAGO}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
   rr:predicate top:name ;
-  rr:objectMap [ rr:template "{NOME_CORPO_IDRICO}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "{LAGO}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
   rr:predicate l0:name ;
-  rr:objectMap [ rr:template "{NOME_CORPO_IDRICO}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "{LAGO}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
    rr:predicate owl:sameAs ;
    rr:objectMap [
       rr:parentTriplesMap <#WikidataLinking> ;
       rr:joinCondition [
-         rr:child "NOME_CORPO_IDRICO";
+         rr:child "LAGO";
          rr:parent "LAGO" ;
       ] ;
     ] ;
@@ -92,7 +93,7 @@ rr:predicateObjectMap [
    rr:objectMap [
       rr:parentTriplesMap <#DBPediaLinking> ;
       rr:joinCondition [
-         rr:child "NOME_CORPO_IDRICO";
+         rr:child "LAGO";
          rr:parent "LAGO" ;
       ] ;
     ] ;
@@ -134,7 +135,7 @@ fnml:functionValue [
  ] ;
  rr:predicateObjectMap [
    rr:predicate grel:p_array_a ;
-   rr:objectMap  [ rr:constant "https://w3id.org/whow/data/water-basin"]
+   rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/water-basin"]
  ];
  rr:predicateObjectMap [
    rr:predicate grel:p_array_a ;
@@ -213,7 +214,7 @@ rr:subjectMap [
     ] ;
     rr:predicateObjectMap [
      rr:predicate grel:p_array_a ;
-     rr:objectMap  [ rr:constant "https://w3id.org/whow/data/water-basin"]
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/water-basin"]
     ];
     rr:predicateObjectMap [
        rr:predicate grel:p_array_a ;
@@ -224,23 +225,23 @@ rr:subjectMap [
        rr:objectMap [ rr:constant "/" ]
     ];
  ];
-rr:class hydro:WaterBasin , hydro:WaterFeature , ispra-mf:FeatureOfInterest
+rr:class hydro:WaterBasin
 ] ;
 rr:predicateObjectMap [
   rr:predicate top:name ;
-  rr:objectMap [ rr:template "{BACINO_IDROGRAFICO}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "{BACINO IDROGRAFICO}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
   rr:predicate l0:name ;
-  rr:objectMap [ rr:template "{BACINO_IDROGRAFICO}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "{BACINO IDROGRAFICO}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
   rr:predicate rdfs:label;
-  rr:objectMap [ rr:template "Water basin {BACINO_IDROGRAFICO}" ; rr:language "en" ]
+  rr:objectMap [ rr:template "Water basin {BACINO IDROGRAFICO}" ; rr:language "en" ]
 ];
 rr:predicateObjectMap [
   rr:predicate rdfs:label;
-  rr:objectMap [ rr:template "Bacino idrografico {BACINO_IDROGRAFICO}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "Bacino idrografico {BACINO IDROGRAFICO}" ; rr:language "it" ]
 ].
 
 
@@ -255,7 +256,7 @@ fnml:functionValue [
 	];
   rr:predicateObjectMap [
     rr:predicate idlab-fn:str ;
-    rr:objectMap [ rml:reference "NOME_CORPO_IDRICO"]
+    rr:objectMap [ rml:reference "LAGO"]
   ] ;
  ] .
 
@@ -267,6 +268,6 @@ fnml:functionValue [
 	];
  rr:predicateObjectMap [
    rr:predicate idlab-fn:str ;
-   rr:objectMap [ rml:reference "BACINO_IDROGRAFICO"]
+   rr:objectMap [ rml:reference "BACINO IDROGRAFICO"]
  ] ;
 ] .
