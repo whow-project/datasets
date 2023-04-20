@@ -20,7 +20,7 @@
 
 # #LogicalSourceLaghi
 <#LogicalSourceLaghi> a rml:BaseSource ;
-    rml:source "Dati_analitici_corpi_idrici_lacustri.csv";
+    rml:source "d4ep-yvbw.csv";
     #rml:source "Dato_analitico_puntuale_relativo_a_ciascun_punto_della_rete_di_monitoraggio_dei_laghi.csv";
     #rml:source "023-ACQUE-SUPERFICIALI-DATI-Laghi.csv" ;
     rml:referenceFormulation ql:CSV .
@@ -64,26 +64,26 @@ rr:subjectMap [
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
-  rr:objectMap [ rr:template "Lake water body {LAGO}" ; rr:language "en" ]
+  rr:objectMap [ rr:template "Lake water body {lago}" ; rr:language "en" ]
 ];
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
-  rr:objectMap [ rr:template "Lago {LAGO}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "Lago {lago}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
   rr:predicate top:name ;
-  rr:objectMap [ rr:template "{LAGO}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "{lago}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
   rr:predicate l0:name ;
-  rr:objectMap [ rr:template "{LAGO}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "{lago}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
    rr:predicate owl:sameAs ;
    rr:objectMap [
       rr:parentTriplesMap <#WikidataLinking> ;
       rr:joinCondition [
-         rr:child "LAGO";
+         rr:child "lago";
          rr:parent "LAGO" ;
       ] ;
     ] ;
@@ -93,7 +93,7 @@ rr:predicateObjectMap [
    rr:objectMap [
       rr:parentTriplesMap <#DBPediaLinking> ;
       rr:joinCondition [
-         rr:child "LAGO";
+         rr:child "lago";
          rr:parent "LAGO" ;
       ] ;
     ] ;
@@ -229,19 +229,19 @@ rr:class hydro:WaterBasin
 ] ;
 rr:predicateObjectMap [
   rr:predicate top:name ;
-  rr:objectMap [ rr:template "{BACINO IDROGRAFICO}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "{bacino_idrografico}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
   rr:predicate l0:name ;
-  rr:objectMap [ rr:template "{BACINO IDROGRAFICO}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "{bacino_idrografico}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
   rr:predicate rdfs:label;
-  rr:objectMap [ rr:template "Water basin {BACINO IDROGRAFICO}" ; rr:language "en" ]
+  rr:objectMap [ rr:template "Water basin {bacino_idrografico}" ; rr:language "en" ]
 ];
 rr:predicateObjectMap [
   rr:predicate rdfs:label;
-  rr:objectMap [ rr:template "Bacino idrografico {BACINO IDROGRAFICO}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "Bacino idrografico {bacino_idrografico}" ; rr:language "it" ]
 ].
 
 
@@ -256,7 +256,7 @@ fnml:functionValue [
 	];
   rr:predicateObjectMap [
     rr:predicate idlab-fn:str ;
-    rr:objectMap [ rml:reference "LAGO"]
+    rr:objectMap [ rml:reference "lago"]
   ] ;
  ] .
 
@@ -268,6 +268,6 @@ fnml:functionValue [
 	];
  rr:predicateObjectMap [
    rr:predicate idlab-fn:str ;
-   rr:objectMap [ rml:reference "BACINO IDROGRAFICO"]
+   rr:objectMap [ rml:reference "bacino_idrografico"]
  ] ;
 ] .
