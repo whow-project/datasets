@@ -43,7 +43,7 @@
 rml:logicalSource <#LogicalSourceConcentrationOfChemicalSubstances> ;
 rr:subjectMap [
   rr:template "https://w3id.org/whow/data/observable-properties/{CAS}";
-  rr:class w-mon:WaterObservableProperty , ispra-emf:ObservationParameter , iot:ObservationParameter , sosa:ObservableProperty ;
+  rr:class w-mon:WaterObservableProperty  ;
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label;
@@ -68,18 +68,15 @@ rr:predicateObjectMap [
 rr:predicateObjectMap [
   rr:predicate ispra-top:name;
   rr:objectMap [ rr:template "Concentration of {CHEMICAL SUBSTANCE}" ; rr:language "en"]
-];
-rr:predicateObjectMap [
-  rr:predicate w-mon:hasChemicalSubstance;
-  rr:objectMap [ rr:template "https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-{CAS}" ; rr:termType rr:IRI ]
 ].
+
 
 #WISE CODES
 <#WISECodesMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceWISECodes> ;
 rr:subjectMap [
   rr:template "https://w3id.org/whow/data/observable-properties/wise-{WISE}";
-  rr:class w-mon:WaterObservableProperty, ispra-emf:ObservationParameter , iot:ObservationParameter , sosa:ObservableProperty ;
+  rr:class w-mon:WaterObservableProperty ;
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label;
@@ -163,7 +160,7 @@ rr:predicateObjectMap [
 rml:logicalSource <#LogicalSourceOtherProperties> ;
 rr:subjectMap [
   rr:template "https://w3id.org/whow/data/observable-properties/{CODE}";
-  rr:class w-mon:WaterObservableProperty , ispra-emf:ObservationParameter , iot:ObservationParameter , sosa:ObservableProperty ;
+  rr:class w-mon:WaterObservableProperty ;
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label;
