@@ -1,4 +1,4 @@
-,CAS,PARAMETER(IT), CHEMICAL SUBSTANCE,ID,EC Name,EC No.,Mol Formula,Description,Infocard URL,ECHA Name
+,CAS,PARAMETER(IT),CHEMICAL SUBSTANCE,ID,EC Name,EC No.,Mol Formula,Description,Infocard URL,ECHA Name
 1,479-61-8,"Clorofilla ""a""","Magnesium, [(2E,7R,11R)-3,7,11,15-tetramethyl-2-hexadecenyl (3S,4S,21R)-9-ethenyl-14-ethyl-21-(methoxycarbonyl)-4,8,13,18-tetramethyl-20-oxo-3-phorbinepropanoato(2-)-.kappa.N23,.kappa.N24,.kappa.N25,.kappa.N26]-, (SP-4-2)-",100.006.852,"Magnesium, [3,7,11,15-tetramethyl-2-hexadecenyl 9-ethenyl-14-ethyl-21-(methoxycarbonyl)-4,8,13,18-tetramethyl-20-oxo-3-phorbinepropanoato(2-)-N23,N24,N25,N26]-, [SP-4-2-[3S-[3?(2E,7S*,11S*),4?,21?]]]-",207-536-6,C55H72MgN4O5,,https://echa.europa.eu/substance-information/-/substanceinfo/100.006.852,"Magnesium, [3,7,11,15-tetramethyl-2-hexadecenyl 9-ethenyl-14-ethyl-21-(methoxycarbonyl)-4,8,13,18-tetramethyl-20-oxo-3-phorbinepropanoato(2-)-N23,N24,N25,N26]-, [SP-4-2-[3S-[3?(2E,7S*,11S*),4?,21?]]]-"
 2,7440-38-2,Arsenico,Arsenic,100.028.316,Arsenic,231-148-6,As,,https://echa.europa.eu/substance-information/-/substanceinfo/100.028.316,Arsenic
 3,7440-43-9,Cadmio,Cadmium,100.028.320,Cadmium,231-152-8,Cd,,https://echa.europa.eu/substance-information/-/substanceinfo/100.028.320,Cadmium
@@ -25,7 +25,6 @@
 24,56-55-3,Benzo(a)antracene,Benz[a]anthracene,100.000.255,Benz[a]anthracene,200-280-6,C18H12,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.255,Benz[a]anthracene
 25,57-12-5,Cianuri liberi,Cyanide,,,,,,,
 26,57-63-6,17-alfa-etinilestradiolo,"19-Norpregna-1,3,5(10)-trien-20-yne-3,17-diol, (17.alpha.)-",100.000.311,Ethinylestradiol,200-342-2,C20H24O2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.311,Ethinylestradiol
-27,58-89-9,HCH gamma (lindano),"Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.beta.,4.alpha.,5.alpha.,6.beta.)-",100.000.365,?-HCH or ?-BHC,200-401-2,C6H6Cl6,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.365,?-HCH or ?-BHC
 28,59-50-7,4-Cloro-3-metilfenolo,"Phenol, 4-chloro-3-methyl-",100.000.392,Chlorocresol,200-431-6,C7H7ClO,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.392,Chlorocresol
 29,60-51-5,Dimetoato,"Phosphorodithioic acid, O,O-dimethyl S-[2-(methylamino)-2-oxoethyl] ester",100.000.437,Dimethoate,200-480-3,C5H12NO3PS2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.437,Dimethoate
 30,62-53-3,Anilina,Benzenamine,100.000.491,Aniline,200-539-3,C6H7N,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.491,Aniline
@@ -86,7 +85,6 @@
 86,100-42-5,Stirene,"Benzene, ethenyl-",100.002.592,Styrene,202-851-5,C8H8,,https://echa.europa.eu/substance-information/-/substanceinfo/100.002.592,Styrene
 87,100-61-8,N-metil Anilina,"Benzenamine, N-methyl-",100.002.610,N-methylaniline,202-870-9,C7H9N,,https://echa.europa.eu/substance-information/-/substanceinfo/100.002.610,N-methylaniline
 88,103-69-5,N-etil Anilina,"Benzenamine, N-ethyl-",100.002.850,N-ethylaniline,203-135-5,C8H11N,,https://echa.europa.eu/substance-information/-/substanceinfo/100.002.850,N-ethylaniline
-89,104-40-5,p-nonilfenolo,"Phenol, 4-nonyl-",100.002.909,p-nonylphenol,203-199-4,C15H24O,,https://echa.europa.eu/substance-information/-/substanceinfo/100.002.909,p-nonylphenol
 90,105-67-9,"Dimetilfenolo 2,4","Phenol, 2,4-dimethyl-",100.003.020,"2,4-xylenol",203-321-6,C8H10O,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.020,"2,4-xylenol"
 91,106-42-3,Xilene para,"Benzene, 1,4-dimethyl-",100.003.088,p-xylene,203-396-5,C8H10,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.088,p-xylene
 92,106-43-4,4-Clorotoluene,"Benzene, 1-chloro-4-methyl-",100.003.089,4-chlorotoluene,203-397-0,C7H7Cl,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.089,4-chlorotoluene
@@ -174,20 +172,16 @@
 174,16887-00-6,Cloruri,,,,,,,,
 175,16984-48-8,Fluoruri,,,,,,,,
 176,14808-79-8,Solfati,,,,,,,,
-177,10606-46-9,"2,4-Dicofol",,,,,,,,
 178,72-54-8,"4,4'-DDD",,100.000.712,TDE,200-783-0,C14H10Cl4,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.712,TDE
 179,72-55-9,"4,4'-DDE",,100.000.713,"2,2-bis(p-chlorophenyl)-1,1-dichloroethylene",200-784-6,C14H8Cl4,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.713,"2,2-bis(p-chlorophenyl)-1,1-dichloroethylene"
-180,135410-20-7,Acetamiprid,,,,,,,,
 181,74070-46-5,Aclonifen,,100.070.619,2-chloro-6-nitro-3-phenoxyaniline,277-704-1,C12H9ClN2O3,,https://echa.europa.eu/substance-information/-/substanceinfo/100.070.619,2-chloro-6-nitro-3-phenoxyaniline
 182,15972-60-8,Alachlor,,100.036.448,Alachlor,240-110-8,C14H20ClNO2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.036.448,Alachlor
 183,309-00-2,Aldrin,,100.005.652,Aldrin,206-215-8,C12H8Cl6,,https://echa.europa.eu/substance-information/-/substanceinfo/100.005.652,Aldrin
 184,834-12-8,Ametrina,,100.011.486,Ametryn,212-634-7,C9H17N5S,,https://echa.europa.eu/substance-information/-/substanceinfo/100.011.486,Ametryn
 185,6190-65-4,Atrazina-desetil,,,,,,,,
-186,1007-28-9,Atrazina-desisopropil,,,,,,,,
-187,120162-55-2,Azimsulfuron,,,,,,,,
+186,1007-28-9,Atrazina-desisopropil,,,Atrazine Desisopropyl,,,,,
 188,83055-99-6,Bensulfuron Metile,,,,,,,,
 189,314-40-9,Bromacil,,100.005.679,Bromacil,206-245-1,C9H13BrN2O2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.005.679,Bromacil
-190,124495-18-7,Chinossifen,,,,,,,,
 191,57-74-9,Chlordano Totale,,100.000.317,"Chlordane , pur",200-349-0,C10H6Cl8,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.317,"Chlordane , pur"
 192,470-90-6,Chlorfenvinphos,,100.006.758,Chlorfenvinphos,207-432-0,C12H14Cl3O4P,,https://echa.europa.eu/substance-information/-/substanceinfo/100.006.758,Chlorfenvinphos
 193,21725-46-2,Cianazina,,100.040.480,Cyanazine,244-544-9,C9H13ClN6,,https://echa.europa.eu/substance-information/-/substanceinfo/100.040.480,Cyanazine
@@ -196,9 +190,7 @@
 196,5103-74-2,Clordano trans,,100.023.478,"(1?,2?,3a?,4?,7?,7a?)-1,2,4,5,6,7,8,8-octachloro-2,3,3a,4,7,7a-hexahydro-4,7-methano-1H-indene",225-826-0,C10H6Cl8,,https://echa.europa.eu/substance-information/-/substanceinfo/100.023.478,"(1?,2?,3a?,4?,7?,7a?)-1,2,4,5,6,7,8,8-octachloro-2,3,3a,4,7,7a-hexahydro-4,7-methano-1H-indene"
 197,2921-88-2,Clorpirifos,,100.018.969,Chlorpyrifos,220-864-4,C9H11Cl3NO3PS,,https://echa.europa.eu/substance-information/-/substanceinfo/100.018.969,Chlorpyrifos
 198,5598-13-0,Clorpirifos Metile,,100.024.556,Chlorpyrifos-methyl,227-011-5,C7H7Cl3NO3PS,,https://echa.europa.eu/substance-information/-/substanceinfo/100.024.556,Chlorpyrifos-methyl
-199,210880-92-5,Clotianidin,,,,,,,,
-200,10313,COD,,,,,,,,
-201,101205-02-1,Cycloxidim,,,,,,,,
+201,101205-02-1,Cycloxidim,,,Cycloxydim,,,,,
 202,8017-34-3,DDT,,,,,,,,
 203,15307-86-5,Diclofenac,,100.035.755,Diclofenac,239-348-5,C14H11Cl2NO2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.035.755,Diclofenac
 204,2008-58-4,"Diclorobenzammide 2,6",,100.016.291,"2,6-dichlorobenzamide",217-918-4,C7H5Cl2NO,,https://echa.europa.eu/substance-information/-/substanceinfo/100.016.291,"2,6-dichlorobenzamide"
@@ -207,7 +199,7 @@
 207,115-29-7,Endosulfan (isomeri alfa e beta),,100.003.709,Endosulfan,204-079-4,C9H6Cl6O3S,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.709,Endosulfan
 208,959-98-8,Endosulfan alfa,,,,,,,,
 209,33213-65-9,Endosulfan beta,,,,,,,,
-210,1031-07-8,Endosulfan solfato,,,,,,,,
+210,1031-07-8,Endosulfan solfato,,,Endosulfan sulfate,,,,,
 211,72-20-8,Endrin,,100.000.705,Endrin,200-775-7,C12H8Cl6O,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.705,Endrin
 212,76-44-8,Eptacloro,,100.000.876,Heptachlor,200-962-3,C10H5Cl7,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.876,Heptachlor
 213,1024-57-3,Eptacloro epossido,,100.012.574,Heptachlor epoxide,213-831-0,C10H5Cl7O,,https://echa.europa.eu/substance-information/-/substanceinfo/100.012.574,Heptachlor epoxide
@@ -215,11 +207,8 @@
 215,608-73-1,Esaclorocicloesano,,100.009.245,BHC or HCH,210-168-9,C6H6Cl6,,https://echa.europa.eu/substance-information/-/substanceinfo/100.009.245,BHC or HCH
 216,122-14-5,Fenitrotion,,100.004.114,Fenitrothion,204-524-2,C9H12NO5PS,,https://echa.europa.eu/substance-information/-/substanceinfo/100.004.114,Fenitrothion
 217,55-38-9,Fenthion,,100.000.211,Fenthion,200-231-9,C10H15O3PS2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.211,Fenthion
-218,142459-58-3,Flufenacet,,,,,,,,
 219,81406-37-3,Fluroxipir,,100.072.481,"1-methylheptyl [(4-amino-3,5-dichloro-6-fluoropyridin-2-yl)oxy]acetate",279-752-9,C15H21Cl2FN2O3,,https://echa.europa.eu/substance-information/-/substanceinfo/100.072.481,"1-methylheptyl [(4-amino-3,5-dichloro-6-fluoropyridin-2-yl)oxy]acetate"
-220,138261-41-3,Imidacloprid,,,,,,,,
 221,34123-59-6,Isoproturon,,100.047.108,"3-(4-isopropylphenyl)-1,1-dimethylurea",251-835-4,C12H18N2O,,https://echa.europa.eu/substance-information/-/substanceinfo/100.047.108,"isoproturon (ISO); 3-(4-isopropylphenyl)-1,1-dimethylurea"
-222,141112-29-0,Isoxaflutol,,,,,,,,
 223,121-75-5,Malathion,,100.004.089,Malathion,204-497-7,C10H19O6PS2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.004.089,Malathion
 224,57837-19-1,Metalaxyl,,100.055.418,"Methyl N-(2,6-dimethylphenyl)-N-(methoxyacetyl)-DL-alaninate",260-979-7,C15H21NO4,,https://echa.europa.eu/substance-information/-/substanceinfo/100.055.418,"Methyl N-(2,6-dimethylphenyl)-N-(methoxyacetyl)-DL-alaninate"
 225,41394-05-2,Metamitron,,100.050.301,"4-amino-3-methyl-6-phenyl-1,2,4-triazin-5-one",255-349-3,C10H10N4O,,https://echa.europa.eu/substance-information/-/substanceinfo/100.050.301,"4-amino-3-methyl-6-phenyl-1,2,4-triazin-5-one"
@@ -228,7 +217,6 @@
 228,21087-64-9,Metribuzin,,100.040.175,Metribuzin,244-209-7,C8H14N4OS,,https://echa.europa.eu/substance-information/-/substanceinfo/100.040.175,"metribuzin (ISO); 4-amino-6-tert-butyl-3-methylthio-1,2,4-triazin-5(4H)-one"
 229,7786-34-7,Mevinfos,,100.029.177,Mevinphos,232-095-1,C7H13O6P,,https://echa.europa.eu/substance-information/-/substanceinfo/100.029.177,Mevinphos
 230,2212-67-1,Molinate,,100.016.965,Molinate,218-661-0,C9H17NOS,,https://echa.europa.eu/substance-information/-/substanceinfo/100.016.965,Molinate
-231,111991-09-4,Nicosulfuron,,,,,,,,
 232,53-19-0,"o,p'-DDD",,100.000.152,Mitotane,200-166-6,C14H10Cl4,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.152,Mitotane
 233,3424-82-6,"o,p-DDE",,100.020.290,"2,2,o,p'-tetrachlorovinylidenebisbenzene",222-318-0,C14H8Cl4,,https://echa.europa.eu/substance-information/-/substanceinfo/100.020.290,"2,2,o,p'-tetrachlorovinylidenebisbenzene"
 234,789-02-6,"o,p'-DDT",,100.011.211,"2,2,2,o,p'-pentachloroethylidenebisbenzene",212-332-5,C14H9Cl5,,https://echa.europa.eu/substance-information/-/substanceinfo/100.011.211,"2,2,2,o,p'-pentachloroethylidenebisbenzene"
@@ -245,29 +233,18 @@
 245,709-98-8,Propanil,,100.010.832,Propanil,211-914-6,C9H9Cl2NO,,https://echa.europa.eu/substance-information/-/substanceinfo/100.010.832,Propanil
 246,2275-18-5,Protoate,,100.017.177,Prothoate,218-893-2,C9H20NO3PS2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.017.177,Prothoate
 247,84087-01-4,Quinclorac,,,,,,,,
-248,122931-48-0,Rimsulfuron,,,,,,,,
 249,99105-77-8,Sulcotrione,,,,,,,,
-250,30125-63-4,Terbutilazina desetil,,,,,,,,
 251,886-50-0,Terbutrina,,100.011.773,Terbutryn,212-950-5,C10H19N5S,,https://echa.europa.eu/substance-information/-/substanceinfo/100.011.773,Terbutryn
-252,111988-49-9,Thiacloprid,,,,,,,,
 253,28249-77-6,Thiobencarb,,100.044.461,S-4-chlorobenzyl diethylthiocarbamate,248-924-5,C12H16ClNOS,,https://echa.europa.eu/substance-information/-/substanceinfo/100.044.461,S-4-chlorobenzyl diethylthiocarbamate
-254,153719-23-4,Tiametoxam,,,,,,,,
 255,2303-17-5,Triallate,,100.017.239,Tri-allate,218-962-7,C10H16Cl3NOS,,https://echa.europa.eu/substance-information/-/substanceinfo/100.017.239,Tri-allate
 256,1582-09-8,Trifluralin,,100.014.936,Trifluralin,216-428-8,C13H16F3N3O4,,https://echa.europa.eu/substance-information/-/substanceinfo/100.014.936,Trifluralin
 257,34256-82-1,Acetocloro,,100.047.166,2-chloro-N-(ethoxymethyl)-N-(2-ethyl-6-methylphenyl)acetamide,251-899-3,C14H20ClNO2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.047.166,2-chloro-N-(ethoxymethyl)-N-(2-ethyl-6-methylphenyl)acetamide
 258,865318-97-4,Ametoctradina,,,,,,,,
-259,131860-33-8,Azoxistrobina,,,,,,,,
-260,188425-85-6,Boscalid,,,,,,,,
 261,81777-89-1,Clomazone,,,,,,,,
-262,110488-70-5,Dimetomorf,,,,,,,,
-263,239110-15-7,Fluopicolide,,,,,,,,
-264,104206-82-8,Mesotrione,,,,,,,,
 265,10265-92-6,"Metamidofos (trifosforamidato di O,S- dimetile)",,100.030.538,Methamidophos,233-606-0,C2H8NO2PS,,https://echa.europa.eu/substance-information/-/substanceinfo/100.030.538,Methamidophos
 266,66246-88-6,Penconazolo,,100.060.231,"1-[2-(2,4-dichlorophenyl)pentyl]-1H-1,2,4-triazole",266-275-6,C13H15Cl2N3,,https://echa.europa.eu/substance-information/-/substanceinfo/100.060.231,"1-[2-(2,4-dichlorophenyl)pentyl]-1H-1,2,4-triazole"
 267,53122-28-0,Pirimetanil,,,,,,,,
 268,67747-09-5,Procloraz,,100.060.885,"N-propyl-N-[2-(2,4,6-trichlorophenoxy)ethyl]-1H-imidazole-1-carboxamide",266-994-5,C15H16Cl3N3O2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.060.885,"N-propyl-N-[2-(2,4,6-trichlorophenoxy)ethyl]-1H-imidazole-1-carboxamide"
-269,118134-30-8,Spiroxamina,,,,,,,,
-270,107534-96-3,Tebuconazolo,,,,,,,,
 271,23564-05-8,Tiofanato metile,,100.041.567,Thiophanate-methyl,245-740-7,C12H14N4O4S2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.041.567,Thiophanate-methyl
 272,1066-51-9,AMPA,,,,,,,,
 273,18540-29-9,Cromo VI,,,,,,,,
@@ -314,7 +291,6 @@
 314,85721-33-1,Ciprofloxacina,,,,,,,,
 315,81103-11-9,Claritromicina,,,,,,,,
 316,114-07-8,Eritromicina,,100.003.673,Erythromycin,204-040-1,C37H67NO13,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.673,Erythromycin
-317,139968-49-3,Metaflumizone,,,,,,,,
 318,95-81-8,2-cloro-5-metilanilina,,100.002.232,6-chloro-m-toluidine,202-454-7,C7H8ClN,,https://echa.europa.eu/substance-information/-/substanceinfo/100.002.232,6-chloro-m-toluidine
 319,91-59-8,2-Naftilammina,,100.001.892,2-naphthylamine,202-080-4,C10H9N,,https://echa.europa.eu/substance-information/-/substanceinfo/100.001.892,2-naphthylamine
 320,35822-46-9,"1,2,3,4,6,7,8 HpCDD",,,,,,,,
@@ -334,3 +310,6 @@
 334,51207-31-9,"2,3,7,8 TCDF",,,,,,,,
 335,3268-87-9,OCDD,,,,,,,,
 336,39001-02-0,OCDF,,,,,,,,
+337,117-84-0,Di-n-ottilftalato,Di-n-octyl phthalate,,Di-n-octyl phthalate,,,,,
+338,7439-96-5,Manganese,Manganese,,Manganese,,,,,
+339,74-82-8,Metano,Methane,,Methane,,,,,
