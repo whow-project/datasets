@@ -5,5 +5,20 @@ CODE,PARAMETER,PARAMETER_EN
 10062,Trasparenza (disco di Secchi),Transparency (Secchi disk)
 10313,COD,COD
 M-PRT-0,Portata,Flow rate
+CHM-MP-XIL,m+p-Xilene,m+p-Xilene
+7440-02-0-BIO,Nichel biodisponibile,
+7439-92-1-BIO,Piombo biodisponibile,
+CAM-PRF-0,Profondità,Depth
+CHM-IPA-0,Idrocarburi policiclici aromatici,
+CHM-TNS-N0,Tensioattivi non ionici,
+72-54-8-SUM,DDD,DDD
+72-55-9-SUM,DDE,DDE
+CHM-TEST-NITR,Rapporto Nitrati-Nitriti,
+CHM-TTC-0,Somma tricloroetilene + tetracloroetilene,
+CHM-TRIA-MET,Sommatoria Trialometani,
+CHM-DDT-TOT-RICALC,DDT totale,
+CHM-ANTIP-TOT,Pesticidi totali,
+CHM-POL-ARO,Sommatoria Idrocarburi Policiclici Aromatici,
+CHM-HC-TOT,Idrocarburi tot. (espressi come n-esano),
 LT-00-0,Altezza idrometrica,Hydrometric height
 10050,Solidi sedimentabili,Settleable solids

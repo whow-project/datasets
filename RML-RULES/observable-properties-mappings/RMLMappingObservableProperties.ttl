@@ -42,7 +42,7 @@
 <#ChemicalSubstancesConcentrationMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceConcentrationOfChemicalSubstances> ;
 rr:subjectMap [
-  rr:template "https://w3id.org/whow/data/observable-properties/{CAS}";
+  rr:template "https://w3id.org/italia/lombardia/data/observable-properties/{CAS}";
   rr:class w-mon:WaterObservableProperty  ;
 ] ;
 rr:predicateObjectMap [
@@ -75,7 +75,7 @@ rr:predicateObjectMap [
 <#WISECodesMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceWISECodes> ;
 rr:subjectMap [
-  rr:template "https://w3id.org/whow/data/observable-properties/wise-{WISE}";
+  rr:template "https://w3id.org/italia/lombardia/data/observable-properties/wise-{WISE}";
   rr:class w-mon:WaterObservableProperty ;
 ] ;
 rr:predicateObjectMap [
@@ -104,14 +104,14 @@ rr:predicateObjectMap [
 ];
 rr:predicateObjectMap [
   rr:predicate ispra-top:hasUniqueIdentifier;
-  rr:objectMap [ rr:template "https://w3id.org/whow/data/identifier/{WISE}"; rr:termType rr:IRI]
+  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/identifier/{WISE}"; rr:termType rr:IRI]
 ].
 
 
 <#UniqueWISEIDMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceWISECodes> ;
 rr:subjectMap [
-  rr:template "https://w3id.org/whow/data/identifier/{WISE}";
+  rr:template "https://w3id.org/italia/lombardia/data/identifier/{WISE}";
   rr:class ispra-top:UniqueIdentifier
 ] ;
 rr:predicateObjectMap [
@@ -128,13 +128,13 @@ rr:predicateObjectMap [
 ];
 rr:predicateObjectMap [
   rr:predicate ispra-top:isIssuedBy;
-  rr:objectMap [ rr:constant "https://w3id.org/whow/data/organisation/european-environmental-agency"; rr:termType rr:IRI; ]
+  rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/organisation/european-environmental-agency"; rr:termType rr:IRI; ]
 ].
 
 <#EuropeanEnvironmentalAgencyMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceWISECodes> ;
 rr:subjectMap [
-  rr:template "https://w3id.org/whow/data/organisation/european-environmental-agency";
+  rr:template "https://w3id.org/italia/lombardia/data/organisation/european-environmental-agency";
   rr:class ispra-top:Organisation
 ] ;
 rr:predicateObjectMap [
@@ -159,7 +159,7 @@ rr:predicateObjectMap [
 <#OtherPropertiesMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceOtherProperties> ;
 rr:subjectMap [
-  rr:template "https://w3id.org/whow/data/observable-properties/{CODE}";
+  rr:template "https://w3id.org/italia/lombardia/data/observable-properties/{CODE}";
   rr:class w-mon:WaterObservableProperty ;
 ] ;
 rr:predicateObjectMap [
@@ -172,7 +172,7 @@ rr:predicateObjectMap [
 ];
 rr:predicateObjectMap [
   rr:predicate ispra-top:hasUniqueIdentifier;
-  rr:objectMap [   rr:template "https://w3id.org/whow/data/identifier/{CODE}"; rr:termType rr:IRI;]
+  rr:objectMap [   rr:template "https://w3id.org/italia/lombardia/data/identifier/{CODE}"; rr:termType rr:IRI;]
 ];
 rr:predicateObjectMap [
   rr:predicate l0:name;
@@ -195,7 +195,7 @@ rr:predicateObjectMap [
 <#OTHERCODEMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceOtherProperties> ;
 rr:subjectMap [
-  rr:template "https://w3id.org/whow/data/identifier/{CODE}";
+  rr:template "https://w3id.org/italia/lombardia/data/identifier/{CODE}";
   rr:class ispra-top:UniqueIdentifier
 ] ;
 rr:predicateObjectMap [

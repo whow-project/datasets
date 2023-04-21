@@ -16,232 +16,372 @@
 @prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/whow/data/identifier/10050> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/10050> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo 10050"@it, "Identifier 10050"@en;
   ispra-top:identifier "10050" .
 
-<https://w3id.org/whow/data/identifier/10062> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/10062> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo 10062"@it, "Identifier 10062"@en;
   ispra-top:identifier "10062" .
 
-<https://w3id.org/whow/data/identifier/10313> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/10313> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo 10313"@it, "Identifier 10313"@en;
   ispra-top:identifier "10313" .
 
-<https://w3id.org/whow/data/identifier/12408-02-5> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/12408-02-5> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo 12408-02-5"@it, "Identifier 12408-02-5"@en;
   ispra-top:identifier "12408-02-5" .
 
-<https://w3id.org/whow/data/identifier/20001> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/20001> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo 20001"@it, "Identifier 20001"@en;
   ispra-top:identifier "20001" .
 
-<https://w3id.org/whow/data/identifier/31-02-7> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/31-02-7> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo WISE — 31-02-7"@it, "WISE Identifier — 31-02-7"@en;
   ispra-top:identifier "31-02-7";
-  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+  ispra-top:isIssuedBy <https://w3id.org/italia/lombardia/data/organisation/european-environmental-agency> .
 
-<https://w3id.org/whow/data/identifier/3121-01-5> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/3121-01-5> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo WISE — 3121-01-5"@it, "WISE Identifier — 3121-01-5"@en;
   ispra-top:identifier "3121-01-5";
-  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+  ispra-top:isIssuedBy <https://w3id.org/italia/lombardia/data/organisation/european-environmental-agency> .
 
-<https://w3id.org/whow/data/identifier/3131-01-9> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/3131-01-9> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo WISE — 3131-01-9"@it, "WISE Identifier — 3131-01-9"@en;
   ispra-top:identifier "3131-01-9";
-  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+  ispra-top:isIssuedBy <https://w3id.org/italia/lombardia/data/organisation/european-environmental-agency> .
 
-<https://w3id.org/whow/data/identifier/3133-01-5> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/3133-01-5> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo WISE — 3133-01-5"@it, "WISE Identifier — 3133-01-5"@en;
   ispra-top:identifier "3133-01-5";
-  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+  ispra-top:isIssuedBy <https://w3id.org/italia/lombardia/data/organisation/european-environmental-agency> .
 
-<https://w3id.org/whow/data/identifier/3133-05-9> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/3133-05-9> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo WISE — 3133-05-9"@it, "WISE Identifier — 3133-05-9"@en;
   ispra-top:identifier "3133-05-9";
-  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+  ispra-top:isIssuedBy <https://w3id.org/italia/lombardia/data/organisation/european-environmental-agency> .
 
-<https://w3id.org/whow/data/identifier/3142-01-6> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/3142-01-6> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo WISE — 3142-01-6"@it, "WISE Identifier — 3142-01-6"@en;
   ispra-top:identifier "3142-01-6";
-  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+  ispra-top:isIssuedBy <https://w3id.org/italia/lombardia/data/organisation/european-environmental-agency> .
 
-<https://w3id.org/whow/data/identifier/32-02-0> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/32-02-0> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo WISE — 32-02-0"@it, "WISE Identifier — 32-02-0"@en;
   ispra-top:identifier "32-02-0";
-  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+  ispra-top:isIssuedBy <https://w3id.org/italia/lombardia/data/organisation/european-environmental-agency> .
 
-<https://w3id.org/whow/data/identifier/33-28-3> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/33-28-3> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo WISE — 33-28-3"@it, "WISE Identifier — 33-28-3"@en;
   ispra-top:identifier "33-28-3";
-  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+  ispra-top:isIssuedBy <https://w3id.org/italia/lombardia/data/organisation/european-environmental-agency> .
 
-<https://w3id.org/whow/data/identifier/33-29-4> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/33-29-4> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo WISE — 33-29-4"@it, "WISE Identifier — 33-29-4"@en;
   ispra-top:identifier "33-29-4";
-  ispra-top:isIssuedBy <https://w3id.org/whow/data/organisation/european-environmental-agency> .
+  ispra-top:isIssuedBy <https://w3id.org/italia/lombardia/data/organisation/european-environmental-agency> .
 
-<https://w3id.org/whow/data/identifier/71-52-3> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/71-52-3> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo 71-52-3"@it, "Identifier 71-52-3"@en;
   ispra-top:identifier "71-52-3" .
 
-<https://w3id.org/whow/data/identifier/LT-00-0> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/72-54-8-SUM> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo 72-54-8-SUM"@it, "Identifier 72-54-8-SUM"@en;
+  ispra-top:identifier "72-54-8-SUM" .
+
+<https://w3id.org/italia/lombardia/data/identifier/72-55-9-SUM> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo 72-55-9-SUM"@it, "Identifier 72-55-9-SUM"@en;
+  ispra-top:identifier "72-55-9-SUM" .
+
+<https://w3id.org/italia/lombardia/data/identifier/7439-92-1-BIO> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo 7439-92-1-BIO"@it, "Identifier 7439-92-1-BIO"@en;
+  ispra-top:identifier "7439-92-1-BIO" .
+
+<https://w3id.org/italia/lombardia/data/identifier/7440-02-0-BIO> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo 7440-02-0-BIO"@it, "Identifier 7440-02-0-BIO"@en;
+  ispra-top:identifier "7440-02-0-BIO" .
+
+<https://w3id.org/italia/lombardia/data/identifier/CAM-PRF-0> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo CAM-PRF-0"@it, "Identifier CAM-PRF-0"@en;
+  ispra-top:identifier "CAM-PRF-0" .
+
+<https://w3id.org/italia/lombardia/data/identifier/CHM-ANTIP-TOT> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo CHM-ANTIP-TOT"@it, "Identifier CHM-ANTIP-TOT"@en;
+  ispra-top:identifier "CHM-ANTIP-TOT" .
+
+<https://w3id.org/italia/lombardia/data/identifier/CHM-DDT-TOT-RICALC> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo CHM-DDT-TOT-RICALC"@it, "Identifier CHM-DDT-TOT-RICALC"@en;
+  ispra-top:identifier "CHM-DDT-TOT-RICALC" .
+
+<https://w3id.org/italia/lombardia/data/identifier/CHM-HC-TOT> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo CHM-HC-TOT"@it, "Identifier CHM-HC-TOT"@en;
+  ispra-top:identifier "CHM-HC-TOT" .
+
+<https://w3id.org/italia/lombardia/data/identifier/CHM-IPA-0> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo CHM-IPA-0"@it, "Identifier CHM-IPA-0"@en;
+  ispra-top:identifier "CHM-IPA-0" .
+
+<https://w3id.org/italia/lombardia/data/identifier/CHM-MP-XIL> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo CHM-MP-XIL"@it, "Identifier CHM-MP-XIL"@en;
+  ispra-top:identifier "CHM-MP-XIL" .
+
+<https://w3id.org/italia/lombardia/data/identifier/CHM-POL-ARO> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo CHM-POL-ARO"@it, "Identifier CHM-POL-ARO"@en;
+  ispra-top:identifier "CHM-POL-ARO" .
+
+<https://w3id.org/italia/lombardia/data/identifier/CHM-TEST-NITR> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo CHM-TEST-NITR"@it, "Identifier CHM-TEST-NITR"@en;
+  ispra-top:identifier "CHM-TEST-NITR" .
+
+<https://w3id.org/italia/lombardia/data/identifier/CHM-TNS-N0> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo CHM-TNS-N0"@it, "Identifier CHM-TNS-N0"@en;
+  ispra-top:identifier "CHM-TNS-N0" .
+
+<https://w3id.org/italia/lombardia/data/identifier/CHM-TRIA-MET> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo CHM-TRIA-MET"@it, "Identifier CHM-TRIA-MET"@en;
+  ispra-top:identifier "CHM-TRIA-MET" .
+
+<https://w3id.org/italia/lombardia/data/identifier/CHM-TTC-0> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo CHM-TTC-0"@it, "Identifier CHM-TTC-0"@en;
+  ispra-top:identifier "CHM-TTC-0" .
+
+<https://w3id.org/italia/lombardia/data/identifier/LT-00-0> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo LT-00-0"@it, "Identifier LT-00-0"@en;
   ispra-top:identifier "LT-00-0" .
 
-<https://w3id.org/whow/data/identifier/M-PRT-0> a ispra-top:UniqueIdentifier;
+<https://w3id.org/italia/lombardia/data/identifier/M-PRT-0> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo M-PRT-0"@it, "Identifier M-PRT-0"@en;
   ispra-top:identifier "M-PRT-0" .
 
-<https://w3id.org/whow/data/observable-properties/100-00-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/100-00-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1-chloro-4-nitro-"@en, "Concentrazione di 1-Cloro-4-nitrobenzene"@it;
   ispra-top:name "Concentration of Benzene, 1-chloro-4-nitro-"@en, "Concentrazione di 1-Cloro-4-nitrobenzene"@it;
   l0:name "Concentration of Benzene, 1-chloro-4-nitro-"@en, "Concentrazione di 1-Cloro-4-nitrobenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/100-02-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/100-02-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 4-nitro-"@en, "Concentrazione di 4-Nitrofenolo"@it;
   ispra-top:name "Concentration of Phenol, 4-nitro-"@en, "Concentrazione di 4-Nitrofenolo"@it;
   l0:name "Concentration of Phenol, 4-nitro-"@en, "Concentrazione di 4-Nitrofenolo"@it .
 
-<https://w3id.org/whow/data/observable-properties/100-41-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/100-41-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, ethyl-"@en, "Concentrazione di Etilbenzene"@it;
   ispra-top:name "Concentration of Benzene, ethyl-"@en, "Concentrazione di Etilbenzene"@it;
   l0:name "Concentration of Benzene, ethyl-"@en, "Concentrazione di Etilbenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/100-42-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/100-42-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, ethenyl-"@en, "Concentrazione di Stirene"@it;
   ispra-top:name "Concentration of Benzene, ethenyl-"@en, "Concentrazione di Stirene"@it;
   l0:name "Concentration of Benzene, ethenyl-"@en, "Concentrazione di Stirene"@it .
 
-<https://w3id.org/whow/data/observable-properties/100-61-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/100-61-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, N-methyl-"@en, "Concentrazione di N-metil Anilina"@it;
   ispra-top:name "Concentration of Benzenamine, N-methyl-"@en, "Concentrazione di N-metil Anilina"@it;
   l0:name "Concentration of Benzenamine, N-methyl-"@en, "Concentrazione di N-metil Anilina"@it .
 
-<https://w3id.org/whow/data/observable-properties/10050> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/10050> a w-mon:WaterObservableProperty;
   rdfs:label "Observable Property: Settleable solids"@en, "Parametro Osservato: Solidi sedimentabili"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/10050>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/10050>;
   ispra-top:name "Settleable solids"@en, "Solidi sedimentabili"@it;
   l0:name "Settleable solids"@en, "Solidi sedimentabili"@it .
 
-<https://w3id.org/whow/data/observable-properties/10062> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/10062> a w-mon:WaterObservableProperty;
   rdfs:label "Observable Property: Transparency (Secchi disk)"@en, "Parametro Osservato: Trasparenza (disco di Secchi)"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/10062>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/10062>;
   ispra-top:name "Transparency (Secchi disk)"@en, "Trasparenza (disco di Secchi)"@it;
   l0:name "Transparency (Secchi disk)"@en, "Trasparenza (disco di Secchi)"@it .
 
-<https://w3id.org/whow/data/observable-properties/103-69-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/1007-28-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Atrazina-desisopropil"@it;
+  ispra-top:name "Concentrazione di Atrazina-desisopropil"@it;
+  l0:name "Concentrazione di Atrazina-desisopropil"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/101205-02-1> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Cycloxidim"@it;
+  ispra-top:name "Concentrazione di Cycloxidim"@it;
+  l0:name "Concentrazione di Cycloxidim"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/1024-57-3> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Eptacloro epossido"@it;
+  ispra-top:name "Concentrazione di Eptacloro epossido"@it;
+  l0:name "Concentrazione di Eptacloro epossido"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/10265-92-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Metamidofos (trifosforamidato di O,S- dimetile)"@it;
+  ispra-top:name "Concentrazione di Metamidofos (trifosforamidato di O,S- dimetile)"@it;
+  l0:name "Concentrazione di Metamidofos (trifosforamidato di O,S- dimetile)"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/103-69-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, N-ethyl-"@en, "Concentrazione di N-etil Anilina"@it;
   ispra-top:name "Concentration of Benzenamine, N-ethyl-"@en, "Concentrazione di N-etil Anilina"@it;
   l0:name "Concentration of Benzenamine, N-ethyl-"@en, "Concentrazione di N-etil Anilina"@it .
 
-<https://w3id.org/whow/data/observable-properties/10313> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/1031-07-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Endosulfan solfato"@it;
+  ispra-top:name "Concentrazione di Endosulfan solfato"@it;
+  l0:name "Concentrazione di Endosulfan solfato"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/10313> a w-mon:WaterObservableProperty;
   rdfs:label "Observable Property: COD"@en, "Parametro Osservato: COD"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/10313>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/10313>;
   ispra-top:name "COD"@en, "COD"@it;
   l0:name "COD"@en, "COD"@it .
 
-<https://w3id.org/whow/data/observable-properties/104-40-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/104-40-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 4-nonyl-"@en, "Concentrazione di p-nonilfenolo"@it;
   ispra-top:name "Concentration of Phenol, 4-nonyl-"@en, "Concentrazione di p-nonilfenolo"@it;
   l0:name "Concentration of Phenol, 4-nonyl-"@en, "Concentrazione di p-nonilfenolo"@it .
 
-<https://w3id.org/whow/data/observable-properties/105-67-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/104206-82-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Mesotrione"@it;
+  ispra-top:name "Concentrazione di Mesotrione"@it;
+  l0:name "Concentrazione di Mesotrione"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/105-67-9> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 2,4-dimethyl-"@en, "Concentrazione di Dimetilfenolo 2,4"@it;
   ispra-top:name "Concentration of Phenol, 2,4-dimethyl-"@en, "Concentrazione di Dimetilfenolo 2,4"@it;
   l0:name "Concentration of Phenol, 2,4-dimethyl-"@en, "Concentrazione di Dimetilfenolo 2,4"@it .
 
-<https://w3id.org/whow/data/observable-properties/106-42-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/106-42-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1,4-dimethyl-"@en, "Concentrazione di Xilene para"@it;
   ispra-top:name "Concentration of Benzene, 1,4-dimethyl-"@en, "Concentrazione di Xilene para"@it;
   l0:name "Concentration of Benzene, 1,4-dimethyl-"@en, "Concentrazione di Xilene para"@it .
 
-<https://w3id.org/whow/data/observable-properties/106-43-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/106-43-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1-chloro-4-methyl-"@en, "Concentrazione di 4-Clorotoluene"@it;
   ispra-top:name "Concentration of Benzene, 1-chloro-4-methyl-"@en, "Concentrazione di 4-Clorotoluene"@it;
   l0:name "Concentration of Benzene, 1-chloro-4-methyl-"@en, "Concentrazione di 4-Clorotoluene"@it .
 
-<https://w3id.org/whow/data/observable-properties/106-46-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/106-46-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1,4-dichloro-"@en, "Concentrazione di 1,4-diclorobenzene"@it;
   ispra-top:name "Concentration of Benzene, 1,4-dichloro-"@en, "Concentrazione di 1,4-diclorobenzene"@it;
   l0:name "Concentration of Benzene, 1,4-dichloro-"@en, "Concentrazione di 1,4-diclorobenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/106-47-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/106-47-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, 4-chloro-"@en, "Concentrazione di 4-cloroanilina"@it;
   ispra-top:name "Concentration of Benzenamine, 4-chloro-"@en, "Concentrazione di 4-cloroanilina"@it;
   l0:name "Concentration of Benzenamine, 4-chloro-"@en, "Concentrazione di 4-cloroanilina"@it .
 
-<https://w3id.org/whow/data/observable-properties/106-48-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/106-48-9> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 4-chloro-"@en, "Concentrazione di 4-Clorofenolo"@it;
   ispra-top:name "Concentration of Phenol, 4-chloro-"@en, "Concentrazione di 4-Clorofenolo"@it;
   l0:name "Concentration of Phenol, 4-chloro-"@en, "Concentrazione di 4-Clorofenolo"@it .
 
-<https://w3id.org/whow/data/observable-properties/106-49-0> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/106-49-0> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, 4-methyl-"@en, "Concentrazione di p-toluidina"@it;
   ispra-top:name "Concentration of Benzenamine, 4-methyl-"@en, "Concentrazione di p-toluidina"@it;
   l0:name "Concentration of Benzenamine, 4-methyl-"@en, "Concentrazione di p-toluidina"@it .
 
-<https://w3id.org/whow/data/observable-properties/106-93-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/106-93-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethane, 1,2-dibromo-"@en, "Concentrazione di 1,2-dibromoetano"@it;
   ispra-top:name "Concentration of Ethane, 1,2-dibromo-"@en, "Concentrazione di 1,2-dibromoetano"@it;
   l0:name "Concentration of Ethane, 1,2-dibromo-"@en, "Concentrazione di 1,2-dibromoetano"@it .
 
-<https://w3id.org/whow/data/observable-properties/107-06-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/10606-46-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di 2,4-Dicofol"@it;
+  ispra-top:name "Concentrazione di 2,4-Dicofol"@it;
+  l0:name "Concentrazione di 2,4-Dicofol"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/1066-51-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Aminomethylphosphonic acid"@en, "Concentrazione di AMPA"@it;
+  ispra-top:name "Concentration of Aminomethylphosphonic acid"@en, "Concentrazione di AMPA"@it;
+  l0:name "Concentration of Aminomethylphosphonic acid"@en, "Concentrazione di AMPA"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/107-06-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethane, 1,2-dichloro-"@en, "Concentrazione di Dicloroetano 1,2"@it;
   ispra-top:name "Concentration of Ethane, 1,2-dichloro-"@en, "Concentrazione di Dicloroetano 1,2"@it;
   l0:name "Concentration of Ethane, 1,2-dichloro-"@en, "Concentrazione di Dicloroetano 1,2"@it .
 
-<https://w3id.org/whow/data/observable-properties/108-38-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/1071-83-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Glifosate"@it;
+  ispra-top:name "Concentrazione di Glifosate"@it;
+  l0:name "Concentrazione di Glifosate"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/107534-96-3> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Tebuconazolo"@it;
+  ispra-top:name "Concentrazione di Tebuconazolo"@it;
+  l0:name "Concentrazione di Tebuconazolo"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/108-38-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1,3-dimethyl-"@en, "Concentrazione di Xilene meta"@it;
   ispra-top:name "Concentration of Benzene, 1,3-dimethyl-"@en, "Concentrazione di Xilene meta"@it;
   l0:name "Concentration of Benzene, 1,3-dimethyl-"@en, "Concentrazione di Xilene meta"@it .
 
-<https://w3id.org/whow/data/observable-properties/108-41-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/108-41-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1-chloro-3-methyl-"@en, "Concentrazione di 3-Clorotoluene"@it;
   ispra-top:name "Concentration of Benzene, 1-chloro-3-methyl-"@en, "Concentrazione di 3-Clorotoluene"@it;
   l0:name "Concentration of Benzene, 1-chloro-3-methyl-"@en, "Concentrazione di 3-Clorotoluene"@it .
 
-<https://w3id.org/whow/data/observable-properties/108-42-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/108-42-9> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, 3-chloro-"@en, "Concentrazione di 3-cloroanilina"@it;
   ispra-top:name "Concentration of Benzenamine, 3-chloro-"@en, "Concentrazione di 3-cloroanilina"@it;
   l0:name "Concentration of Benzenamine, 3-chloro-"@en, "Concentrazione di 3-cloroanilina"@it .
 
-<https://w3id.org/whow/data/observable-properties/108-43-0> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/108-43-0> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 3-chloro-"@en, "Concentrazione di 3-Clorofenolo"@it;
   ispra-top:name "Concentration of Phenol, 3-chloro-"@en, "Concentrazione di 3-Clorofenolo"@it;
   l0:name "Concentration of Phenol, 3-chloro-"@en, "Concentrazione di 3-Clorofenolo"@it .
 
-<https://w3id.org/whow/data/observable-properties/108-44-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/108-44-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, 3-methyl-"@en, "Concentrazione di m-Toluidina"@it;
   ispra-top:name "Concentration of Benzenamine, 3-methyl-"@en, "Concentrazione di m-Toluidina"@it;
   l0:name "Concentration of Benzenamine, 3-methyl-"@en, "Concentrazione di m-Toluidina"@it .
 
-<https://w3id.org/whow/data/observable-properties/108-70-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/108-70-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1,3,5-trichloro-"@en, "Concentrazione di Triclorobenzene 1,3,5"@it;
   ispra-top:name "Concentration of Benzene, 1,3,5-trichloro-"@en, "Concentrazione di Triclorobenzene 1,3,5"@it;
   l0:name "Concentration of Benzene, 1,3,5-trichloro-"@en, "Concentrazione di Triclorobenzene 1,3,5"@it .
 
-<https://w3id.org/whow/data/observable-properties/108-88-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/108-88-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, methyl-"@en, "Concentrazione di Toluene"@it;
   ispra-top:name "Concentration of Benzene, methyl-"@en, "Concentrazione di Toluene"@it;
   l0:name "Concentration of Benzene, methyl-"@en, "Concentrazione di Toluene"@it .
 
-<https://w3id.org/whow/data/observable-properties/108-90-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/108-90-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, chloro-"@en, "Concentrazione di Monoclorobenzene"@it;
   ispra-top:name "Concentration of Benzene, chloro-"@en, "Concentrazione di Monoclorobenzene"@it;
   l0:name "Concentration of Benzene, chloro-"@en, "Concentrazione di Monoclorobenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/108-95-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/108-95-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol"@en, "Concentrazione di Fenoli"@it;
   ispra-top:name "Concentration of Phenol"@en, "Concentrazione di Fenoli"@it;
   l0:name "Concentration of Phenol"@en, "Concentrazione di Fenoli"@it .
 
-<https://w3id.org/whow/data/observable-properties/115-96-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/110488-70-5> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Dimetomorf"@it;
+  ispra-top:name "Concentrazione di Dimetomorf"@it;
+  l0:name "Concentrazione di Dimetomorf"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/1113-02-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Ometoato"@it;
+  ispra-top:name "Concentrazione di Ometoato"@it;
+  l0:name "Concentrazione di Ometoato"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/111988-49-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Thiacloprid"@it;
+  ispra-top:name "Concentrazione di Thiacloprid"@it;
+  l0:name "Concentrazione di Thiacloprid"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/111991-09-4> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Nicosulfuron"@it;
+  ispra-top:name "Concentrazione di Nicosulfuron"@it;
+  l0:name "Concentrazione di Nicosulfuron"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/115-29-7> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Endosulfan (isomeri alfa e beta)"@it;
+  ispra-top:name "Concentrazione di Endosulfan (isomeri alfa e beta)"@it;
+  l0:name "Concentrazione di Endosulfan (isomeri alfa e beta)"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/115-32-2> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Dicofol"@it;
+  ispra-top:name "Concentrazione di Dicofol"@it;
+  l0:name "Concentrazione di Dicofol"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/115-96-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethanol, 2-chloro-, 1,1',1''-phosphate"@en, "Concentrazione di TCEP (tris-2cloroetil-fosfato)"@it;
   ispra-top:name "Concentration of Ethanol, 2-chloro-, 1,1',1''-phosphate"@en, "Concentrazione di TCEP (tris-2cloroetil-fosfato)"@it;
   l0:name "Concentration of Ethanol, 2-chloro-, 1,1',1''-phosphate"@en, "Concentrazione di TCEP (tris-2cloroetil-fosfato)"@it .
 
-<https://w3id.org/whow/data/observable-properties/117-81-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/117-81-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-bis(2-ethylhexyl) ester"@en,
     "Concentrazione di Di-2-etilesilftalato"@it;
   ispra-top:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-bis(2-ethylhexyl) ester"@en,
@@ -249,37 +389,77 @@
   l0:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-bis(2-ethylhexyl) ester"@en,
     "Concentrazione di Di-2-etilesilftalato"@it .
 
-<https://w3id.org/whow/data/observable-properties/118-74-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/117-84-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Di-n-octyl phthalate"@en, "Concentrazione di Di-n-ottilftalato"@it;
+  ispra-top:name "Concentration of Di-n-octyl phthalate"@en, "Concentrazione di Di-n-ottilftalato"@it;
+  l0:name "Concentration of Di-n-octyl phthalate"@en, "Concentrazione di Di-n-ottilftalato"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/118-74-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1,2,3,4,5,6-hexachloro-"@en, "Concentrazione di Esaclorobenzene"@it;
   ispra-top:name "Concentration of Benzene, 1,2,3,4,5,6-hexachloro-"@en, "Concentrazione di Esaclorobenzene"@it;
   l0:name "Concentration of Benzene, 1,2,3,4,5,6-hexachloro-"@en, "Concentrazione di Esaclorobenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/120-12-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/118134-30-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Spiroxamina"@it;
+  ispra-top:name "Concentrazione di Spiroxamina"@it;
+  l0:name "Concentrazione di Spiroxamina"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/1190931-27-1> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di cC6O4 [Difluoro{[2,2,4,5-tetrafluoro- 5-(trifluoromethoxy)-1,3-dioxolan- 4-yl]oxy} acetic acid]"@it;
+  ispra-top:name "Concentrazione di cC6O4 [Difluoro{[2,2,4,5-tetrafluoro- 5-(trifluoromethoxy)-1,3-dioxolan- 4-yl]oxy} acetic acid]"@it;
+  l0:name "Concentrazione di cC6O4 [Difluoro{[2,2,4,5-tetrafluoro- 5-(trifluoromethoxy)-1,3-dioxolan- 4-yl]oxy} acetic acid]"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/120-12-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Anthracene"@en, "Concentrazione di Antracene"@it;
   ispra-top:name "Concentration of Anthracene"@en, "Concentrazione di Antracene"@it;
   l0:name "Concentration of Anthracene"@en, "Concentrazione di Antracene"@it .
 
-<https://w3id.org/whow/data/observable-properties/120-82-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/120-82-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1,2,4-trichloro-"@en, "Concentrazione di 1,2,4-Triclorobenzene"@it;
   ispra-top:name "Concentration of Benzene, 1,2,4-trichloro-"@en, "Concentrazione di 1,2,4-Triclorobenzene"@it;
   l0:name "Concentration of Benzene, 1,2,4-trichloro-"@en, "Concentrazione di 1,2,4-Triclorobenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/120-83-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/120-83-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 2,4-dichloro-"@en, "Concentrazione di 2,4-Diclorofenolo"@it;
   ispra-top:name "Concentration of Phenol, 2,4-dichloro-"@en, "Concentrazione di 2,4-Diclorofenolo"@it;
   l0:name "Concentration of Phenol, 2,4-dichloro-"@en, "Concentrazione di 2,4-Diclorofenolo"@it .
 
-<https://w3id.org/whow/data/observable-properties/12002-48-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/12002-48-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, trichloro-"@en, "Concentrazione di Triclorobenzeni"@it;
   ispra-top:name "Concentration of Benzene, trichloro-"@en, "Concentrazione di Triclorobenzeni"@it;
   l0:name "Concentration of Benzene, trichloro-"@en, "Concentrazione di Triclorobenzeni"@it .
 
-<https://w3id.org/whow/data/observable-properties/121-73-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/120162-55-2> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Azimsulfuron"@it;
+  ispra-top:name "Concentrazione di Azimsulfuron"@it;
+  l0:name "Concentrazione di Azimsulfuron"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/121-73-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1-chloro-3-nitro-"@en, "Concentrazione di 3 Cloronitrobenzene"@it;
   ispra-top:name "Concentration of Benzene, 1-chloro-3-nitro-"@en, "Concentrazione di 3 Cloronitrobenzene"@it;
   l0:name "Concentration of Benzene, 1-chloro-3-nitro-"@en, "Concentrazione di 3 Cloronitrobenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/122-34-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/121-75-5> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Malathion"@it;
+  ispra-top:name "Concentrazione di Malathion"@it;
+  l0:name "Concentrazione di Malathion"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/12144-05-7> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di CO3"@it;
+  ispra-top:name "Concentrazione di CO3"@it;
+  l0:name "Concentrazione di CO3"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/12185-15-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Solfuri"@it;
+  ispra-top:name "Concentrazione di Solfuri"@it;
+  l0:name "Concentrazione di Solfuri"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/122-14-5> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Fenitrotion"@it;
+  ispra-top:name "Concentrazione di Fenitrotion"@it;
+  l0:name "Concentrazione di Fenitrotion"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/122-34-9> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2,N4-diethyl-"@en,
     "Concentrazione di Simazina"@it;
   ispra-top:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2,N4-diethyl-"@en,
@@ -287,55 +467,80 @@
   l0:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2,N4-diethyl-"@en,
     "Concentrazione di Simazina"@it .
 
-<https://w3id.org/whow/data/observable-properties/122-39-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/122-39-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, N-phenyl-"@en, "Concentrazione di Difenilammina"@it;
   ispra-top:name "Concentration of Benzenamine, N-phenyl-"@en, "Concentrazione di Difenilammina"@it;
   l0:name "Concentration of Benzenamine, N-phenyl-"@en, "Concentrazione di Difenilammina"@it .
 
-<https://w3id.org/whow/data/observable-properties/124-48-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/122931-48-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Rimsulfuron"@it;
+  ispra-top:name "Concentrazione di Rimsulfuron"@it;
+  l0:name "Concentrazione di Rimsulfuron"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/124-48-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Methane, dibromochloro-"@en, "Concentrazione di Dibromoclorometano"@it;
   ispra-top:name "Concentration of Methane, dibromochloro-"@en, "Concentrazione di Dibromoclorometano"@it;
   l0:name "Concentration of Methane, dibromochloro-"@en, "Concentrazione di Dibromoclorometano"@it .
 
-<https://w3id.org/whow/data/observable-properties/12408-02-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/12408-02-5> a w-mon:WaterObservableProperty;
   rdfs:label "Observable Property: pH"@en, "Parametro Osservato: pH"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/12408-02-5>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/12408-02-5>;
   ispra-top:name "pH"@en, "pH"@it;
   l0:name "pH"@en, "pH"@it .
 
-<https://w3id.org/whow/data/observable-properties/127-18-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/124495-18-7> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Chinossifen"@it;
+  ispra-top:name "Concentrazione di Chinossifen"@it;
+  l0:name "Concentrazione di Chinossifen"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/127-18-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethene, 1,1,2,2-tetrachloro-"@en, "Concentrazione di Tetracloroetilene"@it;
   ispra-top:name "Concentration of Ethene, 1,1,2,2-tetrachloro-"@en, "Concentrazione di Tetracloroetilene"@it;
   l0:name "Concentration of Ethene, 1,1,2,2-tetrachloro-"@en, "Concentrazione di Tetracloroetilene"@it .
 
-<https://w3id.org/whow/data/observable-properties/129-00-0> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/129-00-0> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Pyrene"@en, "Concentrazione di Pirene"@it;
   ispra-top:name "Concentration of Pyrene"@en, "Concentrazione di Pirene"@it;
   l0:name "Concentration of Pyrene"@en, "Concentrazione di Pirene"@it .
 
-<https://w3id.org/whow/data/observable-properties/131-11-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/131-11-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-dimethyl ester"@en,
     "Concentrazione di Dimetil-ftalato (DMP)"@it;
   ispra-top:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-dimethyl ester"@en,
     "Concentrazione di Dimetil-ftalato (DMP)"@it;
   l0:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-dimethyl ester"@en, "Concentrazione di Dimetil-ftalato (DMP)"@it .
 
-<https://w3id.org/whow/data/observable-properties/1330-20-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/131860-33-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Azoxistrobina"@it;
+  ispra-top:name "Concentrazione di Azoxistrobina"@it;
+  l0:name "Concentrazione di Azoxistrobina"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/1330-20-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, dimethyl-"@en, "Concentrazione di Xilene (somma isomeri)"@it;
   ispra-top:name "Concentration of Benzene, dimethyl-"@en, "Concentrazione di Xilene (somma isomeri)"@it;
   l0:name "Concentration of Benzene, dimethyl-"@en, "Concentrazione di Xilene (somma isomeri)"@it .
 
-<https://w3id.org/whow/data/observable-properties/134-32-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/134-32-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1-Naphthalenamine"@en, "Concentrazione di 1-Naftilammina"@it;
   ispra-top:name "Concentration of 1-Naphthalenamine"@en, "Concentrazione di 1-Naftilammina"@it;
   l0:name "Concentration of 1-Naphthalenamine"@en, "Concentrazione di 1-Naftilammina"@it .
 
-<https://w3id.org/whow/data/observable-properties/1344-09-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/1344-09-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Silicic acid, sodium salt"@en, "Concentrazione di Silicati reattivi"@it;
   ispra-top:name "Concentration of Silicic acid, sodium salt"@en, "Concentrazione di Silicati reattivi"@it;
   l0:name "Concentration of Silicic acid, sodium salt"@en, "Concentrazione di Silicati reattivi"@it .
 
-<https://w3id.org/whow/data/observable-properties/139-40-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/135410-20-7> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Acetamiprid"@it;
+  ispra-top:name "Concentrazione di Acetamiprid"@it;
+  l0:name "Concentrazione di Acetamiprid"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/138261-41-3> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Imidacloprid"@it;
+  ispra-top:name "Concentrazione di Imidacloprid"@it;
+  l0:name "Concentrazione di Imidacloprid"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/139-40-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2,N4-bis(1-methylethyl)-"@en,
     "Concentrazione di Propazina"@it;
   ispra-top:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2,N4-bis(1-methylethyl)-"@en,
@@ -343,43 +548,103 @@
   l0:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2,N4-bis(1-methylethyl)-"@en,
     "Concentrazione di Propazina"@it .
 
-<https://w3id.org/whow/data/observable-properties/140-66-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/140-66-9> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 4-(1,1,3,3-tetramethylbutyl)-"@en, "Concentrazione di para-terz-ottilfenolo"@it;
   ispra-top:name "Concentration of Phenol, 4-(1,1,3,3-tetramethylbutyl)-"@en, "Concentrazione di para-terz-ottilfenolo"@it;
   l0:name "Concentration of Phenol, 4-(1,1,3,3-tetramethylbutyl)-"@en, "Concentrazione di para-terz-ottilfenolo"@it .
 
-<https://w3id.org/whow/data/observable-properties/14265-44-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/141112-29-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Isoxaflutol"@it;
+  ispra-top:name "Concentrazione di Isoxaflutol"@it;
+  l0:name "Concentrazione di Isoxaflutol"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/142459-58-3> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Flufenacet"@it;
+  ispra-top:name "Concentrazione di Flufenacet"@it;
+  l0:name "Concentrazione di Flufenacet"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/14265-44-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phosphate"@en, "Concentrazione di Ortofosfato"@it;
   ispra-top:name "Concentration of Phosphate"@en, "Concentrazione di Ortofosfato"@it;
   l0:name "Concentration of Phosphate"@en, "Concentrazione di Ortofosfato"@it .
 
-<https://w3id.org/whow/data/observable-properties/156-59-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/14797-55-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Azoto nitrico"@it;
+  ispra-top:name "Concentrazione di Azoto nitrico"@it;
+  l0:name "Concentrazione di Azoto nitrico"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/14797-65-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Azoto nitroso"@it;
+  ispra-top:name "Concentrazione di Azoto nitroso"@it;
+  l0:name "Concentrazione di Azoto nitroso"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/14798-03-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Azoto ammoniacale"@it;
+  ispra-top:name "Concentrazione di Azoto ammoniacale"@it;
+  l0:name "Concentrazione di Azoto ammoniacale"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/14808-79-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Solfati"@it;
+  ispra-top:name "Concentrazione di Solfati"@it;
+  l0:name "Concentrazione di Solfati"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/15307-86-5> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Diclofenac"@it;
+  ispra-top:name "Concentrazione di Diclofenac"@it;
+  l0:name "Concentrazione di Diclofenac"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/153719-23-4> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Tiametoxam"@it;
+  ispra-top:name "Concentrazione di Tiametoxam"@it;
+  l0:name "Concentrazione di Tiametoxam"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/156-59-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethene, 1,2-dichloro-, (1Z)-"@en, "Concentrazione di Dicloroetilene cis"@it;
   ispra-top:name "Concentration of Ethene, 1,2-dichloro-, (1Z)-"@en, "Concentrazione di Dicloroetilene cis"@it;
   l0:name "Concentration of Ethene, 1,2-dichloro-, (1Z)-"@en, "Concentrazione di Dicloroetilene cis"@it .
 
-<https://w3id.org/whow/data/observable-properties/156-60-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/156-60-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethene, 1,2-dichloro-, (1E)-"@en, "Concentrazione di Dicloroetilene trans"@it;
   ispra-top:name "Concentration of Ethene, 1,2-dichloro-, (1E)-"@en, "Concentrazione di Dicloroetilene trans"@it;
   l0:name "Concentration of Ethene, 1,2-dichloro-, (1E)-"@en, "Concentrazione di Dicloroetilene trans"@it .
 
-<https://w3id.org/whow/data/observable-properties/1634-04-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/1582-09-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Trifluralin"@it;
+  ispra-top:name "Concentrazione di Trifluralin"@it;
+  l0:name "Concentrazione di Trifluralin"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/15972-60-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Alachlor"@it;
+  ispra-top:name "Concentrazione di Alachlor"@it;
+  l0:name "Concentrazione di Alachlor"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/1634-04-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Propane, 2-methoxy-2-methyl-"@en, "Concentrazione di MTBE (metil terbutil etere)"@it;
   ispra-top:name "Concentration of Propane, 2-methoxy-2-methyl-"@en, "Concentrazione di MTBE (metil terbutil etere)"@it;
   l0:name "Concentration of Propane, 2-methoxy-2-methyl-"@en, "Concentrazione di MTBE (metil terbutil etere)"@it .
 
-<https://w3id.org/whow/data/observable-properties/1698-60-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/16887-00-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Cloruri"@it;
+  ispra-top:name "Concentrazione di Cloruri"@it;
+  l0:name "Concentrazione di Cloruri"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/1698-60-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 3(2H)-Pyridazinone, 5-amino-4-chloro-2-phenyl-"@en, "Concentrazione di Chloridazon"@it;
   ispra-top:name "Concentration of 3(2H)-Pyridazinone, 5-amino-4-chloro-2-phenyl-"@en,
     "Concentrazione di Chloridazon"@it;
   l0:name "Concentration of 3(2H)-Pyridazinone, 5-amino-4-chloro-2-phenyl-"@en, "Concentrazione di Chloridazon"@it .
 
-<https://w3id.org/whow/data/observable-properties/1717-00-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/16984-48-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Fluoruri"@it;
+  ispra-top:name "Concentrazione di Fluoruri"@it;
+  l0:name "Concentrazione di Fluoruri"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/1717-00-6> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethane, 1,1-dichloro-1-fluoro-"@en, "Concentrazione di 1,1-Dicloro-1-fluoro-etano (Freon 141)"@it;
   ispra-top:name "Concentration of Ethane, 1,1-dichloro-1-fluoro-"@en, "Concentrazione di 1,1-Dicloro-1-fluoro-etano (Freon 141)"@it;
   l0:name "Concentration of Ethane, 1,1-dichloro-1-fluoro-"@en, "Concentrazione di 1,1-Dicloro-1-fluoro-etano (Freon 141)"@it .
 
-<https://w3id.org/whow/data/observable-properties/1763-23-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/1763-23-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1-Octanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluoro-"@en,
     "Concentrazione di PFOS (Perfluoro Octane Sulfonate)"@it;
   ispra-top:name "Concentration of 1-Octanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluoro-"@en,
@@ -387,7 +652,32 @@
   l0:name "Concentration of 1-Octanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluoro-"@en,
     "Concentrazione di PFOS (Perfluoro Octane Sulfonate)"@it .
 
-<https://w3id.org/whow/data/observable-properties/1912-24-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/17778-88-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Azoto totale"@it;
+  ispra-top:name "Concentrazione di Azoto totale"@it;
+  l0:name "Concentrazione di Azoto totale"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/18540-29-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Cromo VI"@it;
+  ispra-top:name "Concentrazione di Cromo VI"@it;
+  l0:name "Concentrazione di Cromo VI"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/188425-85-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Boscalid"@it;
+  ispra-top:name "Concentrazione di Boscalid"@it;
+  l0:name "Concentrazione di Boscalid"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/189-64-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Dibenzo(ah)pirene"@it;
+  ispra-top:name "Concentrazione di Dibenzo(ah)pirene"@it;
+  l0:name "Concentrazione di Dibenzo(ah)pirene"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/191-24-2> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Benzo (g,h,i) perilene"@it;
+  ispra-top:name "Concentrazione di Benzo (g,h,i) perilene"@it;
+  l0:name "Concentrazione di Benzo (g,h,i) perilene"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/1912-24-9> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-ethyl-N4-(1-methylethyl)-"@en,
     "Concentrazione di Atrazina"@it;
   ispra-top:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-ethyl-N4-(1-methylethyl)-"@en,
@@ -395,33 +685,108 @@
   l0:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-ethyl-N4-(1-methylethyl)-"@en,
     "Concentrazione di Atrazina"@it .
 
-<https://w3id.org/whow/data/observable-properties/193-39-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/193-39-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Indeno[1,2,3-cd]pyrene"@en, "Concentrazione di Indeno(1,2,3-cd)pirene"@it;
   ispra-top:name "Concentration of Indeno[1,2,3-cd]pyrene"@en, "Concentrazione di Indeno(1,2,3-cd)pirene"@it;
   l0:name "Concentration of Indeno[1,2,3-cd]pyrene"@en, "Concentrazione di Indeno(1,2,3-cd)pirene"@it .
 
-<https://w3id.org/whow/data/observable-properties/20001> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/19666-30-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Oxadiazon"@it;
+  ispra-top:name "Concentrazione di Oxadiazon"@it;
+  l0:name "Concentrazione di Oxadiazon"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/20001> a w-mon:WaterObservableProperty;
   rdfs:label "Observable Property: Hardness (total)"@en, "Parametro Osservato: Durezza (totale)"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/20001>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/20001>;
   ispra-top:name "Durezza (totale)"@it, "Hardness (total)"@en;
   l0:name "Durezza (totale)"@it, "Hardness (total)"@en .
 
-<https://w3id.org/whow/data/observable-properties/206-44-0> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/2008-58-4> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Diclorobenzammide 2,6"@it;
+  ispra-top:name "Concentrazione di Diclorobenzammide 2,6"@it;
+  l0:name "Concentrazione di Diclorobenzammide 2,6"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/2032-65-7> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Metiocarb"@it;
+  ispra-top:name "Concentrazione di Metiocarb"@it;
+  l0:name "Concentrazione di Metiocarb"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/205-99-2> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Benzo (b) fluorantene"@it;
+  ispra-top:name "Concentrazione di Benzo (b) fluorantene"@it;
+  l0:name "Concentrazione di Benzo (b) fluorantene"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/2058-94-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di PFUdA (Perfluoro Undecanoic Acid)"@it;
+  ispra-top:name "Concentrazione di PFUdA (Perfluoro Undecanoic Acid)"@it;
+  l0:name "Concentrazione di PFUdA (Perfluoro Undecanoic Acid)"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/206-44-0> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Fluoranthene"@en, "Concentrazione di Fluorantene"@it;
   ispra-top:name "Concentration of Fluoranthene"@en, "Concentrazione di Fluorantene"@it;
   l0:name "Concentration of Fluoranthene"@en, "Concentrazione di Fluorantene"@it .
 
-<https://w3id.org/whow/data/observable-properties/208-96-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/207-08-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Benzo (k) fluorantene"@it;
+  ispra-top:name "Concentrazione di Benzo (k) fluorantene"@it;
+  l0:name "Concentrazione di Benzo (k) fluorantene"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/208-96-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Acenaphthylene"@en, "Concentrazione di Acenaftilene"@it;
   ispra-top:name "Concentration of Acenaphthylene"@en, "Concentrazione di Acenaftilene"@it;
   l0:name "Concentration of Acenaphthylene"@en, "Concentrazione di Acenaftilene"@it .
 
-<https://w3id.org/whow/data/observable-properties/218-01-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/21087-64-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Metribuzin"@it;
+  ispra-top:name "Concentrazione di Metribuzin"@it;
+  l0:name "Concentrazione di Metribuzin"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/210880-92-5> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Clotianidin"@it;
+  ispra-top:name "Concentrazione di Clotianidin"@it;
+  l0:name "Concentrazione di Clotianidin"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/21725-46-2> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Cianazina"@it;
+  ispra-top:name "Concentrazione di Cianazina"@it;
+  l0:name "Concentrazione di Cianazina"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/218-01-9> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Chrysene"@en, "Concentrazione di Crisene"@it;
   ispra-top:name "Concentration of Chrysene"@en, "Concentrazione di Crisene"@it;
   l0:name "Concentration of Chrysene"@en, "Concentrazione di Crisene"@it .
 
-<https://w3id.org/whow/data/observable-properties/25057-89-0> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/2212-67-1> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Molinate"@it;
+  ispra-top:name "Concentrazione di Molinate"@it;
+  l0:name "Concentrazione di Molinate"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/2275-18-5> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Protoate"@it;
+  ispra-top:name "Concentrazione di Protoate"@it;
+  l0:name "Concentrazione di Protoate"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/2303-17-5> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Triallate"@it;
+  ispra-top:name "Concentrazione di Triallate"@it;
+  l0:name "Concentrazione di Triallate"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/23103-98-2> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Pirimicarb"@it, "Concentrazione di p-nonilfenolo"@it;
+  ispra-top:name "Concentrazione di Pirimicarb"@it, "Concentrazione di p-nonilfenolo"@it;
+  l0:name "Concentrazione di Pirimicarb"@it, "Concentrazione di p-nonilfenolo"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/23564-05-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Tiofanato metile"@it;
+  ispra-top:name "Concentrazione di Tiofanato metile"@it;
+  l0:name "Concentrazione di Tiofanato metile"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/239110-15-7> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Fluopicolide"@it;
+  ispra-top:name "Concentrazione di Fluopicolide"@it;
+  l0:name "Concentrazione di Fluopicolide"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/25057-89-0> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1H-2,1,3-Benzothiadiazin-4(3H)-one, 3-(1-methylethyl)-, 2,2-dioxide"@en,
     "Concentrazione di Bentazone"@it;
   ispra-top:name "Concentration of 1H-2,1,3-Benzothiadiazin-4(3H)-one, 3-(1-methylethyl)-, 2,2-dioxide"@en,
@@ -429,18 +794,53 @@
   l0:name "Concentration of 1H-2,1,3-Benzothiadiazin-4(3H)-one, 3-(1-methylethyl)-, 2,2-dioxide"@en,
     "Concentrazione di Bentazone"@it .
 
-<https://w3id.org/whow/data/observable-properties/2706-90-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/2706-90-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Pentanoic acid, 2,2,3,3,4,4,5,5,5-nonafluoro-"@en, "Concentrazione di PFPeA (Perfluoro Pentanoic Acid)"@it;
   ispra-top:name "Concentration of Pentanoic acid, 2,2,3,3,4,4,5,5,5-nonafluoro-"@en,
     "Concentrazione di PFPeA (Perfluoro Pentanoic Acid)"@it;
   l0:name "Concentration of Pentanoic acid, 2,2,3,3,4,4,5,5,5-nonafluoro-"@en, "Concentrazione di PFPeA (Perfluoro Pentanoic Acid)"@it .
 
-<https://w3id.org/whow/data/observable-properties/288-88-0> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/28044-83-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Eptacloro Epossido endo"@it;
+  ispra-top:name "Concentrazione di Eptacloro Epossido endo"@it;
+  l0:name "Concentrazione di Eptacloro Epossido endo"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/28159-98-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Cibutrina"@it;
+  ispra-top:name "Concentrazione di Cibutrina"@it;
+  l0:name "Concentrazione di Cibutrina"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/28249-77-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Thiobencarb"@it;
+  ispra-top:name "Concentrazione di Thiobencarb"@it;
+  l0:name "Concentrazione di Thiobencarb"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/288-88-0> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1H-1,2,4-Triazole"@en, "Concentrazione di M.Mt.T.D."@it;
   ispra-top:name "Concentration of 1H-1,2,4-Triazole"@en, "Concentrazione di M.Mt.T.D."@it;
   l0:name "Concentration of 1H-1,2,4-Triazole"@en, "Concentrazione di M.Mt.T.D."@it .
 
-<https://w3id.org/whow/data/observable-properties/307-24-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/2921-88-2> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Clorpirifos"@it;
+  ispra-top:name "Concentrazione di Clorpirifos"@it;
+  l0:name "Concentrazione di Clorpirifos"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/298-00-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Paration metile"@it;
+  ispra-top:name "Concentrazione di Paration metile"@it;
+  l0:name "Concentrazione di Paration metile"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/301-12-2> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Oxydemeton-metile"@it;
+  ispra-top:name "Concentrazione di Oxydemeton-metile"@it;
+  l0:name "Concentrazione di Oxydemeton-metile"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/30125-63-4> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Terbutilazina desetil"@it;
+  ispra-top:name "Concentrazione di Terbutilazina desetil"@it;
+  l0:name "Concentrazione di Terbutilazina desetil"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/307-24-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Hexanoic acid, 2,2,3,3,4,4,5,5,6,6,6-undecafluoro-"@en,
     "Concentrazione di PFHxA (Perfluoro Hexanoic Acid)"@it;
   ispra-top:name "Concentration of Hexanoic acid, 2,2,3,3,4,4,5,5,6,6,6-undecafluoro-"@en,
@@ -448,7 +848,7 @@
   l0:name "Concentration of Hexanoic acid, 2,2,3,3,4,4,5,5,6,6,6-undecafluoro-"@en,
     "Concentrazione di PFHxA (Perfluoro Hexanoic Acid)"@it .
 
-<https://w3id.org/whow/data/observable-properties/307-55-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/307-55-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Dodecanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-tricosafluoro-"@en,
     "Concentrazione di PFDoA (Perfluoro Dodecanoic Acid)"@it;
   ispra-top:name "Concentration of Dodecanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-tricosafluoro-"@en,
@@ -456,7 +856,17 @@
   l0:name "Concentration of Dodecanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-tricosafluoro-"@en,
     "Concentrazione di PFDoA (Perfluoro Dodecanoic Acid)"@it .
 
-<https://w3id.org/whow/data/observable-properties/319-84-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/309-00-2> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Aldrin"@it;
+  ispra-top:name "Concentrazione di Aldrin"@it;
+  l0:name "Concentrazione di Aldrin"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/314-40-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Bromacil"@it;
+  ispra-top:name "Concentrazione di Bromacil"@it;
+  l0:name "Concentrazione di Bromacil"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/319-84-6> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.beta.,4.alpha.,5.beta.,6.beta.)-"@en,
     "Concentrazione di HCH alfa"@it;
   ispra-top:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.beta.,4.alpha.,5.beta.,6.beta.)-"@en,
@@ -464,7 +874,7 @@
   l0:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.beta.,4.alpha.,5.beta.,6.beta.)-"@en,
     "Concentrazione di HCH alfa"@it .
 
-<https://w3id.org/whow/data/observable-properties/319-85-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/319-85-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.beta.,3.alpha.,4.beta.,5.alpha.,6.beta.)-"@en,
     "Concentrazione di HCH-beta"@it;
   ispra-top:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.beta.,3.alpha.,4.beta.,5.alpha.,6.beta.)-"@en,
@@ -472,7 +882,7 @@
   l0:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.beta.,3.alpha.,4.beta.,5.alpha.,6.beta.)-"@en,
     "Concentrazione di HCH-beta"@it .
 
-<https://w3id.org/whow/data/observable-properties/319-86-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/319-86-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.alpha.,4.beta.,5.alpha.,6.beta.)-"@en,
     "Concentrazione di HCH delta"@it;
   ispra-top:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.alpha.,4.beta.,5.alpha.,6.beta.)-"@en,
@@ -480,20 +890,25 @@
   l0:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.alpha.,4.beta.,5.alpha.,6.beta.)-"@en,
     "Concentrazione di HCH delta"@it .
 
-<https://w3id.org/whow/data/observable-properties/330-54-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/330-54-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Urea, N'-(3,4-dichlorophenyl)-N,N-dimethyl-"@en, "Concentrazione di Diuron"@it;
   ispra-top:name "Concentration of Urea, N'-(3,4-dichlorophenyl)-N,N-dimethyl-"@en,
     "Concentrazione di Diuron"@it;
   l0:name "Concentration of Urea, N'-(3,4-dichlorophenyl)-N,N-dimethyl-"@en, "Concentrazione di Diuron"@it .
 
-<https://w3id.org/whow/data/observable-properties/330-55-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/330-55-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Urea, N'-(3,4-dichlorophenyl)-N-methoxy-N-methyl-"@en,
     "Concentrazione di Linuron"@it;
   ispra-top:name "Concentration of Urea, N'-(3,4-dichlorophenyl)-N-methoxy-N-methyl-"@en,
     "Concentrazione di Linuron"@it;
   l0:name "Concentration of Urea, N'-(3,4-dichlorophenyl)-N-methoxy-N-methyl-"@en, "Concentrazione di Linuron"@it .
 
-<https://w3id.org/whow/data/observable-properties/333-41-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/33213-65-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Endosulfan beta"@it;
+  ispra-top:name "Concentrazione di Endosulfan beta"@it;
+  l0:name "Concentrazione di Endosulfan beta"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/333-41-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phosphorothioic acid, O,O-diethyl O-[6-methyl-2-(1-methylethyl)-4-pyrimidinyl] ester"@en,
     "Concentrazione di Diazinone"@it;
   ispra-top:name "Concentration of Phosphorothioic acid, O,O-diethyl O-[6-methyl-2-(1-methylethyl)-4-pyrimidinyl] ester"@en,
@@ -501,7 +916,7 @@
   l0:name "Concentration of Phosphorothioic acid, O,O-diethyl O-[6-methyl-2-(1-methylethyl)-4-pyrimidinyl] ester"@en,
     "Concentrazione di Diazinone"@it .
 
-<https://w3id.org/whow/data/observable-properties/335-67-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/335-67-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Octanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-pentadecafluoro-"@en,
     "Concentrazione di PFOA (Perfluoro Octanoic Acid)"@it;
   ispra-top:name "Concentration of Octanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-pentadecafluoro-"@en,
@@ -509,7 +924,7 @@
   l0:name "Concentration of Octanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-pentadecafluoro-"@en,
     "Concentrazione di PFOA (Perfluoro Octanoic Acid)"@it .
 
-<https://w3id.org/whow/data/observable-properties/335-76-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/335-76-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Decanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-nonadecafluoro-"@en,
     "Concentrazione di PFDA (Perfluoro Decanoic Acid)"@it;
   ispra-top:name "Concentration of Decanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-nonadecafluoro-"@en,
@@ -517,7 +932,22 @@
   l0:name "Concentration of Decanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-nonadecafluoro-"@en,
     "Concentrazione di PFDA (Perfluoro Decanoic Acid)"@it .
 
-<https://w3id.org/whow/data/observable-properties/355-46-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/34123-59-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Isoproturon"@it;
+  ispra-top:name "Concentrazione di Isoproturon"@it;
+  l0:name "Concentrazione di Isoproturon"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/3424-82-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di o,p-DDE"@it;
+  ispra-top:name "Concentrazione di o,p-DDE"@it;
+  l0:name "Concentrazione di o,p-DDE"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/34256-82-1> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Acetocloro"@it;
+  ispra-top:name "Concentrazione di Acetocloro"@it;
+  l0:name "Concentrazione di Acetocloro"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/355-46-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1-Hexanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,6-tridecafluoro-"@en,
     "Concentrazione di PFHxS (Perfluoro Hexane Sulfonate)"@it;
   ispra-top:name "Concentration of 1-Hexanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,6-tridecafluoro-"@en,
@@ -525,12 +955,12 @@
   l0:name "Concentration of 1-Hexanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,6-tridecafluoro-"@en,
     "Concentrazione di PFHxS (Perfluoro Hexane Sulfonate)"@it .
 
-<https://w3id.org/whow/data/observable-properties/375-22-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/375-22-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Butanoic acid, 2,2,3,3,4,4,4-heptafluoro-"@en, "Concentrazione di PFBA (Perfluoro Butanoic Acid)"@it;
   ispra-top:name "Concentration of Butanoic acid, 2,2,3,3,4,4,4-heptafluoro-"@en, "Concentrazione di PFBA (Perfluoro Butanoic Acid)"@it;
   l0:name "Concentration of Butanoic acid, 2,2,3,3,4,4,4-heptafluoro-"@en, "Concentrazione di PFBA (Perfluoro Butanoic Acid)"@it .
 
-<https://w3id.org/whow/data/observable-properties/375-73-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/375-73-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1-Butanesulfonic acid, 1,1,2,2,3,3,4,4,4-nonafluoro-"@en,
     "Concentrazione di PFBS (Perfluoro Butane Sulfonate)"@it;
   ispra-top:name "Concentration of 1-Butanesulfonic acid, 1,1,2,2,3,3,4,4,4-nonafluoro-"@en,
@@ -538,7 +968,7 @@
   l0:name "Concentration of 1-Butanesulfonic acid, 1,1,2,2,3,3,4,4,4-nonafluoro-"@en,
     "Concentrazione di PFBS (Perfluoro Butane Sulfonate)"@it .
 
-<https://w3id.org/whow/data/observable-properties/375-85-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/375-85-9> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Heptanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,7-tridecafluoro-"@en,
     "Concentrazione di PFHpA (Perfluoro Heptanoic Acid)"@it;
   ispra-top:name "Concentration of Heptanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,7-tridecafluoro-"@en,
@@ -546,7 +976,7 @@
   l0:name "Concentration of Heptanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,7-tridecafluoro-"@en,
     "Concentrazione di PFHpA (Perfluoro Heptanoic Acid)"@it .
 
-<https://w3id.org/whow/data/observable-properties/375-95-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/375-95-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Nonanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,9-heptadecafluoro-"@en,
     "Concentrazione di PFNA (Perfluoro Nonanoic Acid)"@it;
   ispra-top:name "Concentration of Nonanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,9-heptadecafluoro-"@en,
@@ -554,7 +984,17 @@
   l0:name "Concentration of Nonanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,9-heptadecafluoro-"@en,
     "Concentrazione di PFNA (Perfluoro Nonanoic Acid)"@it .
 
-<https://w3id.org/whow/data/observable-properties/465-73-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/40487-42-1> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Pendimetalin"@it;
+  ispra-top:name "Concentrazione di Pendimetalin"@it;
+  l0:name "Concentrazione di Pendimetalin"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/41394-05-2> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Metamitron"@it;
+  ispra-top:name "Concentrazione di Metamitron"@it;
+  l0:name "Concentrazione di Metamitron"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/465-73-6> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,4:5,8-Dimethanonaphthalene, 1,2,3,4,10,10-hexachloro-1,4,4a,5,8,8a-hexahydro-, (1R,4S,4aS,5R,8S,8aR)-rel-"@en,
     "Concentrazione di Isodrin"@it;
   ispra-top:name "Concentration of 1,4:5,8-Dimethanonaphthalene, 1,2,3,4,10,10-hexachloro-1,4,4a,5,8,8a-hexahydro-, (1R,4S,4aS,5R,8S,8aR)-rel-"@en,
@@ -562,15 +1002,17 @@
   l0:name "Concentration of 1,4:5,8-Dimethanonaphthalene, 1,2,3,4,10,10-hexachloro-1,4,4a,5,8,8a-hexahydro-, (1R,4S,4aS,5R,8S,8aR)-rel-"@en,
     "Concentrazione di Isodrin"@it .
 
-<https://w3id.org/whow/data/observable-properties/479-61-8> a w-mon:WaterObservableProperty;
-  rdfs:label "Concentration of Magnesium, [(2E,7R,11R)-3,7,11,15-tetramethyl-2-hexadecenyl (3S,4S,21R)-9-ethenyl-14-ethyl-21-(methoxycarbonyl)-4,8,13,18-tetramethyl-20-oxo-3-phorbinepropanoato(2-)-.kappa.N23,.kappa.N24,.kappa.N25,.kappa.N26]-, (SP-4-2)-"@en,
-    "Concentrazione di Clorofilla \"a\""@it;
-  ispra-top:name "Concentration of Magnesium, [(2E,7R,11R)-3,7,11,15-tetramethyl-2-hexadecenyl (3S,4S,21R)-9-ethenyl-14-ethyl-21-(methoxycarbonyl)-4,8,13,18-tetramethyl-20-oxo-3-phorbinepropanoato(2-)-.kappa.N23,.kappa.N24,.kappa.N25,.kappa.N26]-, (SP-4-2)-"@en,
-    "Concentrazione di Clorofilla \"a\""@it;
-  l0:name "Concentration of Magnesium, [(2E,7R,11R)-3,7,11,15-tetramethyl-2-hexadecenyl (3S,4S,21R)-9-ethenyl-14-ethyl-21-(methoxycarbonyl)-4,8,13,18-tetramethyl-20-oxo-3-phorbinepropanoato(2-)-.kappa.N23,.kappa.N24,.kappa.N25,.kappa.N26]-, (SP-4-2)-"@en,
-    "Concentrazione di Clorofilla \"a\""@it .
+<https://w3id.org/italia/lombardia/data/observable-properties/470-90-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Chlorfenvinphos"@it;
+  ispra-top:name "Concentrazione di Chlorfenvinphos"@it;
+  l0:name "Concentrazione di Chlorfenvinphos"@it .
 
-<https://w3id.org/whow/data/observable-properties/50-29-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/479-61-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Chlorophyll a"@en, "Concentrazione di Clorofilla \"a\""@it;
+  ispra-top:name "Concentration of Chlorophyll a"@en, "Concentrazione di Clorofilla \"a\""@it;
+  l0:name "Concentration of Chlorophyll a"@en, "Concentrazione di Clorofilla \"a\""@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/50-29-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1,1'-(2,2,2-trichloroethylidene)bis[4-chloro-"@en,
     "Concentrazione di p,p'-DDT"@it;
   ispra-top:name "Concentration of Benzene, 1,1'-(2,2,2-trichloroethylidene)bis[4-chloro-"@en,
@@ -578,17 +1020,37 @@
   l0:name "Concentration of Benzene, 1,1'-(2,2,2-trichloroethylidene)bis[4-chloro-"@en,
     "Concentrazione di p,p'-DDT"@it .
 
-<https://w3id.org/whow/data/observable-properties/50-32-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/50-32-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzo[a]pyrene"@en, "Concentrazione di Benzo (a) pirene"@it;
   ispra-top:name "Concentration of Benzo[a]pyrene"@en, "Concentrazione di Benzo (a) pirene"@it;
   l0:name "Concentration of Benzo[a]pyrene"@en, "Concentrazione di Benzo (a) pirene"@it .
 
-<https://w3id.org/whow/data/observable-properties/51-28-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/51-28-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 2,4-dinitro-"@en, "Concentrazione di 2,4-Dinitrofenolo"@it;
   ispra-top:name "Concentration of Phenol, 2,4-dinitro-"@en, "Concentrazione di 2,4-Dinitrofenolo"@it;
   l0:name "Concentration of Phenol, 2,4-dinitro-"@en, "Concentrazione di 2,4-Dinitrofenolo"@it .
 
-<https://w3id.org/whow/data/observable-properties/51235-04-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/5103-71-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Clordano cis"@it;
+  ispra-top:name "Concentrazione di Clordano cis"@it;
+  l0:name "Concentrazione di Clordano cis"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/5103-74-2> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Clordano trans"@it;
+  ispra-top:name "Concentrazione di Clordano trans"@it;
+  l0:name "Concentrazione di Clordano trans"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/51218-45-2> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Metolachlor"@it;
+  ispra-top:name "Concentrazione di Metolachlor"@it;
+  l0:name "Concentrazione di Metolachlor"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/51218-49-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Pretilachlor"@it;
+  ispra-top:name "Concentrazione di Pretilachlor"@it;
+  l0:name "Concentrazione di Pretilachlor"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/51235-04-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,3,5-Triazine-2,4(1H,3H)-dione, 3-cyclohexyl-6-(dimethylamino)-1-methyl-"@en,
     "Concentrazione di Esazinone"@it;
   ispra-top:name "Concentration of 1,3,5-Triazine-2,4(1H,3H)-dione, 3-cyclohexyl-6-(dimethylamino)-1-methyl-"@en,
@@ -596,42 +1058,67 @@
   l0:name "Concentration of 1,3,5-Triazine-2,4(1H,3H)-dione, 3-cyclohexyl-6-(dimethylamino)-1-methyl-"@en,
     "Concentrazione di Esazinone"@it .
 
-<https://w3id.org/whow/data/observable-properties/53-70-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/53-19-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di o,p'-DDD"@it;
+  ispra-top:name "Concentrazione di o,p'-DDD"@it;
+  l0:name "Concentrazione di o,p'-DDD"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/53-70-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Dibenz[a,h]anthracene"@en, "Concentrazione di Dibenzo(a,h)antracene"@it;
   ispra-top:name "Concentration of Dibenz[a,h]anthracene"@en, "Concentrazione di Dibenzo(a,h)antracene"@it;
   l0:name "Concentration of Dibenz[a,h]anthracene"@en, "Concentrazione di Dibenzo(a,h)antracene"@it .
 
-<https://w3id.org/whow/data/observable-properties/534-52-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/53122-28-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Pirimetanil"@it;
+  ispra-top:name "Concentrazione di Pirimetanil"@it;
+  l0:name "Concentrazione di Pirimetanil"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/534-52-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 2-methyl-4,6-dinitro-"@en, "Concentrazione di 2-Metil-4,6-dinitrofenolo (DNOC)"@it;
   ispra-top:name "Concentration of Phenol, 2-methyl-4,6-dinitro-"@en, "Concentrazione di 2-Metil-4,6-dinitrofenolo (DNOC)"@it;
   l0:name "Concentration of Phenol, 2-methyl-4,6-dinitro-"@en, "Concentrazione di 2-Metil-4,6-dinitrofenolo (DNOC)"@it .
 
-<https://w3id.org/whow/data/observable-properties/540-59-0> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/540-59-0> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethene, 1,2-dichloro-"@en, "Concentrazione di 1,2-dicloroetilene"@it;
   ispra-top:name "Concentration of Ethene, 1,2-dichloro-"@en, "Concentrazione di 1,2-dicloroetilene"@it;
   l0:name "Concentration of Ethene, 1,2-dichloro-"@en, "Concentrazione di 1,2-dicloroetilene"@it .
 
-<https://w3id.org/whow/data/observable-properties/541-73-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/541-73-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1,3-dichloro-"@en, "Concentrazione di 1,3 Diclorobenzene"@it;
   ispra-top:name "Concentration of Benzene, 1,3-dichloro-"@en, "Concentrazione di 1,3 Diclorobenzene"@it;
   l0:name "Concentration of Benzene, 1,3-dichloro-"@en, "Concentrazione di 1,3 Diclorobenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/56-23-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/55-38-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Fenthion"@it;
+  ispra-top:name "Concentrazione di Fenthion"@it;
+  l0:name "Concentrazione di Fenthion"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/5598-13-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Clorpirifos Metile"@it;
+  ispra-top:name "Concentrazione di Clorpirifos Metile"@it;
+  l0:name "Concentrazione di Clorpirifos Metile"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/56-23-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Methane, tetrachloro-"@en, "Concentrazione di Tetracloruro di carbonio"@it;
   ispra-top:name "Concentration of Methane, tetrachloro-"@en, "Concentrazione di Tetracloruro di carbonio"@it;
   l0:name "Concentration of Methane, tetrachloro-"@en, "Concentrazione di Tetracloruro di carbonio"@it .
 
-<https://w3id.org/whow/data/observable-properties/56-55-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/56-38-2> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Paration etile"@it;
+  ispra-top:name "Concentrazione di Paration etile"@it;
+  l0:name "Concentrazione di Paration etile"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/56-55-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benz[a]anthracene"@en, "Concentrazione di Benzo(a)antracene"@it;
   ispra-top:name "Concentration of Benz[a]anthracene"@en, "Concentrazione di Benzo(a)antracene"@it;
   l0:name "Concentration of Benz[a]anthracene"@en, "Concentrazione di Benzo(a)antracene"@it .
 
-<https://w3id.org/whow/data/observable-properties/57-12-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/57-12-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Cyanide"@en, "Concentrazione di Cianuri liberi"@it;
   ispra-top:name "Concentration of Cyanide"@en, "Concentrazione di Cianuri liberi"@it;
   l0:name "Concentration of Cyanide"@en, "Concentrazione di Cianuri liberi"@it .
 
-<https://w3id.org/whow/data/observable-properties/57-63-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/57-63-6> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 19-Norpregna-1,3,5(10)-trien-20-yne-3,17-diol, (17.alpha.)-"@en,
     "Concentrazione di 17-alfa-etinilestradiolo"@it;
   ispra-top:name "Concentration of 19-Norpregna-1,3,5(10)-trien-20-yne-3,17-diol, (17.alpha.)-"@en,
@@ -639,7 +1126,17 @@
   l0:name "Concentration of 19-Norpregna-1,3,5(10)-trien-20-yne-3,17-diol, (17.alpha.)-"@en,
     "Concentrazione di 17-alfa-etinilestradiolo"@it .
 
-<https://w3id.org/whow/data/observable-properties/58-89-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/57-74-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Chlordano Totale"@it;
+  ispra-top:name "Concentrazione di Chlordano Totale"@it;
+  l0:name "Concentrazione di Chlordano Totale"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/57837-19-1> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Metalaxyl"@it;
+  ispra-top:name "Concentrazione di Metalaxyl"@it;
+  l0:name "Concentrazione di Metalaxyl"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/58-89-9> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.beta.,4.alpha.,5.alpha.,6.beta.)-"@en,
     "Concentrazione di HCH gamma (lindano)"@it;
   ispra-top:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.beta.,4.alpha.,5.alpha.,6.beta.)-"@en,
@@ -647,12 +1144,12 @@
   l0:name "Concentration of Cyclohexane, 1,2,3,4,5,6-hexachloro-, (1.alpha.,2.alpha.,3.beta.,4.alpha.,5.alpha.,6.beta.)-"@en,
     "Concentrazione di HCH gamma (lindano)"@it .
 
-<https://w3id.org/whow/data/observable-properties/59-50-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/59-50-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 4-chloro-3-methyl-"@en, "Concentrazione di 4-Cloro-3-metilfenolo"@it;
   ispra-top:name "Concentration of Phenol, 4-chloro-3-methyl-"@en, "Concentrazione di 4-Cloro-3-metilfenolo"@it;
   l0:name "Concentration of Phenol, 4-chloro-3-methyl-"@en, "Concentrazione di 4-Cloro-3-metilfenolo"@it .
 
-<https://w3id.org/whow/data/observable-properties/5915-41-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/5915-41-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-(1,1-dimethylethyl)-N4-ethyl-"@en,
     "Concentrazione di Terbutilazina"@it;
   ispra-top:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-(1,1-dimethylethyl)-N4-ethyl-"@en,
@@ -660,7 +1157,7 @@
   l0:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-(1,1-dimethylethyl)-N4-ethyl-"@en,
     "Concentrazione di Terbutilazina"@it .
 
-<https://w3id.org/whow/data/observable-properties/60-51-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/60-51-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phosphorodithioic acid, O,O-dimethyl S-[2-(methylamino)-2-oxoethyl] ester"@en,
     "Concentrazione di Dimetoato"@it;
   ispra-top:name "Concentration of Phosphorodithioic acid, O,O-dimethyl S-[2-(methylamino)-2-oxoethyl] ester"@en,
@@ -668,22 +1165,37 @@
   l0:name "Concentration of Phosphorodithioic acid, O,O-dimethyl S-[2-(methylamino)-2-oxoethyl] ester"@en,
     "Concentrazione di Dimetoato"@it .
 
-<https://w3id.org/whow/data/observable-properties/608-27-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/60-57-1> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Dieldrin"@it;
+  ispra-top:name "Concentrazione di Dieldrin"@it;
+  l0:name "Concentrazione di Dieldrin"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/608-27-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, 2,3-dichloro-"@en, "Concentrazione di 2,3-Dicloroanilina"@it;
   ispra-top:name "Concentration of Benzenamine, 2,3-dichloro-"@en, "Concentrazione di 2,3-Dicloroanilina"@it;
   l0:name "Concentration of Benzenamine, 2,3-dichloro-"@en, "Concentrazione di 2,3-Dicloroanilina"@it .
 
-<https://w3id.org/whow/data/observable-properties/608-93-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/608-73-1> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Esaclorocicloesano"@it;
+  ispra-top:name "Concentrazione di Esaclorocicloesano"@it;
+  l0:name "Concentrazione di Esaclorocicloesano"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/608-93-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1,2,3,4,5-pentachloro-"@en, "Concentrazione di Pentaclorobenzene"@it;
   ispra-top:name "Concentration of Benzene, 1,2,3,4,5-pentachloro-"@en, "Concentrazione di Pentaclorobenzene"@it;
   l0:name "Concentration of Benzene, 1,2,3,4,5-pentachloro-"@en, "Concentrazione di Pentaclorobenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/62-53-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/6190-65-4> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Atrazina-desetil"@it;
+  ispra-top:name "Concentrazione di Atrazina-desetil"@it;
+  l0:name "Concentrazione di Atrazina-desetil"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/62-53-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine"@en, "Concentrazione di Anilina"@it;
   ispra-top:name "Concentration of Benzenamine"@en, "Concentrazione di Anilina"@it;
   l0:name "Concentration of Benzenamine"@en, "Concentrazione di Anilina"@it .
 
-<https://w3id.org/whow/data/observable-properties/62-73-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/62-73-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phosphoric acid, 2,2-dichloroethenyl dimethyl ester"@en,
     "Concentrazione di Diclorvos"@it;
   ispra-top:name "Concentration of Phosphoric acid, 2,2-dichloroethenyl dimethyl ester"@en,
@@ -691,43 +1203,85 @@
   l0:name "Concentration of Phosphoric acid, 2,2-dichloroethenyl dimethyl ester"@en,
     "Concentrazione di Diclorvos"@it .
 
-<https://w3id.org/whow/data/observable-properties/635-22-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/635-22-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, 4-chloro-3-nitro-"@en, "Concentrazione di 4-Cloro-3-Nitroanolina"@it;
   ispra-top:name "Concentration of Benzenamine, 4-chloro-3-nitro-"@en, "Concentrazione di 4-Cloro-3-Nitroanolina"@it;
   l0:name "Concentration of Benzenamine, 4-chloro-3-nitro-"@en, "Concentrazione di 4-Cloro-3-Nitroanolina"@it .
 
-<https://w3id.org/whow/data/observable-properties/636-30-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/636-30-6> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, 2,4,5-trichloro-"@en, "Concentrazione di 2,4,5-Tricloroanilina"@it;
   ispra-top:name "Concentration of Benzenamine, 2,4,5-trichloro-"@en, "Concentrazione di 2,4,5-Tricloroanilina"@it;
   l0:name "Concentration of Benzenamine, 2,4,5-trichloro-"@en, "Concentrazione di 2,4,5-Tricloroanilina"@it .
 
-<https://w3id.org/whow/data/observable-properties/637-92-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/637-92-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Propane, 2-ethoxy-2-methyl-"@en, "Concentrazione di ETBE ( etil terbutil etere )"@it;
   ispra-top:name "Concentration of Propane, 2-ethoxy-2-methyl-"@en, "Concentrazione di ETBE ( etil terbutil etere )"@it;
   l0:name "Concentration of Propane, 2-ethoxy-2-methyl-"@en, "Concentrazione di ETBE ( etil terbutil etere )"@it .
 
-<https://w3id.org/whow/data/observable-properties/67-66-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/66246-88-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Penconazolo"@it;
+  ispra-top:name "Concentrazione di Penconazolo"@it;
+  l0:name "Concentrazione di Penconazolo"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/67-66-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Methane, trichloro-"@en, "Concentrazione di Triclorometano"@it;
   ispra-top:name "Concentration of Methane, trichloro-"@en, "Concentrazione di Triclorometano"@it;
   l0:name "Concentration of Methane, trichloro-"@en, "Concentrazione di Triclorometano"@it .
 
-<https://w3id.org/whow/data/observable-properties/71-43-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/67747-09-5> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Procloraz"@it;
+  ispra-top:name "Concentrazione di Procloraz"@it;
+  l0:name "Concentrazione di Procloraz"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/709-98-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Propanil"@it;
+  ispra-top:name "Concentrazione di Propanil"@it;
+  l0:name "Concentrazione di Propanil"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/71-43-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene"@en, "Concentrazione di Benzene"@it;
   ispra-top:name "Concentration of Benzene"@en, "Concentrazione di Benzene"@it;
   l0:name "Concentration of Benzene"@en, "Concentrazione di Benzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/71-52-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/71-52-3> a w-mon:WaterObservableProperty;
   rdfs:label "Observable Property: Alkalinity"@en, "Parametro Osservato: Alcalinità"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/71-52-3>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/71-52-3>;
   ispra-top:name "Alcalinità"@it, "Alkalinity"@en;
   l0:name "Alcalinità"@it, "Alkalinity"@en .
 
-<https://w3id.org/whow/data/observable-properties/71-55-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/71-55-6> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethane, 1,1,1-trichloro-"@en, "Concentrazione di Tricloroetano 1,1,1"@it;
   ispra-top:name "Concentration of Ethane, 1,1,1-trichloro-"@en, "Concentrazione di Tricloroetano 1,1,1"@it;
   l0:name "Concentration of Ethane, 1,1,1-trichloro-"@en, "Concentrazione di Tricloroetano 1,1,1"@it .
 
-<https://w3id.org/whow/data/observable-properties/7286-69-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/72-20-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Endrin"@it;
+  ispra-top:name "Concentrazione di Endrin"@it;
+  l0:name "Concentrazione di Endrin"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/72-54-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of DDD"@en, "Concentrazione di DDD"@it;
+  ispra-top:name "Concentration of DDD"@en, "Concentrazione di DDD"@it;
+  l0:name "Concentration of DDD"@en, "Concentrazione di DDD"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/72-54-8-SUM> a w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: DDD"@en, "Parametro Osservato: DDD"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/72-54-8-SUM>;
+  ispra-top:name "DDD"@en, "DDD"@it;
+  l0:name "DDD"@en, "DDD"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/72-55-9> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of DDE"@en, "Concentrazione di DDE"@it;
+  ispra-top:name "Concentration of DDE"@en, "Concentrazione di DDE"@it;
+  l0:name "Concentration of DDE"@en, "Concentrazione di DDE"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/72-55-9-SUM> a w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: DDE"@en, "Parametro Osservato: DDE"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/72-55-9-SUM>;
+  ispra-top:name "DDE"@en, "DDE"@it;
+  l0:name "DDE"@en, "DDE"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/7286-69-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-ethyl-N4-(1-methylpropyl)-"@en,
     "Concentrazione di Secbutilazina"@it;
   ispra-top:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-ethyl-N4-(1-methylpropyl)-"@en,
@@ -735,174 +1289,251 @@
   l0:name "Concentration of 1,3,5-Triazine-2,4-diamine, 6-chloro-N2-ethyl-N4-(1-methylpropyl)-"@en,
     "Concentrazione di Secbutilazina"@it .
 
-<https://w3id.org/whow/data/observable-properties/7439-89-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7287-19-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Prometrina"@it;
+  ispra-top:name "Concentrazione di Prometrina"@it;
+  l0:name "Concentrazione di Prometrina"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/74-82-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Methane"@en, "Concentrazione di Metano"@it;
+  ispra-top:name "Concentration of Methane"@en, "Concentrazione di Metano"@it;
+  l0:name "Concentration of Methane"@en, "Concentrazione di Metano"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/74070-46-5> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Aclonifen"@it;
+  ispra-top:name "Concentrazione di Aclonifen"@it;
+  l0:name "Concentrazione di Aclonifen"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/7439-89-6> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Iron"@en, "Concentrazione di Ferro"@it;
   ispra-top:name "Concentration of Iron"@en, "Concentrazione di Ferro"@it;
   l0:name "Concentration of Iron"@en, "Concentrazione di Ferro"@it .
 
-<https://w3id.org/whow/data/observable-properties/7439-92-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7439-92-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Lead"@en, "Concentrazione di Piombo"@it;
   ispra-top:name "Concentration of Lead"@en, "Concentrazione di Piombo"@it;
   l0:name "Concentration of Lead"@en, "Concentrazione di Piombo"@it .
 
-<https://w3id.org/whow/data/observable-properties/7439-95-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7439-92-1-BIO> a w-mon:WaterObservableProperty;
+  rdfs:label "Parametro Osservato: Piombo biodisponibile"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/7439-92-1-BIO>;
+  ispra-top:name "Piombo biodisponibile"@it;
+  l0:name "Piombo biodisponibile"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/7439-95-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Magnesium"@en, "Concentrazione di Magnesio"@it;
   ispra-top:name "Concentration of Magnesium"@en, "Concentrazione di Magnesio"@it;
   l0:name "Concentration of Magnesium"@en, "Concentrazione di Magnesio"@it .
 
-<https://w3id.org/whow/data/observable-properties/7439-97-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7439-96-5> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of Manganese"@en, "Concentrazione di Manganese"@it;
+  ispra-top:name "Concentration of Manganese"@en, "Concentrazione di Manganese"@it;
+  l0:name "Concentration of Manganese"@en, "Concentrazione di Manganese"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/7439-97-6> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Mercury"@en, "Concentrazione di Mercurio"@it;
   ispra-top:name "Concentration of Mercury"@en, "Concentrazione di Mercurio"@it;
   l0:name "Concentration of Mercury"@en, "Concentrazione di Mercurio"@it .
 
-<https://w3id.org/whow/data/observable-properties/7440-02-0> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7440-02-0> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Nickel"@en, "Concentrazione di Nichel"@it;
   ispra-top:name "Concentration of Nickel"@en, "Concentrazione di Nichel"@it;
   l0:name "Concentration of Nickel"@en, "Concentrazione di Nichel"@it .
 
-<https://w3id.org/whow/data/observable-properties/7440-09-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7440-02-0-BIO> a w-mon:WaterObservableProperty;
+  rdfs:label "Parametro Osservato: Nichel biodisponibile"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/7440-02-0-BIO>;
+  ispra-top:name "Nichel biodisponibile"@it;
+  l0:name "Nichel biodisponibile"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/7440-09-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Potassium"@en, "Concentrazione di Potassio"@it;
   ispra-top:name "Concentration of Potassium"@en, "Concentrazione di Potassio"@it;
   l0:name "Concentration of Potassium"@en, "Concentrazione di Potassio"@it .
 
-<https://w3id.org/whow/data/observable-properties/7440-23-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7440-23-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Sodium"@en, "Concentrazione di Sodio"@it;
   ispra-top:name "Concentration of Sodium"@en, "Concentrazione di Sodio"@it;
   l0:name "Concentration of Sodium"@en, "Concentrazione di Sodio"@it .
 
-<https://w3id.org/whow/data/observable-properties/7440-36-0> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7440-36-0> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Antimony"@en, "Concentrazione di Antimonio"@it;
   ispra-top:name "Concentration of Antimony"@en, "Concentrazione di Antimonio"@it;
   l0:name "Concentration of Antimony"@en, "Concentrazione di Antimonio"@it .
 
-<https://w3id.org/whow/data/observable-properties/7440-38-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7440-38-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Arsenic"@en, "Concentrazione di Arsenico"@it;
   ispra-top:name "Concentration of Arsenic"@en, "Concentrazione di Arsenico"@it;
   l0:name "Concentration of Arsenic"@en, "Concentrazione di Arsenico"@it .
 
-<https://w3id.org/whow/data/observable-properties/7440-42-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7440-42-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Boron"@en, "Concentrazione di Boro"@it;
   ispra-top:name "Concentration of Boron"@en, "Concentrazione di Boro"@it;
   l0:name "Concentration of Boron"@en, "Concentrazione di Boro"@it .
 
-<https://w3id.org/whow/data/observable-properties/7440-43-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7440-43-9> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Cadmium"@en, "Concentrazione di Cadmio"@it;
   ispra-top:name "Concentration of Cadmium"@en, "Concentrazione di Cadmio"@it;
   l0:name "Concentration of Cadmium"@en, "Concentrazione di Cadmio"@it .
 
-<https://w3id.org/whow/data/observable-properties/7440-47-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7440-47-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Chromium"@en, "Concentrazione di Cromo totale"@it;
   ispra-top:name "Concentration of Chromium"@en, "Concentrazione di Cromo totale"@it;
   l0:name "Concentration of Chromium"@en, "Concentrazione di Cromo totale"@it .
 
-<https://w3id.org/whow/data/observable-properties/7440-50-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7440-50-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Copper"@en, "Concentrazione di Rame"@it;
   ispra-top:name "Concentration of Copper"@en, "Concentrazione di Rame"@it;
   l0:name "Concentration of Copper"@en, "Concentrazione di Rame"@it .
 
-<https://w3id.org/whow/data/observable-properties/7440-62-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7440-62-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Vanadium"@en, "Concentrazione di Vanadio"@it;
   ispra-top:name "Concentration of Vanadium"@en, "Concentrazione di Vanadio"@it;
   l0:name "Concentration of Vanadium"@en, "Concentrazione di Vanadio"@it .
 
-<https://w3id.org/whow/data/observable-properties/7440-66-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7440-66-6> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Zinc"@en, "Concentrazione di Zinco"@it;
   ispra-top:name "Concentration of Zinc"@en, "Concentrazione di Zinco"@it;
   l0:name "Concentration of Zinc"@en, "Concentrazione di Zinco"@it .
 
-<https://w3id.org/whow/data/observable-properties/7440-70-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7440-70-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Calcium"@en, "Concentrazione di Calcio"@it;
   ispra-top:name "Concentration of Calcium"@en, "Concentrazione di Calcio"@it;
   l0:name "Concentration of Calcium"@en, "Concentrazione di Calcio"@it .
 
-<https://w3id.org/whow/data/observable-properties/75-01-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/75-01-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethene, chloro-"@en, "Concentrazione di Cloruro di Vinile"@it;
   ispra-top:name "Concentration of Ethene, chloro-"@en, "Concentrazione di Cloruro di Vinile"@it;
   l0:name "Concentration of Ethene, chloro-"@en, "Concentrazione di Cloruro di Vinile"@it .
 
-<https://w3id.org/whow/data/observable-properties/75-09-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/75-09-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Methane, dichloro-"@en, "Concentrazione di Diclorometano"@it;
   ispra-top:name "Concentration of Methane, dichloro-"@en, "Concentrazione di Diclorometano"@it;
   l0:name "Concentration of Methane, dichloro-"@en, "Concentrazione di Diclorometano"@it .
 
-<https://w3id.org/whow/data/observable-properties/75-25-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/75-25-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Methane, tribromo-"@en, "Concentrazione di Tribromometano"@it;
   ispra-top:name "Concentration of Methane, tribromo-"@en, "Concentrazione di Tribromometano"@it;
   l0:name "Concentration of Methane, tribromo-"@en, "Concentrazione di Tribromometano"@it .
 
-<https://w3id.org/whow/data/observable-properties/75-27-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/75-27-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Methane, bromodichloro-"@en, "Concentrazione di Bromodiclorometano"@it;
   ispra-top:name "Concentration of Methane, bromodichloro-"@en, "Concentrazione di Bromodiclorometano"@it;
   l0:name "Concentration of Methane, bromodichloro-"@en, "Concentrazione di Bromodiclorometano"@it .
 
-<https://w3id.org/whow/data/observable-properties/75-34-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/75-34-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethane, 1,1-dichloro-"@en, "Concentrazione di Dicloroetano 1,1"@it;
   ispra-top:name "Concentration of Ethane, 1,1-dichloro-"@en, "Concentrazione di Dicloroetano 1,1"@it;
   l0:name "Concentration of Ethane, 1,1-dichloro-"@en, "Concentrazione di Dicloroetano 1,1"@it .
 
-<https://w3id.org/whow/data/observable-properties/75-35-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/75-35-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethene, 1,1-dichloro-"@en, "Concentrazione di 1,1-Dicloroetilene"@it;
   ispra-top:name "Concentration of Ethene, 1,1-dichloro-"@en, "Concentrazione di 1,1-Dicloroetilene"@it;
   l0:name "Concentration of Ethene, 1,1-dichloro-"@en, "Concentrazione di 1,1-Dicloroetilene"@it .
 
-<https://w3id.org/whow/data/observable-properties/7664-41-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/76-44-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Eptacloro"@it;
+  ispra-top:name "Concentrazione di Eptacloro"@it;
+  l0:name "Concentrazione di Eptacloro"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/7664-41-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ammonia"@en, "Concentrazione di Ammoniaca (non ionizzata)"@it;
   ispra-top:name "Concentration of Ammonia"@en, "Concentrazione di Ammoniaca (non ionizzata)"@it;
   l0:name "Concentration of Ammonia"@en, "Concentrazione di Ammoniaca (non ionizzata)"@it .
 
-<https://w3id.org/whow/data/observable-properties/7723-14-0> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7723-14-0> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phosphorus"@en, "Concentrazione di Fosforo Totale"@it;
   ispra-top:name "Concentration of Phosphorus"@en, "Concentrazione di Fosforo Totale"@it;
   l0:name "Concentration of Phosphorus"@en, "Concentrazione di Fosforo Totale"@it .
 
-<https://w3id.org/whow/data/observable-properties/7782-44-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/77732-09-3> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Oxadixyl"@it;
+  ispra-top:name "Concentrazione di Oxadixyl"@it;
+  l0:name "Concentrazione di Oxadixyl"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/7782-44-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Oxygen"@en, "Concentrazione di Ossigeno disciolto"@it;
   ispra-top:name "Concentration of Oxygen"@en, "Concentrazione di Ossigeno disciolto"@it;
   l0:name "Concentration of Oxygen"@en, "Concentrazione di Ossigeno disciolto"@it .
 
-<https://w3id.org/whow/data/observable-properties/7782-49-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7782-49-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Selenium"@en, "Concentrazione di Selenio"@it;
   ispra-top:name "Concentration of Selenium"@en, "Concentrazione di Selenio"@it;
   l0:name "Concentration of Selenium"@en, "Concentrazione di Selenio"@it .
 
-<https://w3id.org/whow/data/observable-properties/78-87-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/7786-34-7> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Mevinfos"@it;
+  ispra-top:name "Concentrazione di Mevinfos"@it;
+  l0:name "Concentrazione di Mevinfos"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/78-87-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Propane, 1,2-dichloro-"@en, "Concentrazione di 1,2-dicloropropano"@it;
   ispra-top:name "Concentration of Propane, 1,2-dichloro-"@en, "Concentrazione di 1,2-dicloropropano"@it;
   l0:name "Concentration of Propane, 1,2-dichloro-"@en, "Concentrazione di 1,2-dicloropropano"@it .
 
-<https://w3id.org/whow/data/observable-properties/79-00-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/789-02-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di o,p'-DDT"@it;
+  ispra-top:name "Concentrazione di o,p'-DDT"@it;
+  l0:name "Concentrazione di o,p'-DDT"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/79-00-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethane, 1,1,2-trichloro-"@en, "Concentrazione di Tricloroetano 1,1,2"@it;
   ispra-top:name "Concentration of Ethane, 1,1,2-trichloro-"@en, "Concentrazione di Tricloroetano 1,1,2"@it;
   l0:name "Concentration of Ethane, 1,1,2-trichloro-"@en, "Concentrazione di Tricloroetano 1,1,2"@it .
 
-<https://w3id.org/whow/data/observable-properties/79-01-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/79-01-6> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethene, 1,1,2-trichloro-"@en, "Concentrazione di Tricloroetilene"@it;
   ispra-top:name "Concentration of Ethene, 1,1,2-trichloro-"@en, "Concentrazione di Tricloroetilene"@it;
   l0:name "Concentration of Ethene, 1,1,2-trichloro-"@en, "Concentrazione di Tricloroetilene"@it .
 
-<https://w3id.org/whow/data/observable-properties/79-34-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/79-34-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Ethane, 1,1,2,2-tetrachloro-"@en, "Concentrazione di Tetracloroetano 1,1,2,2"@it;
   ispra-top:name "Concentration of Ethane, 1,1,2,2-tetrachloro-"@en, "Concentrazione di Tetracloroetano 1,1,2,2"@it;
   l0:name "Concentration of Ethane, 1,1,2,2-tetrachloro-"@en, "Concentrazione di Tetracloroetano 1,1,2,2"@it .
 
-<https://w3id.org/whow/data/observable-properties/80-05-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/80-05-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 4,4'-(1-methylethylidene)bis-"@en, "Concentrazione di Bisfenolo A"@it;
   ispra-top:name "Concentration of Phenol, 4,4'-(1-methylethylidene)bis-"@en, "Concentrazione di Bisfenolo A"@it;
   l0:name "Concentration of Phenol, 4,4'-(1-methylethylidene)bis-"@en, "Concentrazione di Bisfenolo A"@it .
 
-<https://w3id.org/whow/data/observable-properties/83-32-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/8017-34-3> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentration of DDT"@en, "Concentrazione di DDT"@it;
+  ispra-top:name "Concentration of DDT"@en, "Concentrazione di DDT"@it;
+  l0:name "Concentration of DDT"@en, "Concentrazione di DDT"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/81406-37-3> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Fluroxipir"@it;
+  ispra-top:name "Concentrazione di Fluroxipir"@it;
+  l0:name "Concentrazione di Fluroxipir"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/81777-89-1> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Clomazone"@it;
+  ispra-top:name "Concentrazione di Clomazone"@it;
+  l0:name "Concentrazione di Clomazone"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/83-32-9> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Acenaphthylene, 1,2-dihydro-"@en, "Concentrazione di Acenaftene"@it;
   ispra-top:name "Concentration of Acenaphthylene, 1,2-dihydro-"@en, "Concentrazione di Acenaftene"@it;
   l0:name "Concentration of Acenaphthylene, 1,2-dihydro-"@en, "Concentrazione di Acenaftene"@it .
 
-<https://w3id.org/whow/data/observable-properties/84-66-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/83055-99-6> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Bensulfuron Metile"@it;
+  ispra-top:name "Concentrazione di Bensulfuron Metile"@it;
+  l0:name "Concentrazione di Bensulfuron Metile"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/834-12-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Ametrina"@it;
+  ispra-top:name "Concentrazione di Ametrina"@it;
+  l0:name "Concentrazione di Ametrina"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/84-66-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-diethyl ester"@en,
     "Concentrazione di Dietil-Ftalato (DEP)"@it;
   ispra-top:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-diethyl ester"@en,
     "Concentrazione di Dietil-Ftalato (DEP)"@it;
   l0:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-diethyl ester"@en, "Concentrazione di Dietil-Ftalato (DEP)"@it .
 
-<https://w3id.org/whow/data/observable-properties/84-69-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/84-69-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-bis(2-methylpropyl) ester"@en,
     "Concentrazione di Bis(2-metilpropil)ftalato"@it;
   ispra-top:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-bis(2-methylpropyl) ester"@en,
@@ -910,19 +1541,24 @@
   l0:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-bis(2-methylpropyl) ester"@en,
     "Concentrazione di Bis(2-metilpropil)ftalato"@it .
 
-<https://w3id.org/whow/data/observable-properties/84-74-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/84-74-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-dibutyl ester"@en,
     "Concentrazione di Dibutil-ftalato"@it;
   ispra-top:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-dibutyl ester"@en,
     "Concentrazione di Dibutil-ftalato"@it;
   l0:name "Concentration of 1,2-Benzenedicarboxylic acid, 1,2-dibutyl ester"@en, "Concentrazione di Dibutil-ftalato"@it .
 
-<https://w3id.org/whow/data/observable-properties/85-01-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/84087-01-4> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Quinclorac"@it;
+  ispra-top:name "Concentrazione di Quinclorac"@it;
+  l0:name "Concentrazione di Quinclorac"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/85-01-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenanthrene"@en, "Concentrazione di Fenantrene"@it;
   ispra-top:name "Concentration of Phenanthrene"@en, "Concentrazione di Fenantrene"@it;
   l0:name "Concentration of Phenanthrene"@en, "Concentrazione di Fenantrene"@it .
 
-<https://w3id.org/whow/data/observable-properties/85-68-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/85-68-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,2-Benzenedicarboxylic acid, 1-butyl 2-(phenylmethyl) ester"@en,
     "Concentrazione di Benzil-butil-ftalato"@it;
   ispra-top:name "Concentration of 1,2-Benzenedicarboxylic acid, 1-butyl 2-(phenylmethyl) ester"@en,
@@ -930,93 +1566,103 @@
   l0:name "Concentration of 1,2-Benzenedicarboxylic acid, 1-butyl 2-(phenylmethyl) ester"@en,
     "Concentrazione di Benzil-butil-ftalato"@it .
 
-<https://w3id.org/whow/data/observable-properties/86-73-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/86-73-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 9H-Fluorene"@en, "Concentrazione di Fluorene"@it;
   ispra-top:name "Concentration of 9H-Fluorene"@en, "Concentrazione di Fluorene"@it;
   l0:name "Concentration of 9H-Fluorene"@en, "Concentrazione di Fluorene"@it .
 
-<https://w3id.org/whow/data/observable-properties/87-61-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/865318-97-4> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Ametoctradina"@it;
+  ispra-top:name "Concentrazione di Ametoctradina"@it;
+  l0:name "Concentrazione di Ametoctradina"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/87-61-6> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1,2,3-trichloro-"@en, "Concentrazione di 1,2,3-Triclorobenzene"@it;
   ispra-top:name "Concentration of Benzene, 1,2,3-trichloro-"@en, "Concentrazione di 1,2,3-Triclorobenzene"@it;
   l0:name "Concentration of Benzene, 1,2,3-trichloro-"@en, "Concentrazione di 1,2,3-Triclorobenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/87-68-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/87-68-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of 1,3-Butadiene, 1,1,2,3,4,4-hexachloro-"@en, "Concentrazione di Esaclorobutadiene"@it;
   ispra-top:name "Concentration of 1,3-Butadiene, 1,1,2,3,4,4-hexachloro-"@en, "Concentrazione di Esaclorobutadiene"@it;
   l0:name "Concentration of 1,3-Butadiene, 1,1,2,3,4,4-hexachloro-"@en, "Concentrazione di Esaclorobutadiene"@it .
 
-<https://w3id.org/whow/data/observable-properties/87-86-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/87-86-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 2,3,4,5,6-pentachloro-"@en, "Concentrazione di Pentaclorofenolo"@it;
   ispra-top:name "Concentration of Phenol, 2,3,4,5,6-pentachloro-"@en, "Concentrazione di Pentaclorofenolo"@it;
   l0:name "Concentration of Phenol, 2,3,4,5,6-pentachloro-"@en, "Concentrazione di Pentaclorofenolo"@it .
 
-<https://w3id.org/whow/data/observable-properties/88-06-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/88-06-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 2,4,6-trichloro-"@en, "Concentrazione di 2,4,6-Triclorofenolo"@it;
   ispra-top:name "Concentration of Phenol, 2,4,6-trichloro-"@en, "Concentrazione di 2,4,6-Triclorofenolo"@it;
   l0:name "Concentration of Phenol, 2,4,6-trichloro-"@en, "Concentrazione di 2,4,6-Triclorofenolo"@it .
 
-<https://w3id.org/whow/data/observable-properties/88-73-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/88-73-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1-chloro-2-nitro-"@en, "Concentrazione di 1-Cloro-2-nitrobenzene"@it;
   ispra-top:name "Concentration of Benzene, 1-chloro-2-nitro-"@en, "Concentrazione di 1-Cloro-2-nitrobenzene"@it;
   l0:name "Concentration of Benzene, 1-chloro-2-nitro-"@en, "Concentrazione di 1-Cloro-2-nitrobenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/88-75-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/88-75-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 2-nitro-"@en, "Concentrazione di 2-Nitrofenolo"@it;
   ispra-top:name "Concentration of Phenol, 2-nitro-"@en, "Concentrazione di 2-Nitrofenolo"@it;
   l0:name "Concentration of Phenol, 2-nitro-"@en, "Concentrazione di 2-Nitrofenolo"@it .
 
-<https://w3id.org/whow/data/observable-properties/89-63-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/886-50-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Terbutrina"@it;
+  ispra-top:name "Concentrazione di Terbutrina"@it;
+  l0:name "Concentrazione di Terbutrina"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/89-63-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, 4-chloro-2-nitro-"@en, "Concentrazione di 4-cloro-2-nitroanilina"@it;
   ispra-top:name "Concentration of Benzenamine, 4-chloro-2-nitro-"@en, "Concentrazione di 4-cloro-2-nitroanilina"@it;
   l0:name "Concentration of Benzenamine, 4-chloro-2-nitro-"@en, "Concentrazione di 4-cloro-2-nitroanilina"@it .
 
-<https://w3id.org/whow/data/observable-properties/91-20-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/91-20-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Naphthalene"@en, "Concentrazione di Naftalene"@it;
   ispra-top:name "Concentration of Naphthalene"@en, "Concentrazione di Naftalene"@it;
   l0:name "Concentration of Naphthalene"@en, "Concentrazione di Naftalene"@it .
 
-<https://w3id.org/whow/data/observable-properties/93-65-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/93-65-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Propanoic acid, 2-(4-chloro-2-methylphenoxy)-"@en, "Concentrazione di Mecoprop"@it;
   ispra-top:name "Concentration of Propanoic acid, 2-(4-chloro-2-methylphenoxy)-"@en,
     "Concentrazione di Mecoprop"@it;
   l0:name "Concentration of Propanoic acid, 2-(4-chloro-2-methylphenoxy)-"@en, "Concentrazione di Mecoprop"@it .
 
-<https://w3id.org/whow/data/observable-properties/93-76-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/93-76-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Acetic acid, 2-(2,4,5-trichlorophenoxy)-"@en, "Concentrazione di 2,4,5-T"@it;
   ispra-top:name "Concentration of Acetic acid, 2-(2,4,5-trichlorophenoxy)-"@en, "Concentrazione di 2,4,5-T"@it;
   l0:name "Concentration of Acetic acid, 2-(2,4,5-trichlorophenoxy)-"@en, "Concentrazione di 2,4,5-T"@it .
 
-<https://w3id.org/whow/data/observable-properties/94-74-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/94-74-6> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Acetic acid, 2-(4-chloro-2-methylphenoxy)-"@en, "Concentrazione di (MCPA) Acido 2,4 meticlorofenossi acetico"@it;
   ispra-top:name "Concentration of Acetic acid, 2-(4-chloro-2-methylphenoxy)-"@en, "Concentrazione di (MCPA) Acido 2,4 meticlorofenossi acetico"@it;
   l0:name "Concentration of Acetic acid, 2-(4-chloro-2-methylphenoxy)-"@en, "Concentrazione di (MCPA) Acido 2,4 meticlorofenossi acetico"@it .
 
-<https://w3id.org/whow/data/observable-properties/94-75-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/94-75-7> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Acetic acid, 2-(2,4-dichlorophenoxy)-"@en, "Concentrazione di Acido 2,4 diclorofenossi acetico (2,4 D)"@it;
   ispra-top:name "Concentration of Acetic acid, 2-(2,4-dichlorophenoxy)-"@en, "Concentrazione di Acido 2,4 diclorofenossi acetico (2,4 D)"@it;
   l0:name "Concentration of Acetic acid, 2-(2,4-dichlorophenoxy)-"@en, "Concentrazione di Acido 2,4 diclorofenossi acetico (2,4 D)"@it .
 
-<https://w3id.org/whow/data/observable-properties/95-47-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/95-47-6> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1,2-dimethyl-"@en, "Concentrazione di Xilene orto"@it;
   ispra-top:name "Concentration of Benzene, 1,2-dimethyl-"@en, "Concentrazione di Xilene orto"@it;
   l0:name "Concentration of Benzene, 1,2-dimethyl-"@en, "Concentrazione di Xilene orto"@it .
 
-<https://w3id.org/whow/data/observable-properties/95-49-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/95-49-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1-chloro-2-methyl-"@en, "Concentrazione di 2-Clorotoluene"@it;
   ispra-top:name "Concentration of Benzene, 1-chloro-2-methyl-"@en, "Concentrazione di 2-Clorotoluene"@it;
   l0:name "Concentration of Benzene, 1-chloro-2-methyl-"@en, "Concentrazione di 2-Clorotoluene"@it .
 
-<https://w3id.org/whow/data/observable-properties/95-50-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/95-50-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1,2-dichloro-"@en, "Concentrazione di 1,2-Diclorobenzene"@it;
   ispra-top:name "Concentration of Benzene, 1,2-dichloro-"@en, "Concentrazione di 1,2-Diclorobenzene"@it;
   l0:name "Concentration of Benzene, 1,2-dichloro-"@en, "Concentrazione di 1,2-Diclorobenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/95-51-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/95-51-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, 2-chloro-"@en, "Concentrazione di 2-cloroanilina"@it;
   ispra-top:name "Concentration of Benzenamine, 2-chloro-"@en, "Concentrazione di 2-cloroanilina"@it;
   l0:name "Concentration of Benzenamine, 2-chloro-"@en, "Concentrazione di 2-cloroanilina"@it .
 
-<https://w3id.org/whow/data/observable-properties/95-53-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/95-53-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, 2-methyl-"@en, "Concentrazione di 2-Metilanilina [o-Toluidina]"@it,
     "Concentrazione di 2-Metilanina [o-Toluidina]"@it;
   ispra-top:name "Concentration of Benzenamine, 2-methyl-"@en, "Concentrazione di 2-Metilanilina [o-Toluidina]"@it,
@@ -1024,107 +1670,185 @@
   l0:name "Concentration of Benzenamine, 2-methyl-"@en, "Concentrazione di 2-Metilanilina [o-Toluidina]"@it,
     "Concentrazione di 2-Metilanina [o-Toluidina]"@it .
 
-<https://w3id.org/whow/data/observable-properties/95-57-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/95-57-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Phenol, 2-chloro-"@en, "Concentrazione di 2-Clorofenolo"@it;
   ispra-top:name "Concentration of Phenol, 2-chloro-"@en, "Concentrazione di 2-Clorofenolo"@it;
   l0:name "Concentration of Phenol, 2-chloro-"@en, "Concentrazione di 2-Clorofenolo"@it .
 
-<https://w3id.org/whow/data/observable-properties/95-69-2> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/95-69-2> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, 4-chloro-2-methyl-"@en, "Concentrazione di 4-cloro-2-metilanilina"@it;
   ispra-top:name "Concentration of Benzenamine, 4-chloro-2-methyl-"@en, "Concentrazione di 4-cloro-2-metilanilina"@it;
   l0:name "Concentration of Benzenamine, 4-chloro-2-methyl-"@en, "Concentrazione di 4-cloro-2-metilanilina"@it .
 
-<https://w3id.org/whow/data/observable-properties/95-76-1> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/95-76-1> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, 3,4-dichloro-"@en, "Concentrazione di 3,4-dicloroanilina"@it;
   ispra-top:name "Concentration of Benzenamine, 3,4-dichloro-"@en, "Concentrazione di 3,4-dicloroanilina"@it;
   l0:name "Concentration of Benzenamine, 3,4-dichloro-"@en, "Concentrazione di 3,4-dicloroanilina"@it .
 
-<https://w3id.org/whow/data/observable-properties/95-82-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/95-82-9> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzenamine, 2,5-dichloro-"@en, "Concentrazione di 2,5-dicloroanilina"@it;
   ispra-top:name "Concentration of Benzenamine, 2,5-dichloro-"@en, "Concentrazione di 2,5-dicloroanilina"@it;
   l0:name "Concentration of Benzenamine, 2,5-dichloro-"@en, "Concentrazione di 2,5-dicloroanilina"@it .
 
-<https://w3id.org/whow/data/observable-properties/95-94-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/95-94-3> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1,2,4,5-tetrachloro-"@en, "Concentrazione di 1,2,4,5-Tetraclorobenzene"@it;
   ispra-top:name "Concentration of Benzene, 1,2,4,5-tetrachloro-"@en, "Concentrazione di 1,2,4,5-Tetraclorobenzene"@it;
   l0:name "Concentration of Benzene, 1,2,4,5-tetrachloro-"@en, "Concentrazione di 1,2,4,5-Tetraclorobenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/96-18-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/959-98-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Endosulfan alfa"@it;
+  ispra-top:name "Concentrazione di Endosulfan alfa"@it;
+  l0:name "Concentrazione di Endosulfan alfa"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/96-18-4> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Propane, 1,2,3-trichloro-"@en, "Concentrazione di 1,2,3-Tricloropropano"@it;
   ispra-top:name "Concentration of Propane, 1,2,3-trichloro-"@en, "Concentrazione di 1,2,3-Tricloropropano"@it;
   l0:name "Concentration of Propane, 1,2,3-trichloro-"@en, "Concentrazione di 1,2,3-Tricloropropano"@it .
 
-<https://w3id.org/whow/data/observable-properties/98-82-8> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/98-82-8> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, (1-methylethyl)-"@en, "Concentrazione di Isopropilbenzene"@it;
   ispra-top:name "Concentration of Benzene, (1-methylethyl)-"@en, "Concentrazione di Isopropilbenzene"@it;
   l0:name "Concentration of Benzene, (1-methylethyl)-"@en, "Concentrazione di Isopropilbenzene"@it .
 
-<https://w3id.org/whow/data/observable-properties/LT-00-0> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/99105-77-8> a w-mon:WaterObservableProperty;
+  rdfs:label "Concentrazione di Sulcotrione"@it;
+  ispra-top:name "Concentrazione di Sulcotrione"@it;
+  l0:name "Concentrazione di Sulcotrione"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/CAM-PRF-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: Depth"@en, "Parametro Osservato: Profondità"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CAM-PRF-0>;
+  ispra-top:name "Depth"@en, "Profondità"@it;
+  l0:name "Depth"@en, "Profondità"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/CHM-ANTIP-TOT> a w-mon:WaterObservableProperty;
+  rdfs:label "Parametro Osservato: Pesticidi totali"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CHM-ANTIP-TOT>;
+  ispra-top:name "Pesticidi totali"@it;
+  l0:name "Pesticidi totali"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/CHM-DDT-TOT-RICALC>
+  a w-mon:WaterObservableProperty;
+  rdfs:label "Parametro Osservato: DDT totale"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CHM-DDT-TOT-RICALC>;
+  ispra-top:name "DDT totale"@it;
+  l0:name "DDT totale"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/CHM-HC-TOT> a w-mon:WaterObservableProperty;
+  rdfs:label "Parametro Osservato: Idrocarburi tot. (espressi come n-esano)"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CHM-HC-TOT>;
+  ispra-top:name "Idrocarburi tot. (espressi come n-esano)"@it;
+  l0:name "Idrocarburi tot. (espressi come n-esano)"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/CHM-IPA-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Parametro Osservato: Idrocarburi policiclici aromatici"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CHM-IPA-0>;
+  ispra-top:name "Idrocarburi policiclici aromatici"@it;
+  l0:name "Idrocarburi policiclici aromatici"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/CHM-MP-XIL> a w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: m+p-Xilene"@en, "Parametro Osservato: m+p-Xilene"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CHM-MP-XIL>;
+  ispra-top:name "m+p-Xilene"@en, "m+p-Xilene"@it;
+  l0:name "m+p-Xilene"@en, "m+p-Xilene"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/CHM-POL-ARO> a w-mon:WaterObservableProperty;
+  rdfs:label "Parametro Osservato: Sommatoria Idrocarburi Policiclici Aromatici"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CHM-POL-ARO>;
+  ispra-top:name "Sommatoria Idrocarburi Policiclici Aromatici"@it;
+  l0:name "Sommatoria Idrocarburi Policiclici Aromatici"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/CHM-TEST-NITR> a w-mon:WaterObservableProperty;
+  rdfs:label "Parametro Osservato: Rapporto Nitrati-Nitriti"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CHM-TEST-NITR>;
+  ispra-top:name "Rapporto Nitrati-Nitriti"@it;
+  l0:name "Rapporto Nitrati-Nitriti"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/CHM-TNS-N0> a w-mon:WaterObservableProperty;
+  rdfs:label "Parametro Osservato: Tensioattivi non ionici"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CHM-TNS-N0>;
+  ispra-top:name "Tensioattivi non ionici"@it;
+  l0:name "Tensioattivi non ionici"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/CHM-TRIA-MET> a w-mon:WaterObservableProperty;
+  rdfs:label "Parametro Osservato: Sommatoria Trialometani"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CHM-TRIA-MET>;
+  ispra-top:name "Sommatoria Trialometani"@it;
+  l0:name "Sommatoria Trialometani"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/CHM-TTC-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Parametro Osservato: Somma tricloroetilene + tetracloroetilene"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CHM-TTC-0>;
+  ispra-top:name "Somma tricloroetilene + tetracloroetilene"@it;
+  l0:name "Somma tricloroetilene + tetracloroetilene"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/LT-00-0> a w-mon:WaterObservableProperty;
   rdfs:label "Observable Property: Hydrometric height"@en, "Parametro Osservato: Altezza idrometrica"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/LT-00-0>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/LT-00-0>;
   ispra-top:name "Altezza idrometrica"@it, "Hydrometric height"@en;
   l0:name "Altezza idrometrica"@it, "Hydrometric height"@en .
 
-<https://w3id.org/whow/data/observable-properties/M-PRT-0> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/M-PRT-0> a w-mon:WaterObservableProperty;
   rdfs:label "Observable Property: Flow rate"@en, "Parametro Osservato: Portata"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/M-PRT-0>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/M-PRT-0>;
   ispra-top:name "Flow rate"@en, "Portata"@it;
   l0:name "Flow rate"@en, "Portata"@it .
 
-<https://w3id.org/whow/data/observable-properties/wise-31-02-7> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/wise-31-02-7> a w-mon:WaterObservableProperty;
   rdfs:label "Observable property: Total suspended solids"@en, "Parametro osservato: Solidi sospesi totali"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/31-02-7>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/31-02-7>;
   ispra-top:name "Solidi sospesi totali"@it, "Total suspended solids"@en;
   l0:name "Solidi sospesi totali"@it, "Total suspended solids"@en .
 
-<https://w3id.org/whow/data/observable-properties/wise-3121-01-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/wise-3121-01-5> a w-mon:WaterObservableProperty;
   rdfs:label "Observable property: Water temperature"@en, "Parametro osservato: Temperatura acqua"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/3121-01-5>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/3121-01-5>;
   ispra-top:name "Temperatura acqua"@it, "Water temperature"@en;
   l0:name "Temperatura acqua"@it, "Water temperature"@en .
 
-<https://w3id.org/whow/data/observable-properties/wise-3131-01-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/wise-3131-01-9> a w-mon:WaterObservableProperty;
   rdfs:label "Observable property: Oxygen % saturation"@en, "Parametro osservato: Ossigeno % di saturazione"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/3131-01-9>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/3131-01-9>;
   ispra-top:name "Ossigeno % di saturazione"@it, "Oxygen % saturation"@en;
   l0:name "Ossigeno % di saturazione"@it, "Oxygen % saturation"@en .
 
-<https://w3id.org/whow/data/observable-properties/wise-3133-01-5> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/wise-3133-01-5> a w-mon:WaterObservableProperty;
   rdfs:label "Observable property: BOD-5"@en, "Parametro osservato: BOD-5"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/3133-01-5>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/3133-01-5>;
   ispra-top:name "BOD-5"@en, "BOD-5"@it;
   l0:name "BOD-5"@en, "BOD-5"@it .
 
-<https://w3id.org/whow/data/observable-properties/wise-3133-05-9> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/wise-3133-05-9> a w-mon:WaterObservableProperty;
   rdfs:label "Observable property: DOC"@en, "Parametro osservato: DOC"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/3133-05-9>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/3133-05-9>;
   ispra-top:name "DOC"@en, "DOC"@it;
   l0:name "DOC"@en, "DOC"@it .
 
-<https://w3id.org/whow/data/observable-properties/wise-3142-01-6> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/wise-3142-01-6> a w-mon:WaterObservableProperty;
   rdfs:label "Observable property: Electrical conductivity at 20°C"@en, "Parametro osservato: Conducibilità elettrica a 20°C"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/3142-01-6>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/3142-01-6>;
   ispra-top:name "Conducibilità elettrica a 20°C"@it, "Electrical conductivity at 20°C"@en;
   l0:name "Conducibilità elettrica a 20°C"@it, "Electrical conductivity at 20°C"@en .
 
-<https://w3id.org/whow/data/observable-properties/wise-32-02-0> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/wise-32-02-0> a w-mon:WaterObservableProperty;
   rdfs:label "Parametro osservato: Sommatoria Antiparassitari ciclodiene"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/32-02-0>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/32-02-0>;
   ispra-top:name "Sommatoria Antiparassitari ciclodiene"@it;
   l0:name "Sommatoria Antiparassitari ciclodiene"@it .
 
-<https://w3id.org/whow/data/observable-properties/wise-33-28-3> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/wise-33-28-3> a w-mon:WaterObservableProperty;
   rdfs:label "Observable property: Total surfactants"@en, "Parametro osservato: Tensioattivi totali"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/33-28-3>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/33-28-3>;
   ispra-top:name "Tensioattivi totali"@it, "Total surfactants"@en;
   l0:name "Tensioattivi totali"@it, "Total surfactants"@en .
 
-<https://w3id.org/whow/data/observable-properties/wise-33-29-4> a w-mon:WaterObservableProperty;
+<https://w3id.org/italia/lombardia/data/observable-properties/wise-33-29-4> a w-mon:WaterObservableProperty;
   rdfs:label "Observable property: Anionic surfactants (MBAS)"@en, "Parametro osservato: Tensioattivi anionici (MBAS)"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/whow/data/identifier/33-29-4>;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/33-29-4>;
   ispra-top:name "Anionic surfactants (MBAS)"@en, "Tensioattivi anionici (MBAS)"@it;
   l0:name "Anionic surfactants (MBAS)"@en, "Tensioattivi anionici (MBAS)"@it .
 
-<https://w3id.org/whow/data/organisation/european-environmental-agency> a ispra-top:Organisation;
+<https://w3id.org/italia/lombardia/data/organisation/european-environmental-agency>
+  a ispra-top:Organisation;
   rdfs:label "Agenzia Ambientale Europea"@it, "European Environmental Agency"@en;
   ispra-top:name "Agenzia Ambientale Europea"@it, "American Chemical Society"@en .
