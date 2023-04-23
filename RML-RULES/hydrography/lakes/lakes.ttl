@@ -80,6 +80,13 @@
   l0:name "GANNA"@it;
   hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/ticino> .
 
+<https://w3id.org/italia/lombardia/data/lake-water-body/garda> a hydro:LakeWaterBody;
+  rdfs:label "Lago GARDA"@it, "Lake water body GARDA"@en;
+  owl:sameAs <http://dbpedia.org/resource/Lake_Garda>, <http://www.wikidata.org/entity/Q6414>;
+  top:name "GARDA"@it;
+  l0:name "GARDA"@it;
+  hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/del-garda> .
+
 <https://w3id.org/italia/lombardia/data/lake-water-body/garlate> a hydro:LakeWaterBody;
   rdfs:label "Lago GARLATE"@it, "Lake water body GARLATE"@en;
   owl:sameAs <http://www.wikidata.org/entity/Q63161>;
@@ -223,6 +230,11 @@
   rdfs:label "Bacino idrografico Adda prelacuale"@it, "Water basin Adda prelacuale"@en;
   top:name "Adda prelacuale"@it;
   l0:name "Adda prelacuale"@it .
+
+<https://w3id.org/italia/lombardia/data/water-basin/del-garda> a hydro:WaterBasin;
+  rdfs:label "Bacino idrografico del Garda"@it, "Water basin del Garda"@en;
+  top:name "del Garda"@it;
+  l0:name "del Garda"@it .
 
 <https://w3id.org/italia/lombardia/data/water-basin/lambro> a hydro:WaterBasin;
   rdfs:label "Bacino idrografico Lambro"@it, "Water basin Lambro"@en;
