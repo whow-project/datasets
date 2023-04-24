@@ -400,7 +400,7 @@ rr:predicateObjectMap [
  ];
  rr:predicateObjectMap [
     rr:predicate ispra-top:hasUnitOfMeasure ;
-    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/unit-of-measure/metro" ; rr:termType rr:IRI ]
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/unit-of-measure/m" ; rr:termType rr:IRI ]
  ].
 
 <#HydroDepthURIMapping>
@@ -462,9 +462,30 @@ rml:logicalSource <#LogicalSourceLakes>;
   ];
   rr:predicateObjectMap [
     rr:predicate ispra-top:hasUnitOfMeasure;
-    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/measurement-unit/{unita_di_misura_testuale}" ; rr:termType rr:IRI ]
+    rr:objectMap <#URI4UnitOfMeasure>
+    # rr:template "https://w3id.org/italia/lombardia/data/measurement-unit/{unita_di_misura_testuale}" ; rr:termType rr:IRI ]
   ].
 
+<#URI4UnitOfMeasure>
+rr:termType rr:IRI ;
+fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate grel:p_array_a ;
+      rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/measurement-unit"]
+   ] ;
+   rr:predicateObjectMap [
+      rr:predicate grel:p_array_a ;
+      rr:objectMap <#SlygifyUnitOfMeasure>
+   ] ;
+   rr:predicateObjectMap [
+      rr:predicate grel:p_string_sep ;
+      rr:objectMap [ rr:constant "/" ]
+   ]
+].
 
 #####################
 # UNIT OF MEASURE
@@ -483,7 +504,7 @@ rml:logicalSource <#LogicalSourceLakes>;
       ];
       rr:predicateObjectMap [
         rr:predicate idlab-fn:str ;
-        rr:objectMap [rr:template "https://w3id.org/italia/lombardia/data/measurement-unit/{unita_di_misura_testuale}" ; rr:termType rr:IRI ]
+        rr:objectMap <#URI4UnitOfMeasure>
       ]
     ] ;
     rr:class ispra-top:UnitOfMeasure
@@ -960,5 +981,17 @@ fnml:functionValue [
   rr:predicateObjectMap [
     rr:predicate idlab-fn:str ;
     rr:objectMap [ rml:reference "lago"]
+  ] ;
+ ] .
+
+<#SlygifyUnitOfMeasure>
+fnml:functionValue [
+	rr:predicateObjectMap [
+		rr:predicate fno:executes ;
+		rr:objectMap [ rr:constant idlab-fn:slugify ]
+	];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "unita_di_misura"]
   ] ;
  ] .
