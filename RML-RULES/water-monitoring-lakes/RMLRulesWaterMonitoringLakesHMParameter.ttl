@@ -18,7 +18,6 @@
 @prefix iotapit: <https://w3id.org/italia/onto/IoT/>.
 @prefix l0: <https://w3id.org/italia/onto/l0/>.
 @prefix tiapit: <https://w3id.org/italia/onto/TI/>.
-@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @base <https://w3id.org/italia/lombardia/data/> .
 
 
@@ -120,8 +119,12 @@ rr:predicateObjectMap [
    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/observable-properties/{other}" ; rr:termType rr:IRI ]
 ] ;
 rr:predicateObjectMap [
-  rr:predicate ispra-emf:generationTime ;
+  rr:predicate tiapit:hasSpatialCoverage ;
   rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/year/{anno}"; rr:termType rr:IRI ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-emf:generationTime ;
+  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/temporal-entity/({data_campionamento})"; rr:termType rr:IRI ]
 ];
 rr:predicateObjectMap [
    rr:predicate ispra-emf:hasFeatureOfInterest ;
@@ -165,51 +168,38 @@ fnml:functionValue [
     ]
 ] .
 
-# # <#URITemporalEntity>
-# # rr:termType rr:IRI ;
-# # fnml:functionValue [
-# #    rr:predicateObjectMap [
-# #      rr:predicate fno:executes ;
-# #      rr:objectMap [ rr:constant grel:array_join ]
-# #    ];
-# #    rr:predicateObjectMap [
-# #      rr:predicate grel:p_array_a ;
-# #      rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/temporal-entity" ]
-# #    ] ;
-# #    rr:predicateObjectMap [
-# #      rr:predicate grel:p_array_a ;
-# #      rr:objectMap <#normalisedDateSampling>
-# #    ];
-# #    rr:predicateObjectMap [
-# #        rr:predicate grel:p_string_sep ;
-# #        rr:objectMap [ rr:constant "/"]
-# #    ]
-# # ].
-# #
-# # <#normalisedDateSampling>
-# # fnml:functionValue [
-# #   	rr:predicateObjectMap [
-# #   		rr:predicate fno:executes ;
-# #   		rr:objectMap [ rr:constant idlab-fn:normalizeDate ]
-# #   	];
-# #     rr:predicateObjectMap [
-# #       rr:predicate idlab-fn:strDate ;
-# #       rr:objectMap [ rml:reference "data_campionamento" ]
-# #     ];
-# #     rr:predicateObjectMap [
-# #       rr:predicate idlab-fn:pattern ;
-# #       rr:objectMap [ rr:constant "dd/MM/yyyy" ]
-# #     ];
-# # ] .
 
-# # #############
-# # ## TEMPORAL ENTITY OBJECT YEAR MAPPING
-# # #############
+#######################################
+# TEMPORAL ENTITY OBJECT DATE MAPPING
+#######################################
+<#TEDateMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceLakes>;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/temporal-entity/({data_campionamento})";
+  rr:class ispra-top:TemporalEntity
+] ;
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:template "Temporal Entity: {data_campionamento}" ; rr:language "en" ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rr:template "Entità temporale: {data_campionamento}" ; rr:language "it" ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate ispra-top:time ;
+    rr:objectMap [ rml:reference "data_campionamento" ; rr:datatype xsd:date ]
+ ].
+
+
+########################################
+## TEMPORAL ENTITY OBJECT YEAR MAPPING
+########################################
 <#TEYearMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceLakes>;
 rr:subjectMap [
   rr:template "https://w3id.org/italia/lombardia/data/year/{anno}";
-  rr:class ispra-top:Year
+  rr:class tiapit:Year
 ];
 rr:predicateObjectMap [
    rr:predicate rdfs:label ;
@@ -220,14 +210,14 @@ rr:predicateObjectMap [
     rr:objectMap [ rr:template "Anno: {anno}" ; rr:language "it" ]
  ];
  rr:predicateObjectMap [
-    rr:predicate ispra-top:year ;
+    rr:predicate tiapit:year ;
     rr:objectMap [ rml:reference "anno" ; rr:datatype xsd:gYear ]
  ].
 
 
-# # #################
-# # ### WATER SAMPLE OBJECT MAPPING
-# # #################
+###############################
+# WATER SAMPLE OBJECT MAPPING
+###############################
 <#HydroObservationSampleMapping> a rr:TriplesMap;
 rml:logicalSource <#LogicalSourceLakes>;
   rr:subjectMap [
