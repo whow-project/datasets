@@ -4,7 +4,7 @@ CODE,PARAMETER,PARAMETER_EN
 12408-02-5,pH,pH
 10062,Trasparenza (disco di Secchi),Transparency (Secchi disk)
 10313,COD,COD
-M-PRT-0,Portata,Flow rate
+CAM-PRT-0,Portata,Flow rate
 CHM-MP-XIL,m+p-Xilene,m+p-Xilene
 7440-02-0-BIO,Nichel biodisponibile,
 7439-92-1-BIO,Piombo biodisponibile,
@@ -20,5 +20,5 @@ CHM-DDT-TOT-RICALC,DDT totale,
 CHM-ANTIP-TOT,Pesticidi totali,
 CHM-POL-ARO,Sommatoria Idrocarburi Policiclici Aromatici,
 CHM-HC-TOT,Idrocarburi tot. (espressi come n-esano),
-LT-00-0,Altezza idrometrica,Hydrometric height
+ALT-00-0,Altezza idrometrica,Hydrometric height
 10050,Solidi sedimentabili,Settleable solids

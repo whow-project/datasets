@@ -101,9 +101,17 @@
   rdfs:label "Identificativo 7440-02-0-BIO"@it, "Identifier 7440-02-0-BIO"@en;
   ispra-top:identifier "7440-02-0-BIO" .
 
+<https://w3id.org/italia/lombardia/data/identifier/ALT-00-0> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo ALT-00-0"@it, "Identifier ALT-00-0"@en;
+  ispra-top:identifier "ALT-00-0" .
+
 <https://w3id.org/italia/lombardia/data/identifier/CAM-PRF-0> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo CAM-PRF-0"@it, "Identifier CAM-PRF-0"@en;
   ispra-top:identifier "CAM-PRF-0" .
+
+<https://w3id.org/italia/lombardia/data/identifier/CAM-PRT-0> a ispra-top:UniqueIdentifier;
+  rdfs:label "Identificativo CAM-PRT-0"@it, "Identifier CAM-PRT-0"@en;
+  ispra-top:identifier "CAM-PRT-0" .
 
 <https://w3id.org/italia/lombardia/data/identifier/CHM-ANTIP-TOT> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo CHM-ANTIP-TOT"@it, "Identifier CHM-ANTIP-TOT"@en;
@@ -144,14 +152,6 @@
 <https://w3id.org/italia/lombardia/data/identifier/CHM-TTC-0> a ispra-top:UniqueIdentifier;
   rdfs:label "Identificativo CHM-TTC-0"@it, "Identifier CHM-TTC-0"@en;
   ispra-top:identifier "CHM-TTC-0" .
-
-<https://w3id.org/italia/lombardia/data/identifier/LT-00-0> a ispra-top:UniqueIdentifier;
-  rdfs:label "Identificativo LT-00-0"@it, "Identifier LT-00-0"@en;
-  ispra-top:identifier "LT-00-0" .
-
-<https://w3id.org/italia/lombardia/data/identifier/M-PRT-0> a ispra-top:UniqueIdentifier;
-  rdfs:label "Identificativo M-PRT-0"@it, "Identifier M-PRT-0"@en;
-  ispra-top:identifier "M-PRT-0" .
 
 <https://w3id.org/italia/lombardia/data/observable-properties/100-00-5> a w-mon:WaterObservableProperty;
   rdfs:label "Concentration of Benzene, 1-chloro-4-nitro-"@en, "Concentrazione di 1-Cloro-4-nitrobenzene"@it;
@@ -1715,11 +1715,23 @@
   ispra-top:name "Concentrazione di Sulcotrione"@it;
   l0:name "Concentrazione di Sulcotrione"@it .
 
+<https://w3id.org/italia/lombardia/data/observable-properties/ALT-00-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: Hydrometric height"@en, "Parametro Osservato: Altezza idrometrica"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/ALT-00-0>;
+  ispra-top:name "Altezza idrometrica"@it, "Hydrometric height"@en;
+  l0:name "Altezza idrometrica"@it, "Hydrometric height"@en .
+
 <https://w3id.org/italia/lombardia/data/observable-properties/CAM-PRF-0> a w-mon:WaterObservableProperty;
   rdfs:label "Observable Property: Depth"@en, "Parametro Osservato: Profondità"@it;
   ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CAM-PRF-0>;
   ispra-top:name "Depth"@en, "Profondità"@it;
   l0:name "Depth"@en, "Profondità"@it .
+
+<https://w3id.org/italia/lombardia/data/observable-properties/CAM-PRT-0> a w-mon:WaterObservableProperty;
+  rdfs:label "Observable Property: Flow rate"@en, "Parametro Osservato: Portata"@it;
+  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CAM-PRT-0>;
+  ispra-top:name "Flow rate"@en, "Portata"@it;
+  l0:name "Flow rate"@en, "Portata"@it .
 
 <https://w3id.org/italia/lombardia/data/observable-properties/CHM-ANTIP-TOT> a w-mon:WaterObservableProperty;
   rdfs:label "Parametro Osservato: Pesticidi totali"@it;
@@ -1781,18 +1793,6 @@
   ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/CHM-TTC-0>;
   ispra-top:name "Somma tricloroetilene + tetracloroetilene"@it;
   l0:name "Somma tricloroetilene + tetracloroetilene"@it .
-
-<https://w3id.org/italia/lombardia/data/observable-properties/LT-00-0> a w-mon:WaterObservableProperty;
-  rdfs:label "Observable Property: Hydrometric height"@en, "Parametro Osservato: Altezza idrometrica"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/LT-00-0>;
-  ispra-top:name "Altezza idrometrica"@it, "Hydrometric height"@en;
-  l0:name "Altezza idrometrica"@it, "Hydrometric height"@en .
-
-<https://w3id.org/italia/lombardia/data/observable-properties/M-PRT-0> a w-mon:WaterObservableProperty;
-  rdfs:label "Observable Property: Flow rate"@en, "Parametro Osservato: Portata"@it;
-  ispra-top:hasUniqueIdentifier <https://w3id.org/italia/lombardia/data/identifier/M-PRT-0>;
-  ispra-top:name "Flow rate"@en, "Portata"@it;
-  l0:name "Flow rate"@en, "Portata"@it .
 
 <https://w3id.org/italia/lombardia/data/observable-properties/wise-31-02-7> a w-mon:WaterObservableProperty;
   rdfs:label "Observable property: Total suspended solids"@en, "Parametro osservato: Solidi sospesi totali"@it;
