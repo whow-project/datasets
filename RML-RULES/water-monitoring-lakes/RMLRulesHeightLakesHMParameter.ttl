@@ -104,7 +104,7 @@ rr:predicateObjectMap [
 ];
 rr:predicateObjectMap [
    rr:predicate w-mon:hasWaterObservableProperty ;
-   rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/observable-properties/LT-00-0" ; rr:termType rr:IRI ]
+   rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/observable-properties/ALT-00-0" ; rr:termType rr:IRI ]
 ] ;
 rr:predicateObjectMap [
   rr:predicate ispra-emf:generationTime ;
