@@ -107,18 +107,58 @@ rr:predicateObjectMap [
    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/observable-properties/ALT-00-0" ; rr:termType rr:IRI ]
 ] ;
 rr:predicateObjectMap [
-  rr:predicate ispra-emf:generationTime ;
+  rr:predicate tiapit:hasTemporalCoverage ;
   rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/year/{anno}"; rr:termType rr:IRI ]
 ];
 rr:predicateObjectMap [
-  rr:predicate tiapit:date ;
-  rr:objectMap <#dateMapping>
+  rr:predicate ispra-emf:generationTime ;
+  rr:objectMap <#URIdateMapping>
 ];
 rr:predicateObjectMap [
    rr:predicate ispra-emf:hasFeatureOfInterest ;
    rr:objectMap <#WaterBodyMapping>
 ].
 
+<#URIdateMapping>
+rr:termType rr:IRI ;
+fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/temporal-entity" ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap <#dateMappingParenthesis>
+   ];
+   rr:predicateObjectMap [
+       rr:predicate grel:p_string_sep ;
+       rr:objectMap [ rr:constant "/("]
+   ]
+].
+
+<#dateMappingParenthesis>
+fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap <#dateMapping>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap [ rr:constant ")" ]
+   ] ;
+   rr:predicateObjectMap [
+       rr:predicate grel:p_string_sep ;
+       rr:objectMap [ rr:constant ""]
+   ]
+].
 
 ##################
 ## DATE Mapping
@@ -148,7 +188,7 @@ fnml:functionValue [
 rml:logicalSource <#LogicalSourceLakesHeight>;
 rr:subjectMap [
   rr:template "https://w3id.org/italia/lombardia/data/year/{anno}";
-  rr:class ispra-top:Year
+  rr:class tiapit:Year
 ];
 rr:predicateObjectMap [
    rr:predicate rdfs:label ;
@@ -159,10 +199,44 @@ rr:predicateObjectMap [
     rr:objectMap [ rr:template "Anno: {anno}" ; rr:language "it" ]
  ];
  rr:predicateObjectMap [
-    rr:predicate ispra-top:year ;
+    rr:predicate tiapit:year ;
     rr:objectMap [ rml:reference "anno" ; rr:datatype xsd:gYear ]
  ].
 
+##############################
+# GENERATION TIME OBJ MAPPING
+##############################
+ <#TemporalEntityGTDateMapping> a rr:TriplesMap ;
+ rml:logicalSource <#LogicalSourceLakesHeight>;
+ rr:subjectMap [
+   fnml:functionValue [
+      rr:predicateObjectMap [
+        rr:predicate fno:executes ;
+        rr:objectMap [ rr:constant grel:array_join ]
+      ];
+      rr:predicateObjectMap [
+        rr:predicate grel:p_array_a ;
+        rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/temporal-entity" ]
+      ] ;
+      rr:predicateObjectMap [
+        rr:predicate grel:p_array_a ;
+        rr:objectMap <#dateMappingParenthesis>
+      ];
+      rr:predicateObjectMap [
+          rr:predicate grel:p_string_sep ;
+          rr:objectMap [ rr:constant "/("]
+      ]
+   ];
+   rr:class ispra-top:TemporalEntity
+ ] ;
+  rr:predicateObjectMap [
+     rr:predicate rdfs:label ;
+     rr:objectMap [ rr:template "Entità temporale: {periodo}" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+     rr:predicate ispra-top:time ;
+     rr:objectMap <#dateMapping>
+  ].
 
 # #################
 # ### WATER SAMPLE OBJECT MAPPING

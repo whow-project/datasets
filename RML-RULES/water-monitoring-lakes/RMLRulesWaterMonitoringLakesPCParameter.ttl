@@ -131,7 +131,7 @@ rr:predicateObjectMap [
    rr:objectMap [ rr:template "https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-{cas}" ; rr:termType rr:IRI ]
 ] ;
 rr:predicateObjectMap [
-  rr:predicate tiapit:hasSpatialCoverage ;
+  rr:predicate tiapit:hasTemporalCoverage ;
   rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/year/{anno}"; rr:termType rr:IRI ]
 ];
 rr:predicateObjectMap [
