@@ -11,9 +11,9 @@
 10,14265-44-2,Ortofosfato,Phosphate,,,,,,,
 11,7782-44-7,Ossigeno disciolto,Oxygen,100.029.051,Oxygen,231-956-9,O2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.029.051,Oxygen
 12,7439-92-1,Piombo,Lead,100.028.273,Lead,231-100-4,Pb,,https://echa.europa.eu/substance-information/-/substanceinfo/100.028.273,Lead
-13,7440-09-07,Potassio,Potassium,,,,,,,
+13,7440-09-7,Potassio,Potassium,,,,,,,
 14,7440-50-8,Rame,Copper,100.028.326,Copper,231-159-6,Cu,,https://echa.europa.eu/substance-information/-/substanceinfo/100.028.326,copper
-15,1344-09-08,Silicati reattivi,"Silicic acid, sodium salt",,,,,,,
+15,1344-09-8,Silicati reattivi,"Silicic acid, sodium salt",,,,,,,
 16,7440-23-5,Sodio,Sodium,100.028.302,Sodium,231-132-9,Na,,https://echa.europa.eu/substance-information/-/substanceinfo/100.028.302,Sodium
 17,7440-66-6,Zinco,Zinc,100.028.341,Zinc,231-175-3,Zn,,https://echa.europa.eu/substance-information/-/substanceinfo/100.028.341,Zinc
 18,50-29-3,"p,p'-DDT","Benzene, 1,1'-(2,2,2-trichloroethylidene)bis[4-chloro-",100.000.023,Clofenotane,200-024-3,C14H9Cl5,,https://echa.europa.eu/substance-information/-/substanceinfo/100.000.023,Clofenotane
@@ -80,7 +80,7 @@
 81,96-18-4,"1,2,3-Tricloropropano","Propane, 1,2,3-trichloro-",100.002.261,"1,2,3-trichloropropane",202-486-1,C3H5Cl3,,https://echa.europa.eu/substance-information/-/substanceinfo/100.002.261,"1,2,3-trichloropropane"
 82,98-82-8,Isopropilbenzene,"Benzene, (1-methylethyl)-",100.002.458,Cumene,202-704-5,C9H12,,https://echa.europa.eu/substance-information/-/substanceinfo/100.002.458,Cumene
 83,100-00-5,1-Cloro-4-nitrobenzene,"Benzene, 1-chloro-4-nitro-",100.002.554,1-chloro-4-nitrobenzene,202-809-6,C6H4ClNO2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.002.554,1-chloro-4-nitrobenzene
-84,0100-02-07,4-Nitrofenolo,"Phenol, 4-nitro-",,,,,,,
+84,100-02-7,4-Nitrofenolo,"Phenol, 4-nitro-",,,,,,,
 85,100-41-4,Etilbenzene,"Benzene, ethyl-",100.002.591,Ethylbenzene,202-849-4,C8H10,,https://echa.europa.eu/substance-information/-/substanceinfo/100.002.591,Ethylbenzene
 86,100-42-5,Stirene,"Benzene, ethenyl-",100.002.592,Styrene,202-851-5,C8H8,,https://echa.europa.eu/substance-information/-/substanceinfo/100.002.592,Styrene
 87,100-61-8,N-metil Anilina,"Benzenamine, N-methyl-",100.002.610,N-methylaniline,202-870-9,C7H9N,,https://echa.europa.eu/substance-information/-/substanceinfo/100.002.610,N-methylaniline
@@ -93,7 +93,6 @@
 95,106-48-9,4-Clorofenolo,"Phenol, 4-chloro-",100.003.094,4-chlorophenol,203-402-6,C6H5ClO,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.094,4-chlorophenol
 96,106-49-0,p-toluidina,"Benzenamine, 4-methyl-",100.003.095,p-toluidine,203-403-1,C7H9N,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.095,p-toluidine
 97,106-93-4,"1,2-dibromoetano","Ethane, 1,2-dibromo-",100.003.132,"1,2-dibromoethane",203-444-5,C2H4Br2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.132,"1,2-dibromoethane"
-98,0107-06-02,"Dicloroetano 1,2","Ethane, 1,2-dichloro-",,,,,,,
 99,108-38-3,Xilene meta,"Benzene, 1,3-dimethyl-",100.003.252,m-xylene,203-576-3,C8H10,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.252,m-xylene
 100,108-41-8,3-Clorotoluene,"Benzene, 1-chloro-3-methyl-",100.003.255,3-chlorotoluene,203-580-5,C7H7Cl,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.255,3-chlorotoluene
 101,108-42-9,3-cloroanilina,"Benzenamine, 3-chloro-",100.003.256,3-chloroaniline,203-581-0,C6H6ClN,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.256,3-chloroaniline
@@ -106,7 +105,7 @@
 108,115-96-8,TCEP (tris-2cloroetil-fosfato),"Ethanol, 2-chloro-, 1,1',1''-phosphate",100.003.744,Tris(2-chloroethyl) phosphate,204-118-5,C6H12Cl3O4P,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.744,Tris(2-chloroethyl) phosphate
 109,117-81-7,Di-2-etilesilftalato,"1,2-Benzenedicarboxylic acid, 1,2-bis(2-ethylhexyl) ester",100.003.829,Bis(2-ethylhexyl) phthalate,204-211-0,C24H38O4,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.829,Bis(2-ethylhexyl) phthalate
 110,118-74-1,Esaclorobenzene,"Benzene, 1,2,3,4,5,6-hexachloro-",100.003.886,Hexachlorobenzene,204-273-9,C6Cl6,,https://echa.europa.eu/substance-information/-/substanceinfo/100.003.886,Hexachlorobenzene
-111,0120-12-7,Antracene,Anthracene,,,,,,,
+111,120-12-7,Antracene,Anthracene,,,,,,,
 112,120-82-1,"1,2,4-Triclorobenzene","Benzene, 1,2,4-trichloro-",100.004.026,"1,2,4-trichlorobenzene",204-428-0,C6H3Cl3,,https://echa.europa.eu/substance-information/-/substanceinfo/100.004.026,"1,2,4-trichlorobenzene"
 113,120-83-2,"2,4-Diclorofenolo","Phenol, 2,4-dichloro-",100.004.027,"2,4-dichlorophenol",204-429-6,C6H4Cl2O,,https://echa.europa.eu/substance-information/-/substanceinfo/100.004.027,"2,4-dichlorophenol"
 114,121-73-3,3 Cloronitrobenzene,"Benzene, 1-chloro-3-nitro-",100.004.088,1-chloro-3-nitrobenzene,204-496-1,C6H4ClNO2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.004.088,1-chloro-3-nitrobenzene
@@ -115,7 +114,7 @@
 117,124-48-1,Dibromoclorometano,"Methane, dibromochloro-",100.004.277,Dibromochloromethane,204-704-0,CHBr2Cl,,https://echa.europa.eu/substance-information/-/substanceinfo/100.004.277,Dibromochloromethane
 118,127-18-4,Tetracloroetilene,"Ethene, 1,1,2,2-tetrachloro-",100.004.388,Tetrachloroethylene,204-825-9,C2Cl4,,https://echa.europa.eu/substance-information/-/substanceinfo/100.004.388,Tetrachloroethylene
 119,129-00-0,Pirene,Pyrene,100.004.481,Pyrene,204-927-3,C16H10,,https://echa.europa.eu/substance-information/-/substanceinfo/100.004.481,Pyrene
-120,0131-11-3,Dimetil-ftalato (DMP),"1,2-Benzenedicarboxylic acid, 1,2-dimethyl ester",,,,,,,
+120,131-11-3,Dimetil-ftalato (DMP),"1,2-Benzenedicarboxylic acid, 1,2-dimethyl ester",,,,,,,
 121,139-40-2,Propazina,"1,3,5-Triazine-2,4-diamine, 6-chloro-N2,N4-bis(1-methylethyl)-",100.004.873,Propazine,205-359-9,C9H16ClN5,,https://echa.europa.eu/substance-information/-/substanceinfo/100.004.873,Propazine
 122,140-66-9,para-terz-ottilfenolo,"Phenol, 4-(1,1,3,3-tetramethylbutyl)-",100.004.934,"4-(1,1,3,3-tetramethylbutyl)phenol",205-426-2,C14H22O,,https://echa.europa.eu/substance-information/-/substanceinfo/100.004.934,"4-(1,1,3,3-tetramethylbutyl)phenol"
 123,156-59-2,Dicloroetilene cis,"Ethene, 1,2-dichloro-, (1Z)-",100.005.328,cis-dichloroethylene,205-859-7,C2H2Cl2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.005.328,cis-dichloroethylene
@@ -123,7 +122,6 @@
 125,193-39-5,"Indeno(1,2,3-cd)pirene","Indeno[1,2,3-cd]pyrene",100.005.359,"Indeno[1,2,3-cd]pyrene",205-893-2,C22H12,,https://echa.europa.eu/substance-information/-/substanceinfo/100.005.359,"Indeno[1,2,3-cd]pyrene"
 126,206-44-0,Fluorantene,Fluoranthene,100.005.376,Fluoranthene,205-912-4,C16H10,,https://echa.europa.eu/substance-information/-/substanceinfo/100.005.376,Fluoranthene
 127,208-96-8,Acenaftilene,Acenaphthylene,100.005.380,Acenaphthylene,205-917-1,C12H8,,https://echa.europa.eu/substance-information/-/substanceinfo/100.005.380,Acenaphthylene
-128,0218-01-09,Crisene,Chrysene,,,,,,,
 129,288-88-0,M.Mt.T.D.,"1H-1,2,4-Triazole",100.005.476,"1,2,4-triazole",206-022-9,C2H3N3,,https://echa.europa.eu/substance-information/-/substanceinfo/100.005.476,"1,2,4-triazole"
 130,307-24-4,PFHxA (Perfluoro Hexanoic Acid),"Hexanoic acid, 2,2,3,3,4,4,5,5,6,6,6-undecafluoro-",100.005.634,Undecafluorohexanoic acid,206-196-6,C6HF11O2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.005.634,Undecafluorohexanoic acid
 131,307-55-1,PFDoA (Perfluoro Dodecanoic Acid),"Dodecanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-tricosafluoro-",100.005.641,Tricosafluorododecanoic acid,206-203-2,C12HF23O2,,https://echa.europa.eu/substance-information/-/substanceinfo/100.005.641,Tricosafluorododecanoic acid
@@ -148,7 +146,7 @@
 150,636-30-6,"2,4,5-Tricloroanilina","Benzenamine, 2,4,5-trichloro-",100.010.232,"2,4,5-trichloroaniline",211-254-9,C6H4Cl3N,,https://echa.europa.eu/substance-information/-/substanceinfo/100.010.232,"2,4,5-trichloroaniline"
 151,637-92-3,ETBE ( etil terbutil etere ),"Propane, 2-ethoxy-2-methyl-",100.010.282,2-ethoxy-2-methylpropane,211-309-7,C6H14O,,https://echa.europa.eu/substance-information/-/substanceinfo/100.010.282,2-ethoxy-2-methylpropane
 152,1330-20-7,Xilene (somma isomeri),"Benzene, dimethyl-",100.014.124,Xylene,215-535-7,C8H10,,https://echa.europa.eu/substance-information/-/substanceinfo/100.014.124,Xylene
-153,1634-04-04,MTBE (metil terbutil etere),"Propane, 2-methoxy-2-methyl-",,,,,,,
+153,1634-04-4,MTBE (metil terbutil etere),"Propane, 2-methoxy-2-methyl-",,,,,,,
 154,1698-60-8,Chloridazon,"3(2H)-Pyridazinone, 5-amino-4-chloro-2-phenyl-",100.015.382,Chloridazon,216-920-2,C10H8ClN3O,,https://echa.europa.eu/substance-information/-/substanceinfo/100.015.382,Chloridazon
 155,1717-00-6,"1,1-Dicloro-1-fluoro-etano (Freon 141)","Ethane, 1,1-dichloro-1-fluoro-",,,,,,,
 156,1763-23-1,PFOS (Perfluoro Octane Sulfonate),"1-Octanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluoro-",100.015.618,Heptadecafluorooctane-1-sulphonic acid,217-179-8,C8HF17O3S,,https://echa.europa.eu/substance-information/-/substanceinfo/100.015.618,Heptadecafluorooctane-1-sulphonic acid
@@ -163,7 +161,6 @@
 165,7664-41-7,Ammoniaca (non ionizzata),Ammonia,100.028.760,"Ammonia, anhydrous",231-635-3,H3N,,https://echa.europa.eu/substance-information/-/substanceinfo/100.028.760,"Ammonia, anhydrous"
 166,12002-48-1,Triclorobenzeni,"Benzene, trichloro-",100.031.272,Trichlorobenzene,234-413-4,C6H3Cl3,,https://echa.europa.eu/substance-information/-/substanceinfo/100.031.272,Trichlorobenzene
 167,25057-89-0,Bentazone,"1H-2,1,3-Benzothiadiazin-4(3H)-one, 3-(1-methylethyl)-, 2,2-dioxide",100.042.335,Bentazone,246-585-8,C10H12N2O3S,,https://echa.europa.eu/substance-information/-/substanceinfo/100.042.335,Bentazone
-168,51235-04-02,Esazinone,"1,3,5-Triazine-2,4(1H,3H)-dione, 3-cyclohexyl-6-(dimethylamino)-1-methyl-",,,,,,,
 169,14798-03-9,Azoto ammoniacale,,,,,,,,
 170,14798-03-9,Ammoniaca totale,,,,,,,,
 171,14797-55-8,Azoto nitrico,,,,,,,,
@@ -313,3 +310,63 @@
 337,117-84-0,Di-n-ottilftalato,Di-n-octyl phthalate,,Di-n-octyl phthalate,,,,,
 338,7439-96-5,Manganese,Manganese,,Manganese,,,,,
 339,74-82-8,Metano,Methane,,Methane,,,,,
+340,71-52-3,Bicarbonati,,,,,,,,
+341,72-54-8,"4,4'-DDD",,,,,,,,
+342,98-95-3,Nitrobenzene,,,,,,,,
+343,75-69-4,"Triclorofluorometano (Freon 11)",,,,,,,,
+344,1918-00-9,Dicamba,,,,,,,,
+345,35822-46-9,"1,2,3,4,6,7,8 HpCDD",,,,,,,,
+346,67562-39-4,"1,2,3,4,6,7,8 HpCDF",,,,,,,,
+347,39227-28-6,"1,2,3,4,7,8 HxCDD",,,,,,,,
+348,70648-26-9,"1,2,3,4,7,8 HxCDF",,,,,,,,
+349,55673-89-7,"1,2,3,4,7,8,9 HpCDF",,,,,,,,
+350,57653-85-7,"1,2,3,6,7,8 HxCDD",,,,,,,,
+351,57117-44-9,"1,2,3,6,7,8 HxCDF",,,,,,,,
+352,40321-76-4,"1,2,3,7,8 PeCDD",,,,,,,,
+353,57117-41-6,"1,2,3,7,8 PeCDF",,,,,,,,
+354,19408-74-3,"1,2,3,7,8,9 HxCDD",,,,,,,,
+355,72918-21-9,"1,2,3,7,8,9 HxCDF",,,,,,,,
+356,60851-34-5,"2,3,4,6,7,8 HxCDF",,,,,,,,
+357,57117-31-4,"2,3,4,7,8 PeCDF",,,,,,,,
+358,1746-01-6,"2,3,7,8 TCDD",,,,,,,,
+359,51207-31-9,"2,3,7,8 TCDF",,,,,,,,
+360,3268-87-9,OCDD,,,,,,,,
+361,39001-02-0,OCDF,,,,,,,,
+362,528-29-0,"1,2 - dinitrobenzene",,,,,,,,
+363,37680-73-2,PCB 101,,,,,,,,
+364,32598-14-4,PCB 105,,,,,,,,
+365,38380-03-9,PCB 110,,,,,,,,
+366,74472-37-0,PCB 114,,,,,,,,
+367,31508-00-6,PCB 118,,,,,,,,
+368,65510-44-3,PCB 123,,,,,,,,
+369,57465-28-8,PCB 126,,,,,,,,
+370,85760-74-3,PCB 128,,,,,,,,
+371,35065-28-2,PCB 138,,,,,,,,
+372,51908-16-8,PCB 146,,,,,,,,
+373,38380-04-0,PCB 149,,,,,,,,
+374,52663-63-5,PCB 151,,,,,,,,
+375,35065-27-1,PCB 153,,,,,,,,
+376,38380-08-4,PCB 156,,,,,,,,
+377,69782-90-7,PCB 157,,,,,,,,
+378,52663-72-6,PCB 167,,,,,,,,
+379,32774-16-6,PCB 169,,,,,,,,
+380,35065-30-6,PCB 170,,,,,,,,
+381,52663-70-4,PCB 177,,,,,,,,
+382,35065-29-3,PCB 180,,,,,,,,
+383,52663-69-1,PCB 183,,,,,,,,
+384,52663-68-0,PCB 187,,,,,,,,
+385,39635-31-9,PCB 189,,,,,,,,
+386,7012-37-5,PCB 28,,,,,,,,
+387,35693-99-3,PCB 52,,,,,,,,
+388,32598-13-3,PCB 77,,,,,,,,
+389,70362-50-4,PCB 81,,,,,,,,
+390,38379-99-6,PCB 95,,,,,,,,
+391,38380-01-7,PCB 99,,,,,,,,
+392,298-46-4,Carbamazepina,,,,,,,,
+393,551-92-8,Dimetridazolo,,,,,,,,
+394,443-48-1,Metronidazolo,,,,,,,,
+395,7440-41-7,Berillio,,,,,,,,
+396,630-20-6,"1,1,1,2-Tetracloroetano",,,,,,,,
+397,7440-48-4,Cobalto,,,,,,,,
+398,7429-90-5,Alluminio,,,,,,,,
+399,7440-39-3,Bario,,,,,,,,

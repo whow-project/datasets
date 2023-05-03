@@ -1,0 +1,79 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix idlab-fn: <http://example.com/idlab/function/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix ispra-top: <https://w3id.org/italia/env/onto/top/> .
+@prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <https://w3id.org/whow/controlled-vocabulary/chemical-substances/> .
+
+##########################################################
+## LOGICAL SOURCES TO BE USED
+##########################################################
+
+# #LogicalSourceSostanzeChimiche
+<#LogicalSourceChemicalSubstances2> a rml:BaseSource ;
+    rml:source "sostanzenew2.csv";
+    rml:referenceFormulation ql:CSV .
+
+# #LogicalSourceSostanzeChimiche
+<#LogicalSourceChemicalSubstancesWikidata2> a rml:BaseSource ;
+    rml:source "queryCAS.csv";
+    rml:referenceFormulation ql:CSV .
+
+# ##Wikidata SPARQL ENPOINT
+# <#InputSPARQL>
+#     a sd:Service ;
+#     sd:endpoint <https://query.wikidata.org/sparql> ;
+#     sd:supportedLanguage sd:SPARQL11Query ;
+#     sd:resultFormat <http://www.w3.org/ns/formats/SPARQL_Results_JSON> .
+
+# <#LogicalSourceChemicalRDF> a rml:BaseSource ;
+#      rml:source <#InputSPARQL>;
+#      rml:referenceFormulation ql:JSONPath;
+#      rml:iterator "$.results.bindings[*]";
+#      rml:query """
+#      SELECT DISTINCT ?cas ?s
+#      WHERE {
+#       ?s wdt:P231 ?cas .
+#      }
+#      """
+# .
+
+############# CSMapping ###########
+<#ChemicalSubstancesLinkingMapping2> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceChemicalSubstances2> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-{cod_cas}";
+] ;
+rr:predicateObjectMap [
+  rr:predicate owl:sameAs ;
+  rr:objectMap [
+     rr:parentTriplesMap <#CASLinkingMapping2> ;
+     rr:joinCondition [
+        rr:child "cod_cas";
+        rr:parent "cas" ;
+     ]
+   ]
+ ].
+
+
+
+
+########################
+# CAS LINKING MAPPING
+########################
+<#CASLinkingMapping2> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceChemicalSubstancesWikidata2> ;
+  rr:subjectMap [
+      rml:reference "s" ;
+      rr:termType rr:IRI
+  ].

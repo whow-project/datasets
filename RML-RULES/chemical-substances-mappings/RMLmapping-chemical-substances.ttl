@@ -13,6 +13,13 @@
 @prefix ispra-top: <https://w3id.org/italia/env/onto/top/> .
 @prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
 @prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix ndc: <http://w3id.org/italia/onto/NDC/> .
+@prefix adms:    <http://www.w3.org/ns/adms#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xkos:    <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @base      <https://w3id.org/whow/controlled-vocabulary/chemical-substances/> .
 
 ##########################################################
@@ -26,6 +33,140 @@
 
 ############# CSMapping ###########
 
+
+<#ChemicalSubstanceConceptSchemeMapping> a rr:TriplesMap ;
+  rml:logicalSource <#LogicalSourceChemicalSubstances> ;
+
+  rr:subjectMap [
+    rr:template "https://w3id.org/whow/controlled-vocabulary/chemical-substances";
+    rr:class skos:ConceptScheme , adms:Asset , dcatapit:Dataset , dcat:Dataset
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate skos:hasTopConcept;
+    rr:objectMap [ rr:template "https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-{CAS}" ; rr:termType rr:IRI ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:constant "Vocabolario controllato delle sostanze chimiche del progetto WHOW"; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:constant "Controlled Vocabulary on the chemical substances of the WHOW project" ; rr:language "en" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:title;
+    rr:objectMap [ rr:constant "Vocabolario controllato delle sostanze chimiche del progetto WHOW"; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:title;
+    rr:objectMap [ rr:constant "Controlled Vocabulary on the chemical substances of the WHOW project" ; rr:language "en" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:comment , dct:description ;
+    rr:objectMap [ rr:constant "Questo è il vocabolario controllato delle sostanze chimiche utilizzate nel contesto del progetto WHOW - Water Health Open Knowledge per tracciare la presenza di tali sostanze nell'acqua superficiale e per il consumo umano"; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:comment , dct:description ;
+    rr:objectMap [ rr:constant "This is the controlled vocabulary of chemicals used in the context of the WHOW - Water Health Open Knowledge project to track the presence of these substances in surface water and for human consumption"; rr:language "en" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:type;
+    rr:objectMap [ rr:constant "http://purl.org/adms/assettype/CodeList" ; rr:termType rr:IRI ;]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate adms:representationTechnique;
+    rr:objectMap [ rr:constant "http://purl.org/adms/representationtechnique/SKOS" ; rr:termType rr:IRI ;]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:identifier;
+    rr:objectMap [ rr:constant "https://w3id.org/leo/controlled-vocabulary/chemical-substances" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ndc:keyConcept;
+    rr:objectMap [ rr:constant "chemical-substances" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:rightsHolder , dct:publisher , dct:creator ;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:theme;
+    rr:objectMap [ rr:constant "http://publications.europa.eu/resource/authority/data-theme/ENVI" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:language;
+    rr:objectMap [ rr:constant "http://publications.europa.eu/resource/authority/language/ITA" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:language;
+    rr:objectMap [ rr:constant "http://publications.europa.eu/resource/authority/language/ENG" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:accrualPeriodicity;
+    rr:objectMap [ rr:constant "http://publications.europa.eu/resource/authority/frequency/IRREG" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:keyword;
+    rr:objectMap [ rr:constant "sostanze chimiche" ; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:keyword;
+    rr:objectMap [ rr:constant "chemical substances" ; rr:language "en" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:issued;
+    rr:objectMap [ rr:constant "2022-05-22" ; rr:datatype xsd:date ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:modified;
+    rr:objectMap [ rr:constant "2023-05-03" ; rr:datatype xsd:date ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate owl:versionInfo;
+    rr:objectMap [ rr:constant "Versione 0.3" ; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:distribution;
+    rr:objectMap [ rr:template "https://w3id.org/whow/data/distribution/cs-RDF-TURTLE" ; rr:termType rr:IRI ; ]
+  ] .
+
+
+###########################
+## DISTRIBUTIONS MAPPING
+###########################
+
+<#dcatDistributionMURDFTURTLEMapping> a rr:TriplesMap ;
+  rml:logicalSource <#LogicalSourceChemicalSubstances> ;
+  rr:subjectMap [
+    rr:template "https://w3id.org/leo/data/distribution/cs-RDF-TURTLE";
+    rr:class dcatapit:Distribution , dcat:Distribution
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:title;
+    rr:objectMap [ rr:constant "Questa è la distribuzione RDF TURTLE del vocabolario controllato sulle sostanze chimiche"; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:title;
+    rr:objectMap [ rr:constant "This is the RDF TURTLE distribution of the controlled vocabulary on the chemical substances"; rr:language "en" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:format;
+    rr:objectMap [ rr:constant "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:license;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:downloadURL;
+    rr:objectMap [ rr:constant "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/chemical-substances-mappings/chemical-subs-linking.ttl" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:accessURL;
+    rr:objectMap [ rr:constant "https://github.com/whow-project/datasets/tree/main/RML-RULES/chemical-substances-mappings" ; rr:termType rr:IRI ; ]
+  ] .
+
+######### CONTROLLED VOCABULARY CONTENT
 
 <#ChemicalSubstancesMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceChemicalSubstances> ;

@@ -13,6 +13,8 @@
 @prefix ispra-top: <https://w3id.org/italia/env/onto/top/> .
 @prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
 @prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix adms:    <http://www.w3.org/ns/adms#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
 @base      <https://w3id.org/whow/controlled-vocabulary/chemical-substances/> .
 
 ##########################################################
@@ -26,6 +28,20 @@
 
 ############# CSMapping ###########
 
+
+<#ChemicalSubstanceConceptSchemeMapping2> a rr:TriplesMap ;
+  rml:logicalSource <#LogicalSourceChemicalSubstances4Pesticides> ;
+  rr:subjectMap [
+    rr:template "https://w3id.org/whow/controlled-vocabulary/chemical-substances";
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate skos:hasTopConcept;
+    rr:objectMap [ rr:template "https://w3id.org/whow/controlled-vocabulary/chemical-substances/cas-{cod_cas}" ; rr:termType rr:IRI ]
+  ] .
+
+###############
+# CONTROLLED VOCABULARY CONTENT
+###############
 
 <#ChemicalSubstances4PesticidesMapping> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceChemicalSubstances4Pesticides> ;
