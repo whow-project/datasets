@@ -70,6 +70,37 @@ rr:predicateObjectMap [
   rr:objectMap [ rr:template "Concentration of {CHEMICAL SUBSTANCE}" ; rr:language "en"]
 ].
 
+<#ChemicalSubstancesConcentrationMapping2> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceConcentrationOfChemicalSubstances> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/observable-properties/{OTHER IDENTIFIER}";
+  rr:class w-mon:WaterObservableProperty  ;
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Concentrazione di {PARAMETER (IT)}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Concentration of {CHEMICAL SUBSTANCE}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate l0:name;
+  rr:objectMap [ rr:template "Concentration of {CHEMICAL SUBSTANCE}" ; rr:language "en"]
+];
+rr:predicateObjectMap [
+  rr:predicate l0:name;
+  rr:objectMap [ rr:template "Concentrazione di {PARAMETER (IT)}" ; rr:language "it"]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name;
+  rr:objectMap [ rr:template "Concentrazione di {PARAMETER (IT)}" ; rr:language "it"]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name;
+  rr:objectMap [ rr:template "Concentration of {CHEMICAL SUBSTANCE}" ; rr:language "en"]
+].
+
 
 #WISE CODES
 <#WISECodesMapping> a rr:TriplesMap ;
