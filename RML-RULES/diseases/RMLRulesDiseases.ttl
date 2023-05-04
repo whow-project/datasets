@@ -1,0 +1,365 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ndc: <http://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix idlab-fn: <http://example.com/idlab/function/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix crml: <http://w3id.org/stlab/crml#> .
+@prefix l0:  <https://w3id.org/italia/onto/l0/> .
+@prefix ispra-top: <https:/w3id.org/italia/env/onto/top/> .
+@prefix hm: <https://w3id.org/whow/onto/health-monitoring/> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@base <https://w3id.org/whow/data/> .
+
+# #LogicalSourceMalattieInfettive
+<#LogicalSourceMalattieInfettive> a rml:BaseSource ;
+    rml:source "infectious_diseases.csv";
+    rml:referenceFormulation ql:CSV .
+
+# #LogicalSourceLinkingMalattieInfettive
+<#LogicalSourceLinkingMalattieInfettive> a rml:BaseSource ;
+    rml:source "LinkingSnomed.csv";
+    rml:referenceFormulation ql:CSV .
+
+
+###########################################################
+##                  MAPPING RULES
+##########################################################
+
+<#DiseaseConceptSchemeMapping> a rr:TriplesMap ;
+  rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+  rr:subjectMap [
+    rr:template "https://w3id.org/whow/controlled-vocabulary/diseases";
+    rr:class skos:ConceptScheme , adms:Asset , dcatapit:Dataset , dcat:Dataset
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate skos:hasTopConcept;
+    rr:objectMap <#URITopConcept>
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label , dct:title ;
+    rr:objectMap [ rr:constant "Vocabolario controllato delle malattie (infettive)"; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label, dct:title ;
+    rr:objectMap [ rr:constant "Controlled Vocabulary on (infectious) diseases" ; rr:language "en" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:comment , dct:description ;
+    rr:objectMap [ rr:constant "Questo è il vocabolario controllato delle malattie (infettive) utilizzato nel contesto del progetto WHOW - Water Health Open Knowledge per modellare i dati sulla distribuzione delle malattie (infettive)"; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:comment , dct:description ;
+    rr:objectMap [ rr:constant "This is the controlled vocabulary on (infectious) diseases used in the context of the WHOW - Water Health Open Knowledge project to model the rates of the (infectious) diseases"; rr:language "en" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:type;
+    rr:objectMap [ rr:constant "http://purl.org/adms/assettype/Taxonomy" ; rr:termType rr:IRI ;]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate adms:representationTechnique;
+    rr:objectMap [ rr:constant "http://purl.org/adms/representationtechnique/SKOS" ; rr:termType rr:IRI ;]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:identifier;
+    rr:objectMap [ rr:constant "https://w3id.org/whow/controlled-vocabulary/diseases" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ndc:keyConcept;
+    rr:objectMap [ rr:constant "diseases" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate xkos:numberOfLevels;
+    rr:objectMap [ rr:constant "2" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:rightsHolder , dct:publisher , dct:creator ;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:theme;
+    rr:objectMap [ rr:constant "http://publications.europa.eu/resource/authority/data-theme/HEAL" ; rr:termType rr:IRI ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:language;
+    rr:objectMap [ rr:constant "http://publications.europa.eu/resource/authority/language/ITA" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:language;
+    rr:objectMap [ rr:constant "http://publications.europa.eu/resource/authority/language/ENG" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:accrualPeriodicity;
+    rr:objectMap [ rr:constant "http://publications.europa.eu/resource/authority/frequency/IRREG" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:keyword;
+    rr:objectMap [ rr:constant "malattie infettive" ; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:keyword;
+    rr:objectMap [ rr:constant "malattie" ; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:keyword;
+    rr:objectMap [ rr:constant "malattia" ; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:keyword;
+    rr:objectMap [ rr:constant "diseases" ; rr:language "en" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:issued;
+    rr:objectMap [ rr:constant "2023-05-04" ; rr:datatype xsd:date ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:modified;
+    rr:objectMap [ rr:constant "2023-05-04" ; rr:datatype xsd:date ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate owl:versionInfo;
+    rr:objectMap [ rr:constant "Versione 0.1" ; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:distribution;
+    rr:objectMap [ rr:template "https://w3id.org/whow/data/distribution/d-RDF-TURTLE" ; rr:termType rr:IRI ]
+  ] .
+
+
+###########################
+## DISTRIBUTIONS MAPPING
+###########################
+
+<#dcatDistributionMURDFTURTLEMapping> a rr:TriplesMap ;
+  rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+  rr:subjectMap [
+    rr:template "https://w3id.org/whow/data/distribution/d-RDF-TURTLE";
+    rr:class dcatapit:Distribution , dcat:Distribution
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:title;
+    rr:objectMap [ rr:constant "Questa è la distribuzione RDF TURTLE del vocabolario controllato sulle malattie (infettive)"; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:title;
+    rr:objectMap [ rr:constant "This is the RDF TURTLE distribution of the controlled vocabulary on the malattie (infettive)"; rr:language "en" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:format;
+    rr:objectMap [ rr:constant "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dct:license;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:downloadURL;
+    rr:objectMap [ rr:constant "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/diseases/diseases-linking.ttl" ; rr:termType rr:IRI ; ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dcat:accessURL;
+    rr:objectMap [ rr:constant "https://github.com/whow-project/datasets/tree/main/RML-RULES/diseases" ; rr:termType rr:IRI ; ]
+  ] .
+
+
+###############
+# URI TOP CONCEPT
+###############
+<#URITopConcept>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [ rr:constant "https://w3id.org/whow/controlled-vocabulary/diseases"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  <#MD5Classification>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "/" ]
+ ]
+].
+
+<#MD5Classification>
+fnml:functionValue [
+  rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:string_md5 ]
+  ];
+  rr:predicateObjectMap [
+   rr:predicate grel:valueParameter ;
+   rr:objectMap [rml:reference "CLASSIFICAZIONE da REPORT"]
+  ];
+].
+
+# #################################
+# ## CLASSIFICATION OBJ MAPPING
+# #################################
+<#ClassificationObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/whow/controlled-vocabulary/diseases"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#MD5Classification>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ]
+  ];
+  rr:class hm:DiseaseType , skos:Concept
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "{CLASSIFICAZIONE da REPORT}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate skos:prefLabel , ispra-top:name, l0:name ;
+  rr:objectMap [ rr:template "{CLASSIFICAZIONE da REPORT}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate skos:inScheme;
+  rr:objectMap [ rr:constant "https://w3id.org/whow/controlled-vocabulary/diseases"; rr:termType rr:IRI ]
+];
+rr:predicateObjectMap [
+  rr:predicate skos:narrower , hm:narrower ;
+  rr:objectMap <#URIDisease>
+];
+rr:predicateObjectMap [
+  rr:predicate clvapit:hasRankOrder;
+  rr:objectMap [ rr:constant "1"]
+].
+
+
+<#URIDisease>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [ rr:constant "https://w3id.org/whow/controlled-vocabulary/diseases"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  <#SlugifyDisease>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "/" ]
+ ]
+].
+
+
+# #################################
+# ## DISEASE OBJ MAPPING
+# #################################
+<#DiseaseMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/whow/controlled-vocabulary/diseases"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#SlugifyDisease>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ]
+  ];
+  rr:class hm:Disease , skos:Concept
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate skos:prefLabel , ispra-top:name, l0:name ;
+    rr:objectMap [ rr:template "{Patologia}" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "La malattia {Patologia}" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate skos:broader;
+    rr:objectMap <#URITopConcept>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:isClassifiedBy;
+    rr:objectMap <#URITopConcept>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate clvapit:hasRankOrder;
+    rr:objectMap [ rr:constant "2"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate skos:inScheme;
+    rr:objectMap [ rr:constant "https://w3id.org/whow/controlled-vocabulary/diseases"; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+   rr:predicate owl:sameAs ;
+   rr:objectMap [
+      rr:parentTriplesMap <#DiseaseLinkingMapping> ;
+      rr:joinCondition [
+         rr:child "Patologia";
+         rr:parent "Patologia" ;
+      ]
+    ]
+  ].
+
+#################
+# LINKING SNOMED
+#################
+<#DiseaseLinkingMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceLinkingMalattieInfettive> ;
+  rr:subjectMap [
+      rml:reference "snomedURI" ;
+      rr:termType rr:IRI
+  ].
+
+<#SlugifyDisease>
+fnml:functionValue [
+	rr:predicateObjectMap [
+		rr:predicate fno:executes ;
+		rr:objectMap [ rr:constant idlab-fn:slugify ]
+	];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "Patologia"]
+  ] ;
+ ] .

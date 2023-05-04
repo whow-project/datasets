@@ -1,0 +1,20 @@
+Patologia,snomedURI
+EPATITE A,http://snomed.info/id/40468003
+LEGIONELLOSI,http://snomed.info/id/26726000
+GIARDIASI,http://snomed.info/id/58265007
+DIARREA INFETTIVA,http://snomed.info/id/19213003
+VARICELLA,http://snomed.info/id/38907003
+LISTERIOSI,http://snomed.info/id/4241002
+MALATTIA INVASIVA DA HIB,http://snomed.info/id/373035007
+MORBILLO,http://snomed.info/id/14189004
+PERTOSSE,http://snomed.info/id/27836007
+ROSOLIA,http://snomed.info/id/36653000
+MALATTIA INVASIVA MENINGOCOCCICA,http://snomed.info/id/23511006
+MALATTIA INVASIVA PNEUMOCOCCICA,http://snomed.info/id/16814004
+MENINGITI BATTERICHE,http://snomed.info/id/95883001
+MONONUCLEOSI INFETTIVA,http://snomed.info/id/271558008
+PAROTITE EPIDEMICA,http://snomed.info/id/240526004
+SALMONELLOSI NON TIFOIDE,http://snomed.info/id/763772002
+SCARLATTINA,http://snomed.info/id/30242009
+SHIGHELLOSI,http://snomed.info/id/36188001
+TUBERCOLOSI,http://snomed.info/id/56717001
