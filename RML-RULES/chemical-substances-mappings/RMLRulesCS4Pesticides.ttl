@@ -66,6 +66,10 @@ rr:predicateObjectMap [
   rr:objectMap [ rr:template "{nom_sost_ing}" ; rr:language "en"]
 ];
 rr:predicateObjectMap [
+  rr:predicate skos:inScheme;
+  rr:objectMap [ rr:template "https://w3id.org/whow/controlled-vocabulary/chemical-substances"; rr:termType rr:IRI ]
+];
+rr:predicateObjectMap [
   rr:predicate ispra-top:hasUniqueIdentifier;
   rr:objectMap [ rr:template "https://w3id.org/whow/data/identifier/{cod_cas}"; rr:termType rr:IRI ]
 ];
