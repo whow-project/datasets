@@ -51,7 +51,7 @@ rr:subjectMap [
    rr:predicateObjectMap [
      rr:predicate grel:p_string_sep ;
      rr:objectMap [ rr:constant "/" ]
-   ];
+   ]
   ];
   rr:class hydro:RiverWaterBody
 ] ;

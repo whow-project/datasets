@@ -1,0 +1,127 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix idlab-fn: <http://example.com/idlab/function/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix ispra-top: <https://w3id.org/italia/env/onto/top/> .
+@prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <https://w3id.org/whow/controlled-vocabulary/chemical-substances/> .
+
+##########################################################
+## LOGICAL SOURCES TO BE USED
+##########################################################
+
+# #LogicalSourceRivers
+<#LogicalSourceRivers> a rml:BaseSource ;
+    rml:source "kr6i-f553_fiumi.csv";
+    rml:referenceFormulation ql:CSV .
+
+# #LogicalSourceRiversLinking
+<#LogicalSourceRiverslinking> a rml:BaseSource ;
+    rml:source "rivers-entity-linking.csv";
+    rml:referenceFormulation ql:CSV .
+
+############# RiversLinkingMapping ###########
+<#RiversLinkingMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceRivers>;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/river-water-body"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap <#MD5CorsoAcquaLinking>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ]
+  ];
+] ;
+rr:predicateObjectMap [
+  rr:predicate owl:sameAs ;
+  rr:objectMap [
+     rr:parentTriplesMap <#RiverLinkingWikidataMapping> ;
+     rr:joinCondition [
+        rr:child "corso_d_acqua";
+        rr:parent "CORSO D'ACQUA" ;
+     ]
+   ]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate owl:sameAs ;
+   rr:objectMap [
+      rr:parentTriplesMap <#RiverLinkingDbpediaMapping> ;
+      rr:joinCondition [
+         rr:child "corso_d_acqua";
+         rr:parent "CORSO D'ACQUA" ;
+      ]
+    ]
+  ].
+
+
+###################################
+# River LINKING Wikidata MAPPING
+###################################
+<#RiverLinkingWikidataMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceRiverslinking> ;
+  rr:subjectMap [
+      rml:reference "wikidata" ;
+      rr:termType rr:IRI
+  ].
+
+###################################
+# River LINKING Dbpedia MAPPING
+###################################
+<#RiverLinkingDbpediaMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceRiverslinking> ;
+  rr:subjectMap [
+      rml:reference "dbpedia" ;
+      rr:termType rr:IRI
+  ].
+
+<#MD5CorsoAcquaLinking>
+  fnml:functionValue [
+    rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:string_md5 ]
+    ];
+    rr:predicateObjectMap [
+     rr:predicate grel:valueParameter ;
+     rr:objectMap <#ArrayJoinCorsoAcquaCorpoIdricoLinking>
+    ];
+  ].
+
+<#ArrayJoinCorsoAcquaCorpoIdricoLinking>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [ rml:reference "corso_d_acqua"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap [ rml:reference "corpo_idrico"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "" ]
+ ];
+].
