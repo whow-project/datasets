@@ -79,7 +79,7 @@
   ] ;
   rr:predicateObjectMap [
     rr:predicate dct:identifier;
-    rr:objectMap [ rr:constant "https://w3id.org/leo/controlled-vocabulary/chemical-substances" ]
+    rr:objectMap [ rr:constant "https://w3id.org/whow/controlled-vocabulary/chemical-substances" ]
   ] ;
   rr:predicateObjectMap [
     rr:predicate ndc:keyConcept;
@@ -138,7 +138,7 @@
 <#dcatDistributionMURDFTURTLEMapping> a rr:TriplesMap ;
   rml:logicalSource <#LogicalSourceChemicalSubstances> ;
   rr:subjectMap [
-    rr:template "https://w3id.org/leo/data/distribution/cs-RDF-TURTLE";
+    rr:template "https://w3id.org/whow/data/distribution/cs-RDF-TURTLE";
     rr:class dcatapit:Distribution , dcat:Distribution
   ] ;
   rr:predicateObjectMap [
@@ -189,6 +189,10 @@ rr:predicateObjectMap [
 rr:predicateObjectMap [
   rr:predicate skos:prefLabel;
   rr:objectMap [ rr:template "{EC Name}" ; rr:language "en"]
+];
+rr:predicateObjectMap [
+  rr:predicate skos:inScheme;
+  rr:objectMap [ rr:template "https://w3id.org/whow/controlled-vocabulary/chemical-substances"; rr:termType rr:IRI ]
 ];
 rr:predicateObjectMap [
   rr:predicate ispra-top:hasUniqueIdentifier;
