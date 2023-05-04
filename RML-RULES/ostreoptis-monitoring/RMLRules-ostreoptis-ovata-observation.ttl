@@ -26,7 +26,7 @@
 <#LogicalSourceOstreopsis> a rml:BaseSource ;
     rml:source [
       a csvw:Table;
-      csvw:url "Ostreopsis_Ovata_AllRegions_withISTATcode.csv";
+      csvw:url "Ostreopsis_Ovata_AllRegions_withISTATcode_withSeas.csv";
 
       csvw:dialect [
         a csvw:Dialect;
@@ -88,6 +88,12 @@
  """
       .
 
+#LogicalSourceLinkingPlace
+<#LogicalSourceLinkingPlace> a rml:BaseSource ;
+   rml:source "LinkingPlace.csv";
+   rml:referenceFormulation ql:CSV .
+
+
 ###########################################################
 ##                  MAPPING RULES
 ##########################################################
@@ -148,7 +154,12 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
   rr:predicateObjectMap [
      rr:predicate ispra-emf:generationTime ;
      rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/temporal-entity/({Data})"; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+     rr:predicate ispra-emf:hasFeatureOfInterest;
+     rr:objectMap <#URIMarineWaterBody>
   ].
+
 
 #################################
 # GENERATION TIME OBJ MAPPING
@@ -192,7 +203,90 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
   rr:predicateObjectMap [
     rr:predicate w-mon:isTakenAt ;
     rr:objectMap [ rr:template "http://w3id.org/italia/env/ld/sampling-point/{Codice Sito}" ; rr:termType rr:IRI ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate w-mon:isSampleOf ;
+    rr:objectMap <#URIMarineWaterBody>
   ] .
+
+<#URIMarineWaterBody>
+rr:termType rr:IRI ;
+fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/env/ld/marine-water-body"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#SlugifySeaName>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ]
+].
+
+
+##################################
+# MARINE WATER BODY OBJ MAPPING
+##################################
+<#URIMarineWaterBodyObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceOstreopsis> ;
+  rr:subjectMap [
+    fnml:functionValue [
+       rr:predicateObjectMap [
+         rr:predicate fno:executes ;
+         rr:objectMap [ rr:constant grel:array_join ]
+       ] ;
+       rr:predicateObjectMap [
+         rr:predicate grel:p_array_a ;
+         rr:objectMap  [ rr:constant "https://w3id.org/italia/env/ld/marine-water-body"]
+       ];
+       rr:predicateObjectMap [
+         rr:predicate grel:p_array_a ;
+         rr:objectMap  <#SlugifySeaName>
+       ];
+       rr:predicateObjectMap [
+         rr:predicate grel:p_string_sep ;
+         rr:objectMap [ rr:constant "/" ]
+       ]
+    ];
+    rr:class hydro:MarineWaterBody
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rr:template "Marine Water Body: {Seaname}" ; rr:language "en"]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:name , l0:name ;
+    rr:objectMap [ rr:template "Marine Water Body: {Seaname}" ; rr:language "en"]
+  ] ;
+  rr:predicateObjectMap [
+   rr:predicate owl:sameAs ;
+   rr:objectMap [
+      rr:parentTriplesMap <#PlaceLinkingMapping> ;
+      rr:joinCondition [
+         rr:child "Seaname";
+         rr:parent "Seaname" ;
+      ]
+    ]
+  ].
+
+
+########################
+# PLACE LINKING MAPPING
+########################
+<#PlaceLinkingMapping>
+rml:logicalSource <#LogicalSourceLinkingPlace> ;
+  rr:subjectMap [
+      rml:reference "PlaceURI" ;
+      rr:termType rr:IRI
+  ].
+
 
 #############################
 # SAMPLING POINT OBJ MAPPING
@@ -839,3 +933,15 @@ fnml:functionValue [
     rr:objectMap [ rml:reference "Ostreopsis cf. ovata (cell/ g fw)" ]
   ]
 ] .
+
+<#SlugifySeaName>
+fnml:functionValue [
+	rr:predicateObjectMap [
+		rr:predicate fno:executes ;
+		rr:objectMap [ rr:constant idlab-fn:slugify ]
+	];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "Seaname"]
+  ] ;
+ ] .
