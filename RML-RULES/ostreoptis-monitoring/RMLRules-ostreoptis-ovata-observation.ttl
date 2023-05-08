@@ -14,7 +14,6 @@
 @prefix ispra-plc: <https://w3id.org/italia/env/onto/place/>.
 @prefix ispra-top: <https://w3id.org/italia/env/onto/top/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix crml: <http://w3id.org/stlab/crml#> .
 @prefix hydro: <https://w3id.org/whow/onto/hydrography/>.
 @prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
 @prefix l0: <https://w3id.org/italia/onto/l0/>.
@@ -149,7 +148,7 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
   ];
   rr:predicateObjectMap [
      rr:predicate w-mon:hasObservationSample ;
-     rr:objectMap [ rr:template "http://w3id.org/italia/env/ld/water-sample/{LAT}-{LONG}"; rr:termType rr:IRI ]
+     rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/water-sample/{LAT}-{LONG}"; rr:termType rr:IRI ]
   ];
   rr:predicateObjectMap [
      rr:predicate ispra-emf:generationTime ;
@@ -189,7 +188,7 @@ rml:logicalSource <#LogicalSourceOstreopsis> ;
 <#WaterSampleMapping> a rr:TriplesMap;
 rml:logicalSource <#LogicalSourceOstreopsis>;
   rr:subjectMap [
-    rr:template "http://w3id.org/italia/env/ld/water-sample/{LAT}-{LONG}";
+    rr:template "https://w3id.org/italia/env/ld/water-sample/{LAT}-{LONG}";
     rr:class w-mon:WaterSample
   ];
   rr:predicateObjectMap [
@@ -202,7 +201,7 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
   ] ;
   rr:predicateObjectMap [
     rr:predicate w-mon:isTakenAt ;
-    rr:objectMap [ rr:template "http://w3id.org/italia/env/ld/sampling-point/{Codice Sito}" ; rr:termType rr:IRI ]
+    rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/sampling-point/{Codice Sito}" ; rr:termType rr:IRI ]
   ] ;
   rr:predicateObjectMap [
     rr:predicate w-mon:isSampleOf ;
@@ -294,7 +293,7 @@ rml:logicalSource <#LogicalSourceLinkingPlace> ;
 <#SamplinPointObjMapping> a rr:TriplesMap;
 rml:logicalSource <#LogicalSourceOstreopsis>;
   rr:subjectMap [
-    rr:template "http://w3id.org/italia/env/ld/sampling-point/{Codice Sito}";
+    rr:template "https://w3id.org/italia/env/ld/sampling-point/{Codice Sito}";
     rr:class w-mon:SamplingPoint , ispra-top:Location , ispra-emf:FeatureOfInterest
   ];
   rr:predicateObjectMap [
@@ -403,101 +402,6 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
   ] .
 
 
-
-
-
-    # ## result mapping
-    #
-    #     <#ResultMapping> a rr:TriplesMap;
-    #     rml:logicalSource <#LogicalSourceOstreopsis>;
-    #     rr:subjectMap [
-    #     fnml:functionValue [
-    #      rr:predicateObjectMap [
-    #        rr:predicate fno:executes ;
-    #        rr:objectMap [ rr:constant grel:array_join ]
-    #      ];
-    #
-    #       rr:predicateObjectMap [
-    #         rr:predicate grel:p_array_a ;
-    #         rr:objectMap [ rr:constant "https://w3id.org/whow/data/observation-result/"]
-    #       ] ;
-    #       rr:predicateObjectMap [
-    #             rr:predicate grel:p_array_a ;
-    #            rr:objectMap
-    #                    [rml:reference "Ostreopsis cf. ovata (cell/l)"]
-    #
-    #       ];
-    #       rr:predicateObjectMap [
-    #             rr:predicate grel:p_array_a ;
-    #            rr:objectMap
-    #                    [rr:constant "cell-l"]
-    #
-    #       ];
-    #       rr:predicateObjectMap [
-    #         rr:predicate grel:p_string_sep ;
-    #         rr:objectMap [ rr:constant "-" ]
-    #       ]
-    #     ];
-    #           rr:class w-mon:ObservationValue
-    #                 ];
-    #      rr:predicateObjectMap [
-    #         rr:predicate rdfs:label ;
-    #         rr:objectMap [
-    #            rr:template "Observation value {Ostreopsis cf. ovata (cell/l)}" ; rr:language "en" ] #agg datatype property
-    #       ];
-    #
-    #       rr:predicateObjectMap [
-    #         rr:predicate ispra-top:hasUnitOfMeasure;
-    #         rr:objectMap [rr:template "http://w3id.org/whow/data/um/cell-l";
-    #         rr:termType rr:IRI;]
-    #
-    #         ].
-    #
-    #
-    #         <#ResultMapping2> a rr:TriplesMap;
-    #         rml:logicalSource <#LogicalSourceOstreopsis>;
-    #         rr:subjectMap [
-    #         fnml:functionValue [
-    #          rr:predicateObjectMap [
-    #            rr:predicate fno:executes ;
-    #            rr:objectMap [ rr:constant grel:array_join ]
-    #          ];
-    #
-    #           rr:predicateObjectMap [
-    #             rr:predicate grel:p_array_a ;
-    #             rr:objectMap [ rr:constant "https://w3id.org/whow/data/observation-result/"]
-    #           ] ;
-    #           rr:predicateObjectMap [
-    #                 rr:predicate grel:p_array_a ;
-    #                 rr:objectMap
-    #                         [rml:reference "Ostreopsis cf. ovata (cell/ g fw)"]
-    #
-    #           ];
-    #           rr:predicateObjectMap [
-    #                 rr:predicate grel:p_array_a ;
-    #                 rr:objectMap
-    #                         [rr:constant "cell-g-fw"]
-    #
-    #           ];
-    #           rr:predicateObjectMap [
-    #             rr:predicate grel:p_string_sep ;
-    #             rr:objectMap [ rr:constant "-" ]
-    #           ]
-    #         ];
-    #               rr:class w-mon:ObservationValue
-    #                     ];
-    #          rr:predicateObjectMap [
-    #             rr:predicate rdfs:label ;
-    #             rr:objectMap [
-    #                rr:template "Observation value {Ostreopsis cf. ovata (cell/ g fw)}" ; rr:language "en" ] #agg datatype property
-    #           ];
-    #
-    #           rr:predicateObjectMap [
-    #             rr:predicate ispra-top:hasUnitOfMeasure;
-    #             rr:objectMap [rr:template "http://w3id.org/whow/data/um/cell-g-fw";
-    #             rr:termType rr:IRI;]
-    #
-    #             ].
 
 ################################
 ### OBSERVABLE PROPERTY Mapping
