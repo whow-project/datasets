@@ -10,7 +10,7 @@ In particular, within the RML-RULES directory there are different directories; e
 
 1) **chemical sustance mapping**: this directory includes the RML rules necessary to create the [WHOW controlled vocabulary on chemical sustances](https://w3id.org/whow/controlled-vocabulary/chemical-substances) that is linked to the related concepts available in Wikidata. We used two types of CSV files: one coming from the monitoring of the quality of water bodies of different types (e.g., rivers, lakes), and one used in the pesticides domain. This dataset mainly serves the WHOW use case 2.
 
-2) **diseases**: this directory includes the RML rules necessary to create the [WHOW controlled vocabulary on (infectious) diseases][https://w3id.org/whow/controlled-vocabulary/diseases] that is linked to snomed ontology. We used the open dataset on the monitoring of the infectious diseases rates of Lombardy region to create the RDF dataset. This dataset mainly serves the WHOW use case 2.
+2) **diseases**: this directory includes the RML rules necessary to create the [WHOW controlled vocabulary on (infectious) diseases](https://w3id.org/whow/controlled-vocabulary/diseases) that is linked to snomed ontology. We used the open dataset on the monitoring of the infectious diseases rates of Lombardy region to create the RDF dataset. This dataset mainly serves the WHOW use case 2.
 
 3) **hydrography**: this directory includes two additional directories with the RML rules necessary to create the list of lakes and rivers of the lombardy region. The RDF datasets, linked to Wikidata and DBpedia, have been obtained by applying the RML rules to datasets on the monitoring of the quality of rivers and lakes. These datasets mainly serve the WHOW use case 2.
 
