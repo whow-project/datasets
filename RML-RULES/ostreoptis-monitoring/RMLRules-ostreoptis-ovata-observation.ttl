@@ -25,7 +25,7 @@
 <#LogicalSourceOstreopsis> a rml:BaseSource ;
     rml:source [
       a csvw:Table;
-      csvw:url "Ostreopsis_Ovata_AllRegions_withISTATcode_withSeas.csv";
+      csvw:url "Ostreopsis_Ovata_AllRegions_2020_withISTATcode_withSeas.csv";
 
       csvw:dialect [
         a csvw:Dialect;
@@ -97,9 +97,9 @@
 ##                  MAPPING RULES
 ##########################################################
 ###############################
-# OSTREOPTIS OVATA OBS MAPPING
+# OSTREOPSIS OVATA OBS MAPPING
 ###############################
-<#WaterObservationOstreoptisMapping> a rr:TriplesMap;
+<#WaterObservationOstreopsisMapping> a rr:TriplesMap;
 rml:logicalSource <#LogicalSourceOstreopsis>;
   rr:subjectMap [
     fnml:functionValue [
@@ -124,11 +124,11 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
   ];
   rr:predicateObjectMap [
    rr:predicate rdfs:label ;
-   rr:objectMap [ rr:template "Observation of ostreoptis ovata with value {Ostreopsis cf. ovata (cell/l)} with sample point in {Nome Sito} done at {Data}." ; rr:language "en" ]
+   rr:objectMap [ rr:template "Observation of Ostreopsis ovata with value {Ostreopsis cf. ovata cell/l} with sample point in {Nome Sito} done at {Data}." ; rr:language "en" ]
   ];
   rr:predicateObjectMap [
    rr:predicate rdfs:label ;
-   rr:objectMap [ rr:template "Osservazione di ostreoptis ovata con valore {Ostreopsis cf. ovata (cell/l)} con punto prelievo {Nome Sito}, fatta il {Data}." ; rr:language "it" ]
+   rr:objectMap [ rr:template "Osservazione di Ostreopsis ovata con valore {Ostreopsis cf. ovata cell/l} con punto prelievo {Nome Sito}, fatta il {Data}." ; rr:language "it" ]
   ];
   rr:predicateObjectMap [
     rr:predicate w-mon:hasResult ;
@@ -339,7 +339,7 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
      rr:objectMap [
         rr:parentTriplesMap <#MunicipalityURIMapping> ;
         rr:joinCondition [
-           rr:child "PRO_COM_T";
+           rr:child "Istatcode";
            rr:parent "ID.value" ;
         ] ;
       ]
@@ -406,7 +406,7 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
 ################################
 ### OBSERVABLE PROPERTY Mapping
 ################################
-<#ObservablePropertyOstreoptisMapping> a rr:TriplesMap;
+<#ObservablePropertyOstreopsisMapping> a rr:TriplesMap;
 rml:logicalSource <#LogicalSourceOstreopsis>;
   rr:subjectMap [
     rr:constant "https://w3id.org/italia/env/ld/observable-property/110068";
@@ -441,7 +441,7 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
 ################################
 ### BIOLOGICAL AGENT Mapping
 ################################
-<#BiologicalAgentOstreoptisMapping> a rr:TriplesMap;
+<#BiologicalAgentOstreostisMapping> a rr:TriplesMap;
 rml:logicalSource <#LogicalSourceOstreopsis>;
   rr:subjectMap [
     rr:constant "https://w3id.org/italia/env/ld/biological-agent/110068";
@@ -461,7 +461,7 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
   ];
   rr:predicateObjectMap [
     rr:predicate skos:prefLabel ;
-    rr:objectMap [ rr:constant "Ostreoptis ovata"]
+    rr:objectMap [ rr:constant "Ostreopsis ovata"]
   ];
   rr:predicateObjectMap [
     rr:predicate ispra-top:hasUniqueIdentifier ;
@@ -542,7 +542,7 @@ rr:termType rr:IRI ;
       ] ;
       rr:predicateObjectMap [
         rr:predicate idlab-fn:str ;
-        rr:objectMap [rr:template "https://w3id.org/italia/env/ld/observation-value/{Ostreopsis cf. ovata (cell/l)}-cell-l"]
+        rr:objectMap [rr:template "https://w3id.org/italia/env/ld/observation-value/{Ostreopsis cf. ovata cell/l}-cell-l"]
       ]
   ].
 
@@ -584,22 +584,22 @@ rml:logicalSource <#LogicalSourceOstreopsis> ;
         ] ;
         rr:predicateObjectMap [
           rr:predicate idlab-fn:str ;
-          rr:objectMap [rr:template "https://w3id.org/italia/env/ld/observation-value/{Ostreopsis cf. ovata (cell/l)}-cell-l"]
+          rr:objectMap [rr:template "https://w3id.org/italia/env/ld/observation-value/{Ostreopsis cf. ovata cell/l}-cell-l"]
         ]
     ];
     rr:class w-mon:ObservationValue
   ] ;
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rr:template "Valore {Ostreopsis cf. ovata (cell/l)} cell/l" ; rr:language "it"]
+    rr:objectMap [ rr:template "Valore {Ostreopsis cf. ovata cell/l} cell/l" ; rr:language "it"]
   ] ;
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rr:template "Value {Ostreopsis cf. ovata (cell/l)} cell/l" ; rr:language "en"]
+    rr:objectMap [ rr:template "Value {Ostreopsis cf. ovata cell/l} cell/l" ; rr:language "en"]
   ] ;
   rr:predicateObjectMap [
     rr:predicate ispra-top:value ;
-    rr:objectMap [ rml:reference "Ostreopsis cf. ovata (cell/l)" ; rr:datatype xsd:integer ]
+    rr:objectMap [ rml:reference "Ostreopsis cf. ovata cell/l" ; rr:datatype xsd:integer ]
   ] ;
   rr:predicateObjectMap [
     rr:predicate ispra-top:hasUnitOfMeasure ;
@@ -658,15 +658,15 @@ rml:logicalSource <#LogicalSourceOstreopsis> ;
   ] ;
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rr:template "Valore {Ostreopsis cf. ovata (cell/ g fw)} cell/g fw" ; rr:language "it"]
+    rr:objectMap [ rr:template "Valore {Ostreopsis cf. ovata cell/ g fw} cell/g fw" ; rr:language "it"]
   ] ;
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rr:template "Value {Ostreopsis cf. ovata (cell/ g fw)} cell/g fw" ; rr:language "en"]
+    rr:objectMap [ rr:template "Value {Ostreopsis cf. ovata cell/ g fw} cell/g fw" ; rr:language "en"]
   ] ;
   rr:predicateObjectMap [
     rr:predicate ispra-top:value ;
-    rr:objectMap [ rml:reference "Ostreopsis cf. ovata (cell/ g fw)" ; rr:datatype xsd:decimal ]
+    rr:objectMap [ rml:reference "Ostreopsis cf. ovata cell/ g fw" ; rr:datatype xsd:decimal ]
   ] ;
   rr:predicateObjectMap [
     rr:predicate ispra-top:hasUnitOfMeasure ;
@@ -730,47 +730,51 @@ fnml:functionValue [
     ] ;
     rr:predicateObjectMap [
       rr:predicate grel:p_array_a ;
-      rr:objectMap  [ rr:template "{Regione}"]
+      rr:objectMap  [ rml:reference "Regione"]
     ];
     rr:predicateObjectMap [
       rr:predicate grel:p_array_a ;
-      rr:objectMap  [ rr:template "{Provincia}"]
+      rr:objectMap  [ rml:reference "Provincia"]
     ];
     rr:predicateObjectMap [
       rr:predicate grel:p_array_a ;
-      rr:objectMap  [ rr:template "{Comune}"]
+      rr:objectMap  [ rml:reference "Comune"]
     ];
     rr:predicateObjectMap [
       rr:predicate grel:p_array_a ;
-      rr:objectMap  [ rr:template "{Codice Sito}"]
+      rr:objectMap  [ rml:reference "Codice Sito"]
     ];
     rr:predicateObjectMap [
       rr:predicate grel:p_array_a ;
-      rr:objectMap  [ rr:template "{Nome Sito}"]
+      rr:objectMap  [ rml:reference "Nome Sito"]
     ];
     rr:predicateObjectMap [
       rr:predicate grel:p_array_a ;
-      rr:objectMap  [ rr:template "{LONG}"]
+      rr:objectMap  [ rml:reference "LONG"]
     ];
     rr:predicateObjectMap [
       rr:predicate grel:p_array_a ;
-      rr:objectMap  [ rr:template "{LAT}"]
+      rr:objectMap  [ rml:reference "LAT"]
     ];
     rr:predicateObjectMap [
       rr:predicate grel:p_array_a ;
-      rr:objectMap  [ rr:template "{Data}"]
+      rr:objectMap  [ rml:reference "Data"]
     ];
     rr:predicateObjectMap [
       rr:predicate grel:p_array_a ;
-      rr:objectMap  [ rr:template "{Ostreopsis cf. ovata (cell/l)}"]
+      rr:objectMap  [ rml:reference "Ostreopsis cf. ovata cell/l"]
     ];
     rr:predicateObjectMap [
       rr:predicate grel:p_array_a ;
-      rr:objectMap  [ rr:template "{PRO_COM_T}"]
+      rr:objectMap  [ rml:reference "Istatcode"]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate grel:p_array_a ;
+      rr:objectMap  [ rml:reference "Seaname"]
     ];
     rr:predicateObjectMap [
       rr:predicate grel:p_string_sep ;
-      rr:objectMap [ rr:constant "-" ]
+      rr:objectMap [ rr:constant "" ]
     ];
   ].
 
@@ -787,7 +791,7 @@ fnml:functionValue [
     ] ;
     rr:predicateObjectMap [
         rr:predicate grel:valueParameter2 ;
-        rr:objectMap [ rml:reference "Ostreopsis cf. ovata (cell/l)" ]
+        rr:objectMap [ rml:reference "Ostreopsis cf. ovata cell/l" ]
     ]
 ] .
 
@@ -804,7 +808,7 @@ fnml:functionValue [
     ] ;
     rr:predicateObjectMap [
         rr:predicate grel:valueParameter2 ;
-        rr:objectMap [ rml:reference "Ostreopsis cf. ovata (cell/ g fw)" ]
+        rr:objectMap [ rml:reference "Ostreopsis cf. ovata cell/ g fw" ]
     ]
 ] .
 
@@ -822,7 +826,7 @@ rr:termType rr:IRI ;
      ];
      rr:predicateObjectMap [
        rr:predicate grel:any_false ;
-       rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/observation-value/{Ostreopsis cf. ovata (cell/ g fw)}-cell-g-fw" ]
+       rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/observation-value/{Ostreopsis cf. ovata cell/ g fw}-cell-g-fw" ]
      ]
    ] .
 
@@ -834,7 +838,7 @@ fnml:functionValue [
   ];
   rr:predicateObjectMap [
     rr:predicate idlab-fn:str ;
-    rr:objectMap [ rml:reference "Ostreopsis cf. ovata (cell/ g fw)" ]
+    rr:objectMap [ rml:reference "Ostreopsis cf. ovata cell/ g fw" ]
   ]
 ] .
 
