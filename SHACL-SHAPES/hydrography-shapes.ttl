@@ -1,0 +1,153 @@
+@prefix :      <https://w3id.org/whow/onto/hydrography/> .
+@prefix ispra-emf: <https://w3id.org/italia/env/onto/inspire-mf/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+
+
+######## NODE SHAPES
+<https://w3id.org/whow/data/shapes/156f33b29f90d32e59cf5c17e043b830>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/whow/onto/hydrography> ;
+        rdfs:label        "Coastal Water Body"@en ;
+        sh:description    "The class of coastal water body; that is, a marine water body bordering a coast"@en ;
+        sh:name           "Coastal Water Body"@en ;
+        sh:nodeKind       sh:IRI ;
+        sh:severity       sh:Warning ;
+        sh:targetClass    :CoastalWaterBody .
+
+<https://w3id.org/whow/data/shapes/19614f68e1724039411e0845872f3a36>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/whow/onto/hydrography> ;
+        rdfs:label        "Water Basin"@en ;
+        sh:name           "Water Basin"@en ;
+        sh:nodeKind       sh:IRI ;
+        sh:severity       sh:Warning ;
+        sh:property       <https://w3id.org/whow/data/shapes/be9d2e56581f8730afd3e6f30fd7aca1> , <https://w3id.org/whow/data/shapes/be9d2e56581f8730afd3e6f30fd7aca2>;
+        sh:targetClass    :WaterBasin .
+
+<https://w3id.org/whow/data/shapes/4c75844e4b0aff5e246407dd706af0cb>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/whow/onto/hydrography> ;
+        rdfs:label        "Lake Water Body"@en ;
+        sh:description    "A body of standing inland surface water."@en ;
+        sh:name           "Lake Water Body"@en ;
+        sh:property       <https://w3id.org/whow/data/shapes/605feb49ec1788219a333ed303e33c84> , <https://w3id.org/whow/data/shapes/605feb49ec1788219a333ed303e33c85> ;
+        sh:nodeKind       sh:IRI ;
+        sh:severity       sh:Warning ;
+        sh:targetClass    :LakeWaterBody .
+
+
+<https://w3id.org/whow/data/shapes/9282ef16742f9606386aa393635b1abd>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/whow/onto/hydrography> ;
+        rdfs:label        "Groundwater Body"@en ;
+        sh:description    "A distinct volume of groundwater within an aquifer or system of aquifers, which is hydraulically isolated from nearby groundwater bodies."@en ;
+        sh:name           "Groundwater Body"@en ;
+        sh:nodeKind       sh:IRI ;
+        sh:severity       sh:Warning ;
+        sh:targetClass    :GroundwaterBody .
+
+<https://w3id.org/whow/data/shapes/e2e1dd4a130fa3d9eb99f4bb7b214296>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/whow/onto/hydrography> ;
+        rdfs:label        "Transitional Water Body"@en ;
+        sh:description    "Bodies of surface water in the vicinity of river mouths which are partly saline in character as a result of their proximity to coastal waters but which are substantially influenced by freshwater flows."@en ;
+        sh:name           "Transitional Water Body"@en ;
+        sh:nodeKind       sh:IRI ;
+        sh:severity       sh:Warning ;
+        sh:targetClass    :TransitionalWaterBody .
+
+
+<https://w3id.org/whow/data/shapes/b70e79990687571fb09150db7ec565a1>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/whow/onto/hydrography> ;
+        rdfs:label        "Marine Water"@en ;
+        sh:description    "The waters, the seabed and subsoil on the seaward side of the baseline from which the extent of territorial waters is measured"@en ;
+        sh:name           "Marine Water"@en ;
+        sh:nodeKind       sh:IRI ;
+        sh:severity       sh:Warning ;
+        sh:targetClass    :MarineWater .
+
+<https://astrea.linkeddata.es/shapes#e726aee41f98082494015bee93ba2f5d>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/whow/onto/hydrography> ;
+        rdfs:label        "River Water Body"@en ;
+        sh:description    "A body of inland water flowing for the most part on the surface of the land but which may flow underground for part of its course."@en ;
+        sh:name           "River Water Body"@en ;
+        sh:nodeKind       sh:IRI ;
+        sh:severity       sh:Warning ;
+        sh:property       <https://w3id.org/whow/data/shapes/605feb49ec1788219a333ed303e33c84> , <https://w3id.org/whow/data/shapes/605feb49ec1788219a333ed303e33c85> ;
+        sh:targetClass    :RiverWaterBody .
+
+<https://w3id.org/whow/data/shapes/eabc6a8cdfc34c22352888fd99c6f333>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/whow/onto/hydrography> ;
+        rdfs:label        "Water Body"@en ;
+        sh:description    "Abstract class representing a WFD - Water Framework Directive body of surface water or body of groundwater"@en ;
+        sh:name           "Water Body"@en ;
+        sh:nodeKind       sh:IRI ;
+        sh:severity       sh:Info ;
+        sh:property       <https://w3id.org/whow/data/shapes/605feb49ec1788219a333ed303e33c84> , <https://w3id.org/whow/data/shapes/605feb49ec1788219a333ed303e33c85> ;
+        sh:targetClass    :WaterBody .
+
+<https://w3id.org/whow/data/shapes/55ae35a9b23ecfc5aa6653425310d9a3>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/whow/onto/hydrography> ;
+        rdfs:label        "Water Feature"@en ;
+        sh:description    "A specific feature of interest in the hydrography context."@en ;
+        sh:name           "Water Feature"@en ;
+        sh:nodeKind       sh:IRI ;
+        sh:severity       sh:Warning ;
+        sh:targetClass    :WaterFeature .
+
+
+<https://w3id.org/whow/data/shapes/ae45edffa287770171c044c875423753>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://w3id.org/italia/env/onto/inspire-emf/FeatureOfInterest> .
+
+
+########### PROPERTY SHAPES
+<https://w3id.org/whow/data/shapes/605feb49ec1788219a333ed303e33c84>
+        a               sh:PropertyShape ;
+        rdfs:label      "belongs to water basin"@en , "This property links the water body to the water basin it belongs"@en ;
+        sh:class        :WaterBasin ;
+        sh:description  "This property links the water body to the water basin it belongs"@en ;
+        sh:name         "belongs to water basin"@en ;
+        sh:path         :belongsToWaterBasin ;
+        sh:severity     sh:Violation ;
+        sh:message      "The class should be of type WaterBasin" .
+
+<https://w3id.org/whow/data/shapes/605feb49ec1788219a333ed303e33c85>
+        a            sh:PropertyShape ;
+        sh:class     :WaterBasin ;
+        sh:nodeKind  sh:IRI ;
+        sh:severity  sh:Violation ;
+        sh:path      :belongsToWaterBasin .
+
+
+<https://w3id.org/whow/data/shapes/be9d2e56581f8730afd3e6f30fd7aca1>
+        a               sh:PropertyShape ;
+        rdfs:label      "is sub water basin"@en , "This property is used to represent hierarchies of water basin since water basins can be formed by other water basins."@en ;
+        sh:class        :WaterBasin ;
+        sh:description  "This property is used to represent hierarchies of water basin since water basins can be formed by other water basins."@en ;
+        sh:name         "is sub water basin"@en ;
+        sh:severity     sh:Violation ;
+        sh:path         :isSubWaterBasin ;
+        sh:message      "The class should be of type WaterBasin" .
+
+<https://w3id.org/whow/data/shapes/be9d2e56581f8730afd3e6f30fd7aca2>
+        a            sh:PropertyShape ;
+        sh:class     :WaterBasin ;
+        sh:nodeKind  sh:IRI ;
+        sh:severity  sh:Violation ;
+        sh:path      :isSubWaterBasin .
