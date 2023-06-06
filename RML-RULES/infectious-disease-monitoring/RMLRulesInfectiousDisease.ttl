@@ -266,7 +266,7 @@ rr:subjectMap [
 rml:logicalSource <#LogicalSourceMalattieInfettive> ;
 rr:subjectMap [
     rr:constant "https://w3id.org/italia/lombardia/data/indicator/number-dossier";
-    rr:class hm:HealthCareIndicator
+    rr:class hm:HealthcareIndicator
 ] ;
 rr:predicateObjectMap [
    rr:predicate rdfs:label ;
@@ -288,7 +288,7 @@ rr:predicateObjectMap [
 rml:logicalSource <#LogicalSourceMalattieInfettive> ;
 rr:subjectMap [
    rr:constant "https://w3id.org/italia/lombardia/data/indicator/rate-age-sex";
-   rr:class hm:HealthCareIndicator
+   rr:class hm:HealthcareIndicator
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
@@ -310,7 +310,7 @@ rr:predicateObjectMap [
 rml:logicalSource <#LogicalSourceMalattieInfettive> ;
 rr:subjectMap [
    rr:constant "https://w3id.org/italia/lombardia/data/indicator/rate-region";
-   rr:class hm:HealthCareIndicator
+   rr:class hm:HealthcareIndicator
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
@@ -332,7 +332,7 @@ rr:predicateObjectMap [
 rml:logicalSource <#LogicalSourceMalattieInfettive> ;
 rr:subjectMap [
    rr:constant "https://w3id.org/italia/lombardia/data/indicator/rate-disease";
-   rr:class hm:HealthCareIndicator
+   rr:class hm:HealthcareIndicator
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
@@ -678,7 +678,7 @@ rml:logicalSource <#LogicalSourceMalattieInfettive> ;
     rr:objectMap [ rml:reference "Popolazione Residente" ; rr:datatype xsd:float ]
   ];
   rr:predicateObjectMap [
-    rr:predicate hm:isAffectedBy;
+    rr:predicate hm:affectedBy , hm:hasScope ;
     rr:objectMap <#URIDisease>
   ];
   rr:predicateObjectMap [
