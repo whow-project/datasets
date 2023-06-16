@@ -17,7 +17,7 @@
 @prefix clv:   <https://w3id.org/italia/onto/CLV/>.
 @prefix ispra-top: <https://w3id.org/italia/env/onto/top/> .
 @prefix wh-mon: <https://w3id.org/whow/onto/weather-monitoring/>.
-@prefix ispra-mf: <https://w3id.org/italia/env/onto/ispire-mf/>.
+@prefix ispra-emf: <https://w3id.org/italia/env/onto/inspire-mf/>.
 @prefix ispra-plc: <https://w3id.org/italia/env/onto/place/> .
 @base <https://w3id.org/italia/lombardia/data/> .
 
@@ -102,7 +102,7 @@ rml:logicalSource <#LogicalSourceWeatherSensorData>;
      rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/weather-sensor/{IdSensore}"; rr:termType rr:IRI ]
   ];
   rr:predicateObjectMap [
-     rr:predicate ispra-mf:hasObservationValue ;
+     rr:predicate ispra-emf:hasObservationValue ;
      rr:objectMap <#URIObservationValueObject>
      ### problema sulla feature of interest che dipende dalla proprietà osservata che sta nell'altro file e se si vuole usare la mappatura delle proprietà sugli individui dell'ontologia bisogna fare in altro modo (unire i due file)
      #rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/observation-value/{Valore}-{Simbolo}"; rr:termType rr:IRI ]
@@ -194,7 +194,7 @@ rr:predicateObjectMap [
   rr:objectMap [ rr:template "Sensore {idsensore}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
-  rr:predicate ispra-mf:isHostedBy ;
+  rr:predicate ispra-emf:isHostedBy ;
   rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/weather-station/{idstazione}" ; rr:termType rr:IRI ]
 ].
 # rr:predicateObjectMap [
@@ -399,7 +399,7 @@ rr:subjectMap [
         rr:objectMap [ rr:constant "/" ]
      ]
     ] ;
-    rr:class ispra-mf:ObservationValue
+    rr:class ispra-emf:ObservationValue
 ] ;
 rr:predicateObjectMap [
    rr:predicate rdfs:label ;
