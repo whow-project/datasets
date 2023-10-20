@@ -15,6 +15,7 @@
 @prefix covapit: <https://w3id.org/italia/onto/COV/> .
 @prefix sm: <https://w3id.org/italia/onto/SM/>.
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
 @base <https://w3id.org/italia/lombardia/data/> .
 
 #java -jar .\rmlmapper-4.15.0-r361-all.jar -m rml-rules-ats.ttl -o rml-rules-ats-output.ttl -s turtle

@@ -1,0 +1,65 @@
+{
+	"bound_services": {
+		"https://w3id.org/whow/onto/flow/ingestion": {
+			"endpoint": "ws://host.docker.internal:8765/ingestion",
+			"data": {
+				"title": "Test data catalog",
+				"description": "Some description for the test data catalog.",
+				"distributions": [
+					{"id": "ATS_FILE",
+					 "mimetype": "text/csv",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/ats/ats-file.csv"},
+					{"id": "ATS_LINKING",
+					 "mimetype": "text/csv",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/ats/ats-linking.csv"}
+				],
+				"store": true
+			}
+		},
+		"https://w3id.org/whow/onto/flow/preprocessing": {
+			"endpoint": "ws://host.docker.internal:8765/preprocessor",
+			"data": {"ids": ["ATS_FILE", "ATS_LINKING"]}
+		},
+		"https://w3id.org/whow/onto/flow/mapping": {
+			"endpoint": "ws://host.docker.internal:8765/mapping",
+			"data": {
+				"graphs": [{
+					"id": "ATS",
+					"rmls": [
+						{
+							"uri": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/ats/RMLRulesATS_pyrml.ttl"
+						}
+					]
+				}]
+			}
+		},
+		"https://w3id.org/whow/onto/flow/metadating": {
+			"endpoint": "ws://host.docker.internal:8765/metadating",
+			"data": {
+				"meta": [{
+					"id": "ATS",
+					"dataset_id": "https://www.dati.lombardia.it/resource/h55m-dqi2",
+					"distribution_id": "https://www.dati.lombardia.it/resource/h55m-dqi2.json.rdf",
+					"configuration": "http://host.docker.internal/whow/config_test.ini"
+				}]
+			}
+		},
+		"https://w3id.org/whow/onto/flow/reasoning": {
+			"endpoint": "ws://host.docker.internal:8765/reasoning",
+			"data": {
+				"reasoning": [
+					{
+						"graph_id": "RMLMappinghydrolakes",
+						"ontologies": [
+							"https://w3id.org/whow/onto/health-monitoring",
+							"https://w3id.org/whow/onto/hydrography"
+						]
+					}
+				]
+			}
+		},
+		"https://w3id.org/whow/onto/flow/validation": {
+			"endpoint": "ws://host.docker.internal:8765/validation"
+		}
+	} 
+}
