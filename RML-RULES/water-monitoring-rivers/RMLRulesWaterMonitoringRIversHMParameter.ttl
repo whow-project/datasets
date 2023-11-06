@@ -97,7 +97,7 @@ rml:logicalSource <#LogicalSourceRivers>;
        rr:objectMap <#HydroMorphologicalObservationRiversMapping>
      ]
    ] ;
-   rr:class w-mon:WaterHydroMorphologicalObservation
+   rr:class w-mon:WaterHydromorphologicalParameterObservation
 ] ;
 rr:predicateObjectMap [
  rr:predicate rdfs:label ;
