@@ -413,10 +413,17 @@ rml:logicalSource <#LogicalSourceLakesHeight> ;
       rr:predicate ispra-top:name , l0:name ;
       rr:objectMap [ rml:reference "punto" ; rr:language "it" ]
    ];
+   ### SAME AS FOR ISPRA
    rr:predicateObjectMap [
       rr:predicate owl:sameAs ;
       rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/place/municipality/00201_{codice_comune}" ; rr:termType rr:IRI ]
    ];
+   ### SAME AS FOR ARCO CITY
+   rr:predicateObjectMap [
+      rr:predicate owl:sameAs ;
+      rr:objectMap <#URICityMIC>
+   ];
+   ### SAME AS FOR NATIONAL VOC
    rr:predicateObjectMap [
      rr:predicateObjectMap [
         rr:predicate owl:sameAs ;
@@ -429,6 +436,39 @@ rml:logicalSource <#LogicalSourceLakesHeight> ;
         ];
     ]
   ].
+
+  <#URICityMIC>
+  rr:termType rr:IRI ;
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap [ rr:constant "https://w3id.org/arco/resource/City" ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap <#slugifyCity>
+   ];
+   rr:predicateObjectMap [
+       rr:predicate grel:p_string_sep ;
+       rr:objectMap [ rr:constant "/"]
+   ]
+  ].
+
+<#slugifyCity>
+  fnml:functionValue [
+    rr:predicateObjectMap [
+      rr:predicate fno:executes ;
+      rr:objectMap [ rr:constant idlab-fn:slugify ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate idlab-fn:str ;
+      rr:objectMap [ rml:reference "punto"]
+    ] ;
+  ] .
 
 <#IsPuntoNull>
 fnml:functionValue [

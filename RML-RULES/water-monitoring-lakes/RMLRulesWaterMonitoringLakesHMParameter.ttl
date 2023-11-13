@@ -212,6 +212,10 @@ rr:predicateObjectMap [
  rr:predicateObjectMap [
     rr:predicate tiapit:year ;
     rr:objectMap [ rml:reference "anno" ; rr:datatype xsd:gYear ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate owl:sameAs ;
+    rr:objectMap [ rr:template "https://dati.isprambiente.it/ld/common/year/{anno}" ; rr:termType rr:IRI ]
  ].
 
 
@@ -572,7 +576,105 @@ rr:predicateObjectMap [
  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/geometry/{coord_y}-{coord_x}" ; rr:termType rr:IRI ]
 ];
 rr:predicateObjectMap [
-  rr:predicate ispra-plc:hasProvince ;
+   rr:predicate ispra-plc:hasProvince ;
+   rr:objectMap <#URIProvince>
+] ;
+ rr:predicateObjectMap [
+    rr:predicate ispra-plc:hasMunicipality ;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/city/{codice_comune}" ; rr:termType rr:IRI ]
+].
+
+#############################################################################
+# MANAGEMENT OF PLACES AND LINKING TO OTHER DATASETS
+<#URIProvince>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/province"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap <#substringCodiceComune>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "/" ]
+ ];
+].
+
+<#substringCodiceComune>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:string_substring ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:valueParameter ;
+   rr:objectMap  [ rml:reference "codice_comune"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:param_int_i_from ;
+   rr:objectMap [ rr:constant "0"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:param_int_i_opt_to ;
+   rr:objectMap [ rr:constant "3"]
+ ];
+].
+
+
+#################################
+# PROVINCE OBJ MAPPING
+##################################
+<#ProvinceObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceLakes> ;
+  rr:subjectMap [
+    fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:string_substring ]
+     ] ;
+     rr:predicateObjectMap [
+       rr:predicate grel:valueParameter ;
+       rr:objectMap  [ rml:reference "codice_comune"]
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:param_int_i_from ;
+       rr:objectMap [ rr:constant "0"]
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:param_int_i_opt_to ;
+       rr:objectMap [ rr:constant "3"]
+     ]
+    ];
+    rr:class ispra-plc:Province , ispra-plc:Feature , clv:Feature , ispra-top:Location
+ ] ;
+
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Province: {provincia}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:template "Provincia {provincia}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+   rr:predicate ispra-top:name , l0:name ;
+   rr:objectMap [ rml:reference "provincia" ; rr:language "it" ]
+];
+### SAME AS ARCO PROVINCE
+rr:predicateObjectMap [
+   rr:predicate owl:sameAs ;
+   rr:objectMap <#URIProvinceMIC>
+] ;
+#### SAME AS FOR NATIONAL VOC
+rr:predicateObjectMap [
+  rr:predicate owl:sameAs ;
   rr:objectMap [
      rr:parentTriplesMap <#ProvinceMapping1> ;
      rr:joinCondition [
@@ -580,17 +682,120 @@ rr:predicateObjectMap [
         rr:parent "provincia.value" ;
      ] ;
    ] ;
+ ].
+
+<#URIProvinceMIC>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
  ];
  rr:predicateObjectMap [
-    rr:predicate ispra-plc:hasMunicipality ;
-    rr:objectMap [
-       rr:parentTriplesMap <#CityMapping1> ;
-       rr:joinCondition [
-          rr:child "comune";
-          rr:parent "nome.value" ;
-       ] ;
-    ]
+   rr:predicate grel:p_array_a ;
+   rr:objectMap [ rr:constant "https://w3id.org/arco/resource/Province" ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap <#lowercaseProv>
+ ];
+ rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/"]
+ ]
+].
+
+<#lowercaseProv>
+fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:toLowerCase ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:valueParameter ;
+     rr:objectMap [ rml:reference "provincia" ]
+  ]
 ] .
+
+
+#################################
+# COMUNE OBJ MAPPING
+##################################
+<#CityObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceLakes> ;
+  rr:subjectMap [
+     rr:template "https://w3id.org/italia/lombardia/data/city/{codice_comune}";
+     rr:class ispra-plc:Municipality , ispra-plc:Feature , clv:Feature , ispra-top:Location
+  ] ;
+  rr:predicateObjectMap [
+     rr:predicate rdfs:label ;
+     rr:objectMap [ rr:template "City: {comune}" ; rr:language "en" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate rdfs:label ;
+      rr:objectMap [ rr:template "Città {comune}" ; rr:language "it" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate ispra-top:name , l0:name ;
+      rr:objectMap [ rml:reference "comune" ; rr:language "it" ]
+   ];
+   ### SAME AS FOR ISPRA
+   rr:predicateObjectMap [
+      rr:predicate owl:sameAs ;
+      rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/place/municipality/00201_{codice_comune}" ; rr:termType rr:IRI ]
+   ];
+   ### SAME AS ARCO CITY
+   rr:predicateObjectMap [
+      rr:predicate owl:sameAs ;
+      rr:objectMap <#URICityMIC>
+   ];
+   #### SAME AS FOR NATIONAL VOC
+   rr:predicateObjectMap [
+     rr:predicateObjectMap [
+        rr:predicate owl:sameAs ;
+        rr:objectMap [
+          rr:parentTriplesMap <#CityMapping1> ;
+          rr:joinCondition [
+             rr:child "comune";
+             rr:parent "nome.value" ;
+          ] ;
+        ]
+      ]
+    ] .
+
+<#URICityMIC>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap [ rr:constant "https://w3id.org/arco/resource/City" ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap <#slugifyCity>
+ ];
+ rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/"]
+ ]
+].
+
+<#slugifyCity>
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant idlab-fn:slugify ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "comune"]
+  ] ;
+] .
+
 
 ##############################
 ## CITY LINKING
@@ -611,6 +816,8 @@ rml:logicalSource <#LogicalSourcePROVINCERDF> ;
 rr:subjectMap [
   rr:template "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/{ID.value}" ;  rr:termType rr:IRI ;
 ].
+###################################################################################
+
 
 # ####################
 # ## GEOMETRY MAPPING OBJECT MAPPING
@@ -656,9 +863,9 @@ rr:predicateObjectMap [
 ] .
 
 
-# ###################
+# ########################################
 # ## GEOMETRY TYPE MAPPING OBJECT MAPPING
-# #####################
+# ########################################
 <#GeometryType> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceLakes> ;
 rr:subjectMap [
