@@ -780,20 +780,20 @@ rml:logicalSource <#LogicalSourceGroundWaters> ;
     fnml:functionValue [
      rr:predicateObjectMap [
        rr:predicate fno:executes ;
-       rr:objectMap [ rr:constant grel:string_substring ]
+       rr:objectMap [ rr:constant grel:array_join ]
      ] ;
      rr:predicateObjectMap [
-       rr:predicate grel:valueParameter ;
-       rr:objectMap  [ rml:reference "codice_comune"]
+       rr:predicate grel:p_array_a ;
+       rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/province"]
      ];
      rr:predicateObjectMap [
-       rr:predicate grel:param_int_i_from ;
-       rr:objectMap [ rr:constant "0"]
+       rr:predicate grel:p_array_a ;
+       rr:objectMap <#substringCodiceComuneMapping>
      ];
      rr:predicateObjectMap [
-       rr:predicate grel:param_int_i_opt_to ;
-       rr:objectMap [ rr:constant "3"]
-     ]
+       rr:predicate grel:p_string_sep ;
+       rr:objectMap [ rr:constant "/" ]
+     ];
     ];
     rr:class ispra-plc:Province , ispra-plc:Feature , clv:Feature , ispra-top:Location
  ] ;
