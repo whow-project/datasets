@@ -155,9 +155,105 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
      rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/temporal-entity/({Data})"; rr:termType rr:IRI ]
   ];
   rr:predicateObjectMap [
+     rr:predicate ispra-top:atTime ;
+     rr:objectMap <#URIYear>
+  ];
+  rr:predicateObjectMap [
      rr:predicate ispra-emf:hasFeatureOfInterest;
      rr:objectMap <#URIMarineWaterBody>
   ].
+
+<#URIYear>
+rr:termType rr:IRI ;
+fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/env/ld/common/year"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#substringData>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ]
+].
+
+<#substringData>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:string_substring ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:valueParameter ;
+   rr:objectMap  [ rml:reference "Data"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:param_int_i_from ;
+   rr:objectMap [ rr:constant "0"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:param_int_i_opt_to ;
+   rr:objectMap [ rr:constant "4"]
+ ];
+].
+
+################################
+# YEAR OBJ MAPPING FOR LINKING
+#################################
+<#YearObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceOstreopsis> ;
+  rr:subjectMap [
+    fnml:functionValue [
+       rr:predicateObjectMap [
+         rr:predicate fno:executes ;
+         rr:objectMap [ rr:constant grel:array_join ]
+       ] ;
+       rr:predicateObjectMap [
+         rr:predicate grel:p_array_a ;
+         rr:objectMap  [ rr:constant "https://w3id.org/italia/env/ld/common/year"]
+       ];
+       rr:predicateObjectMap [
+         rr:predicate grel:p_array_a ;
+         rr:objectMap  <#substringData>
+       ];
+       rr:predicateObjectMap [
+         rr:predicate grel:p_string_sep ;
+         rr:objectMap [ rr:constant "/" ]
+       ]
+     ] ;
+  ] ;
+  rr:predicateObjectMap [
+   rr:predicate owl:sameAs ;
+   rr:objectMap <#URIForLinking>
+  ] .
+
+<#URIForLinking>
+rr:termType rr:IRI ;
+fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/year"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#substringData>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ]
+].
 
 
 #################################
