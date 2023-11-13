@@ -17,6 +17,7 @@
 @prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
 @prefix iotapit: <https://w3id.org/italia/onto/IoT/>.
 @prefix l0: <https://w3id.org/italia/onto/l0/>.
+@prefix clv: <https://w3id.org/italia/onto/CLV/>.
 @prefix tiapit: <https://w3id.org/italia/onto/TI/>.
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @base <https://w3id.org/italia/lombardia/data/> .
@@ -34,7 +35,7 @@
     sd:supportedLanguage sd:SPARQL11Query ;
     sd:resultFormat <http://www.w3.org/ns/formats/SPARQL_Results_JSON> .
 
-##Logical Source CITY RDF
+#Logical Source CITY RDF
 <#LogicalSourceCITYRDF> a rml:BaseSource ;
       rml:source <#InputSPARQL>;
       rml:referenceFormulation ql:JSONPath;
@@ -99,6 +100,10 @@ rr:predicateObjectMap [
  rr:objectMap <#URISampleMapping>
 ];
 rr:predicateObjectMap [
+ rr:predicate w-mon:withRespectToReferenceParam ;
+ rr:objectMap <#NotNullURIHydrometricZero>
+];
+rr:predicateObjectMap [
   rr:predicate w-mon:hasResult ;
   rr:objectMap <#URLHeightObservationResult>
 ];
@@ -132,53 +137,162 @@ fnml:functionValue [
    ] ;
    rr:predicateObjectMap [
      rr:predicate grel:p_array_a ;
-     rr:objectMap <#dateMappingParenthesis>
+     rr:objectMap [ rml:reference "periodo"]
    ];
    rr:predicateObjectMap [
        rr:predicate grel:p_string_sep ;
-       rr:objectMap [ rr:constant "/("]
+       rr:objectMap [ rr:constant "/"]
    ]
 ].
 
-<#dateMappingParenthesis>
-fnml:functionValue [
-   rr:predicateObjectMap [
-     rr:predicate fno:executes ;
-     rr:objectMap [ rr:constant grel:array_join ]
-   ];
-   rr:predicateObjectMap [
-     rr:predicate grel:p_array_a ;
-     rr:objectMap <#dateMapping>
-   ];
-   rr:predicateObjectMap [
-     rr:predicate grel:p_array_a ;
-     rr:objectMap [ rr:constant ")" ]
+# <#dateMappingParenthesis>
+# fnml:functionValue [
+#    rr:predicateObjectMap [
+#      rr:predicate fno:executes ;
+#      rr:objectMap [ rr:constant grel:array_join ]
+#    ];
+#    rr:predicateObjectMap [
+#      rr:predicate grel:p_array_a ;
+#      rr:objectMap <#dateMapping>
+#    ];
+#    rr:predicateObjectMap [
+#      rr:predicate grel:p_array_a ;
+#      rr:objectMap [ rr:constant ")" ]
+#    ] ;
+#    rr:predicateObjectMap [
+#        rr:predicate grel:p_string_sep ;
+#        rr:objectMap [ rr:constant ""]
+#    ]
+# ].
+
+###########################
+# HYDROMETRIC ZERO OBJ MAPPING
+############################
+<#HydrometricZeroObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceLakesHeight>;
+rr:subjectMap [
+  fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:controls_if ]
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:bool_b ;
+       rr:objectMap <#IsHydrometricNull>
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:any_false ;
+       rr:objectMap <#URIHydrometricZero>
+     ]
    ] ;
-   rr:predicateObjectMap [
-       rr:predicate grel:p_string_sep ;
-       rr:objectMap [ rr:constant ""]
-   ]
+ rr:class ispra-top:Parameter
+];
+rr:predicateObjectMap [
+ rr:predicate rdfs:label ;
+ rr:objectMap [ rr:template "Hydrometric zero parameter with value {zero_idrometrico} {zero_idrometrico_unit_di_misura}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+ rr:predicate rdfs:label ;
+ rr:objectMap [ rr:template "Parametro zero idrometrico con valore {zero_idrometrico} {zero_idrometrico_unit_di_misura}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+ rr:predicate l0:name , ispra-top:name ;
+ rr:objectMap [ rr:constant "Hydrometric zero" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+ rr:predicate l0:name , ispra-top:name ;
+ rr:objectMap [ rr:constant "Zero Idrometrico" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+ rr:predicate ispra-top:hasValue ;
+ rr:objectMap <#URIValueHZUM>
 ].
+
+######################################
+# Value Hydrometric zero obj mapping
+######################################
+<#ValueHZUMObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceLakesHeight>;
+rr:subjectMap [
+  fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:array_join ]
+     ];
+     rr:predicateObjectMap [
+        rr:predicate grel:p_array_a ;
+        rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/value"]
+     ] ;
+     rr:predicateObjectMap [
+        rr:predicate grel:p_array_a ;
+        rr:objectMap <#MD5HydrometricZeroUM>
+     ] ;
+     rr:predicateObjectMap [
+        rr:predicate grel:p_string_sep ;
+        rr:objectMap [ rr:constant "/" ]
+     ]
+  ];
+  rr:class ispra-top:Value
+] ;
+rr:predicateObjectMap [
+ rr:predicate rdfs:label ;
+ rr:objectMap [ rr:template "Value {zero_idrometrico} - {zero_idrometrico_unit_di_misura}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+ rr:predicate rdfs:label ;
+ rr:objectMap [ rr:template "Valore {zero_idrometrico} - {zero_idrometrico_unit_di_misura_testuale} ({zero_idrometrico_unit_di_misura})" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+ rr:predicate ispra-top:value ;
+ rr:objectMap [ rml:reference "zero_idrometrico" ; rr:datatype xsd:decimal ]
+];
+rr:predicateObjectMap [
+ rr:predicate ispra-top:hasUnitOfMeasure ;
+ rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/measurement-unit/{zero_idrometrico_unit_di_misura}" ; rr:termType rr:IRI ]
+].
+
+#################################################
+# MEASUREMENT UNIT HYDROMETRIC ZERO OBJ MAPPING
+#################################################
+<HZUMOBJMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceLakesHeight>;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/measurement-unit/{zero_idrometrico_unit_di_misura}";
+  rr:class ispra-top:UnitOfMeasure
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Unit of measure: {zero_idrometrico_unit_di_misura}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Unità di misura: {zero_idrometrico_unit_di_misura_testuale}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name , l0:name ;
+  rr:objectMap [ rml:reference "zero_idrometrico_unit_di_misura_testuale" ; rr:language "it"]
+].
+
 
 ##################
 ## DATE Mapping
 ##################
-<#dateMapping>
-rr:datatype xsd:dateTime ;
-fnml:functionValue [
-  	rr:predicateObjectMap [
-  		rr:predicate fno:executes ;
-  		rr:objectMap [ rr:constant idlab-fn:normalizeDateTime ]
-  	];
-    rr:predicateObjectMap [
-      rr:predicate idlab-fn:strDate ;
-      rr:objectMap [ rml:reference "periodo" ]
-    ];
-    rr:predicateObjectMap [
-      rr:predicate idlab-fn:pattern ;
-      rr:objectMap [ rr:constant "MM/dd/yyyy hh:mm:ss a" ]
-    ];
-] .
+# <#dateMapping>
+# rr:datatype xsd:dateTime ;
+# fnml:functionValue [
+#   	rr:predicateObjectMap [
+#   		rr:predicate fno:executes ;
+#   		rr:objectMap [ rr:constant idlab-fn:normalizeDateTime ]
+#   	];
+#     rr:predicateObjectMap [
+#       rr:predicate idlab-fn:strDate ;
+#       rr:objectMap [ rml:reference "periodo" ]
+#     ];
+#     rr:predicateObjectMap [
+#       rr:predicate idlab-fn:pattern ;
+#       rr:objectMap [ rr:constant "MM/dd/yyyy hh:mm:ss a" ]
+#     ];
+# ] .
 
 
 # # #############
@@ -201,7 +315,12 @@ rr:predicateObjectMap [
  rr:predicateObjectMap [
     rr:predicate tiapit:year ;
     rr:objectMap [ rml:reference "anno" ; rr:datatype xsd:gYear ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate owl:sameAs ;
+    rr:objectMap [ rr:template "https://dati.isprambiente.it/ld/common/year/{anno}" ; rr:termType rr:IRI ]
  ].
+
 
 ##############################
 # GENERATION TIME OBJ MAPPING
@@ -220,11 +339,11 @@ rr:predicateObjectMap [
       ] ;
       rr:predicateObjectMap [
         rr:predicate grel:p_array_a ;
-        rr:objectMap <#dateMappingParenthesis>
+        rr:objectMap [ rml:reference "periodo" ]
       ];
       rr:predicateObjectMap [
           rr:predicate grel:p_string_sep ;
-          rr:objectMap [ rr:constant "/("]
+          rr:objectMap [ rr:constant "/"]
       ]
    ];
    rr:class ispra-top:TemporalEntity
@@ -235,7 +354,7 @@ rr:predicateObjectMap [
   ];
   rr:predicateObjectMap [
      rr:predicate ispra-top:time ;
-     rr:objectMap <#dateMapping>
+     rr:objectMap [ rml:reference "periodo" ; rr:datatype xsd:date ]
   ].
 
 # #################
@@ -269,8 +388,38 @@ rml:logicalSource <#LogicalSourceLakesHeight> ;
      rr:objectMap [ rr:template "Campione prelevato a {punto}" ; rr:language "it" ]
   ];
   rr:predicateObjectMap [
+     rr:predicate w-mon:isTakenAt ;
+     rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/city/{codice_comune}" ; rr:termType rr:IRI ]
+  ].
+
+#################################
+# COMUNE OBJ MAPPING
+##################################
+<#CityObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceLakesHeight> ;
+  rr:subjectMap [
+     rr:template "https://w3id.org/italia/lombardia/data/city/{codice_comune}";
+     rr:class ispra-plc:Municipality , ispra-plc:Feature , clv:Feature , ispra-top:Location
+  ] ;
+  rr:predicateObjectMap [
+     rr:predicate rdfs:label ;
+     rr:objectMap [ rr:template "City: {punto}" ; rr:language "en" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate rdfs:label ;
+      rr:objectMap [ rr:template "Città {punto}" ; rr:language "it" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate ispra-top:name , l0:name ;
+      rr:objectMap [ rml:reference "punto" ; rr:language "it" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate owl:sameAs ;
+      rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/place/municipality/00201_{codice_comune}" ; rr:termType rr:IRI ]
+   ];
+   rr:predicateObjectMap [
      rr:predicateObjectMap [
-        rr:predicate w-mon:isTakenAt ;
+        rr:predicate owl:sameAs ;
         rr:objectMap [
            rr:parentTriplesMap <#PointMapping> ;
            rr:joinCondition [
@@ -488,7 +637,7 @@ rml:logicalSource <#LogicalSourceLakesHeight> ;
   ];
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rr:template "Valore dell'osservazione {altezza} {unit_di_misura_testuale_punto}" ; rr:language "it" ]
+    rr:objectMap [ rr:template "Valore dell'osservazione {altezza} {unit_di_misura_altezza}" ; rr:language "it" ]
   ];
   rr:predicateObjectMap [
     rr:predicate ispra-top:value;
@@ -556,15 +705,11 @@ rml:logicalSource <#LogicalSourceLakesHeight> ;
   ];
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rr:template "Unità di misura: {unit_di_misura_testuale_punto}" ; rr:language "it" ]
+    rr:objectMap [ rr:template "Unità di misura: {unit_di_misura_altezza}" ; rr:language "it" ]
   ];
   rr:predicateObjectMap [
-    rr:predicate ispra-top:name;
-    rr:objectMap [ rml:reference "unit_di_misura_testuale_punto" ; rr:language "it"]
-  ];
-  rr:predicateObjectMap [
-    rr:predicate l0:name;
-    rr:objectMap [ rml:reference "unit_di_misura_testuale_punto" ; rr:language "it"]
+    rr:predicate ispra-top:name , l0:name ;
+    rr:objectMap [ rml:reference "unit_di_misura_altezza" ; rr:language "it"]
   ].
 
 #########################
@@ -710,11 +855,15 @@ fnml:functionValue [
   ];
   rr:predicateObjectMap [
     rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rr:template "{codice_comune}"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
     rr:objectMap  [ rr:template "{unit_di_misura_altezza}"]
   ];
   rr:predicateObjectMap [
     rr:predicate grel:p_array_a ;
-    rr:objectMap  [ rr:template "{unit_di_misura_zero}"]
+    rr:objectMap  [ rr:template "{zero_idrometrico_unit_di_misura}"]
   ];
   rr:predicateObjectMap [
     rr:predicate grel:p_array_a ;
@@ -723,14 +872,6 @@ fnml:functionValue [
   rr:predicateObjectMap [
     rr:predicate grel:p_array_a ;
     rr:objectMap  [ rr:template "{anno}"]
-  ];
-  rr:predicateObjectMap [
-    rr:predicate grel:p_array_a ;
-    rr:objectMap  [ rr:template "{zero_idrometrico_unit_di}"]
-  ];
-  rr:predicateObjectMap [
-    rr:predicate grel:p_array_a ;
-    rr:objectMap  [ rr:template "{unit_di_misura_testuale_punto}"]
   ];
   rr:predicateObjectMap [
     rr:predicate grel:p_string_sep ;
@@ -846,3 +987,106 @@ fnml:functionValue [
     rr:objectMap [ rml:reference "unit_di_misura_altezza"]
   ] ;
  ] .
+
+<#URIValueHZUM>
+rr:termType rr:IRI ;
+  fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:array_join ]
+     ];
+     rr:predicateObjectMap [
+        rr:predicate grel:p_array_a ;
+        rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/value"]
+     ] ;
+     rr:predicateObjectMap [
+        rr:predicate grel:p_array_a ;
+        rr:objectMap <#MD5HydrometricZeroUM>
+     ] ;
+     rr:predicateObjectMap [
+        rr:predicate grel:p_string_sep ;
+        rr:objectMap [ rr:constant "/" ]
+     ]
+  ].
+
+<#NotNullURIHydrometricZero>
+rr:termType rr:IRI ;
+fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:controls_if ]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:bool_b ;
+     rr:objectMap <#IsHydrometricNull>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:any_false ;
+     rr:objectMap <#URIHydrometricZero>
+   ]
+ ] .
+
+<#URIHydrometricZero>
+rr:termType rr:IRI ;
+  fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:array_join ]
+     ];
+     rr:predicateObjectMap [
+        rr:predicate grel:p_array_a ;
+        rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/parameter/hzero"]
+     ] ;
+     rr:predicateObjectMap [
+        rr:predicate grel:p_array_a ;
+        rr:objectMap <#MD5HydrometricZeroUM>
+     ] ;
+     rr:predicateObjectMap [
+        rr:predicate grel:p_string_sep ;
+        rr:objectMap [ rr:constant "-" ]
+     ]
+  ].
+
+<#MD5HydrometricZeroUM>
+fnml:functionValue [
+  rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:string_md5 ]
+  ];
+  rr:predicateObjectMap [
+   rr:predicate grel:valueParameter ;
+   rr:objectMap <#UnionHydrometricZeroUM>
+  ];
+].
+
+<#UnionHydrometricZeroUM>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap [ rml:reference "zero_idrometrico"]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap [ rml:reference "zero_idrometrico_unit_di_misura"]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:p_string_sep ;
+    rr:objectMap [ rr:constant "" ]
+  ]
+] .
+
+<#IsHydrometricNull>
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant idlab-fn:isNull ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "zero_idrometrico" ]
+  ]
+] .
