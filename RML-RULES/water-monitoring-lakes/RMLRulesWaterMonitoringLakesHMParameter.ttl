@@ -216,6 +216,10 @@ rr:predicateObjectMap [
  rr:predicateObjectMap [
     rr:predicate owl:sameAs ;
     rr:objectMap [ rr:template "https://dati.isprambiente.it/ld/common/year/{anno}" ; rr:termType rr:IRI ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate owl:sameAs ;
+    rr:objectMap [ rr:template "https://w3id.org/arco/resource/TimeInterval/{anno}" ; rr:termType rr:IRI ]
  ].
 
 
