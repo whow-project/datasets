@@ -1,0 +1,40 @@
+{
+	"bound_services": {
+		"https://w3id.org/whow/onto/flow/ingestion": {
+			"endpoint": "ws://host.docker.internal:8765/ingestion",
+			"data": {
+				"title": "Test data catalog",
+				"description": "Some description for the test data catalog.",
+				"distributions": [
+					{"id": "CONCENTRATION_PROPS",
+					 "mimetype": "text/csv",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/observable-properties-mappings/concentration-observable-properties-dataset.csv"},
+					{"id": "WISE_CODES",
+					 "mimetype": "text/csv",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/observable-properties-mappings/wise-codes-dataset.csv"},
+					{"id": "OTHER_CODES",
+					 "mimetype": "text/csv",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/observable-properties-mappings/other-codes-observable-properties.csv"}
+				],
+				"store": true
+			}
+		},
+		"https://w3id.org/whow/onto/flow/preprocessing": {
+			"endpoint": "ws://host.docker.internal:8765/preprocessor",
+			"data": {"ids": ["CONCENTRATION_PROPS", "WISE_CODES", "OTHER_CODES"]}
+		},
+		"https://w3id.org/whow/onto/flow/mapping": {
+			"endpoint": "ws://host.docker.internal:8765/mapping",
+			"data": {
+				"graphs": [{
+					"id": "observable-properties",
+					"rmls": [
+						{
+							"uri": "http://host.docker.internal/whow/infectius_diseases/RMLRulesInfectiousDisease_pyrml.ttl"
+						}
+					]
+				}]
+			}
+		}
+	} 
+}
