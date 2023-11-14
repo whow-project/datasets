@@ -78,7 +78,51 @@ rr:predicateObjectMap [
 rr:predicateObjectMap [
   rr:predicate hydro:belongsToWaterBasin ;
   rr:objectMap <#URIWaterBasin>
-].
+];
+rr:predicateObjectMap [
+  rr:predicate owl:sameAs ;
+  rr:objectMap [
+     rr:parentTriplesMap <#RiverLinkingWikidataMapping> ;
+     rr:joinCondition [
+        rr:child "corso_d_acqua";
+        rr:parent "CORSO D'ACQUA" ;
+     ]
+   ]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate owl:sameAs ;
+   rr:objectMap [
+      rr:parentTriplesMap <#RiverLinkingDbpediaMapping> ;
+      rr:joinCondition [
+         rr:child "corso_d_acqua";
+         rr:parent "CORSO D'ACQUA" ;
+      ]
+    ]
+  ].
+
+
+###################################
+# River LINKING Wikidata MAPPING
+###################################
+<#RiverLinkingWikidataMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceRiverslinking> ;
+  rr:subjectMap [
+      rml:reference "wikidata" ;
+      rr:termType rr:IRI
+  ].
+
+###################################
+# River LINKING Dbpedia MAPPING
+###################################
+<#RiverLinkingDbpediaMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceRiverslinking> ;
+  rr:subjectMap [
+      rml:reference "dbpedia" ;
+      rr:termType rr:IRI
+  ].
+
+
+
 
 <#URIWaterBasin>
 rr:termType rr:IRI ;
