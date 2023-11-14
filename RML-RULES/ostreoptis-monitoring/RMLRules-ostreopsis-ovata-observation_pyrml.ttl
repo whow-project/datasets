@@ -710,7 +710,7 @@ rml:logicalSource <#LogicalSourceOstreopsis> ;
   ] ;
   rr:predicateObjectMap [
     rr:predicate ispra-top:value ;
-    rr:objectMap [ rml:reference "Ostreopsis cf. ovata cell/l" ; rr:datatype xsd:integer ]
+    rr:objectMap [ rml:reference "Ostreopsis cf. ovata cell/l" ; rr:datatype xsd:float ]
   ] ;
   rr:predicateObjectMap [
     rr:predicate ispra-top:hasUnitOfMeasure ;
