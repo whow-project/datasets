@@ -22,6 +22,10 @@
     rml:source "{{ RIVERS }}";
     rml:referenceFormulation ql:CSV .
 
+# #LogicalSourceRiversLinking
+<#LogicalSourceRiverslinking> a rml:BaseSource ;
+    rml:source "{{ LINKING }}";
+    rml:referenceFormulation ql:CSV .
 
 
 ###########################################################
