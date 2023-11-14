@@ -1,6 +1,41 @@
 Patologia,snomedURI
+AIDS,http://snomed.info/id/62479008
+AMEBIASI,http://snomed.info/id/111910009
+ANTRACE,
+BOTULISMO,http://snomed.info/id/398565003
+CLAMIDIA,
+COLERA,http://snomed.info/id/7718000
+CONDILOMATOSI ANO GENITALE,
+DENGUE,http://snomed.info/id/38362002
+DERMATOFITOSI,
+DIFTERITE,http://snomed.info/id/397430003
+ENCEFALITE DA ZECCHE,http://snomed.info/id/414093008
+ENCEFALOPATIA di Creutzeld Jacob,
+EPATITE B,http://snomed.info/id/66071002
 EPATITE A,http://snomed.info/id/40468003
+EPATITE C,http://snomed.info/id/50711007
+EPATITE D,http://snomed.info/id/707341005
+EPATITE E,http://snomed.info/id/7111000119109
+EPATITE NON A NON B,
+EPATITE NON SPECIFICATA,http://snomed.info/id/128241005
+FEBBRE EMORRAGICA,
+FEBBRE GIALLA,http://snomed.info/id/16541001
+FEBBRE RICORRENTE EPIDEMICA,
+FEBBRE TIFOIDE,http://snomed.info/id/4834000
+FILARIOSI,http://snomed.info/id/105706003
+INFLUENZA,http://snomed.info/id/6142004
+GONORREA,http://snomed.info/id/15628003
+INFEZIONE DA HIV,
+INFEZIONI TOSSINFEZIONI INTOSSICAZIONI ALIMENTARI,
+LEBBRA,http://snomed.info/id/81004002
+LEISHMANIOSI CUTANEA E VISCERALE,http://snomed.info/id/80612004
 LEGIONELLOSI,http://snomed.info/id/26726000
+LEPTOSPIROSI,http://snomed.info/id/77377001
+MALARIA,http://snomed.info/id/61462000
+MALATTIA DI LYME,http://snomed.info/id/23502006
+MALATTIA INVASIVA DA EMOFILO,
+MALATTIA CHIKUNGUNYA,http://snomed.info/id/111864006
+MENINGO ENCEFALITI VIRALI WEST NILE DISEASE USUTU,http://snomed.info/id/392662004
 GIARDIASI,http://snomed.info/id/58265007
 DIARREA INFETTIVA,http://snomed.info/id/19213003
 VARICELLA,http://snomed.info/id/38907003
@@ -18,3 +53,18 @@ SALMONELLOSI NON TIFOIDE,http://snomed.info/id/763772002
 SCARLATTINA,http://snomed.info/id/30242009
 SHIGHELLOSI,http://snomed.info/id/36188001
 TUBERCOLOSI,http://snomed.info/id/56717001
+MICOBATTERIOSI NON TUBERCOLARE,http://snomed.info/id/88415009
+PARASSITOSI,http://snomed.info/id/17322007
+PEDICULOSI,http://snomed.info/id/20848007
+PESTE,http://snomed.info/id/58750007
+POLIOMELITE,http://snomed.info/id/398102009
+RABBIA,http://snomed.info/id/14168008
+RICKETTSIOSI,http://snomed.info/id/416829003
+SCABBIA,http://snomed.info/id/128869009
+SIFILIDE,http://snomed.info/id/76272004
+TETANO,http://snomed.info/id/10629009
+TOXOPLASMOSI,http://snomed.info/id/187192000
+TIFO ESANTEMATICO,http://snomed.info/id/240613006
+TRICHINOSI,http://snomed.info/id/709018004
+TULAREMIA,http://snomed.info/id/19265001
+ZIKA,http://snomed.info/id/3928002
