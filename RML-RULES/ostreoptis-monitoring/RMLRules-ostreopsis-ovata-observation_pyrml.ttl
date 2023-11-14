@@ -196,7 +196,7 @@ fnml:functionValue [
    rr:objectMap  [ rml:reference "Data"]
  ];
  rr:predicateObjectMap [
-   rr:predicate grel:param_int_i_from ;
+   rr:predicate grel:p_int_i_from ;
    rr:objectMap [ rr:constant "0"]
  ];
  rr:predicateObjectMap [
@@ -653,7 +653,7 @@ rr:termType rr:IRI ;
       ] ;
       rr:predicateObjectMap [
         rr:predicate idlab-fn:str ;
-        rr:objectMap [rr:template "https://w3id.org/italia/env/ld/observation-value/{Ostreopsis cf. ovata cell/l}-cell-l"]
+        rr:objectMap [rr:template "https://w3id.org/italia/env/ld/observation-value/{Ostreopsis cf. ovata cell/l}-cell-l"; rr:termType rr:IRI]
       ]
   ].
 
@@ -695,7 +695,7 @@ rml:logicalSource <#LogicalSourceOstreopsis> ;
         ] ;
         rr:predicateObjectMap [
           rr:predicate idlab-fn:str ;
-          rr:objectMap [rr:template "https://w3id.org/italia/env/ld/observation-value/{Ostreopsis cf. ovata cell/l}-cell-l"]
+          rr:objectMap [rr:template "https://w3id.org/italia/env/ld/observation-value/{Ostreopsis cf. ovata cell/l}-cell-l"; rr:termType rr:IRI]
         ]
     ];
     rr:class w-mon:ObservationValue
@@ -937,7 +937,7 @@ rr:termType rr:IRI ;
      ];
      rr:predicateObjectMap [
        rr:predicate grel:any_false ;
-       rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/observation-value/{Ostreopsis cf. ovata cell/ g fw}-cell-g-fw" ]
+       rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/observation-value/{Ostreopsis cf. ovata cell/ g fw}-cell-g-fw"; rr:termType rr:IRI ]
      ]
    ] .
 
