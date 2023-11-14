@@ -1,0 +1,34 @@
+{
+	"bound_services": {
+		"https://w3id.org/whow/onto/flow/ingestion": {
+			"endpoint": "ws://host.docker.internal:8765/ingestion",
+			"data": {
+				"title": "Test data catalog",
+				"description": "Some description for the test data catalog.",
+				"distributions": [
+					{"id": "INFECTIUS_DISEASES",
+					 "mimetype": "text/csv",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/infectious-disease-monitoring/infectious_diseases.csv"}
+				],
+				"store": true
+			}
+		},
+		"https://w3id.org/whow/onto/flow/preprocessing": {
+			"endpoint": "ws://host.docker.internal:8765/preprocessor",
+			"data": {"ids": ["INFECTIUS_DISEASES"]}
+		},
+		"https://w3id.org/whow/onto/flow/mapping": {
+			"endpoint": "ws://host.docker.internal:8765/mapping",
+			"data": {
+				"graphs": [{
+					"id": "LAKES",
+					"rmls": [
+						{
+							"uri": "http://host.docker.internal/whow/infectius_diseases/RMLRulesInfectiousDisease_pyrml.ttl"
+						}
+					]
+				}]
+			}
+		}
+	} 
+}
