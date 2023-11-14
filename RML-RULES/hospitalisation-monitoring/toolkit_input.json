@@ -24,7 +24,7 @@
 					"id": "HOSPITALISATION",
 					"rmls": [
 						{
-							"uri": "http://host.docker.internal/whow/hospitasation/RMLRulesHospitalHealthcare_pyrml.ttl"
+							"uri": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/hospitalisation-monitoring/RMLRulesHospitalHealthcare_pyrml.ttl"
 						}
 					]
 				}]

@@ -1,0 +1,40 @@
+{
+	"bound_services": {
+		"https://w3id.org/whow/onto/flow/ingestion": {
+			"endpoint": "ws://host.docker.internal:8765/ingestion",
+			"data": {
+				"title": "Test data catalog",
+				"description": "Some description for the test data catalog.",
+				"distributions": [
+					{"id": "RIVERS",
+					 "mimetype": "text/csv",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/hydrography/rivers/kr6i-f553_fiumi.csv"},
+					{"id": "LINKING",
+					 "mimetype": "text/csv",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/hydrography/rivers/rivers-entity-linking.csv"}
+				],
+				"store": true
+			}
+		},
+		"https://w3id.org/whow/onto/flow/preprocessing": {
+			"endpoint": "ws://host.docker.internal:8765/preprocessor",
+			"data": {"ids": ["RIVERS", "LINKING"]}
+		},
+		"https://w3id.org/whow/onto/flow/mapping": {
+			"endpoint": "ws://host.docker.internal:8765/mapping",
+			"data": {
+				"graphs": [{
+					"id": "RIVERS",
+					"rmls": [
+						{
+							"uri": "http://host.docker.internal/whow/rivers/RMLRulesRivers_pyrml.ttl"
+						},
+						{
+							"uri": "http://host.docker.internal/whow/rivers/RMLRulesRiversLinking_pyrml.ttl"
+						}
+					]
+				}]
+			}
+		}
+	} 
+}
