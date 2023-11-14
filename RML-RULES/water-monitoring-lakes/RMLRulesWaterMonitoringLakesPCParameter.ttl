@@ -18,6 +18,7 @@
 @prefix iotapit: <https://w3id.org/italia/onto/IoT/>.
 @prefix l0: <https://w3id.org/italia/onto/l0/>.
 @prefix tiapit: <https://w3id.org/italia/onto/TI/>.
+@prefix clv: <https://w3id.org/italia/onto/CLV/> .
 @base <https://w3id.org/italia/lombardia/data/> .
 
 
@@ -1031,7 +1032,7 @@ rr:predicateObjectMap [
 rr:predicateObjectMap [
   rr:predicate owl:sameAs ;
   rr:objectMap [
-     rr:parentTriplesMap <#ProvinceMapping1> ;
+     rr:parentTriplesMap <#ProvinceMapping2> ;
      rr:joinCondition [
         rr:child "provincia";
         rr:parent "provincia.value" ;
@@ -1109,7 +1110,7 @@ rml:logicalSource <#LogicalSourceLakes> ;
      rr:predicateObjectMap [
         rr:predicate owl:sameAs ;
         rr:objectMap [
-          rr:parentTriplesMap <#CityMapping1> ;
+          rr:parentTriplesMap <#CityMapping2> ;
           rr:joinCondition [
              rr:child "comune";
              rr:parent "nome.value" ;
@@ -1155,7 +1156,7 @@ fnml:functionValue [
 # ## CITY LINKING
 # ##############################
 
-<#CityMapping1> a rr:TriplesMap ;
+<#CityMapping2> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceCITYRDF> ;
 rr:subjectMap [
   rr:template "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/{ID.value}-({starttime.value})" ;  rr:termType rr:IRI ;
@@ -1165,7 +1166,7 @@ rr:subjectMap [
 # ## PROVINCE LINKING
 # ##############################
 
-<#ProvinceMapping1> a rr:TriplesMap ;
+<#ProvinceMapping2> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourcePROVINCERDF> ;
 rr:subjectMap [
   rr:template "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/{ID.value}" ;  rr:termType rr:IRI ;
