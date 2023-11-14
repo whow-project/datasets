@@ -18,6 +18,7 @@
 @prefix w-mon: <https://w3id.org/whow/onto/water-monitoring/>.
 @prefix l0: <https://w3id.org/italia/onto/l0/>.
 @prefix clv: <https://w3id.org/italia/onto/CLV/>.
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
 @base <https://w3id.org/italia/env/ld/rml-rules> .
 
 

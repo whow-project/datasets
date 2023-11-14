@@ -27,7 +27,7 @@
 					"id": "ostreopsis-2018.ttl",
 					"rmls": [
 						{
-							"uri": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/observable-properties-mappings/RMLMappingObservableProperties_pyrml.ttl"
+							"uri": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/ostreoptis-monitoring/RMLRules-ostreopsis-ovata-observation_pyrml.ttl"
 						}
 					]
 				}]
