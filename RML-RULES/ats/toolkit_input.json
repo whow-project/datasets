@@ -27,7 +27,7 @@
 					"id": "ATS",
 					"rmls": [
 						{
-							"uri": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/ats/RMLRulesATS_pyrml.ttl"
+							"uri": "http://host.docker.internal/whow/RMLRulesATS_pyrml.ttl"
 						}
 					]
 				}]
