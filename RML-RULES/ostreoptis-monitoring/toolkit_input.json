@@ -6,28 +6,25 @@
 				"title": "Test data catalog",
 				"description": "Some description for the test data catalog.",
 				"distributions": [
-					{"id": "CONCENTRATION_PROPS",
+					{"id": "OSTREOPSIS",
 					 "mimetype": "text/csv",
-					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/observable-properties-mappings/concentration-observable-properties-dataset.csv"},
-					{"id": "WISE_CODES",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/ostreoptis-monitoring/Ostreopsis_Ovata_AllRegions_2018_withISTATcode_withSeas.csv"},
+					{"id": "LINKING_PLACE",
 					 "mimetype": "text/csv",
-					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/observable-properties-mappings/wise-codes-dataset.csv"},
-					{"id": "OTHER_CODES",
-					 "mimetype": "text/csv",
-					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/observable-properties-mappings/other-codes-observable-properties.csv"}
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/ostreoptis-monitoring/LinkingPlace.csv"}
 				],
 				"store": true
 			}
 		},
 		"https://w3id.org/whow/onto/flow/preprocessing": {
 			"endpoint": "ws://host.docker.internal:8765/preprocessor",
-			"data": {"ids": ["CONCENTRATION_PROPS", "WISE_CODES", "OTHER_CODES"]}
+			"data": {"ids": ["OSTREOPSIS", "LINKING_PLACE"]}
 		},
 		"https://w3id.org/whow/onto/flow/mapping": {
 			"endpoint": "ws://host.docker.internal:8765/mapping",
 			"data": {
 				"graphs": [{
-					"id": "observable-properties",
+					"id": "ostreopsis-2018.ttl",
 					"rmls": [
 						{
 							"uri": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/observable-properties-mappings/RMLMappingObservableProperties_pyrml.ttl"
