@@ -38,7 +38,7 @@
 						"id": "HOSPITALISATION",
 						"dataset_id": "https://hub.dati.lombardia.it/d/rzni-6n8h",
 						"distribution_id": "https://hub.dati.lombardia.it/d/rzni-6n8h-ttl",
-						"configuration": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/drug-consumption-monitoring/metadata_farmaci.ini"
+						"configuration": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/hospitalisation-monitoring/metadata_degenze.ini"
 					}
 				]
 			}
