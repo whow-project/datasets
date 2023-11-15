@@ -35,6 +35,22 @@
 					]
 				}]
 			}
+		},
+		"https://w3id.org/whow/onto/flow/metadating": {
+			"endpoint": "ws://host.docker.internal:8765/metadating",
+			"data": {
+				"meta": [
+					{
+						"id": "LAKES",
+						"dataset_id": "https://hub.dati.lombardia.it/d/d4ep-yvbw",
+						"distribution_id": "https://hub.dati.lombardia.it/d/d4ep-yvbw-ttl",
+						"configuration": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/hospitalisation-monitoring/metadata_degenze.ini"
+					}
+				]
+			}
+		},
+		"https://w3id.org/whow/onto/flow/validation": {
+			"endpoint": "ws://host.docker.internal:8765/validation"
 		}
 	} 
 }
