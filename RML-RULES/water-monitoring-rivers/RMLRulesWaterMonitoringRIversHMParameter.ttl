@@ -19,12 +19,13 @@
 @prefix l0: <https://w3id.org/italia/onto/l0/>.
 @prefix tiapit: <https://w3id.org/italia/onto/TI/>.
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix clv: <https://w3id.org/italia/onto/CLV/> .
 @base <https://w3id.org/italia/lombardia/data/> .
 
 
 # #LogicalSourceRivers
 <#LogicalSourceRivers> a rml:BaseSource ;
-    rml:source "kr6i-f553.csv" ;
+    rml:source "kr6i-f553-2021.csv" ;
     rml:referenceFormulation ql:CSV .
 
 ##Logical Source PROVINCE RDF
@@ -335,53 +336,33 @@ fnml:functionValue [
  ];
 ].
 
-<#substringCodiceComuneMapping>
-fnml:functionValue [
- rr:predicateObjectMap [
-   rr:predicate fno:executes ;
-   rr:objectMap [ rr:constant grel:string_substring ]
- ] ;
- rr:predicateObjectMap [
-   rr:predicate grel:valueParameter ;
-   rr:objectMap  [ rml:reference "codice_comune"]
- ];
- rr:predicateObjectMap [
-   rr:predicate grel:param_int_i_from ;
-   rr:objectMap [ rr:constant "0"]
- ];
- rr:predicateObjectMap [
-   rr:predicate grel:param_int_i_opt_to ;
-   rr:objectMap [ rr:constant "3"]
- ];
-].
-
 
 #################################
 # PROVINCE OBJ MAPPING
 ##################################
 <#ProvinceObjMapping2> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceRivers> ;
-  rr:subjectMap [
-  fnml:functionValue [
-   rr:predicateObjectMap [
-     rr:predicate fno:executes ;
-     rr:objectMap [ rr:constant grel:array_join ]
-   ] ;
-   rr:predicateObjectMap [
-     rr:predicate grel:p_array_a ;
-     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/province"]
-   ];
-   rr:predicateObjectMap [
-     rr:predicate grel:p_array_a ;
-     rr:objectMap <#substringCodiceComuneMapping>
-   ];
-   rr:predicateObjectMap [
-     rr:predicate grel:p_string_sep ;
-     rr:objectMap [ rr:constant "/" ]
-   ]
-  ];
+rr:subjectMap [
+    fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:array_join ]
+     ] ;
+     rr:predicateObjectMap [
+       rr:predicate grel:p_array_a ;
+       rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/province"]
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:p_array_a ;
+       rr:objectMap <#substringCodiceComuneMapping>
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:p_string_sep ;
+       rr:objectMap [ rr:constant "/" ]
+     ]
+    ];
     rr:class ispra-plc:Province , ispra-plc:Feature , clv:Feature , ispra-top:Location
- ] ;
+] ;
 
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
@@ -763,7 +744,7 @@ fnml:functionValue [
   ];
   rr:predicateObjectMap [
     rr:predicate grel:p_array_a ;
-    rr:objectMap <#MD5CorsoDAcqua>
+    rr:objectMap <#MD5CorsoDAcqua1>
   ];
   rr:predicateObjectMap [
     rr:predicate grel:p_string_sep ;
@@ -967,3 +948,55 @@ fnml:functionValue [
      rr:objectMap [ rr:constant "" ]
    ]
  ] .
+
+ <#MD5CorsoDAcqua1>
+ fnml:functionValue [
+   rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:string_md5 ]
+   ];
+   rr:predicateObjectMap [
+    rr:predicate grel:valueParameter ;
+    rr:objectMap <#ArrayJoinCorsoCorpo1>
+   ]
+ ].
+
+<#ArrayJoinCorsoCorpo1>
+ fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:array_join ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "corso_d_acqua"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap [ rml:reference "corpo_idrico"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_string_sep ;
+    rr:objectMap [ rr:constant "" ]
+  ]
+ ].
+
+ <#substringCodiceComuneMapping>
+ fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:string_substring ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:valueParameter ;
+    rr:objectMap  [ rml:reference "codice_comune"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:param_int_i_from ;
+    rr:objectMap [ rr:constant "0"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:param_int_i_opt_to ;
+    rr:objectMap [ rr:constant "3"]
+  ];
+ ].

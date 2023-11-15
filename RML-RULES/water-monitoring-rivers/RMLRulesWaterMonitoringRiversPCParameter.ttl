@@ -18,12 +18,13 @@
 @prefix iotapit: <https://w3id.org/italia/onto/IoT/>.
 @prefix l0: <https://w3id.org/italia/onto/l0/>.
 @prefix tiapit: <https://w3id.org/italia/onto/TI/>.
+@prefix clv: <https://w3id.org/italia/onto/CLV/> .
 @base <https://w3id.org/italia/lombardia/data/> .
 
 
 # #LogicalSourceRivers
 <#LogicalSourceRivers> a rml:BaseSource ;
-    rml:source "kr6i-f553.csv" ;
+    rml:source "kr6i-f553-2021.csv" ;
     rml:referenceFormulation ql:CSV .
 
 ##Logical Source PROVINCE RDF
@@ -849,7 +850,7 @@ fnml:functionValue [
 #################################
 # PROVINCE OBJ MAPPING
 ##################################
-<#ProvinceObjMapping2> a rr:TriplesMap ;
+<#ProvinceObjMapping3> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceRivers> ;
   rr:subjectMap [
   fnml:functionValue [
@@ -939,7 +940,7 @@ fnml:functionValue [
 #################################
 # COMUNE OBJ MAPPING
 ##################################
-<#CityObjMapping2> a rr:TriplesMap ;
+<#CityObjMapping3> a rr:TriplesMap ;
 rml:logicalSource <#LogicalSourceRivers> ;
   rr:subjectMap [
      rr:template "https://w3id.org/italia/lombardia/data/city/{codice_comune}";
