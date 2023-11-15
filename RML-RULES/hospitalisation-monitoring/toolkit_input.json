@@ -29,6 +29,22 @@
 					]
 				}]
 			}
+		},
+		"https://w3id.org/whow/onto/flow/metadating": {
+			"endpoint": "ws://host.docker.internal:8765/metadating",
+			"data": {
+				"meta": [
+					{
+						"id": "DRUGS",
+						"dataset_id": "https://hub.dati.lombardia.it/d/2mr3-henm",
+						"distribution_id": "https://hub.dati.lombardia.it/d/2mr3-henm-ttl",
+						"configuration": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/drug-consumption-monitoring/metadata_farmaci.ini"
+					}
+				]
+			}
+		},
+		"https://w3id.org/whow/onto/flow/validation": {
+			"endpoint": "ws://host.docker.internal:8765/validation"
 		}
 	} 
 }
