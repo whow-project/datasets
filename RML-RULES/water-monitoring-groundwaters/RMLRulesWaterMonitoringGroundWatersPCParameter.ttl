@@ -18,12 +18,13 @@
 @prefix iotapit: <https://w3id.org/italia/onto/IoT/>.
 @prefix l0: <https://w3id.org/italia/onto/l0/>.
 @prefix tiapit: <https://w3id.org/italia/onto/TI/>.
+@prefix clv: <https://w3id.org/italia/onto/CLV/> .
 @base <https://w3id.org/italia/lombardia/data/> .
 
 
 # #LogicalSourceGroundWaters
 <#LogicalSourceGroundWaters> a rml:BaseSource ;
-    rml:source "46wy-4ydd_new.csv" ;
+    rml:source "46wy-4ydd.csv" ;
     rml:referenceFormulation ql:CSV .
 
 ##Logical Source PROVINCE RDF
