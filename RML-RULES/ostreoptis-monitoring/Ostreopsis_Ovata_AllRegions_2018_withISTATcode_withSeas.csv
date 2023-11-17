@@ -1,4 +1,4 @@
-Regione;Provincia;Comune;Codice Sito;Nome Sito;LONG;LAT;Year;Data;Ostreopsis cf. ovata cell/l;Ostreopsis cf. ovata cell/ g fw;Istatcode;Seaname
+﻿Regione;Provincia;Comune;Codice Sito;Nome Sito;LONG;LAT;Year;Data;Ostreopsis cf. ovata cell/l;Ostreopsis cf. ovata cell/ g fw;Istatcode;Seaname
 Abruzzo;Teramo;Martinsicuro;IT013067047007;25 m a sud del porticciolo;13.9207;42.8904;2018;2018-06-11;0.0;0;067047;Adriatic Sea
 Abruzzo;Teramo;Martinsicuro;IT013067047007;25 m a sud del porticciolo;13.9207;42.8904;2018;2018-06-12;0.0;0;067047;Adriatic Sea
 Abruzzo;Teramo;Martinsicuro;IT013067047007;25 m a sud del porticciolo;13.9207;42.8904;2018;2018-06-13;0.0;0;067047;Adriatic Sea
@@ -413,11 +413,11 @@ Marche;Ascoli-Piceno ;Grottammare;IT011044023001;Davanti Scoglio San Nicola;13.8
 Marche;Ascoli-Piceno ;Grottammare;IT011044023001;Davanti Scoglio San Nicola;13.869916666666668;43.00013888888889;2018;2018-08-20;0.0;0;044023;Adriatic Sea
 Marche;Ascoli-Piceno ;Grottammare;IT011044023001;Davanti Scoglio San Nicola;13.869916666666668;43.00013888888889;2018;2018-09-03;0.0;0;044023;Adriatic Sea
 Marche;Ascoli-Piceno ;Grottammare;IT011044023001;Davanti Scoglio San Nicola;13.869916666666668;43.00013888888889;2018;2018-09-17;0.0;0;044023;Adriatic Sea
-Marche;Macerata;Porto recanati;;Fiumarella;13.661666666666669;43.44055555555556;2018;2018-07-27;0.0;0;043042;Adriatic Sea
-Marche;Macerata;Porto recanati;;Fiumarella;13.661666666666669;43.44055555555556;2018;2018-08-08;0.0;0;043042;Adriatic Sea
-Marche;Macerata;Porto recanati;;Fiumarella;13.661666666666669;43.44055555555556;2018;2018-08-30;40.0;900;043042;Adriatic Sea
-Marche;Macerata;Porto recanati;;Fiumarella;13.661666666666669;43.44055555555556;2018;2018-09-13;200.0;1959;043042;Adriatic Sea
-Marche;Macerata;Porto recanati;;Fiumarella;13.661666666666669;43.44055555555556;2018;2018-09-19;15600.0;2023;043042;Adriatic Sea
+Marche;Macerata;Porto recanati;043042Fiumarella;Fiumarella;13.661666666666669;43.44055555555556;2018;2018-07-27;0.0;0;043042;Adriatic Sea
+Marche;Macerata;Porto recanati;043042Fiumarella;Fiumarella;13.661666666666669;43.44055555555556;2018;2018-08-08;0.0;0;043042;Adriatic Sea
+Marche;Macerata;Porto recanati;043042Fiumarella;Fiumarella;13.661666666666669;43.44055555555556;2018;2018-08-30;40.0;900;043042;Adriatic Sea
+Marche;Macerata;Porto recanati;043042Fiumarella;Fiumarella;13.661666666666669;43.44055555555556;2018;2018-09-13;200.0;1959;043042;Adriatic Sea
+Marche;Macerata;Porto recanati;043042Fiumarella;Fiumarella;13.661666666666669;43.44055555555556;2018;2018-09-19;15600.0;2023;043042;Adriatic Sea
 Puglia;Foggia;Isole Tremiti;IT016071026001 ;Isola S.Domino ristorante Il Pirata;15.496762;41.97972222222222;2018;2018-06-06;0.0;;071027;Adriatic Sea
 Puglia;Foggia;Isole Tremiti;IT016071026001 ;Isola S.Domino ristorante Il Pirata;15.496762;42.121216;2018;2018-06-21;0.0;;071026;Adriatic Sea
 Puglia;Foggia;Isole Tremiti;IT016071026001 ;Isola S.Domino ristorante Il Pirata;15.496762;42.121216;2018;2018-07-04;0.0;;071026;Adriatic Sea
