@@ -1,0 +1,37 @@
+{
+	"bound_services": {
+		"https://w3id.org/whow/onto/flow/ingestion": {
+			"endpoint": "ws://host.docker.internal:8765/ingestion",
+			"data": {
+				"title": "Test data catalog",
+				"description": "Some description for the test data catalog.",
+				"distributions": [
+					{"id": "OSTREOPSIS",
+					 "mimetype": "text/csv",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/ostreoptis-monitoring/Ostreopsis_Ovata_AllRegions_2018_withISTATcode_withSeas.csv"},
+					{"id": "LINKING_PLACE",
+					 "mimetype": "text/csv",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/ostreoptis-monitoring/LinkingPlace.csv"}
+				],
+				"store": true
+			}
+		},
+		"https://w3id.org/whow/onto/flow/preprocessing": {
+			"endpoint": "ws://host.docker.internal:8765/preprocessor",
+			"data": {"ids": ["OSTREOPSIS", "LINKING_PLACE"]}
+		},
+		"https://w3id.org/whow/onto/flow/mapping": {
+			"endpoint": "ws://host.docker.internal:8765/mapping",
+			"data": {
+				"graphs": [{
+					"id": "ostreopsis-2018.ttl",
+					"rmls": [
+						{
+							"uri": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/ostreoptis-monitoring/RMLRules-ostreopsis-ovata-observation_pyrml.ttl"
+						}
+					]
+				}]
+			}
+		}
+	} 
+}

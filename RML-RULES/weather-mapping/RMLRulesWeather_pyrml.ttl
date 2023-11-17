@@ -1,0 +1,881 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix idlab-fn: <http://example.com/idlab/function/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix crml: <http://w3id.org/stlab/crml#> .
+@prefix csvw: <http://www.w3.org/ns/csvw#>.
+@prefix l0:   <https://w3id.org/italia/onto/l0/>.
+@prefix ti:   <https://w3id.org/italia/onto/TI/>.
+@prefix clv:   <https://w3id.org/italia/onto/CLV/>.
+@prefix ispra-top: <https://w3id.org/italia/env/onto/top/> .
+@prefix wh-mon: <https://w3id.org/whow/onto/weather-monitoring/>.
+@prefix ispra-emf: <https://w3id.org/italia/env/onto/inspire-mf/>.
+@prefix ispra-plc: <https://w3id.org/italia/env/onto/place/> .
+@base <https://w3id.org/italia/lombardia/data/> .
+
+
+#### LOGICAL SOURCES
+# #LogicalSourceWeatherSensorData
+<#LogicalSourceWeatherSensorData> a rml:BaseSource ;
+    rml:source  "{{ ATS_YEARLY_DATA }}";
+    rml:referenceFormulation ql:CSV .
+
+# #LogicalSourceFeatureOfInterest
+<#LogicalSourceFeatureOfInterest> a rml:BaseSource ;
+    rml:source "{{ FEATURSE_OF_INTEREST }}";
+    rml:referenceFormulation ql:CSV .
+
+##Logical Source PROVINCE RDF
+<#InputSPARQL>
+    a sd:Service ;
+    sd:endpoint <https://schema.gov.it/sparql> ;
+    sd:supportedLanguage sd:SPARQL11Query ;
+    sd:resultFormat <http://www.w3.org/ns/formats/SPARQL_Results_JSON> .
+
+<#LogicalSourcePROVINCERDF> a rml:BaseSource ;
+     rml:source <#InputSPARQL>;
+     rml:referenceFormulation ql:JSONPath;
+     rml:iterator "$.results.bindings[*]";
+     rml:query """
+     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+     PREFIX clv: <https://w3id.org/italia/onto/CLV/>
+
+     SELECT ?s ?provincia ?ID
+     WHERE { ?s a skos:Concept ;
+          skos:inScheme <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces> ;
+          skos:notation ?ID ;
+          clv:acronym ?provincia .
+
+     } """
+.
+
+
+#############
+# MAPPING RULES
+#############
+<#WeatherObservationMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWeatherSensorData>;
+    rr:subjectMap [
+      fnml:functionValue [
+         rr:predicateObjectMap [
+           rr:predicate fno:executes ;
+           rr:objectMap [ rr:constant grel:array_join ]
+         ] ;
+         rr:predicateObjectMap [
+           rr:predicate grel:p_array_a ;
+           rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/weather-observation"]
+         ];
+         rr:predicateObjectMap [
+           rr:predicate grel:p_array_a ;
+           rr:objectMap  <#MD5Observation>
+         ];
+         rr:predicateObjectMap [
+           rr:predicate grel:p_string_sep ;
+           rr:objectMap [ rr:constant "/" ]
+         ]
+    ];
+    rr:class wh-mon:WeatherObservation
+  ];
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rr:template "Osservazione per il sensore {IdSensore} in data {Data} con valore {Valore} {unita_di_misura} - ATS {codice_ats}: {nome_ats}" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate wh-mon:hasResultTime ;
+    rr:objectMap <#URLifyDateTime> ;
+  ];
+  rr:predicateObjectMap [
+     rr:predicate wh-mon:isObservationMadeBySensor ;
+     rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/weather-sensor/{IdSensore}"; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+     rr:predicate ispra-emf:hasObservationValue ;
+     rr:objectMap <#URIObservationValueObject>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate wh-mon:hasFeatureOfInterest ;
+    rr:objectMap [
+       rr:parentTriplesMap <#FoIMapping> ;
+       rr:joinCondition [
+          rr:child "Tipologia";
+          rr:parent "Tipologia" ;
+       ]
+     ] ;
+  ];
+  rr:predicateObjectMap [
+     rr:predicate wh-mon:hasObservedWeatherProperty ;
+     rr:objectMap <#WeatherObservablePropMapping>
+  ].
+
+<#FoIMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceFeatureOfInterest> ;
+rr:subjectMap [
+      rr:template "https://w3id.org/whow/onto/weather-monitoring/{FeatureOfInterest}";
+      rr:termType rr:IRI
+] .
+
+<#WeatherObservablePropMapping>
+rr:termType rr:IRI ;
+  fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:array_join ]
+     ] ;
+     rr:predicateObjectMap [
+       rr:predicate grel:p_array_a ;
+       rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/weather-observable-property"]
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:p_array_a ;
+       rr:objectMap  <#slugifyTipologia>
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:p_string_sep ;
+       rr:objectMap [ rr:constant "/" ]
+     ]
+  ].
+
+
+
+##### Weather Observable Property Obj
+<#WeatherObservablePropObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWeatherSensorData> ;
+rr:subjectMap [
+  fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:array_join ]
+     ] ;
+     rr:predicateObjectMap [
+       rr:predicate grel:p_array_a ;
+       rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/weather-observable-property"]
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:p_array_a ;
+       rr:objectMap  <#slugifyTipologia>
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:p_string_sep ;
+       rr:objectMap [ rr:constant "/" ]
+     ]
+  ] ;
+  rr:class wh-mon:WeatherObservableProperty
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Proprietà osservata dal sensore meteo: {Tipologia}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name , l0:name ;
+  rr:objectMap [ rml:reference "Tipologia" ; rr:language "it" ]
+].
+
+
+
+#### Weather Sensor Mapping
+<#WeatherSensorMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWeatherSensorData> ;
+rr:subjectMap [
+    rr:template "https://w3id.org/italia/lombardia/data/weather-sensor/{IdSensore}";
+    rr:class wh-mon:WeatherSensor
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Sensor {IdSensore}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Sensore {IdSensore}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-emf:isHostedBy ;
+  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/weather-station/{IdStazione}" ; rr:termType rr:IRI ]
+].
+# rr:predicateObjectMap [
+#   rr:predicate wh-mon:hasValidityPeriod ;
+#   rr:objectMap <#ValidityPeriodURI>
+# ].
+
+# <#ValidityPeriodURI>
+# rr:termType rr:IRI;
+# fnml:functionValue [
+#  rr:predicateObjectMap [
+#    rr:predicate fno:executes ;
+#    rr:objectMap [ rr:constant grel:array_join ]
+#  ] ;
+#  rr:predicateObjectMap [
+#   rr:predicate grel:p_array_a ;
+#   rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/time-interval"]
+#  ];
+#  rr:predicateObjectMap [
+#   rr:predicate grel:p_array_a ;
+#   rr:objectMap  <#MD5ValidityPeriod>
+#  ];
+#  rr:predicateObjectMap [
+#   rr:predicate grel:p_string_sep ;
+#   rr:objectMap [ rr:constant "/" ]
+#  ]
+# ].
+#
+# <#MD5ValidityPeriod>
+# fnml:functionValue [
+#      rr:predicateObjectMap [
+#        rr:predicate fno:executes ;
+#        rr:objectMap [ rr:constant grel:string_md5 ]
+#      ];
+#      rr:predicateObjectMap [
+#        rr:predicate grel:valueParameter ;
+#        rr:objectMap <#joinDataStartDataStop>
+#      ]
+# ].
+#
+# <#joinDataStartDataStop>
+# fnml:functionValue [
+#  rr:predicateObjectMap [
+#    rr:predicate fno:executes ;
+#    rr:objectMap [ rr:constant grel:array_join ]
+#  ] ;
+#  rr:predicateObjectMap [
+#   rr:predicate grel:p_array_a ;
+#   rr:objectMap  [rml:reference "datastart"]
+#  ];
+#  rr:predicateObjectMap [
+#   rr:predicate grel:p_array_a ;
+#   rr:objectMap  [rml:reference "datastop"]
+#  ];
+#  rr:predicateObjectMap [
+#   rr:predicate grel:p_string_sep ;
+#   rr:objectMap [ rr:constant "" ]
+#  ];
+# ].
+
+
+##### Validity Period mapping ####
+# <#ValidityPeriodMapping> a rr:TriplesMap ;
+# rml:logicalSource <#LogicalSourceWeatherStations> ;
+# rr:subjectMap [
+#   fnml:functionValue [
+#    rr:predicateObjectMap [
+#      rr:predicate fno:executes ;
+#      rr:objectMap [ rr:constant grel:array_join ]
+#    ] ;
+#    rr:predicateObjectMap [
+#     rr:predicate grel:p_array_a ;
+#     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/time-interval"]
+#    ];
+#    rr:predicateObjectMap [
+#     rr:predicate grel:p_array_a ;
+#     rr:objectMap  <#MD5ValidityPeriod>
+#    ];
+#    rr:predicateObjectMap [
+#     rr:predicate grel:p_string_sep ;
+#     rr:objectMap [ rr:constant "/" ]
+#    ]
+#   ];
+#   rr:class ti:TimeInterval
+# ] ;
+# rr:predicateObjectMap [
+#   rr:predicate rdfs:label ;
+#   rr:objectMap [ rr:template "Time Interval: {datastart} - {datastop}" ; rr:language "en" ]
+# ];
+# rr:predicateObjectMap [
+#   rr:predicate rdfs:label ;
+#   rr:objectMap [ rr:template "Intervallo di tempo: {datastart} - {datastop}" ; rr:language "it" ]
+# ] ;
+# rr:predicateObjectMap [
+#   rr:predicate ti:startDate ;
+#   rr:objectMap [rml:referenee "datastart" ; rr:datatype xsd:dateTime ]
+# ] ;
+# rr:predicateObjectMap [
+#   rr:predicate ti:endDate ;
+#   rr:objectMap [rml:referenee "datastop" ; rr:datatype xsd:dateTime ]
+# ] .
+
+##### Weather Station Mapping #######
+<#WeatherStationMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWeatherSensorData> ;
+rr:subjectMap [
+    rr:template "https://w3id.org/italia/lombardia/data/weather-station/{IdStazione}";
+    rr:class wh-mon:WeatherStation
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Weather Station {IdStazione} - {NomeStazione}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Stazione Meteo {IdStazione} - {NomeStazione}" ; rr:language "it" ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate ispra-top:identifier, l0:identifier ;
+  rr:objectMap [ rml:reference "IdStazione" ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name , l0:name ;
+  rr:objectMap [ rml:reference "NomeStazione" ; rr:language "it" ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate ispra-plc:hasGeometry ;
+  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/geometry/{lat}-{lng}-{Quota}" ; rr:termType rr:IRI ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate ispra-plc:hasProvince ;
+  rr:objectMap [
+     rr:parentTriplesMap <#ProvinceIDMapping> ;
+     rr:joinCondition [
+        rr:child "Provincia";
+        rr:parent "provincia.value" ;
+     ] ;
+   ] ;
+ ].
+
+<#ProvinceIDMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourcePROVINCERDF> ;
+rr:subjectMap [
+    rr:template "https://w3id.org/italia/lombardia/data/province/{ID.value}";
+    rr:termType rr:IRI
+] .
+
+
+ #
+ #
+ # # ##############################
+ # # ## PROVINCE LINKING
+ # # ##############################
+ #
+ # <#ProvinceMapping> a rr:TriplesMap ;
+ # rml:logicalSource <#LogicalSourcePROVINCERDF> ;
+ # rr:subjectMap [
+ #   rr:template "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/{ID.value}" ;  rr:termType rr:IRI ;
+ # ].
+
+
+##### Geometry Mapping #####
+<#GeometryMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWeatherSensorData> ;
+rr:subjectMap [
+    rr:template "https://w3id.org/italia/lombardia/data/geometry/{lat}-{lng}-{Quota}";
+    rr:class ispra-plc:Geometry , clv:Geometry
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Geometry: Point {lat}-{lng}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Geometry: Punto {lat}-{lng}" ; rr:language "it" ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate clv:lat , ispra-plc:lat ;
+  rr:objectMap [ rml:reference "lat" ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate clv:long , ispra-plc:long ;
+  rr:objectMap [ rml:reference "lng" ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate clv:alt;
+  rr:objectMap [ rml:reference "Quota" ]
+] .
+
+
+
+#### Observation Value Mapping ####
+<#ObservationValueMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWeatherSensorData> ;
+rr:subjectMap [
+    fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:array_join ]
+     ];
+     rr:predicateObjectMap [
+        rr:predicate grel:p_array_a ;
+        rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/observation-value"]
+     ] ;
+     rr:predicateObjectMap [
+        rr:predicate grel:p_array_a ;
+        rr:objectMap <#MD5ValueUM>
+     ] ;
+     rr:predicateObjectMap [
+        rr:predicate grel:p_string_sep ;
+        rr:objectMap [ rr:constant "/" ]
+     ]
+    ] ;
+    rr:class ispra-emf:ObservationValue
+] ;
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:template "Value {Valore} {Parametro}" ; rr:language "en" ]
+] ;
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:template "Valore {Valore} {unita_di_misura}" ; rr:language "it" ]
+] ;
+rr:predicateObjectMap [
+   rr:predicate ispra-top:value ;
+   rr:objectMap [ rml:reference "Valore" ; rr:datatype xsd:decimal ]
+] ;
+rr:predicateObjectMap [
+   rr:predicate ispra-top:hasUnitOfMeasure ;
+   rr:objectMap <#URIUM>
+] .
+
+###############
+# UM OBJ MAPPING
+###############
+<#UnitOfMeasureMapping> a rr:TriplesMap;
+rml:logicalSource <#LogicalSourceWeatherSensorData> ;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/measurement-unit"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap <#SlugifyUM>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ]
+  ];
+  rr:class ispra-top:UnitOfMeasure
+];
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:template "Unit of measure {Parametro}" ; rr:language "en"]
+];
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:template "Unità di misura {unita_di_misura}" ; rr:language "it"]
+];
+rr:predicateObjectMap [
+   rr:predicate ispra-top:name , l0:name ;
+   rr:objectMap [ rml:reference "unita_di_misura" ; rr:language "it" ]
+].
+
+
+
+### Result Time Mapping ####
+<#ResultTimeMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWeatherSensorData> ;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/time-instant"]
+   ];
+   rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  <#NormalizeDateTime>
+   ];
+   rr:predicateObjectMap [
+    rr:predicate grel:p_string_sep ;
+    rr:objectMap [ rr:constant "/" ]
+   ]
+  ];
+  rr:class ti:TimeInstant
+];
+rr:predicateObjectMap [
+ rr:predicate rdfs:label ;
+ rr:objectMap [ rr:template "Time instant: {Data}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+ rr:predicate rdfs:label ;
+ rr:objectMap [ rr:template "Istante di tempo: {Data}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+ rr:predicate ti:date ;
+ rr:objectMap <#NormalizeDateTimeProperty>
+].
+
+
+
+#### MD5 Execution function ####
+<#MD5Observation>
+fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:string_md5 ]
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:valueParameter ;
+       rr:objectMap <#JoinRiga>
+     ]
+].
+
+### Array join intera riga
+<#JoinRiga>
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:array_join ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "IdSensore"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "Data"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "Valore"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "idOperatore"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "Stato"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "Parametro"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "unita_di_misura"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "codice_ats"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "nome_ats"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "Tipologia"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "IdStazione"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "NomeStazione"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "Quota"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "lat"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "lng"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "Provincia"]
+  ];
+  rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "" ]
+  ];
+].
+
+
+#URLIFY DATETIME
+<#URLifyDateTime>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+  rr:predicate grel:p_array_a ;
+  rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/time-instant"]
+ ];
+ rr:predicateObjectMap [
+  rr:predicate grel:p_array_a ;
+  rr:objectMap  <#NormalizeDateTime>
+ ];
+ rr:predicateObjectMap [
+  rr:predicate grel:p_string_sep ;
+  rr:objectMap [ rr:constant "/" ]
+ ];
+].
+
+#NORMALIZE DATETIME
+<#NormalizeDateTime>
+fnml:functionValue [
+  rml:logicalSource <#LogicalSourceWeatherSensorData>;
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant idlab-fn:normalizeDateTime ]
+ ];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:strDate ;
+    rr:objectMap [ rml:reference "Data" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:pattern ;
+    rr:objectMap [ rr:constant "yyyy-MM-dd HH:mm:ss" ]
+  ];
+].
+
+<#NormalizeDateTimeProperty>
+rr:datatype xsd:dateTime ;
+fnml:functionValue [
+  rml:logicalSource <#LogicalSourceWeatherSensorData>;
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant idlab-fn:normalizeDateTime ]
+ ];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:strDate ;
+    rr:objectMap [ rml:reference "Data" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:pattern ;
+    rr:objectMap [ rr:constant "yyyy-MM-dd HH:mm:ss" ]
+  ];
+].
+
+
+<#DateTimeNormalized>
+rr:datatype xsd:dateTime ;
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant idlab-fn:normalizeDateTime ]
+ ];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:strDate ;
+    rr:objectMap [ rml:reference "Data" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:pattern ;
+    rr:objectMap [ rr:constant "yyyy-MM-dd HH:mm:ss" ]
+  ]
+].
+
+
+# <#manageDataStop>
+# fnml:functionValue [
+#   rr:predicateObjectMap [
+#     rr:predicate fno:executes ;
+#     rr:objectMap [ rr:constant idlab-fn:normalizeDate ]
+#  ];
+#   rr:predicateObjectMap [
+#     rr:predicate idlab-fn:strDate ;
+#     rr:objectMap <#returnDataStop>
+#   ];
+#   rr:predicateObjectMap [
+#     rr:predicate idlab-fn:pattern ;
+#     rr:objectMap [ rr:constant "dd/MM/yyyy" ]
+#   ];
+#
+# ].
+
+# <#CoalesceValue>
+# fnml:functionValue [
+#   rr:predicateObjectMap [
+#     rr:predicate fno:executes ;
+#     rr:objectMap [ rr:constant grel:other_coalesce ]
+#   ];
+#   rr:predicateObjectMap [
+#     rr:predicate grel:p_any_rep_e ;
+#     rr:objectMap [ rr:constant "31/12/2000" ]
+#   ] ;
+#   rr:predicateObjectMap [
+#       rr:predicate grel:p_any_rep_e ;
+#       rr:objectMap [ rr:constant "31/12/9999" ]
+#   ];
+# ] .
+
+#
+# <#returnDataStop>
+# fnml:functionValue [
+#   rr:predicateObjectMap [
+#     rr:predicate fno:executes ;
+#     rr:objectMap [ rr:constant grel:controls_if ]
+#   ];
+#   rr:predicateObjectMap [
+#     rr:predicate grel:bool_b ;
+#     rr:objectMap <#checkValueDataStop>
+#   ] ;
+#   rr:predicateObjectMap [
+#       rr:predicate grel:any_true ;
+#       rr:objectMap [ rr:constant "31/12/9999" ]
+#   ];
+#   rr:predicateObjectMap [
+#       rr:predicate grel:any_false ;
+#       rr:objectMap [ rml:reference "DataStop"]
+#   ];
+# ] .
+
+# <#checkValueDataStop>
+# fnml:functionValue [
+#   rr:predicateObjectMap [
+#     rr:predicate fno:executes ;
+#     rr:objectMap [ rr:constant idlab-fn:isNull ]
+#   ];
+#   rr:predicateObjectMap [
+#     rr:predicate idlab-fn:str ;
+#     rr:objectMap [ rml:reference "DataStop"]
+#   ]
+# ] .
+#
+# <#NormalizeDateStart>
+# rr:datatype xsd:date ;
+# fnml:functionValue [
+#   rml:logicalSource <#LogicalSourceWeatherSensorData>;
+#   rr:predicateObjectMap [
+#     rr:predicate fno:executes ;
+#     rr:objectMap [ rr:constant idlab-fn:normalizeDate ]
+#  ];
+#   rr:predicateObjectMap [
+#     rr:predicate idlab-fn:strDate ;
+#     rr:objectMap [ rml:reference "DataStart" ]
+#   ];
+#   rr:predicateObjectMap [
+#     rr:predicate idlab-fn:pattern ;
+#     rr:objectMap [ rr:constant "dd/MM/yyyy" ]
+#   ];
+#
+# ].
+
+# <#NormalizeDateStop>
+# rr:datatype xsd:date ;
+# fnml:functionValue [
+#   rml:logicalSource <#LogicalSourceWeatherSensorData>;
+#   rr:predicateObjectMap [
+#     rr:predicate fno:executes ;
+#     rr:objectMap [ rr:constant idlab-fn:normalizeDate ]
+#  ];
+#   rr:predicateObjectMap [
+#     rr:predicate idlab-fn:strDate ;
+#     rr:objectMap [ rml:reference "DataStop" ]
+#   ];
+#   rr:predicateObjectMap [
+#     rr:predicate idlab-fn:pattern ;
+#     rr:objectMap [ rr:constant "dd/MM/yyyy" ]
+#   ];
+#
+# ].
+#
+<#slugifyTipologia>
+fnml:functionValue [
+	rr:predicateObjectMap [
+		rr:predicate fno:executes ;
+		rr:objectMap [ rr:constant idlab-fn:slugify ]
+	];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "Tipologia"]
+  ]
+ ] .
+
+<#URIObservationValueObject>
+rr:termType rr:IRI ;
+ fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:array_join ]
+  ];
+  rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/observation-value"]
+  ] ;
+  rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap <#MD5ValueUM>
+  ] ;
+  rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+  ]
+ ] .
+
+<#MD5ValueUM>
+ fnml:functionValue [
+   rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:string_md5 ]
+   ];
+   rr:predicateObjectMap [
+    rr:predicate grel:valueParameter ;
+    rr:objectMap <#UnionValueUM>
+   ];
+ ].
+
+ <#UnionValueUM>
+ fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:array_join ]
+  ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap [ rml:reference "Valore"]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap [ rml:reference "unita_di_misura"]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "" ]
+   ]
+ ] .
+
+<#URIUM>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/measurement-unit"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap <#SlugifyUM>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "/" ]
+ ];
+].
+
+
+<#SlugifyUM>
+fnml:functionValue [
+	rr:predicateObjectMap [
+		rr:predicate fno:executes ;
+		rr:objectMap [ rr:constant idlab-fn:slugify ]
+	];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "unita_di_misura"]
+  ] ;
+ ] .

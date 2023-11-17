@@ -1,0 +1,37 @@
+{
+	"bound_services": {
+		"https://w3id.org/whow/onto/flow/ingestion": {
+			"endpoint": "ws://host.docker.internal:8765/ingestion",
+			"data": {
+				"title": "Test data catalog",
+				"description": "Some description for the test data catalog.",
+				"distributions": [
+					{"id": "INFECTIOUS_DISEASES",
+					 "mimetype": "text/csv",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/diseases/infectious_diseases.csv"},
+					{"id": "LINKING_SNOMED",
+					 "mimetype": "text/csv",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/diseases/LinkingSnomed.csv"}
+				],
+				"store": true
+			}
+		},
+		"https://w3id.org/whow/onto/flow/preprocessing": {
+			"endpoint": "ws://host.docker.internal:8765/preprocessor",
+			"data": {"ids": ["INFECTIOUS_DISEASES", "LINKING_SNOMED"]}
+		},
+		"https://w3id.org/whow/onto/flow/mapping": {
+			"endpoint": "ws://host.docker.internal:8765/mapping",
+			"data": {
+				"graphs": [{
+					"id": "DISEASES",
+					"rmls": [
+						{
+							"uri": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/diseases/RMLRulesDiseases_pyrml.ttl"
+						}
+					]
+				}]
+			}
+		}
+	} 
+}

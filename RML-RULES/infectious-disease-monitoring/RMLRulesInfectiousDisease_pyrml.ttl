@@ -1,0 +1,1428 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix idlab-fn: <http://example.com/idlab/function/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix l0:  <https://w3id.org/italia/onto/l0/> .
+@prefix tiapit:  <https://w3id.org/italia/onto/TI/> .
+@prefix ispra-top: <https://w3id.org/italia/env/onto/top/> .
+@prefix hm: <https://w3id.org/whow/onto/health-monitoring/> .
+@prefix ispra-emf: <https://w3id.org/italia/env/onto/inspire-mf/>.
+@base <https://w3id.org/italia/lombardia/data/> .
+
+# #LogicalSourceMalattieInfettive
+<#LogicalSourceMalattieInfettive> a rml:BaseSource ;
+    rml:source "{{ INFECTIUS_DISEASES }}";
+    rml:referenceFormulation ql:CSV .
+
+###########################################################
+##                  MAPPING RULES
+##########################################################
+
+
+# #################################
+# ## HEALTH CARE N. DOSSIER INDICATOR MAPPING
+# #################################
+<#HealthcareIndicatorNDossierMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/healthcare-indicator-calculation/nd"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#MD5NumberPratiche>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "-" ]
+   ]
+  ];
+  rr:class hm:InfectiousDiseaseIndicatorCalculation
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap <#LabelSexYesOrNoNDossier>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:hasHealthcareIndicatorValue;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/value/{Numero Pratiche}-adimensionale" ; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:doneForHCIndicator;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/indicator/number-dossier" ; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:hasLocation;
+    rr:objectMap [ rr:template "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/03" ; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:ofClinicalCohort;
+    rr:objectMap <#URIClinicalCohort>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:atTime , tiapit:hasTemporalCoverage;
+    rr:objectMap [rr:template "https://w3id.org/italia/lombardia/data/year/{Inizio Sintomi Anno}" ; rr:termType rr:IRI ]
+  ].
+
+
+
+# #################################
+# ## HEALTH CARE Tasso età-sesso INDICATOR MAPPING
+# #################################
+<#HealthcareIndicatorRateAgeSexMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/healthcare-indicator-calculation/ras"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#MD5TassoEtaSesso>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "-" ]
+   ]
+  ];
+  rr:class hm:InfectiousDiseaseIndicatorCalculation
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap <#LabelSexYesOrNoTassoEta>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:hasHealthcareIndicatorValue;
+    rr:objectMap <#URIValoreRateAgeSex>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:doneForHCIndicator;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/indicator/rate-age-sex" ; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:hasLocation;
+    rr:objectMap [ rr:template "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/03" ; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:ofClinicalCohort;
+    rr:objectMap <#URIClinicalCohort>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:atTime , tiapit:hasTemporalCoverage;
+    rr:objectMap [rr:template "https://w3id.org/italia/lombardia/data/year/{Inizio Sintomi Anno}" ; rr:termType rr:IRI ]
+  ].
+
+
+
+# #################################
+# ## HEALTH CARE Tasso regione INDICATOR MAPPING
+# #################################
+<#HealthcareIndicatorRateRegionMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/healthcare-indicator-calculation/rr"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#MD5TassoRegione>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "-" ]
+   ]
+  ];
+  rr:class hm:InfectiousDiseaseIndicatorCalculation
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap <#LabelSexYesOrNoTassoReg>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:hasHealthcareIndicatorValue;
+    rr:objectMap <#URIValoreRateRegion>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:doneForHCIndicator;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/indicator/rate-region" ; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:hasLocation;
+    rr:objectMap [ rr:template "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/03" ; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:ofClinicalCohort;
+    rr:objectMap <#URIClinicalCohort>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:atTime , tiapit:hasTemporalCoverage;
+    rr:objectMap [rr:template "https://w3id.org/italia/lombardia/data/year/{Inizio Sintomi Anno}" ; rr:termType rr:IRI ]
+  ].
+
+
+
+# #################################
+# ## HEALTH CARE Tasso INDICATOR MAPPING
+# #################################
+<#HealthcareIndicatorRateMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/healthcare-indicator-calculation/rd"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#MD5Tasso>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "-" ]
+   ]
+  ];
+  rr:class hm:InfectiousDiseaseIndicatorCalculation
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap <#LabelSexYesOrNoTasso>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:hasHealthcareIndicatorValue;
+    rr:objectMap <#URIValoreRate>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:doneForHCIndicator;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/indicator/rate-disease" ; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:hasLocation;
+    rr:objectMap [ rr:template "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/03" ; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:ofClinicalCohort;
+    rr:objectMap <#URIClinicalCohort>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:atTime , tiapit:hasTemporalCoverage;
+    rr:objectMap [rr:template "https://w3id.org/italia/lombardia/data/year/{Inizio Sintomi Anno}" ; rr:termType rr:IRI ]
+  ].
+
+####################
+# YEAR OBJ MAPPING
+####################
+<#TEYearMapping> a rr:TriplesMap ;
+  rml:logicalSource <#LogicalSourceMalattieInfettive>;
+  rr:subjectMap [
+    rr:template "https://w3id.org/italia/lombardia/data/year/{Inizio Sintomi Anno}";
+    rr:class tiapit:Year , ispra-top:Year
+  ];
+  rr:predicateObjectMap [
+     rr:predicate rdfs:label ;
+     rr:objectMap [ rr:template "Year: {Inizio Sintomi Anno}" ; rr:language "en" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate rdfs:label ;
+      rr:objectMap [ rr:template "Anno: {Inizio Sintomi Anno}" ; rr:language "it" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate tiapit:year , ispra-top:year ;
+      rr:objectMap [ rml:reference "Inizio Sintomi Anno" ; rr:datatype xsd:gYear ]
+   ].
+
+##################################
+# Number of Dossier Indicator Obj Mapping
+##################################
+<#NDossierObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+    rr:constant "https://w3id.org/italia/lombardia/data/indicator/number-dossier";
+    rr:class hm:HealthcareIndicator
+] ;
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:constant "Indicator: Number of Dossier" ; rr:language "en" ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rr:template "Indicatore: Numero di Pratiche" ; rr:language "it" ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate ispra-top:isClassifiedBy ;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/indicator-type/process" ; rr:termType rr:IRI ]
+ ].
+
+##################################
+# Tasso età-sesso Indicator Obj Mapping
+##################################
+<#RateAgeSexObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+   rr:constant "https://w3id.org/italia/lombardia/data/indicator/rate-age-sex";
+   rr:class hm:HealthcareIndicator
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:constant "Indicator: Rate age-sex (x100'000)" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:template "Indicatore: Tasso Età-Sesso (x100'000)" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+   rr:predicate ispra-top:isClassifiedBy ;
+   rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/indicator-type/outcome" ; rr:termType rr:IRI ]
+].
+
+##################################
+# Tasso regione Indicator Obj Mapping
+##################################
+<#RateRegionObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+   rr:constant "https://w3id.org/italia/lombardia/data/indicator/rate-region";
+   rr:class hm:HealthcareIndicator
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:constant "Indicator: Rate region (x 100000)" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:template "Indicatore: Tasso Regione (x 100000)" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+   rr:predicate ispra-top:isClassifiedBy ;
+   rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/indicator-type/outcome" ; rr:termType rr:IRI ]
+].
+
+##################################
+# Tasso disease Indicator Obj Mapping
+##################################
+<#RateDiseaseObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+   rr:constant "https://w3id.org/italia/lombardia/data/indicator/rate-disease";
+   rr:class hm:HealthcareIndicator
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:constant "Indicator: Rate" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:template "Indicatore: Tasso" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+   rr:predicate ispra-top:isClassifiedBy ;
+   rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/indicator-type/outcome" ; rr:termType rr:IRI ]
+].
+
+
+
+
+# #################################
+# ## INDICATOR TYPE Outcome OBJ MAPPING
+# #################################
+<#IndicatorTypeOutcomeObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+    rr:constant "https://w3id.org/italia/lombardia/data/indicator-type/outcome";
+    rr:class ispra-top:Concept
+] ;
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:constant "Outcome Indicator" ; rr:language "en" ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rr:constant "Indicatore di Risultato"; rr:language "it"]
+ ] ;
+ rr:predicateObjectMap [
+    rr:predicate owl:sameAs ;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/controlled-vocabulary/classifications-for-indicators/indicator-types/outcome"; rr:termType rr:IRI ]
+ ] .
+
+
+# #################################
+# ## INDICATOR TYPE PROCESS OBJ MAPPING
+# #################################
+<#IndicatorTypeProcessObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+    rr:constant "https://w3id.org/italia/lombardia/data/indicator-type/process";
+    rr:class ispra-top:Concept
+] ;
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:constant "Process Indicator" ; rr:language "en" ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rr:constant "Indicatore di Processo"; rr:language "it"]
+ ] ;
+ rr:predicateObjectMap [
+    rr:predicate owl:sameAs ;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/controlled-vocabulary/classifications-for-indicators/indicator-types/process"; rr:termType rr:IRI ]
+ ] .
+
+
+# #################################
+# ## INDICATOR VALUE N. DOSSIER MAPPING
+# #################################
+<#IndicatorValueNDossierMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/value/{Numero Pratiche}-adimensionale";
+  rr:class ispra-top:Value
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Valore: {Numero Pratiche}" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:value;
+    rr:objectMap [ rml:reference "Numero Pratiche" ; rr:datatyoe xsd:integer ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:hasUnitOfMeasure;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/measurement-unit/adimensionale" ; rr:termType rr:IRI ]
+  ].
+
+
+# #################################
+# ## INDICATOR VALUE RATE AGE SEX MAPPING
+# #################################
+<#IndicatorValueRateAgeSexMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/value"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#ArrayJoinSlygifyValueUM>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ]
+  ] ;
+  rr:class ispra-top:Value
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Valore: {Tasso Età-Sesso (x100'000)}" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:value;
+    rr:objectMap [ rml:reference "Tasso Età-Sesso (x100'000)" ; rr:datatyoe xsd:decimal ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:hasUnitOfMeasure;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/measurement-unit/adimensionale" ; rr:termType rr:IRI ]
+  ].
+
+
+# #################################
+# ## INDICATOR VALUE RATE REGION MAPPING
+# #################################
+<#IndicatorValueRateRegionMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/value"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#ArrayJoinSlygifyValueUMRegion>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ]
+  ] ;
+  rr:class ispra-top:Value
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Valore: {Tasso Regione(x 100000)}" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:value;
+    rr:objectMap [ rml:reference "Tasso Regione(x 100000)" ; rr:datatyoe xsd:decimal ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:hasUnitOfMeasure;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/measurement-unit/adimensionale" ; rr:termType rr:IRI ]
+  ].
+
+
+
+# #################################
+# ## INDICATOR VALUE RATE DISEASE MAPPING
+# #################################
+<#IndicatorValueRateDiseaseMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/value"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#ArrayJoinSlygifyValueUMRate>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ]
+  ] ;
+  rr:class ispra-top:Value
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Valore: {Tasso}" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:value;
+    rr:objectMap [ rml:reference "Tasso" ; rr:datatyoe xsd:decimal ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:hasUnitOfMeasure;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/measurement-unit/adimensionale" ; rr:termType rr:IRI ]
+  ].
+
+
+# #################################
+# ## SEX CRITERION MAPPING
+# #################################
+<#SexCriterionMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/criterion/sex";
+  rr:class hm:Criterion
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Criterio: Sesso" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Criterion: Sex" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:name;
+    rr:objectMap [ rr:constant "Sesso" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:name;
+    rr:objectMap [ rr:constant "Sex" ; rr:language "en" ]
+  ].
+
+# #################################
+# ## INTERVAL AGE CRITERION MAPPING
+# #################################
+<#IntervalAgeMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/criterion/age";
+  rr:class hm:Criterion
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Criterio: Fascia d'età" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Criterion: Age Range" ; rr:language "en" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:name;
+    rr:objectMap [ rr:constant "Fascia d'età" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:name;
+    rr:objectMap [ rr:constant "Age Range" ; rr:language "en" ]
+  ].
+
+# #################################
+# ## Year Start syntoms CRITERION MAPPING
+# #################################
+<#YearStartSyntomsMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/criterion/year-start-syntoms";
+  rr:class hm:Criterion
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Criterio: Anno inizio sintomi" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Criterion: Year Start Syntoms" ; rr:language "en" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:name;
+    rr:objectMap [ rr:constant "Anno inizio sintomi" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:name;
+    rr:objectMap [ rr:constant "Year Start Syntoms" ; rr:language "en" ]
+  ].
+
+##################################
+# Clinical Cohort URI for Ind. Cal.
+##################################
+<#URIClinicalCohort>
+rr:termType rr:IRI ;
+  fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:array_join ]
+     ] ;
+     rr:predicateObjectMap [
+       rr:predicate grel:p_array_a ;
+       rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/clincal-cohort"]
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:p_array_a ;
+       rr:objectMap  <#MD5ClinicalCohort>
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:p_string_sep ;
+       rr:objectMap [ rr:constant "/" ]
+     ]
+    ].
+
+
+# #################################
+# ## Clinical cohort MAPPING
+# #################################
+<#ClinicalcohortMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+ rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/clincal-cohort"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#MD5ClinicalCohort>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ]
+  ];
+  rr:class hm:ClinicalCohort
+ ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap <#LabelSexYesOrNoClinicalCohort>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:totalValue;
+    rr:objectMap [ rml:reference "Popolazione Residente" ; rr:datatype xsd:float ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:affectedBy , hm:hasScope ;
+    rr:objectMap <#URIDisease>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:hasCohortCriteriaDescription;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/criteria-description/sex-{Sesso}"; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:hasCohortCriteriaDescription;
+    rr:objectMap <#URIEta>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:hasCohortCriteriaDescription;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/criteria-description/year-start-syntoms-{Inizio Sintomi Anno}" ; rr:termType rr:IRI ]
+  ].
+
+
+############################
+# SEX CRITERION DESCRIPTION
+############################
+<#SexCriterionDescription> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/criteria-description/sex-{Sesso}";
+  rr:class hm:Criterion
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Descrizione criterio Sesso con valore {Sesso}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Criterion Description Sex with value {Sesso}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:value;
+  rr:objectMap [ rml:reference "Sesso" ]
+];
+rr:predicateObjectMap [
+  rr:predicate hm:hasCriterion;
+  rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/criterion/sex" ; rr:termType rr:IRI ]
+].
+
+############################
+# AGE CRITERION DESCRIPTION
+############################
+<#AgeCriterionDescription> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  fnml:functionValue [
+    rr:predicateObjectMap [
+      rr:predicate fno:executes ;
+      rr:objectMap [ rr:constant grel:controls_if ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate grel:bool_b ;
+      rr:objectMap <#da85>
+    ];
+    rr:predicateObjectMap [
+      rr:predicate grel:any_true ;
+      rr:objectMap <#URIwithSpaceMgmt>
+    ] ;
+    rr:predicateObjectMap [
+      rr:predicate grel:any_false ;
+      rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/criterion-description/age-{Età Classe}" ]
+    ]
+  ] ;
+  rr:class hm:Criterion
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Descrizione criterio Fascia d'Età con valore {Età Classe}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Criterion Description Age Range with value {Età Classe}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:value;
+  rr:objectMap [ rml:reference "Età Classe" ]
+];
+rr:predicateObjectMap [
+  rr:predicate hm:hasCriterion;
+  rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/criterion/age" ; rr:termType rr:IRI ]
+].
+
+###############################
+# YEAR START SYNTOMS CRITERION
+###############################
+<#YSSCriterionDescription> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceMalattieInfettive> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/criteria-description/year-start-syntoms-{Inizio Sintomi Anno}";
+  rr:class hm:Criterion
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Descrizione criterio Anno Inizio Sintomi con valore {Inizio Sintomi Anno}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Criterion Description Year Start Syntoms with value {Inizio Sintomi Anno}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:value;
+  rr:objectMap [ rml:reference "Inizio Sintomi Anno" ]
+];
+rr:predicateObjectMap [
+  rr:predicate hm:hasCriterion;
+  rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/criterion/year-start-syntoms" ; rr:termType rr:IRI ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:seeAlso;
+  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/year/{Inizio Sintomi Anno}" ; rr:termType rr:IRI ]
+].
+
+<#URIValoreRate>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/value"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  <#ArrayJoinSlygifyValueUMRate>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "/" ]
+ ]
+] .
+
+<#URIValoreRateRegion>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/value"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  <#ArrayJoinSlygifyValueUMRegion>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "/" ]
+ ]
+] .
+
+
+
+<#URIValoreRateAgeSex>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/value"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  <#ArrayJoinSlygifyValueUM>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "/" ]
+ ]
+] .
+
+
+
+
+
+#############
+#FUNCTIONS
+#############
+
+<#ArrayJoinSlygifyValueUMRate>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  <#slugifyValueRate>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rr:constant "adimensionale"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "-" ]
+ ]
+] .
+
+<#ArrayJoinSlygifyValueUMRegion>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  <#slugifyValueRateRegion>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rr:constant "adimensionale"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "-" ]
+ ]
+] .
+
+<#slugifyValueRateRegion>
+fnml:functionValue [
+	rr:predicateObjectMap [
+		rr:predicate fno:executes ;
+		rr:objectMap [ rr:constant idlab-fn:slugify ]
+	];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "Tasso Regione(x 100000)"]
+  ] ;
+ ] .
+
+<#ArrayJoinSlygifyValueUM>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  <#slugifyValueRateAgeSex>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rr:constant "adimensionale"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "-" ]
+ ]
+] .
+
+<#LabelSexYesOrNoClinicalCohort>
+rr:language "it" ;
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:controls_if ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:bool_b ;
+    rr:objectMap <#SexIsNull>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:any_true ;
+    rr:objectMap [ rr:template "Popolazione clinica: totale {Popolazione Residente} nell'anno {Inizio Sintomi Anno} nella fascia d'età {Età Classe}" ; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:any_false ;
+    rr:objectMap [ rr:template "Popolazione clinica: totale {Popolazione Residente} nell'anno {Inizio Sintomi Anno} nella fascia d'età {Età Classe} anni e di sesso {Sesso}" ; rr:language "it" ]
+  ] ;
+] .
+
+<#LabelSexYesOrNoTasso>
+rr:language "it" ;
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:controls_if ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:bool_b ;
+    rr:objectMap <#SexIsNull>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:any_true ;
+    rr:objectMap [ rr:template "Indicatore Tasso con valore {Tasso} - Classe d'età {Età Classe}, Patologia {Patologia}, Anno Inizio Sintomi {Inizio Sintomi Anno}, Popolazione Residente {Popolazione Residente}" ; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:any_false ;
+    rr:objectMap [ rr:template "Indicatore Tasso con valore {Tasso} - Classe d'età {Età Classe}, Sesso {Sesso}, Patologia {Patologia}, Anno Inizio Sintomi {Inizio Sintomi Anno}, Popolazione Residente {Popolazione Residente}" ; rr:language "it" ]
+  ] ;
+] .
+
+<#LabelSexYesOrNoTassoEta>
+rr:language "it" ;
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:controls_if ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:bool_b ;
+    rr:objectMap <#SexIsNull>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:any_true ;
+    rr:objectMap [ rr:template "Indicatore Tasso Età-Sesso (x100'000) con valore {Tasso Età-Sesso (x100'000)} - Classe d'età {Età Classe}, Patologia {Patologia}, Anno Inizio Sintomi {Inizio Sintomi Anno}, Popolazione Residente {Popolazione Residente}" ; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:any_false ;
+    rr:objectMap [ rr:template "Indicatore Tasso Età-Sesso (x100'000) con valore {Tasso Età-Sesso (x100'000)} - Classe d'età {Età Classe}, Sesso {Sesso}, Patologia {Patologia}, Anno Inizio Sintomi {Inizio Sintomi Anno}, Popolazione Residente {Popolazione Residente}" ; rr:language "it" ]
+  ] ;
+] .
+
+<#LabelSexYesOrNoTassoReg>
+rr:language "it" ;
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:controls_if ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:bool_b ;
+    rr:objectMap <#SexIsNull>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:any_true ;
+    rr:objectMap [ rr:template "Indicatore Tasso Regione(x 100000) con valore {Tasso Regione(x 100000)} - Classe d'età {Età Classe}, Patologia {Patologia}, Anno Inizio Sintomi {Inizio Sintomi Anno}, Popolazione Residente {Popolazione Residente}" ; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:any_false ;
+    rr:objectMap [ rr:template "Indicatore Tasso Regione(x 100000) con valore {Tasso Regione(x 100000)} - Classe d'età {Età Classe}, Sesso {Sesso}, Patologia {Patologia}, Anno Inizio Sintomi {Inizio Sintomi Anno}, Popolazione Residente {Popolazione Residente}" ; rr:language "it" ]
+  ] ;
+] .
+
+
+<#LabelSexYesOrNoNDossier>
+rr:language "it" ;
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:controls_if ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:bool_b ;
+    rr:objectMap <#SexIsNull>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:any_true ;
+    rr:objectMap [ rr:template "Indicatore Numero Pratiche con valore {Numero Pratiche} - Classe d'età {Età Classe}, Patologia {Patologia}, Anno Inizio Sintomi {Inizio Sintomi Anno}, Popolazione Residente {Popolazione Residente}" ; rr:language "it" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:any_false ;
+    rr:objectMap [ rr:template "Indicatore Numero Pratiche con valore {Numero Pratiche} - Classe d'età {Età Classe}, Sesso {Sesso}, Patologia {Patologia}, Anno Inizio Sintomi {Inizio Sintomi Anno}, Popolazione Residente {Popolazione Residente}" ; rr:language "it" ]
+  ] ;
+] .
+
+
+<#SexIsNull>
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant idlab-fn:isNull ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "Sesso" ]
+  ]
+] .
+
+
+<#MD5NumberPratiche>
+fnml:functionValue [
+    rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:string_md5 ]
+    ];
+    rr:predicateObjectMap [
+     rr:predicate grel:valueParameter ;
+     rr:objectMap <#ArrayJoin4NumPratiche>
+    ]
+].
+
+<#MD5Tasso>
+fnml:functionValue [
+    rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:string_md5 ]
+    ];
+    rr:predicateObjectMap [
+     rr:predicate grel:valueParameter ;
+     rr:objectMap <#ArrayJoin4Tasso>
+    ]
+].
+
+<#MD5TassoRegione>
+fnml:functionValue [
+    rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:string_md5 ]
+    ];
+    rr:predicateObjectMap [
+     rr:predicate grel:valueParameter ;
+     rr:objectMap <#ArrayJoin4TassoRegione>
+    ]
+].
+
+<#ArrayJoin4Tasso>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Popolazione Residente"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Inizio Sintomi Anno"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Età Classe"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Sesso"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Tasso"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Patologia"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "" ]
+ ]
+] .
+
+<#ArrayJoin4TassoRegione>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Popolazione Residente"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Inizio Sintomi Anno"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Età Classe"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Sesso"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Tasso Regione(x 100000)"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Patologia"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "" ]
+ ]
+] .
+
+
+<#MD5TassoEtaSesso>
+fnml:functionValue [
+    rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:string_md5 ]
+    ];
+    rr:predicateObjectMap [
+     rr:predicate grel:valueParameter ;
+     rr:objectMap <#ArrayJoin4TassoEtaSesso>
+    ]
+].
+
+<#ArrayJoin4TassoEtaSesso>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Popolazione Residente"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Inizio Sintomi Anno"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Età Classe"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Sesso"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Tasso Età-Sesso (x100'000)"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Patologia"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "" ]
+ ]
+] .
+
+<#ArrayJoin4NumPratiche>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Popolazione Residente"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Inizio Sintomi Anno"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Età Classe"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Sesso"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Numero Pratiche"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Patologia"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "" ]
+ ]
+] .
+
+<#MD5ClinicalCohort>
+fnml:functionValue [
+    rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:string_md5 ]
+    ];
+    rr:predicateObjectMap [
+     rr:predicate grel:valueParameter ;
+     rr:objectMap <#arrayJoinClinicalCohort>
+    ]
+].
+
+
+<#arrayJoinClinicalCohort>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Popolazione Residente"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Inizio Sintomi Anno"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Età Classe"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Sesso"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "Patologia"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "" ]
+ ]
+] .
+
+<#URIDisease>
+rr:termType rr:IRI;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [ rr:constant "https://w3id.org/whow/controlled-vocabulary/diseases"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  <#SlugifyDisease>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "/" ]
+ ];
+].
+
+<#URIEta>
+rr:termType rr:IRI ;
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:controls_if ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:bool_b ;
+    rr:objectMap <#da85>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:any_true ;
+    rr:objectMap <#URIwithSpaceMgmt>
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:any_false ;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/criterion-description/age-{Età Classe}" ]
+  ] ;
+] .
+
+<#URIwithSpaceMgmt>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/criterion-description/age"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  <#slugifyEtà>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "-" ]
+ ];
+].
+
+
+<#da85>
+fnml:functionValue [
+    rr:predicateObjectMap [
+        rr:predicate fno:executes ;
+        rr:objectMap [ rr:constant idlab-fn:equal ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate grel:valueParameter ;
+        rr:objectMap [ rr:constant "Da 85" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate grel:valueParameter2 ;
+        rr:objectMap [ rml:reference "Età Classe" ]
+    ]
+] .
+
+<#slugifyEtà>
+fnml:functionValue [
+	rr:predicateObjectMap [
+		rr:predicate fno:executes ;
+		rr:objectMap [ rr:constant idlab-fn:slugify ]
+	];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "Età Classe"]
+  ] ;
+ ] .
+
+
+
+<#SlugifyDisease>
+fnml:functionValue [
+	rr:predicateObjectMap [
+		rr:predicate fno:executes ;
+		rr:objectMap [ rr:constant idlab-fn:slugify ]
+	];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "Patologia"]
+  ] ;
+ ] .
+
+<#slugifyValueRateAgeSex>
+fnml:functionValue [
+	rr:predicateObjectMap [
+		rr:predicate fno:executes ;
+		rr:objectMap [ rr:constant idlab-fn:slugify ]
+	];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "Tasso Età-Sesso (x100'000)"]
+  ] ;
+ ] .
+
+<#slugifyValueRate>
+fnml:functionValue [
+	rr:predicateObjectMap [
+		rr:predicate fno:executes ;
+		rr:objectMap [ rr:constant idlab-fn:slugify ]
+	];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "Tasso"]
+  ] ;
+ ] .

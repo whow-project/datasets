@@ -257,6 +257,14 @@ rr:subjectMap [
    rr:predicateObjectMap [
       rr:predicate tiapit:year , ispra-top:year ;
       rr:objectMap [ rml:reference "Inizio Sintomi Anno" ; rr:datatype xsd:gYear ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate owl:sameAs ;
+      rr:objectMap [ rr:template "https://dati.isprambiente.it/ld/common/year/{Inizio Sintomi Anno}" ; rr:termType rr:IRI ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate owl:sameAs ;
+      rr:objectMap [ rr:template "https://w3id.org/arco/resource/TimeInterval/{Inizio Sintomi Anno}" ; rr:termType rr:IRI ]
    ].
 
 ##################################

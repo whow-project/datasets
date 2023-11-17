@@ -25,18 +25,18 @@
 #### LOGICAL SOURCES
 # #LogicalSourceWeatherSensorData
 <#LogicalSourceWeatherSensorData> a rml:BaseSource ;
-    rml:source  "2019-10-ats-mpntagna.csv";
+    rml:source  "2019-10-ats-brianza.csv";
     rml:referenceFormulation ql:CSV .
 
-#LogicalSourceWeatherStations
-<#LogicalSourceWeatherStations> a rml:BaseSource ;
-    rml:source "nf78-nj6b.csv";
-    rml:referenceFormulation ql:CSV .
+# #LogicalSourceWeatherStations
+# <#LogicalSourceWeatherStations> a rml:BaseSource ;
+#     rml:source "nf78-nj6b.csv";
+#     rml:referenceFormulation ql:CSV .
 
 # #LogicalSourceFeatureOfInterest
-# <#LogicalSourceFeatureOfInterest> a rml:BaseSource ;
-#     rml:source "MappingFeatureOfInterest.csv";
-#     rml:referenceFormulation ql:CSV .
+<#LogicalSourceFeatureOfInterest> a rml:BaseSource ;
+    rml:source "MappingFeatureOfInterest.csv";
+    rml:referenceFormulation ql:CSV .
 
 ##Logical Source PROVINCE RDF
 <#InputSPARQL>
@@ -104,23 +104,31 @@ rml:logicalSource <#LogicalSourceWeatherSensorData>;
   rr:predicateObjectMap [
      rr:predicate ispra-emf:hasObservationValue ;
      rr:objectMap <#URIObservationValueObject>
-     ### problema sulla feature of interest che dipende dalla proprietà osservata che sta nell'altro file e se si vuole usare la mappatura delle proprietà sugli individui dell'ontologia bisogna fare in altro modo (unire i due file)
-     #rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/observation-value/{Valore}-{Simbolo}"; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate wh-mon:hasFeatureOfInterest ;
+    rr:objectMap [
+       rr:parentTriplesMap <#FoIMapping> ;
+       rr:joinCondition [
+          rr:child "Tipologia";
+          rr:parent "Tipologia" ;
+       ]
+     ] ;
   ];
   rr:predicateObjectMap [
      rr:predicate wh-mon:hasObservedWeatherProperty ;
-     rr:objectMap [
-       rr:parentTriplesMap <#WeatherObservablePropMapping>;
-        rr:joinCondition [
-          rr:child "IdSensore";
-          rr:parent "idsensore";
-       ]
-    ] ;
+     rr:objectMap <#WeatherObservablePropMapping>
   ].
 
-<#WeatherObservablePropMapping> a rr:TriplesMap ;
-rml:logicalSource <#LogicalSourceWeatherStations> ;
+<#FoIMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceFeatureOfInterest> ;
 rr:subjectMap [
+      rr:template "https://w3id.org/whow/onto/weather-monitoring/{FeatureOfInterest}";
+      rr:termType rr:IRI
+] .
+
+<#WeatherObservablePropMapping>
+rr:termType rr:IRI ;
   fnml:functionValue [
      rr:predicateObjectMap [
        rr:predicate fno:executes ;
@@ -137,15 +145,14 @@ rr:subjectMap [
      rr:predicateObjectMap [
        rr:predicate grel:p_string_sep ;
        rr:objectMap [ rr:constant "/" ]
-     ];
-  ];
-] .
+     ]
+  ].
 
 
 
 ##### Weather Observable Property Obj
 <#WeatherObservablePropObjMapping> a rr:TriplesMap ;
-rml:logicalSource <#LogicalSourceWeatherStations> ;
+rml:logicalSource <#LogicalSourceWeatherSensorData> ;
 rr:subjectMap [
   fnml:functionValue [
      rr:predicateObjectMap [
@@ -169,33 +176,33 @@ rr:subjectMap [
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
-  rr:objectMap [ rr:template "Proprietà osservata dal sensore meteo: {tipologia}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "Proprietà osservata dal sensore meteo: {Tipologia}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
   rr:predicate ispra-top:name , l0:name ;
-  rr:objectMap [ rml:reference "tipologia" ; rr:language "it" ]
+  rr:objectMap [ rml:reference "Tipologia" ; rr:language "it" ]
 ].
 
 
 
 #### Weather Sensor Mapping
 <#WeatherSensorMapping> a rr:TriplesMap ;
-rml:logicalSource <#LogicalSourceWeatherStations> ;
+rml:logicalSource <#LogicalSourceWeatherSensorData> ;
 rr:subjectMap [
-    rr:template "https://w3id.org/italia/lombardia/data/weather-sensor/{idsensore}";
+    rr:template "https://w3id.org/italia/lombardia/data/weather-sensor/{IdSensore}";
     rr:class wh-mon:WeatherSensor
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
-  rr:objectMap [ rr:template "Sensor {idsensore}" ; rr:language "en" ]
+  rr:objectMap [ rr:template "Sensor {IdSensore}" ; rr:language "en" ]
 ];
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
-  rr:objectMap [ rr:template "Sensore {idsensore}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "Sensore {IdSensore}" ; rr:language "it" ]
 ];
 rr:predicateObjectMap [
   rr:predicate ispra-emf:isHostedBy ;
-  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/weather-station/{idstazione}" ; rr:termType rr:IRI ]
+  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/weather-station/{IdStazione}" ; rr:termType rr:IRI ]
 ].
 # rr:predicateObjectMap [
 #   rr:predicate wh-mon:hasValidityPeriod ;
@@ -299,59 +306,68 @@ rr:predicateObjectMap [
 
 ##### Weather Station Mapping #######
 <#WeatherStationMapping> a rr:TriplesMap ;
-rml:logicalSource <#LogicalSourceWeatherStations> ;
+rml:logicalSource <#LogicalSourceWeatherSensorData> ;
 rr:subjectMap [
-    rr:template "https://w3id.org/italia/lombardia/data/weather-station/{idstazione}";
+    rr:template "https://w3id.org/italia/lombardia/data/weather-station/{IdStazione}";
     rr:class wh-mon:WeatherStation
 ] ;
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
-  rr:objectMap [ rr:template "Weather Station {idstazione} - {nomestazione}" ; rr:language "en" ]
+  rr:objectMap [ rr:template "Weather Station {IdStazione} - {NomeStazione}" ; rr:language "en" ]
 ];
 rr:predicateObjectMap [
   rr:predicate rdfs:label ;
-  rr:objectMap [ rr:template "Stazione Meteo {idstazione} - {nomestazione}" ; rr:language "it" ]
+  rr:objectMap [ rr:template "Stazione Meteo {IdStazione} - {NomeStazione}" ; rr:language "it" ]
 ] ;
 rr:predicateObjectMap [
   rr:predicate ispra-top:identifier, l0:identifier ;
-  rr:objectMap [ rml:reference "idstazione" ]
+  rr:objectMap [ rml:reference "IdStazione" ]
 ] ;
 rr:predicateObjectMap [
   rr:predicate ispra-top:name , l0:name ;
-  rr:objectMap [ rml:reference "nomestazione" ; rr:language "it" ]
+  rr:objectMap [ rml:reference "NomeStazione" ; rr:language "it" ]
 ] ;
 rr:predicateObjectMap [
   rr:predicate ispra-plc:hasGeometry ;
-  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/geometry/{lat}-{lng}-{quota}" ; rr:termType rr:IRI ]
+  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/geometry/{lat}-{lng}-{Quota}" ; rr:termType rr:IRI ]
 ] ;
 rr:predicateObjectMap [
   rr:predicate ispra-plc:hasProvince ;
   rr:objectMap [
-     rr:parentTriplesMap <#ProvinceMapping> ;
+     rr:parentTriplesMap <#ProvinceIDMapping> ;
      rr:joinCondition [
-        rr:child "provincia";
+        rr:child "Provincia";
         rr:parent "provincia.value" ;
      ] ;
    ] ;
  ].
 
+<#ProvinceIDMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourcePROVINCERDF> ;
+rr:subjectMap [
+    rr:template "https://w3id.org/italia/lombardia/data/province/{ID.value}";
+    rr:termType rr:IRI
+] .
 
- # ##############################
- # ## PROVINCE LINKING
- # ##############################
 
- <#ProvinceMapping> a rr:TriplesMap ;
- rml:logicalSource <#LogicalSourcePROVINCERDF> ;
- rr:subjectMap [
-   rr:template "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/{ID.value}" ;  rr:termType rr:IRI ;
- ].
+ #
+ #
+ # # ##############################
+ # # ## PROVINCE LINKING
+ # # ##############################
+ #
+ # <#ProvinceMapping> a rr:TriplesMap ;
+ # rml:logicalSource <#LogicalSourcePROVINCERDF> ;
+ # rr:subjectMap [
+ #   rr:template "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/{ID.value}" ;  rr:termType rr:IRI ;
+ # ].
 
 
 ##### Geometry Mapping #####
 <#GeometryMapping> a rr:TriplesMap ;
-rml:logicalSource <#LogicalSourceWeatherStations> ;
+rml:logicalSource <#LogicalSourceWeatherSensorData> ;
 rr:subjectMap [
-    rr:template "https://w3id.org/italia/lombardia/data/geometry/{lat}-{lng}-{quota}";
+    rr:template "https://w3id.org/italia/lombardia/data/geometry/{lat}-{lng}-{Quota}";
     rr:class ispra-plc:Geometry , clv:Geometry
 ] ;
 rr:predicateObjectMap [
@@ -372,7 +388,7 @@ rr:predicateObjectMap [
 ] ;
 rr:predicateObjectMap [
   rr:predicate clv:alt;
-  rr:objectMap [ rml:reference "quota" ]
+  rr:objectMap [ rml:reference "Quota" ]
 ] .
 
 
@@ -403,7 +419,7 @@ rr:subjectMap [
 ] ;
 rr:predicateObjectMap [
    rr:predicate rdfs:label ;
-   rr:objectMap [ rr:template "Value {Valore} {Simbolo}" ; rr:language "en" ]
+   rr:objectMap [ rr:template "Value {Valore} {Parametro}" ; rr:language "en" ]
 ] ;
 rr:predicateObjectMap [
    rr:predicate rdfs:label ;
@@ -446,7 +462,7 @@ rr:subjectMap [
 ];
 rr:predicateObjectMap [
    rr:predicate rdfs:label ;
-   rr:objectMap [ rr:template "Unit of measure {Simbolo}" ; rr:language "en"]
+   rr:objectMap [ rr:template "Unit of measure {Parametro}" ; rr:language "en"]
 ];
 rr:predicateObjectMap [
    rr:predicate rdfs:label ;
@@ -540,7 +556,7 @@ fnml:functionValue [
   ];
   rr:predicateObjectMap [
     rr:predicate grel:p_array_a ;
-    rr:objectMap  [ rml:reference "Simbolo"]
+    rr:objectMap  [ rml:reference "Parametro"]
   ];
   rr:predicateObjectMap [
     rr:predicate grel:p_array_a ;
@@ -553,6 +569,34 @@ fnml:functionValue [
   rr:predicateObjectMap [
     rr:predicate grel:p_array_a ;
     rr:objectMap  [ rml:reference "nome_ats"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "Tipologia"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "IdStazione"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "NomeStazione"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "Quota"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "lat"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "lng"]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap  [ rml:reference "Provincia"]
   ];
   rr:predicateObjectMap [
    rr:predicate grel:p_string_sep ;
@@ -750,7 +794,7 @@ fnml:functionValue [
 	];
   rr:predicateObjectMap [
     rr:predicate idlab-fn:str ;
-    rr:objectMap [ rml:reference "tipologia"]
+    rr:objectMap [ rml:reference "Tipologia"]
   ]
  ] .
 

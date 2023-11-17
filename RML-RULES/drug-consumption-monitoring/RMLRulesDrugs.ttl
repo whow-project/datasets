@@ -155,6 +155,14 @@ rr:predicateObjectMap [
    rr:predicateObjectMap [
       rr:predicate tiapit:year , ispra-top:year ;
       rr:objectMap [ rml:reference "anno" ; rr:datatype xsd:gYear ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate owl:sameAs ;
+      rr:objectMap [ rr:template "https://dati.isprambiente.it/ld/common/year/{anno}" ; rr:termType rr:IRI ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate owl:sameAs ;
+      rr:objectMap [ rr:template "https://w3id.org/arco/resource/TimeInterval/{anno}" ; rr:termType rr:IRI ]
    ].
 
 ##################################

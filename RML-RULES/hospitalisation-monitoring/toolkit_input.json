@@ -1,0 +1,50 @@
+{
+	"bound_services": {
+		"https://w3id.org/whow/onto/flow/ingestion": {
+			"endpoint": "ws://host.docker.internal:8765/ingestion",
+			"data": {
+				"title": "Test data catalog",
+				"description": "Some description for the test data catalog.",
+				"distributions": [
+					{"id": "HOSPITALISATION",
+					 "mimetype": "text/csv",
+					 "accessURL": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/hospitalisation-monitoring/rzni-6n8h.csv"}
+				],
+				"store": true
+			}
+		},
+		"https://w3id.org/whow/onto/flow/preprocessing": {
+			"endpoint": "ws://host.docker.internal:8765/preprocessor",
+			"data": {"ids": ["HOSPITALISATION"]}
+		},
+		"https://w3id.org/whow/onto/flow/mapping": {
+			"endpoint": "ws://host.docker.internal:8765/mapping",
+			"data": {
+				"graphs": [{
+					"id": "HOSPITALISATION",
+					"rmls": [
+						{
+							"uri": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/hospitalisation-monitoring/RMLRulesHospitalHealthcare_pyrml.ttl"
+						}
+					]
+				}]
+			}
+		},
+		"https://w3id.org/whow/onto/flow/metadating": {
+			"endpoint": "ws://host.docker.internal:8765/metadating",
+			"data": {
+				"meta": [
+					{
+						"id": "HOSPITALISATION",
+						"dataset_id": "https://hub.dati.lombardia.it/d/rzni-6n8h",
+						"distribution_id": "https://hub.dati.lombardia.it/d/rzni-6n8h-ttl",
+						"configuration": "https://raw.githubusercontent.com/whow-project/datasets/main/RML-RULES/hospitalisation-monitoring/metadata_degenze.ini"
+					}
+				]
+			}
+		},
+		"https://w3id.org/whow/onto/flow/validation": {
+			"endpoint": "ws://host.docker.internal:8765/validation"
+		}
+	} 
+}

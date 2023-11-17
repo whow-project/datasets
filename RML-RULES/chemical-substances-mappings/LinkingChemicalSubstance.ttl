@@ -29,24 +29,24 @@
     rml:source "queryCAS.csv";
     rml:referenceFormulation ql:CSV .
 
-# ##Wikidata SPARQL ENPOINT
-# <#InputSPARQL>
-#     a sd:Service ;
-#     sd:endpoint <https://query.wikidata.org/sparql> ;
-#     sd:supportedLanguage sd:SPARQL11Query ;
-#     sd:resultFormat <http://www.w3.org/ns/formats/SPARQL_Results_JSON> .
+##LEO SPARQL ENPOINT
+<#InputSPARQL>
+     a sd:Service ;
+     sd:endpoint <https://opendata.leo-italy.eu/sparql> ;
+     sd:supportedLanguage sd:SPARQL11Query ;
+     sd:resultFormat <http://www.w3.org/ns/formats/SPARQL_Results_JSON> .
 
-# <#LogicalSourceChemicalRDF> a rml:BaseSource ;
-#      rml:source <#InputSPARQL>;
-#      rml:referenceFormulation ql:JSONPath;
-#      rml:iterator "$.results.bindings[*]";
-#      rml:query """
-#      SELECT DISTINCT ?cas ?s
-#      WHERE {
-#       ?s wdt:P231 ?cas .
-#      }
-#      """
-# .
+ <#LogicalSourceChemicalLEORDF> a rml:BaseSource ;
+      rml:source <#InputSPARQL>;
+      rml:referenceFormulation ql:JSONPath;
+      rml:iterator "$.results.bindings[*]";
+      rml:query """
+      SELECT ?uri (SUBSTR(str(?uri), 46) as ?cas)
+      WHERE {
+        ?uri a <https://w3id.org/leo/onto/livestockfarm-description/ChemicalSubstance> .
+      }
+      """
+ .
 
 ############# CSMapping ###########
 <#ChemicalSubstancesLinkingMapping> a rr:TriplesMap ;
@@ -63,9 +63,17 @@ rr:predicateObjectMap [
         rr:parent "cas" ;
      ]
    ]
- ].
-
-
+ ];
+ rr:predicateObjectMap [
+   rr:predicate owl:sameAs ;
+   rr:objectMap [
+      rr:parentTriplesMap <#CASLinkingLEOMapping> ;
+      rr:joinCondition [
+         rr:child "CAS";
+         rr:parent "cas.value" ;
+      ]
+    ]
+  ].
 
 
 ########################
@@ -77,3 +85,10 @@ rml:logicalSource <#LogicalSourceChemicalSubstancesWikidata> ;
       rml:reference "s" ;
       rr:termType rr:IRI
   ].
+
+<#CASLinkingLEOMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceChemicalLEORDF> ;
+  rr:subjectMap [
+    rml:reference "uri.value" ;
+    rr:termType rr:IRI
+  ] .

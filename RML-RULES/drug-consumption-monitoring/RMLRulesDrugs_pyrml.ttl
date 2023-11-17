@@ -1,0 +1,653 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix idlab-fn: <http://example.com/idlab/function/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix l0:  <https://w3id.org/italia/onto/l0/> .
+@prefix tiapit:  <https://w3id.org/italia/onto/TI/> .
+@prefix clvapit:  <https://w3id.org/italia/onto/CLV/> .
+@prefix ispra-top: <https://w3id.org/italia/env/onto/top/> .
+@prefix ispra-plc: <https://w3id.org/italia/env/onto/place/> .
+@prefix hm: <https://w3id.org/whow/onto/health-monitoring/> .
+@prefix ispra-emf: <https://w3id.org/italia/env/onto/inspire-mf/>.
+@base <https://w3id.org/italia/lombardia/data/> .
+
+# #LogicalSourceDrugs
+<#LogicalSourceDrugs> a rml:BaseSource ;
+    rml:source "{{ DRUGS }}";
+    rml:referenceFormulation ql:CSV .
+
+###########################################################
+##                  MAPPING RULES
+##########################################################
+
+
+# #################################
+# ## DDD per ATC livello 1 INDICATOR MAPPING
+# #################################
+<#DDDMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceDrugs> ;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/healthcare-indicator-calculation/ddd"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#MD5DDD>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "-" ]
+   ]
+  ];
+  rr:class hm:DrugDistributionIndicatorCalculation
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Indicatore dosi totali per singolo giorno con valore {ddd_per_atc_livello_1} - Classe d'età {fascia_eta}, sesso {genere}, ATC Livello 1: {descrizione_atc_livello_1}, Popolazione {popolazione}, Anno {anno}" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:hasHealthcareIndicatorValue;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/value/{ddd_per_atc_livello_1}-adimensionale" ; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:doneForHCIndicator;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/indicator/ddd" ; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:hasLocation;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/location/{coordinata_geografica_x}-{coordinata_geografica_y}" ; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:isIndicatorOf;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/health-agency/{codice_ats_residenza}" ; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:ofClinicalCohort;
+    rr:objectMap <#URIClinicalCohort>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:atTime , tiapit:hasTemporalCoverage;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/year/{anno}" ; rr:termType rr:IRI ]
+  ].
+
+
+#####################
+# LOCATION OBJ MAPPING
+#######################
+<#LocationMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceDrugs> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/location/{coordinata_geografica_x}-{coordinata_geografica_y}";
+  rr:class ispra-top:Location, l0:Location
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Luogo: {coordinata_geografica_x} - {coordinata_geografica_y}, ATS: {descrizione_ats_residenza}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-plc:hasGeometry;
+  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/geometry/{coordinata_geografica_x}-{coordinata_geografica_y}" ; rr:termType rr:IRI ]
+];
+rr:predicateObjectMap [
+  rr:predicate hm:isUnderResponsability;
+  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/health-agency/{codice_ats_residenza}" ; rr:termType rr:IRI ]
+].
+
+###################
+# GEOMETRY OBJ MAPPING
+####################
+<#GeometryObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceDrugs> ;
+rr:subjectMap [
+    rr:template "https://w3id.org/italia/lombardia/data/geometry/{coordinata_geografica_x}-{coordinata_geografica_y}";
+    rr:class ispra-plc:Geometry , clvapit:Geometry
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Geometria: {coordinata_geografica_x} - {coordinata_geografica_y}" ; rr:language "it" ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate ispra-plc:lat, clvapit:lat ;
+  rr:objectMap [ rml:reference "coordinata_geografica_y" ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate ispra-plc:long, clvapit:long ;
+  rr:objectMap [ rml:reference "coordinata_geografica_x" ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate ispra-top:isClassifiedBy ;
+  rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/geometry-type/point" ;rr:termTyoe rr:IRI ]
+] .
+
+
+
+####################
+# YEAR OBJ MAPPING
+####################
+<#TEYearMapping> a rr:TriplesMap ;
+  rml:logicalSource <#LogicalSourceDrugs>;
+  rr:subjectMap [
+    rr:template "https://w3id.org/italia/lombardia/data/year/{anno}";
+    rr:class tiapit:Year , ispra-top:Year
+  ];
+  rr:predicateObjectMap [
+     rr:predicate rdfs:label ;
+     rr:objectMap [ rr:template "Year: {anno}" ; rr:language "en" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate rdfs:label ;
+      rr:objectMap [ rr:template "Anno: {anno}" ; rr:language "it" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate tiapit:year , ispra-top:year ;
+      rr:objectMap [ rml:reference "anno" ; rr:datatype xsd:gYear ]
+   ].
+
+##################################
+# DDD Indicator Obj Mapping
+##################################
+<#NDossierObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceDrugs> ;
+rr:subjectMap [
+    rr:constant "https://w3id.org/italia/lombardia/data/indicator/ddd";
+    rr:class hm:HealthcareIndicator
+] ;
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:constant "Indicator: assumed average maintenance dose per day for a drug used for its main indication in adults" ; rr:language "en" ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rr:template "Indicatore: Dosi totali di farmaco per il singolo giorno" ; rr:language "it" ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate ispra-top:isClassifiedBy ;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/indicator-type/outcome" ; rr:termType rr:IRI ]
+ ].
+
+
+# #################################
+# ## INDICATOR TYPE Outcome OBJ MAPPING
+# #################################
+<#IndicatorTypeOutcomeObjMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceDrugs> ;
+rr:subjectMap [
+    rr:constant "https://w3id.org/italia/lombardia/data/indicator-type/outcome";
+    rr:class ispra-top:Concept
+] ;
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:constant "Outcome Indicator" ; rr:language "en" ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rr:constant "Indicatore di Risultato"; rr:language "it"]
+ ] ;
+ rr:predicateObjectMap [
+    rr:predicate owl:sameAs ;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/controlled-vocabulary/classifications-for-indicators/indicator-types/outcome"; rr:termType rr:IRI ]
+ ] .
+
+
+# #################################
+# ## INDICATOR VALUE DDD OBJ MAPPING
+# #################################
+<#IndicatorValueDDDMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceDrugs> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/value/{ddd_per_atc_livello_1}-adimensionale";
+  rr:class ispra-top:Value
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Valore: {ddd_per_atc_livello_1}" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:value;
+    rr:objectMap [ rml:reference "ddd_per_atc_livello_1" ; rr:datatyoe xsd:decimal ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:hasUnitOfMeasure;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/measurement-unit/adimensionale" ; rr:termType rr:IRI ]
+  ].
+
+
+
+# #################################
+# ## SEX CRITERION MAPPING
+# #################################
+<#SexCriterionMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceDrugs> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/criterion/sex";
+  rr:class hm:Criterion
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Criterio: Sesso" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Criterion: Sex" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:name;
+    rr:objectMap [ rr:constant "Sesso" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:name;
+    rr:objectMap [ rr:constant "Sex" ; rr:language "en" ]
+  ].
+
+# #################################
+# ## INTERVAL AGE CRITERION MAPPING
+# #################################
+<#IntervalAgeMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceDrugs> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/criterion/age";
+  rr:class hm:Criterion
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Criterio: Fascia d'età" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Criterion: Age Range" ; rr:language "en" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:name;
+    rr:objectMap [ rr:constant "Fascia d'età" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate ispra-top:name;
+    rr:objectMap [ rr:constant "Age Range" ; rr:language "en" ]
+  ].
+
+
+##################################
+# Clinical Cohort URI for Ind. Cal.
+##################################
+<#URIClinicalCohort>
+rr:termType rr:IRI ;
+  fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:array_join ]
+     ] ;
+     rr:predicateObjectMap [
+       rr:predicate grel:p_array_a ;
+       rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/clincal-cohort"]
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:p_array_a ;
+       rr:objectMap  <#MD5ClinicalCohort>
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:p_string_sep ;
+       rr:objectMap [ rr:constant "/" ]
+     ]
+    ].
+
+
+# #################################
+# ## Clinical cohort MAPPING
+# #################################
+<#ClinicalcohortMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceDrugs> ;
+ rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/clincal-cohort"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#MD5ClinicalCohort>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ]
+  ];
+  rr:class hm:ClinicalCohort , hm:Population
+ ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rr:template "Coorte Clinica: Popolazione {popolazione}, Sesso {genere}, Fascia d'età: {fascia_eta}, Medicinale: {descrizione_atc_livello_1}" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:totalValue;
+    rr:objectMap [ rml:reference "popolazione" ; rr:datatype xsd:float ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:assumed , hm:hasScope ;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/drug/{atc_livello_1}" ; rr:termTyoe rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:hasCohortCriteriaDescription;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/criteria-description/sex-{genere}"; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate hm:hasCohortCriteriaDescription;
+    rr:objectMap <#URIEta>
+  ].
+
+##############################
+# MEDICINALE OBJ MAPPING
+###############################
+<#DrugMapping> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceDrugs> ;
+ rr:subjectMap [
+     rr:template "https://w3id.org/italia/lombardia/data/drug/{atc_livello_1}";
+     rr:class hm:Drug, ispra-top:Concept
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate rdfs:label;
+   rr:objectMap [ rr:template "Medicinale: {descrizione_atc_livello_1}" ; rr:language "it" ]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate ispra-top:identifier, l0:identifier;
+   rr:objectMap [ rml:reference "atc_livello_1" ]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate ispra-top:name, l0:name;
+   rr:objectMap [ rml:reference "descrizione_atc_livello_1" ]
+ ].
+
+
+############################
+# SEX CRITERION DESCRIPTION
+############################
+<#SexCriterionDescription> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceDrugs> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/criteria-description/sex-{genere}";
+  rr:class hm:Criterion
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Descrizione criterio Sesso con valore {genere}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Criterion Description Sex with value {genere}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:value;
+  rr:objectMap [ rml:reference "genere" ]
+];
+rr:predicateObjectMap [
+  rr:predicate hm:hasCriterion;
+  rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/criterion/sex" ; rr:termType rr:IRI ]
+].
+
+############################
+# AGE CRITERION DESCRIPTION
+############################
+<#AgeCriterionDescription> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceDrugs> ;
+rr:subjectMap [
+  fnml:functionValue [
+    rr:predicateObjectMap [
+      rr:predicate fno:executes ;
+      rr:objectMap [ rr:constant grel:controls_if ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate grel:bool_b ;
+      rr:objectMap <#80EPiu>
+    ];
+    rr:predicateObjectMap [
+      rr:predicate grel:any_true ;
+      rr:objectMap <#Slugify80>
+    ] ;
+    rr:predicateObjectMap [
+      rr:predicate grel:any_false ;
+      rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/criterion-description/age-{fascia_eta}" ]
+    ]
+  ] ;
+  rr:class hm:Criterion
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Descrizione criterio Fascia d'Età con valore {fascia_eta}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Criterion Description Age Range with value {fascia_eta}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:value;
+  rr:objectMap [ rml:reference "fascia_eta" ]
+];
+rr:predicateObjectMap [
+  rr:predicate hm:hasCriterion;
+  rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/criterion/age" ; rr:termType rr:IRI ]
+].
+
+
+
+
+#############
+#FUNCTIONS
+#############
+
+
+
+<#MD5DDD>
+fnml:functionValue [
+    rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:string_md5 ]
+    ];
+    rr:predicateObjectMap [
+     rr:predicate grel:valueParameter ;
+     rr:objectMap <#ArrayJoin4DDD>
+    ]
+].
+
+
+<#ArrayJoin4DDD>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "popolazione"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "anno"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "fascia_eta"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "genere"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "ddd_per_atc_livello_1"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "atc_livello_1"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "descrizione_atc_livello_1"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "descrizione_ats_residenza"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "codice_ats_residenza"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "coordinata_geografica_x"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "coordinata_geografica_y"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "" ]
+ ]
+] .
+
+
+
+<#MD5ClinicalCohort>
+fnml:functionValue [
+    rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:string_md5 ]
+    ];
+    rr:predicateObjectMap [
+     rr:predicate grel:valueParameter ;
+     rr:objectMap <#arrayJoinClinicalCohort>
+    ]
+].
+
+<#arrayJoinClinicalCohort>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "popolazione"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "anno"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "fascia_eta"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "genere"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "atc_livello_1"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "descrizione_atc_livello_1"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "descrizione_ats_residenza"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [rml:reference "codice_ats_residenza"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "" ]
+ ]
+] .
+
+
+<#URIEta>
+rr:termType rr:IRI ;
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:controls_if ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:bool_b ;
+    rr:objectMap <#80EPiu>
+  ];
+  rr:predicateObjectMap [
+    rr:predicate grel:any_true ;
+    rr:objectMap <#Slugify80>
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:any_false ;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/criterion-description/age-{fascia_eta}" ]
+  ] ;
+] .
+
+<#Slugify80>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/criterion-description/age"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  <#slugifyEtà>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "-" ]
+ ];
+].
+
+
+<#80EPiu>
+fnml:functionValue [
+    rr:predicateObjectMap [
+        rr:predicate fno:executes ;
+        rr:objectMap [ rr:constant idlab-fn:equal ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate grel:valueParameter ;
+        rr:objectMap [ rr:constant "80 e +" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate grel:valueParameter2 ;
+        rr:objectMap [ rml:reference "fascia_eta" ]
+    ]
+] .
+
+<#slugifyEtà>
+fnml:functionValue [
+	rr:predicateObjectMap [
+		rr:predicate fno:executes ;
+		rr:objectMap [ rr:constant idlab-fn:slugify ]
+	];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "fascia_eta"]
+  ] ;
+ ] .

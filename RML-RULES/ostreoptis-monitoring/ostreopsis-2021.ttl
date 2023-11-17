@@ -27,19 +27,9 @@
   skos:prefLabel "Ostreopsis ovata";
   ispra-top:hasUniqueIdentifier <https://w3id.org/italia/env/ld/identifier/110068> .
 
-<https://w3id.org/italia/env/ld/common/year/2004> owl:sameAs <https://w3id.org/italia/lombardia/data/year/2004> .
-
-<https://w3id.org/italia/env/ld/common/year/2006> owl:sameAs <https://w3id.org/italia/lombardia/data/year/2006> .
-
-<https://w3id.org/italia/env/ld/common/year/2014> owl:sameAs <https://w3id.org/italia/lombardia/data/year/2014> .
-
-<https://w3id.org/italia/env/ld/common/year/2018> owl:sameAs <https://w3id.org/italia/lombardia/data/year/2018> .
-
 <https://w3id.org/italia/env/ld/common/year/2020> owl:sameAs <https://w3id.org/italia/lombardia/data/year/2020> .
 
 <https://w3id.org/italia/env/ld/common/year/2021> owl:sameAs <https://w3id.org/italia/lombardia/data/year/2021> .
-
-<https://w3id.org/italia/env/ld/common/year/2024> owl:sameAs <https://w3id.org/italia/lombardia/data/year/2024> .
 
 <https://w3id.org/italia/env/ld/geometry/36.872639-15.137889> a ispra-plc:Geometry,
     clv:Geometry;
@@ -6964,26 +6954,6 @@
   l0:identifier "ZOAG";
   l0:name "Spiaggia Centrale - 079"@it .
 
-<https://w3id.org/italia/env/ld/temporal-entity/(2004-08-21)> a ispra-top:TemporalEntity;
-  rdfs:label "Periodo Temporale: 2004-08-21"@it, "Temporal Entity: 2004-08-21"@en;
-  ispra-top:time "2004-08-21"^^xsd:date .
-
-<https://w3id.org/italia/env/ld/temporal-entity/(2006-07-21)> a ispra-top:TemporalEntity;
-  rdfs:label "Periodo Temporale: 2006-07-21"@it, "Temporal Entity: 2006-07-21"@en;
-  ispra-top:time "2006-07-21"^^xsd:date .
-
-<https://w3id.org/italia/env/ld/temporal-entity/(2014-09-21)> a ispra-top:TemporalEntity;
-  rdfs:label "Periodo Temporale: 2014-09-21"@it, "Temporal Entity: 2014-09-21"@en;
-  ispra-top:time "2014-09-21"^^xsd:date .
-
-<https://w3id.org/italia/env/ld/temporal-entity/(2018-08-21)> a ispra-top:TemporalEntity;
-  rdfs:label "Periodo Temporale: 2018-08-21"@it, "Temporal Entity: 2018-08-21"@en;
-  ispra-top:time "2018-08-21"^^xsd:date .
-
-<https://w3id.org/italia/env/ld/temporal-entity/(2020-07-21)> a ispra-top:TemporalEntity;
-  rdfs:label "Periodo Temporale: 2020-07-21"@it, "Temporal Entity: 2020-07-21"@en;
-  ispra-top:time "2020-07-21"^^xsd:date .
-
 <https://w3id.org/italia/env/ld/temporal-entity/(2020-10-07)> a ispra-top:TemporalEntity;
   rdfs:label "Periodo Temporale: 2020-10-07"@it, "Temporal Entity: 2020-10-07"@en;
   ispra-top:time "2020-10-07"^^xsd:date .
@@ -7360,10 +7330,6 @@
   rdfs:label "Periodo Temporale: 2021-12-08"@it, "Temporal Entity: 2021-12-08"@en;
   ispra-top:time "2021-12-08"^^xsd:date .
 
-<https://w3id.org/italia/env/ld/temporal-entity/(2024-06-21)> a ispra-top:TemporalEntity;
-  rdfs:label "Periodo Temporale: 2024-06-21"@it, "Temporal Entity: 2024-06-21"@en;
-  ispra-top:time "2024-06-21"^^xsd:date .
-
 <https://w3id.org/italia/env/ld/unit-of-measure/cell-g-fw> a ispra-top:UnitOfMeasure;
   rdfs:label "Unit of Measure cells/gram fresh weight (cell/g fw)"@en, "Unità di Misura cellule/grammo peso fresco (cell/g fw)"@it;
   ispra-top:name "Unit of Measure cells/gram fresh weight (cell/g fw)"@en, "Unità di Misura cellule/grammo peso fresco (cell/g fw)"@it .
@@ -7685,19 +7651,6 @@
   w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
   w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/40.839444444444446-8.414444444444445>;
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/28345-cell-l>, <https://w3id.org/italia/env/ld/observation-value/303033-cell-g-fw>;
-  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
-
-<https://w3id.org/italia/env/ld/water-observation/0659fed9d6b887b307a89b2ca26e4140>
-  a w-mon:WaterBiologicalQualityParameterObservation;
-  rdfs:label "Observation of Ostreopsis ovata with value 3200 with sample point in Cala Rossa done at 2020-07-21."@en,
-    "Osservazione di Ostreopsis ovata con valore 3200 con punto prelievo Cala Rossa, fatta il 2020-07-21."@it;
-  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2020-07-21)>;
-  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
-  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2020>;
-  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
-  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.05715-15.294983333333333>;
-  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/2373-cell-g-fw>,
-    <https://w3id.org/italia/env/ld/observation-value/3200-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
 <https://w3id.org/italia/env/ld/water-observation/0664145bf59015430e4bb4db76d96da2>
@@ -8632,6 +8585,18 @@
   w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
   w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.2543-13.600222>;
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/2080-cell-l>, <https://w3id.org/italia/env/ld/observation-value/7553-cell-g-fw>;
+  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
+
+<https://w3id.org/italia/env/ld/water-observation/1adafb08cb285e2a764f9aa847730a6b>
+  a w-mon:WaterBiologicalQualityParameterObservation;
+  rdfs:label "Observation of Ostreopsis ovata with value 0 with sample point in Calabernardo done at 2021-08-04."@en,
+    "Osservazione di Ostreopsis ovata con valore 0 con punto prelievo Calabernardo, fatta il 2021-08-04."@it;
+  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2021-08-04)>;
+  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
+  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2021>;
+  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
+  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/36.872639-15.137889>;
+  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/0-cell-l>, <https://w3id.org/italia/env/ld/observation-value/1364-cell-g-fw>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
 <https://w3id.org/italia/env/ld/water-observation/1b1c376088acb11155f93768c89d8880>
@@ -9874,18 +9839,6 @@
     <https://w3id.org/italia/env/ld/observation-value/37640-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
-<https://w3id.org/italia/env/ld/water-observation/2f7f2d2a5024b47acb5d6e483e8d1b96>
-  a w-mon:WaterBiologicalQualityParameterObservation;
-  rdfs:label "Observation of Ostreopsis ovata with value 320 with sample point in Cala Rossa done at 2014-09-21."@en,
-    "Osservazione di Ostreopsis ovata con valore 320 con punto prelievo Cala Rossa, fatta il 2014-09-21."@it;
-  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2014-09-21)>;
-  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
-  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2014>;
-  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
-  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.05715-15.294983333333333>;
-  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/320-cell-l>, <https://w3id.org/italia/env/ld/observation-value/773-cell-g-fw>;
-  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
-
 <https://w3id.org/italia/env/ld/water-observation/2fab1e46c32e211f061e9ea01d50da9a>
   a w-mon:WaterBiologicalQualityParameterObservation;
   rdfs:label "Observation of Ostreopsis ovata with value 0 with sample point in Hotel Majestic - 096 done at 2021-06-28."@en,
@@ -10005,6 +9958,19 @@
   w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
   w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/43.591503-12.41504>;
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/0-cell-g-fw>, <https://w3id.org/italia/env/ld/observation-value/0-cell-l>;
+  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
+
+<https://w3id.org/italia/env/ld/water-observation/329170fd5b4fc1ecc236fafe41ef497f>
+  a w-mon:WaterBiologicalQualityParameterObservation;
+  rdfs:label "Observation of Ostreopsis ovata with value 23280 with sample point in Cala Rossa done at 2021-06-24."@en,
+    "Osservazione di Ostreopsis ovata con valore 23280 con punto prelievo Cala Rossa, fatta il 2021-06-24."@it;
+  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2021-06-24)>;
+  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
+  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2021>;
+  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
+  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.05715-15.294983333333333>;
+  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/219213-cell-g-fw>,
+    <https://w3id.org/italia/env/ld/observation-value/23280-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
 <https://w3id.org/italia/env/ld/water-observation/32d1fb88c8490bc366b28536fd7730bb>
@@ -10440,19 +10406,6 @@
   w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
   w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/39.16375-16.138277777777777>;
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/120-cell-l>;
-  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
-
-<https://w3id.org/italia/env/ld/water-observation/3b1603478185179d4556519677a3a9a0>
-  a w-mon:WaterBiologicalQualityParameterObservation;
-  rdfs:label "Observation of Ostreopsis ovata with value 480 with sample point in Cala Rossa done at 2004-08-21."@en,
-    "Osservazione di Ostreopsis ovata con valore 480 con punto prelievo Cala Rossa, fatta il 2004-08-21."@it;
-  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2004-08-21)>;
-  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
-  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2004>;
-  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
-  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.05715-15.294983333333333>;
-  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/286-cell-g-fw>,
-    <https://w3id.org/italia/env/ld/observation-value/480-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
 <https://w3id.org/italia/env/ld/water-observation/3b3acf312789710f245b76f283404bed>
@@ -12065,6 +12018,18 @@
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/%3C60-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
+<https://w3id.org/italia/env/ld/water-observation/564eeec73d71179593835e5834c558d4>
+  a w-mon:WaterBiologicalQualityParameterObservation;
+  rdfs:label "Observation of Ostreopsis ovata with value 1920 with sample point in Punta della Mola done at 2021-07-06."@en,
+    "Osservazione di Ostreopsis ovata con valore 1920 con punto prelievo Punta della Mola, fatta il 2021-07-06."@it;
+  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2021-07-06)>;
+  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
+  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2021>;
+  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
+  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.040203-15.307483>;
+  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/1920-cell-l>, <https://w3id.org/italia/env/ld/observation-value/21898-cell-g-fw>;
+  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
+
 <https://w3id.org/italia/env/ld/water-observation/56ce8903601d0ed14c12562b1318f6dc>
   a w-mon:WaterBiologicalQualityParameterObservation;
   rdfs:label "Observation of Ostreopsis ovata with value 820 with sample point in Calamosca done at 2021-08-05."@en,
@@ -12224,18 +12189,6 @@
   w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
   w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/38.03161111-16.14405>;
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/540-cell-l>, <https://w3id.org/italia/env/ld/observation-value/92-cell-g-fw>;
-  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
-
-<https://w3id.org/italia/env/ld/water-observation/59241a99fc8b9d537cdb18e364cf0fe9>
-  a w-mon:WaterBiologicalQualityParameterObservation;
-  rdfs:label "Observation of Ostreopsis ovata with value 2880 with sample point in Calabernardo done at 2006-07-21."@en,
-    "Osservazione di Ostreopsis ovata con valore 2880 con punto prelievo Calabernardo, fatta il 2006-07-21."@it;
-  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2006-07-21)>;
-  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
-  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2006>;
-  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
-  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/36.872639-15.137889>;
-  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/2880-cell-l>, <https://w3id.org/italia/env/ld/observation-value/5099-cell-g-fw>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
 <https://w3id.org/italia/env/ld/water-observation/592b671e066b9417d6e1b31459f7216a>
@@ -12465,6 +12418,19 @@
   w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
   w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/40.62838528-14.36896797>;
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/2571-cell-g-fw>;
+  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
+
+<https://w3id.org/italia/env/ld/water-observation/5d6d2d930ea5fee765e1bdacc0be5fbf>
+  a w-mon:WaterBiologicalQualityParameterObservation;
+  rdfs:label "Observation of Ostreopsis ovata with value 3200 with sample point in Cala Rossa done at 2021-07-20."@en,
+    "Osservazione di Ostreopsis ovata con valore 3200 con punto prelievo Cala Rossa, fatta il 2021-07-20."@it;
+  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2021-07-20)>;
+  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
+  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2021>;
+  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
+  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.05715-15.294983333333333>;
+  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/2373-cell-g-fw>,
+    <https://w3id.org/italia/env/ld/observation-value/3200-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
 <https://w3id.org/italia/env/ld/water-observation/5d7a20a3c0b097dbaa9fa3b6d65c7e9a>
@@ -12838,6 +12804,18 @@
   w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/40.839444444444446-8.414444444444445>;
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/127041-cell-g-fw>,
     <https://w3id.org/italia/env/ld/observation-value/5100-cell-l>;
+  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
+
+<https://w3id.org/italia/env/ld/water-observation/65855886e6180ef7432fad69d1108a51>
+  a w-mon:WaterBiologicalQualityParameterObservation;
+  rdfs:label "Observation of Ostreopsis ovata with value 3200 with sample point in Cala Rossa done at 2021-08-18."@en,
+    "Osservazione di Ostreopsis ovata con valore 3200 con punto prelievo Cala Rossa, fatta il 2021-08-18."@it;
+  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2021-08-18)>;
+  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
+  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2021>;
+  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
+  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.05715-15.294983333333333>;
+  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/3200-cell-l>, <https://w3id.org/italia/env/ld/observation-value/4971-cell-g-fw>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
 <https://w3id.org/italia/env/ld/water-observation/65d6c39bb3d002562ff88c43303bf1ad>
@@ -13698,6 +13676,19 @@
   w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
   w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/42.331891-14.424488>;
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/0-cell-g-fw>, <https://w3id.org/italia/env/ld/observation-value/0-cell-l>;
+  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
+
+<https://w3id.org/italia/env/ld/water-observation/770bfe7c00e8becb2d99450c527e63ff>
+  a w-mon:WaterBiologicalQualityParameterObservation;
+  rdfs:label "Observation of Ostreopsis ovata with value 1440 with sample point in Cala Rossa done at 2021-07-06."@en,
+    "Osservazione di Ostreopsis ovata con valore 1440 con punto prelievo Cala Rossa, fatta il 2021-07-06."@it;
+  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2021-07-06)>;
+  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
+  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2021>;
+  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
+  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.05715-15.294983333333333>;
+  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/1257-cell-g-fw>,
+    <https://w3id.org/italia/env/ld/observation-value/1440-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
 <https://w3id.org/italia/env/ld/water-observation/7723dc7c9d5f6a6617a355f2b7c89903>
@@ -15915,6 +15906,18 @@
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/0-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
+<https://w3id.org/italia/env/ld/water-observation/a021ab118ffd652db1fc179a4169816b>
+  a w-mon:WaterBiologicalQualityParameterObservation;
+  rdfs:label "Observation of Ostreopsis ovata with value 2880 with sample point in Calabernardo done at 2021-07-06."@en,
+    "Osservazione di Ostreopsis ovata con valore 2880 con punto prelievo Calabernardo, fatta il 2021-07-06."@it;
+  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2021-07-06)>;
+  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
+  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2021>;
+  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
+  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/36.872639-15.137889>;
+  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/2880-cell-l>, <https://w3id.org/italia/env/ld/observation-value/5099-cell-g-fw>;
+  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
+
 <https://w3id.org/italia/env/ld/water-observation/a037eab8e8a8e34554409c14ad623241>
   a w-mon:WaterBiologicalQualityParameterObservation;
   rdfs:label "Observation of Ostreopsis ovata with value <40 with sample point in Quercianella done at 2021-08-24."@en,
@@ -16703,19 +16706,6 @@
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/4240-cell-l>, <https://w3id.org/italia/env/ld/observation-value/45998-cell-g-fw>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
-<https://w3id.org/italia/env/ld/water-observation/af25259439c7c738cf5eb986c9f70841>
-  a w-mon:WaterBiologicalQualityParameterObservation;
-  rdfs:label "Observation of Ostreopsis ovata with value 23280 with sample point in Cala Rossa done at 2024-06-21."@en,
-    "Osservazione di Ostreopsis ovata con valore 23280 con punto prelievo Cala Rossa, fatta il 2024-06-21."@it;
-  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2024-06-21)>;
-  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
-  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2024>;
-  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
-  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.05715-15.294983333333333>;
-  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/219213-cell-g-fw>,
-    <https://w3id.org/italia/env/ld/observation-value/23280-cell-l>;
-  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
-
 <https://w3id.org/italia/env/ld/water-observation/af434d30af5003a1b1dc3c0b185c4902>
   a w-mon:WaterBiologicalQualityParameterObservation;
   rdfs:label "Observation of Ostreopsis ovata with value 0 with sample point in Antistante Ristorante Giacomino done at 2021-06-09."@en,
@@ -16799,18 +16789,6 @@
   w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
   w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/43.6495248791336-10.283437952803>;
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/%3C40-cell-l>;
-  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
-
-<https://w3id.org/italia/env/ld/water-observation/b0d07ab43df9c447c8e2c783766f6921>
-  a w-mon:WaterBiologicalQualityParameterObservation;
-  rdfs:label "Observation of Ostreopsis ovata with value 3200 with sample point in Cala Rossa done at 2018-08-21."@en,
-    "Osservazione di Ostreopsis ovata con valore 3200 con punto prelievo Cala Rossa, fatta il 2018-08-21."@it;
-  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2018-08-21)>;
-  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
-  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2018>;
-  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
-  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.05715-15.294983333333333>;
-  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/3200-cell-l>, <https://w3id.org/italia/env/ld/observation-value/4971-cell-g-fw>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
 <https://w3id.org/italia/env/ld/water-observation/b0dc85ff860846b45f929c25762982d3>
@@ -18329,6 +18307,19 @@
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/%3C60-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
+<https://w3id.org/italia/env/ld/water-observation/cba0a4fcab45d1b7c69c6cf4b98c2518>
+  a w-mon:WaterBiologicalQualityParameterObservation;
+  rdfs:label "Observation of Ostreopsis ovata with value 640 with sample point in Punta della Mola done at 2021-08-04."@en,
+    "Osservazione di Ostreopsis ovata con valore 640 con punto prelievo Punta della Mola, fatta il 2021-08-04."@it;
+  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2021-08-04)>;
+  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
+  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2021>;
+  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
+  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.040203-15.307483>;
+  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/554-cell-g-fw>,
+    <https://w3id.org/italia/env/ld/observation-value/640-cell-l>;
+  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
+
 <https://w3id.org/italia/env/ld/water-observation/cba5af87c1eb7e7383f33306e3d9c3b3>
   a w-mon:WaterBiologicalQualityParameterObservation;
   rdfs:label "Observation of Ostreopsis ovata with value 0 with sample point in Chiariventi - 094 done at 2021-06-28."@en,
@@ -18595,19 +18586,6 @@
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/%3C60-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
-<https://w3id.org/italia/env/ld/water-observation/d10a4947ba47a64a72a5db1880f3c567>
-  a w-mon:WaterBiologicalQualityParameterObservation;
-  rdfs:label "Observation of Ostreopsis ovata with value 1440 with sample point in Cala Rossa done at 2006-07-21."@en,
-    "Osservazione di Ostreopsis ovata con valore 1440 con punto prelievo Cala Rossa, fatta il 2006-07-21."@it;
-  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2006-07-21)>;
-  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
-  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2006>;
-  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
-  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.05715-15.294983333333333>;
-  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/1257-cell-g-fw>,
-    <https://w3id.org/italia/env/ld/observation-value/1440-cell-l>;
-  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
-
 <https://w3id.org/italia/env/ld/water-observation/d11a4a0b6084d27ee6258e10d6a0ebd2>
   a w-mon:WaterBiologicalQualityParameterObservation;
   rdfs:label "Observation of Ostreopsis ovata with value 7840 with sample point in Lungomare Scardamiano done at 2021-07-21."@en,
@@ -18678,6 +18656,19 @@
   w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
   w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/40.61079591-14.53741642>;
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/%3C60-cell-l>;
+  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
+
+<https://w3id.org/italia/env/ld/water-observation/d1ef6d597d06e9dd88d32eef62b12722>
+  a w-mon:WaterBiologicalQualityParameterObservation;
+  rdfs:label "Observation of Ostreopsis ovata with value 480 with sample point in Cala Rossa done at 2021-08-04."@en,
+    "Osservazione di Ostreopsis ovata con valore 480 con punto prelievo Cala Rossa, fatta il 2021-08-04."@it;
+  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2021-08-04)>;
+  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
+  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2021>;
+  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
+  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.05715-15.294983333333333>;
+  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/286-cell-g-fw>,
+    <https://w3id.org/italia/env/ld/observation-value/480-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
 <https://w3id.org/italia/env/ld/water-observation/d209a12e5c55da80199ed03d8967d5d1>
@@ -20374,18 +20365,6 @@
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/0-cell-g-fw>, <https://w3id.org/italia/env/ld/observation-value/0-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
-<https://w3id.org/italia/env/ld/water-observation/ec90cf724b6d0f41a34aa6857fc69254>
-  a w-mon:WaterBiologicalQualityParameterObservation;
-  rdfs:label "Observation of Ostreopsis ovata with value 0 with sample point in Calabernardo done at 2004-08-21."@en,
-    "Osservazione di Ostreopsis ovata con valore 0 con punto prelievo Calabernardo, fatta il 2004-08-21."@it;
-  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2004-08-21)>;
-  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
-  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2004>;
-  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
-  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/36.872639-15.137889>;
-  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/0-cell-l>, <https://w3id.org/italia/env/ld/observation-value/1364-cell-g-fw>;
-  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
-
 <https://w3id.org/italia/env/ld/water-observation/ed1d8ee5e1bf5ab9f79366b54639329c>
   a w-mon:WaterBiologicalQualityParameterObservation;
   rdfs:label "Observation of Ostreopsis ovata with value 0 with sample point in ditta IOM  ex Sansolive done at 2021-06-04."@en,
@@ -20544,6 +20523,18 @@
   w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
   w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/44.14696-8.283879>;
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/3320-cell-l>;
+  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
+
+<https://w3id.org/italia/env/ld/water-observation/f1bfd9895bdc6d32f403ceb280b53c6b>
+  a w-mon:WaterBiologicalQualityParameterObservation;
+  rdfs:label "Observation of Ostreopsis ovata with value 320 with sample point in Cala Rossa done at 2021-09-14."@en,
+    "Osservazione di Ostreopsis ovata con valore 320 con punto prelievo Cala Rossa, fatta il 2021-09-14."@it;
+  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2021-09-14)>;
+  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
+  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2021>;
+  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
+  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.05715-15.294983333333333>;
+  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/320-cell-l>, <https://w3id.org/italia/env/ld/observation-value/773-cell-g-fw>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
 <https://w3id.org/italia/env/ld/water-observation/f1e964c6cac7dfcf4495aedb84911485>
@@ -20800,18 +20791,6 @@
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/%3C60-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
-<https://w3id.org/italia/env/ld/water-observation/f5416376bff7e97d3e276caef828ff5b>
-  a w-mon:WaterBiologicalQualityParameterObservation;
-  rdfs:label "Observation of Ostreopsis ovata with value 1920 with sample point in Punta della Mola done at 2006-07-21."@en,
-    "Osservazione di Ostreopsis ovata con valore 1920 con punto prelievo Punta della Mola, fatta il 2006-07-21."@it;
-  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2006-07-21)>;
-  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
-  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2006>;
-  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
-  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.040203-15.307483>;
-  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/1920-cell-l>, <https://w3id.org/italia/env/ld/observation-value/21898-cell-g-fw>;
-  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
-
 <https://w3id.org/italia/env/ld/water-observation/f545e9ec3ac4ca61c9190c961e3b146d>
   a w-mon:WaterBiologicalQualityParameterObservation;
   rdfs:label "Observation of Ostreopsis ovata with value 0 with sample point in Antistante Ristorante Giacomino done at 2021-09-15."@en,
@@ -20992,19 +20971,6 @@
   w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
   w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/41.2954-13.2748>;
   w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/1020-cell-l>;
-  w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
-
-<https://w3id.org/italia/env/ld/water-observation/f94f85a0a16d9f77b1f89353ee0a23b4>
-  a w-mon:WaterBiologicalQualityParameterObservation;
-  rdfs:label "Observation of Ostreopsis ovata with value 640 with sample point in Punta della Mola done at 2004-08-21."@en,
-    "Osservazione di Ostreopsis ovata con valore 640 con punto prelievo Punta della Mola, fatta il 2004-08-21."@it;
-  ispra-emf:generationTime <https://w3id.org/italia/env/ld/temporal-entity/(2004-08-21)>;
-  ispra-emf:hasFeatureOfInterest <https://w3id.org/italia/env/ld/marine-water-body/ionian-sea>;
-  ispra-top:atTime <https://w3id.org/italia/env/ld/common/year/2004>;
-  w-mon:hasBiologicalAgent <https://w3id.org/italia/env/ld/biological-agent/110068>;
-  w-mon:hasObservationSample <https://w3id.org/italia/env/ld/water-sample/37.040203-15.307483>;
-  w-mon:hasResult <https://w3id.org/italia/env/ld/observation-value/554-cell-g-fw>,
-    <https://w3id.org/italia/env/ld/observation-value/640-cell-l>;
   w-mon:hasWaterObservableProperty <https://w3id.org/italia/env/ld/observable-property/110068> .
 
 <https://w3id.org/italia/env/ld/water-observation/f9ae4d4ec437bf74b317264f90da9f94>
