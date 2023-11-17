@@ -148,7 +148,7 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
   ];
   rr:predicateObjectMap [
      rr:predicate w-mon:hasObservationSample ;
-     rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/water-sample/{LAT}-{LONG}"; rr:termType rr:IRI ]
+     rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/water-sample/{LAT}-{LONG}-({Data})"; rr:termType rr:IRI ]
   ];
   rr:predicateObjectMap [
      rr:predicate ispra-emf:generationTime ;
@@ -157,6 +157,10 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
   rr:predicateObjectMap [
      rr:predicate ispra-top:atTime ;
      rr:objectMap <#URIYear>
+  ];
+  rr:predicateObjectMap [
+     rr:predicate ispra-top:isPartOf ;
+     rr:objectMap [ rr:constant "https://w3id.org/italia/env/ld/ostreopsis/dataset" ; rr:termType rr:IRI ]
   ];
   rr:predicateObjectMap [
      rr:predicate ispra-emf:hasFeatureOfInterest;
@@ -284,16 +288,16 @@ rml:logicalSource <#LogicalSourceOstreopsis> ;
 <#WaterSampleMapping> a rr:TriplesMap;
 rml:logicalSource <#LogicalSourceOstreopsis>;
   rr:subjectMap [
-    rr:template "https://w3id.org/italia/env/ld/water-sample/{LAT}-{LONG}";
+    rr:template "https://w3id.org/italia/env/ld/water-sample/{LAT}-{LONG}-({Data})";
     rr:class w-mon:WaterSample
   ];
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rr:template "Campione acqua preso in {Codice Sito}: {Nome Sito}, Coordinate geografiche: {LAT} - {LONG}" ; rr:language "it"]
+    rr:objectMap [ rr:template "Campione acqua preso in data {Data} presso {Codice Sito}: {Nome Sito}, Coordinate geografiche: {LAT} - {LONG}" ; rr:language "it"]
   ] ;
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rr:template "Water Sample taken at {Codice Sito}: {Nome Sito} - Geographical coordinates: {LAT} - {LONG}" ; rr:language "en"]
+    rr:objectMap [ rr:template "Water Sample taken at {Codice Sito} in {Data}: {Nome Sito} - Geographical coordinates: {LAT} - {LONG}" ; rr:language "en"]
   ] ;
   rr:predicateObjectMap [
     rr:predicate w-mon:isTakenAt ;
@@ -397,7 +401,7 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
      ] ;
      rr:predicateObjectMap [
        rr:predicate grel:p_array_a ;
-       rr:objectMap  [ rr:constant "https://w3id.org/italia/env/ld/sampling-point"]
+       rr:objectMap  [ rr:template "https://w3id.org/italia/env/ld/sampling-point/{Year}"]
      ];
      rr:predicateObjectMap [
        rr:predicate grel:p_array_a ;
@@ -405,18 +409,18 @@ rml:logicalSource <#LogicalSourceOstreopsis>;
      ];
      rr:predicateObjectMap [
        rr:predicate grel:p_string_sep ;
-       rr:objectMap [ rr:constant "/" ]
+       rr:objectMap [ rr:constant "-" ]
      ]
   ];
   rr:class w-mon:SamplingPoint , ispra-top:Location , ispra-emf:FeatureOfInterest
   ];
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rr:template "Punto Prelievo {Codice Sito}: {Nome Sito}, Coordinate geografiche: {LAT} - {LONG}" ; rr:language "it"]
+    rr:objectMap [ rr:template "Punto Prelievo {Codice Sito}: {Nome Sito}, Coordinate geografiche: {LAT} - {LONG}, Anno {Year}" ; rr:language "it"]
   ] ;
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rr:template "Sampling Point {Codice Sito}: {Nome Sito}, Geographical coordinates: {LAT} - {LONG}" ; rr:language "en"]
+    rr:objectMap [ rr:template "Sampling Point {Codice Sito}: {Nome Sito}, Geographical coordinates: {LAT} - {LONG}, Year {Year}" ; rr:language "en"]
   ] ;
   rr:predicateObjectMap [
     rr:predicate l0:identifier , ispra-top:identifier ;
@@ -973,7 +977,7 @@ fnml:functionValue [
    ] ;
    rr:predicateObjectMap [
      rr:predicate grel:p_array_a ;
-     rr:objectMap  [ rr:constant "https://w3id.org/italia/env/ld/sampling-point"]
+     rr:objectMap  [ rr:template "https://w3id.org/italia/env/ld/sampling-point/{Year}"]
    ];
    rr:predicateObjectMap [
      rr:predicate grel:p_array_a ;
@@ -981,7 +985,7 @@ fnml:functionValue [
    ];
    rr:predicateObjectMap [
      rr:predicate grel:p_string_sep ;
-     rr:objectMap [ rr:constant "/" ]
+     rr:objectMap [ rr:constant "-" ]
    ]
 ].
 
@@ -994,5 +998,5 @@ fnml:functionValue [
   rr:predicateObjectMap [
     rr:predicate idlab-fn:str ;
     rr:objectMap [ rml:reference "Codice Sito"]
-  ] ;
+  ]
  ] .
