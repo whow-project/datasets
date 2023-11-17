@@ -30,182 +30,206 @@
     rml:source "beda-kb7b.csv" ;
     rml:referenceFormulation ql:CSV .
 
-    ##Logical Source PROVINCE RDF
-    <#InputSPARQL>
-        a sd:Service ;
-        sd:endpoint <https://schema.gov.it/sparql> ;
-        sd:supportedLanguage sd:SPARQL11Query ;
-        sd:resultFormat <http://www.w3.org/ns/formats/SPARQL_Results_JSON> .
+##Logical Source PROVINCE RDF
+<#InputSPARQL>
+    a sd:Service ;
+    sd:endpoint <https://schema.gov.it/sparql> ;
+    sd:supportedLanguage sd:SPARQL11Query ;
+    sd:resultFormat <http://www.w3.org/ns/formats/SPARQL_Results_JSON> .
 
-    <#LogicalSourcePROVINCERDF> a rml:BaseSource ;
-         rml:source <#InputSPARQL>;
-         rml:referenceFormulation ql:JSONPath;
-         rml:iterator "$.results.bindings[*]";
-         rml:query """
-         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-         PREFIX clv: <https://w3id.org/italia/onto/CLV/>
+<#LogicalSourcePROVINCERDF> a rml:BaseSource ;
+     rml:source <#InputSPARQL>;
+     rml:referenceFormulation ql:JSONPath;
+     rml:iterator "$.results.bindings[*]";
+     rml:query """
+     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+     PREFIX clv: <https://w3id.org/italia/onto/CLV/>
 
-         SELECT ?s ?provincia ?ID
-         WHERE { ?s a skos:Concept ;
-              skos:inScheme <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces> ;
-              skos:notation ?ID ;
-              clv:acronym ?provincia .
+     SELECT ?s ?provincia ?ID
+     WHERE { ?s a skos:Concept ;
+          skos:inScheme <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces> ;
+          skos:notation ?ID ;
+          clv:acronym ?provincia .
 
-         } """
-    .
+     } """
+.
 
-    ##Logical Source CITY RDF
-    <#LogicalSourceCITYRDF> a rml:BaseSource ;
-          rml:source <#InputSPARQL>;
-          rml:referenceFormulation ql:JSONPath;
-          rml:iterator "$.results.bindings[*]";
-          rml:query """
-          PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-    PREFIX clv: <https://w3id.org/italia/onto/CLV/>
-    PREFIX ti: <https://w3id.org/italia/onto/TI/>
-    SELECT ?s ?ID ?nome ?starttime ?endTime
-    WHERE { ?s a skos:Concept ;
-            skos:inScheme <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities> ;
-            skos:notation ?ID ;
-            skos:prefLabel ?nome ;
-            clv:hasSOValidity/ti:endTime ?endTime ;
-            clv:hasSOValidity/ti:startTime ?starttime ;
-            clv:hasHigherRank <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/03> .
-            FILTER (str(?endTime)="9999-12-31")
+##Logical Source CITY RDF
+<#LogicalSourceCITYRDF> a rml:BaseSource ;
+      rml:source <#InputSPARQL>;
+      rml:referenceFormulation ql:JSONPath;
+      rml:iterator "$.results.bindings[*]";
+      rml:query """
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX clv: <https://w3id.org/italia/onto/CLV/>
+PREFIX ti: <https://w3id.org/italia/onto/TI/>
+SELECT ?s ?ID ?nome ?starttime ?endTime
+WHERE { ?s a skos:Concept ;
+        skos:inScheme <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities> ;
+        skos:notation ?ID ;
+        skos:prefLabel ?nome ;
+        clv:hasSOValidity/ti:endTime ?endTime ;
+        clv:hasSOValidity/ti:startTime ?starttime ;
+        clv:hasHigherRank <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/03> .
+        FILTER (str(?endTime)="9999-12-31")
 
-    }
-     """
-          .
+}
+ """
+      .
 
 ###########################################################
 ##                  MAPPING RULES
 ##########################################################
 
-#### GROUND WATERS OBSERVATION MAPPING
-                 <#WatersForHumanConsumptionObservationMapping> a rr:TriplesMap;
-                 rml:logicalSource <#LogicalSourceWatersForHumanConsumption> ;
-                  rr:subjectMap [
-                    fnml:functionValue [
-                      rr:predicateObjectMap [
-                        rr:predicate fno:executes ;
-                        rr:objectMap [ rr:constant idlab-fn:trueCondition ]
-                      ];
-                      rr:predicateObjectMap [
-                        rr:predicate idlab-fn:strBoolean ;
-                        rr:objectMap <#IsFisico>
-                      ];
-                      rr:predicateObjectMap [
-                        rr:predicate idlab-fn:str ;
-                        rr:objectMap <#PhysicoChemicalObservationMapping>
-
-                      ]
-                    ] ;
-                    rr:class w-mon:DrinkingWaterObservation, w-mon:WaterIndicatorParameterObservation
-                 ] ;
-                 rr:predicateObjectMap [
-                  rr:predicate rdfs:label ;
-                  rr:objectMap [ rr:template "Observation for the physical parameter {parametro} with value {valore_testuale} {unit_misura} for waters for human consumption (in province {provincia_punto_prelievo} and city {comune_punto_prelievo}) done at {data_referto} for year {data_referto}" ; rr:language "en" ]
-                 ];
-                 rr:predicateObjectMap [
-                  rr:predicate rdfs:label ;
-                  rr:objectMap [ rr:template "Osservazione del parametro fisico {parametro} con valore {valore_testuale} {unit_misura} per acque per il consumo umano (in provincia di {provincia_punto_prelievo} e comune {comune_punto_prelievo}) fatta in data {data_referto} nell'anno {data_referto}" ; rr:language "it" ]
-                 ];
-                 rr:predicateObjectMap [
-                  rr:predicate w-mon:hasObservationSample ;
-                  rr:objectMap <#URIGeometryForWaterSample1>
-                  #rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/water-sample/{latitudine}-{longitudine}"; rr:termType rr:IRI ]
-                 ] ;
-                 rr:predicateObjectMap [
-                   rr:predicate w-mon:hasResult ;
-                   rr:objectMap <#URLifyObservationResultForHWC>
-                 ];
-                 rr:predicateObjectMap [
-                    rr:predicate w-mon:hasWaterObservableProperty ;
-                    rr:objectMap <#URIObservablePropertiesCASMappingForHWC>
-                 ] ;
-                 rr:predicateObjectMap [
-                    rr:predicate w-mon:hasChemicalSubstance ;
-                    rr:objectMap [ rr:template "https://w3id.org/whow/controlled-vocabulary/chemical-substances/{cas}" ; rr:termType rr:IRI ]
-                 ] ;
-                 rr:predicateObjectMap [
-                   rr:predicate tiapit:hasTemporalCoverage ;
-                   rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/year/{anno_referto}"; rr:termType rr:IRI ]
-                 ];
-                 rr:predicateObjectMap [
-                   rr:predicate ispra-emf:generationTime ;
-                   rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/temporal-entity/{data_referto}"; rr:termType rr:IRI ]
-                 ].
-
-
-
-<#URIGeometryForWaterSample1>
-rr:termType rr:IRI ;
+#### Drinking Water OBSERVATION MAPPING Physical parameter
+<#WatersHCPPObservationMapping> a rr:TriplesMap;
+rml:logicalSource <#LogicalSourceWatersForHumanConsumption> ;
+rr:subjectMap [
   fnml:functionValue [
-   rr:predicateObjectMap [
-     rr:predicate fno:executes ;
-     rr:objectMap [ rr:constant grel:array_join ]
-   ];
-   rr:predicateObjectMap [
-      rr:predicate grel:p_array_a ;
-      rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/water-sample"]
-   ] ;
-   rr:predicateObjectMap [
-      rr:predicate grel:p_array_a ;
-      rr:objectMap <#URIGeometryForWaterSample2>
-   ] ;
-   rr:predicateObjectMap [
-      rr:predicate grel:p_string_sep ;
-      rr:objectMap [ rr:constant "/" ]
-   ]
-  ] .
-
-  <#URIGeometryForWaterSample2>
-  rr:termType rr:IRI ;
-    fnml:functionValue [
-     rr:predicateObjectMap [
-       rr:predicate fno:executes ;
-       rr:objectMap [ rr:constant grel:array_join ]
-     ];
-     rr:predicateObjectMap [
-        rr:predicate grel:p_array_a ;
-        rr:objectMap <#SlugifyGeometry1>
-     ] ;
-     rr:predicateObjectMap [
-        rr:predicate grel:p_array_a ;
-        rr:objectMap <#SlugifyGeometry2>
-     ] ;
-     rr:predicateObjectMap [
-        rr:predicate grel:p_string_sep ;
-        rr:objectMap [ rr:constant "-" ]
-     ]
-    ] .
-
-<#SlugifyGeometry1>
-  fnml:functionValue [
-  	rr:predicateObjectMap [
-  		rr:predicate fno:executes ;
-  		rr:objectMap [ rr:constant idlab-fn:slugify ]
-  	];
+    rr:predicateObjectMap [
+      rr:predicate fno:executes ;
+      rr:objectMap [ rr:constant idlab-fn:trueCondition ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate idlab-fn:strBoolean ;
+      rr:objectMap <#IsFisico>
+    ];
     rr:predicateObjectMap [
       rr:predicate idlab-fn:str ;
-      rr:objectMap [ rml:reference "latitudine"]
-    ] ;
-   ] .
+      rr:objectMap <#PPObservationMapping>
+    ]
+  ] ;
+  rr:class w-mon:DrinkingWaterObservation, w-mon:WaterIndicatorParameterObservation
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Observation for the physical parameter {parametro} with value {valore_testuale} {unit_misura} for drinking waters done in city {comune_punto_prelievo} - {provincia_punto_prelievo} ) at {data_referto}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Osservazione del parametro fisico {parametro} con valore {valore_testuale} {unit_misura} per acque per il consumo umano fatta in {comune_punto_prelievo} - {provincia_punto_prelievo} in data {data_referto}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+ rr:predicate w-mon:hasObservationSample ;
+ rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/water-sample/{id_campione}-{punto_prelievo}" ; rr:termType rr:IRI ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate w-mon:hasResult ;
+  rr:objectMap <#URLifyObservationResultForHWCPP>
+];
+rr:predicateObjectMap [
+   rr:predicate w-mon:hasWaterObservableProperty ;
+   rr:objectMap <#URIObservablePropertiesForHWCPP>
+] ;
+rr:predicateObjectMap [
+ rr:predicate tiapit:hasTemporalCoverage ;
+ rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/year/{anno_referto}"; rr:termType rr:IRI ]
+];
+rr:predicateObjectMap [
+ rr:predicate ispra-emf:generationTime ;
+ rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/temporal-entity/({data_referto})"; rr:termType rr:IRI ]
+].
 
-  <#SlugifyGeometry2>
-  fnml:functionValue [
-  	rr:predicateObjectMap [
-  		rr:predicate fno:executes ;
-  		rr:objectMap [ rr:constant idlab-fn:slugify ]
-  	];
-     rr:predicateObjectMap [
-      rr:predicate idlab-fn:str ;
-      rr:objectMap [ rml:reference "longitudine"]
+
+<#URIObservablePropertiesForHWCPP>
+rr:termType rr:IRI ;
+ fnml:functionValue [
+    rr:predicateObjectMap [
+      rr:predicate fno:executes ;
+      rr:objectMap [ rr:constant grel:controls_if ]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate grel:bool_b ;
+      rr:objectMap <#IsCPNull>
+    ];
+    rr:predicateObjectMap [
+      rr:predicate grel:any_true ;
+      rr:objectMap <#URIProperty>
     ] ;
-   ] .
+    rr:predicateObjectMap [
+      rr:predicate grel:any_false ;
+      rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/observable-properties/{codice_parametro}" ]
+    ]
+  ] .
+
+<#IsCPNull>
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant idlab-fn:isNull ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "codice_parametro" ]
+  ]
+] .
+
+<#URIProperty>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ];
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/observable-properties"]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:p_array_a ;
+    rr:objectMap <#SlugifyParametro>
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate grel:p_string_sep ;
+    rr:objectMap [ rr:constant "/" ]
+  ]
+] .
+
+<#SlugifyParametro>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant idlab-fn:slugify ]
+ ];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "parametro"]
+  ]
+ ] .
+
+###############
+# OBSERVABLE PROPERTY IF CODE PARAMETER IS NULL
+################
+<#OPObjMappingIfCPNull> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
+rr:subjectMap [
+  fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant grel:controls_if ]
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:bool_b ;
+       rr:objectMap <#IsCPNull>
+     ];
+     rr:predicateObjectMap [
+       rr:predicate grel:any_true ;
+       rr:objectMap <#URIProperty>
+     ] ;
+  ] ;
+  rr:class w-mon:WaterObservableProperty
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:template "Concentrazione di {parametro}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate l0:name , ispra-top:name ;
+  rr:objectMap [ rr:template "Concentrazione di {parametro}" ; rr:language "it"]
+].
 
 # ##### URI of Observation Value Mapping
-<#URLifyObservationResultForHWC>
+<#URLifyObservationResultForHWCPP>
 rr:termType rr:IRI ;
 fnml:functionValue [
  rr:predicateObjectMap [
@@ -219,7 +243,7 @@ fnml:functionValue [
   ] ;
   rr:predicateObjectMap [
     rr:predicate grel:p_array_a ;
-    rr:objectMap <#MD5ValueUMForHWC>
+    rr:objectMap <#MD5ValueUMForHWCPP>
   ] ;
   rr:predicateObjectMap [
     rr:predicate grel:p_string_sep ;
@@ -228,7 +252,7 @@ fnml:functionValue [
 ] .
 
 
-<#MD5ValueUMForHWC>
+<#MD5ValueUMForHWCPP>
 fnml:functionValue [
   rr:predicateObjectMap [
    rr:predicate fno:executes ;
@@ -236,11 +260,11 @@ fnml:functionValue [
   ];
   rr:predicateObjectMap [
    rr:predicate grel:valueParameter ;
-   rr:objectMap <#UnionValueUMForHWC>
+   rr:objectMap <#UnionValueUMForHWCPP>
   ];
 ].
 
-<#UnionValueUMForHWC>
+<#UnionValueUMForHWCPP>
 fnml:functionValue [
  rr:predicateObjectMap [
    rr:predicate fno:executes ;
@@ -260,34 +284,7 @@ fnml:functionValue [
   ]
 ] .
 
-<#URIObservablePropertiesCASMappingForHWC> #join con dataset + se non è biologico
-rr:termType rr:IRI ;
- fnml:functionValue [
-    rr:predicateObjectMap [
-      rr:predicate fno:executes ;
-      rr:objectMap [ rr:constant grel:controls_if ]
-    ];
-    rr:predicateObjectMap [
-      rr:predicate grel:bool_b ;
-      rr:objectMap <#IsCasNull>
-    ];
-    rr:predicateObjectMap [
-      rr:predicate grel:any_false ;
-      rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/observable-properties/{CAS}" ]
-    ]
-  ] .
 
-<#IsCasNull>
-fnml:functionValue [
-  rr:predicateObjectMap [
-    rr:predicate fno:executes ;
-    rr:objectMap [ rr:constant idlab-fn:isNull ]
-  ];
-  rr:predicateObjectMap [
-    rr:predicate idlab-fn:str ;
-    rr:objectMap [ rml:reference "cas" ]
-  ]
-] .
 
 #######################################
 # TEMPORAL ENTITY OBJECT DATE MAPPING
@@ -312,94 +309,84 @@ rr:predicateObjectMap [
  ].
 
 # ##########################################
-                  # ## TEMPORAL ENTITY OBJECT YEAR MAPPING
-                  # ##########################################
-                  <#TemporalEntityYearMappingForHWC> a rr:TriplesMap ;
-                  rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
-                  rr:subjectMap [
-                    rr:template "https://w3id.org/italia/lombardia/data/year/{anno_referto}";
-                    rr:class tiapit:Year
-                  ];
-                  rr:predicateObjectMap [
-                     rr:predicate rdfs:label ;
-                     rr:objectMap [ rr:template "Year: {anno_referto}" ; rr:language "en" ]
-                   ];
-                   rr:predicateObjectMap [
-                      rr:predicate rdfs:label ;
-                      rr:objectMap [ rr:template "Anno: {anno_referto}" ; rr:language "it" ]
-                   ];
-                   rr:predicateObjectMap [
-                      rr:predicate tiapit:year ;
-                      rr:objectMap [ rml:reference "anno_referto" ; rr:datatype xsd:gYear ]
-                   ].
+# ## TEMPORAL ENTITY OBJECT YEAR MAPPING
+# ##########################################
+<#TemporalEntityYearMappingForHWC> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/lombardia/data/year/{anno_referto}";
+  rr:class tiapit:Year
+];
+rr:predicateObjectMap [
+   rr:predicate rdfs:label ;
+   rr:objectMap [ rr:template "Year: {anno_referto}" ; rr:language "en" ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rr:template "Anno: {anno_referto}" ; rr:language "it" ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate tiapit:year ;
+    rr:objectMap [ rml:reference "anno_referto" ; rr:datatype xsd:gYear ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate owl:sameAs ;
+    rr:objectMap [ rr:template "https://dati.isprambiente.it/ld/common/year/{anno_referto}" ; rr:termType rr:IRI ]
+ ];
+ rr:predicateObjectMap [
+    rr:predicate owl:sameAs ;
+    rr:objectMap [ rr:template "https://w3id.org/arco/resource/TimeInterval/{anno_referto}" ; rr:termType rr:IRI ]
+ ].
+
+
+###############################
+# WATER SAMPLE OBJECT MAPPING
 ################################
-                  # WATER SAMPLE OBJECT MAPPING
-                  ################################
-                  <#ObservationSampleMappingForHWC> a rr:TriplesMap;
-                  rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
-                    rr:subjectMap [
-                    fnml:functionValue [
-                     rr:predicateObjectMap [
-                       rr:predicate fno:executes ;
-                       rr:objectMap [ rr:constant grel:array_join ]
-                     ];
-                     rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/water-sample"]
-                     ] ;
-                     rr:predicateObjectMap [
-                        rr:predicate grel:p_array_a ;
-                        rr:objectMap <#URIGeometryForWaterSample2>
-                     ] ;
-                     rr:predicateObjectMap [
-                        rr:predicate grel:p_string_sep ;
-                        rr:objectMap [ rr:constant "/" ]
-                     ]
-                    ];
-                    rr:termType rr:IRI;
-                      rr:class w-mon:WaterSample , w-mon:WaterFeature
-                   ];
-                   rr:predicateObjectMap [
-                      rr:predicate rdfs:label ;
-                      rr:objectMap [ rr:template "Water sample taken at {punto_prelievo} in province {provincia_punto_prelievo}, city {comune_punto_prelievo} - (geographical coordinates: {latitudine}-{longitudine})" ; rr:language "en" ]
-                    ];
-                    rr:predicateObjectMap [
-                       rr:predicate rdfs:label ;
-                       rr:objectMap [ rr:template "Campione preso presso il punto prelievo {punto_prelievo} in provincia di {provincia_punto_prelievo}, comune {comune_punto_prelievo} - (coordinate geografiche: {latitudine}-{longitudine})" ; rr:language "it" ]
-                    ];
-                    rr:predicateObjectMap [
-                      rr:predicate w-mon:istakenAt ;
-                      rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/sampling-point/{punto_prelievo}"; rr:termType rr:IRI ]
-                    ];
-                    rr:predicateObjectMap [
-                      rr:predicate w-mon:isSampleOf ;
-                      rr:objectMap <#URIWaterForHumanConsumption>
-                    ] .
+<#ObservationSampleMappingForHWCPP> a rr:TriplesMap;
+rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
+  rr:subjectMap [
+    rr:template "https://w3id.org/italia/lombardia/data/water-sample/{id_campione}-{punto_prelievo}";
+    rr:class w-mon:WaterSample , w-mon:WaterFeature
+ ];
+ rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rr:template "Water sample {id_campione} taken at {punto_prelievo} in province {provincia_punto_prelievo}, city {comune_punto_prelievo} - (geographical coordinates: {latitudine}-{longitudine})" ; rr:language "en" ]
+  ];
+  rr:predicateObjectMap [
+     rr:predicate rdfs:label ;
+     rr:objectMap [ rr:template "Campione {id_campione} preso presso il punto prelievo {punto_prelievo} in provincia di {provincia_punto_prelievo}, comune {comune_punto_prelievo} - (coordinate geografiche: {latitudine}-{longitudine})" ; rr:language "it" ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate w-mon:istakenAt ;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/sampling-point/{punto_prelievo}"; rr:termType rr:IRI ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate w-mon:isSampleOf ;
+    rr:objectMap <#URIWaterFeature>
+  ] .
 
+  <#URIWaterFeature>
+  rr:termType rr:IRI ;
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/water-feature"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#MD5PPCoord>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ];
+  ].
 
-<#URIWaterForHumanConsumption>
-             rr:termType rr:IRI ;
-             fnml:functionValue [
-              rr:predicateObjectMap [
-                rr:predicate fno:executes ;
-                rr:objectMap [ rr:constant grel:array_join ]
-              ] ;
-              rr:predicateObjectMap [
-                rr:predicate grel:p_array_a ;
-                rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/water-human-consumption"]
-              ];
-              rr:predicateObjectMap [
-                rr:predicate grel:p_array_a ;
-                rr:objectMap  <#MD5PPCoord>
-              ];
-              rr:predicateObjectMap [
-                rr:predicate grel:p_string_sep ;
-                rr:objectMap [ rr:constant "/" ]
-              ];
-             ].
-
-
-#MD5 URI Groundwater body
+#MD5 URI WaterFeature
 <#MD5PPCoord>
 fnml:functionValue [
   rr:predicateObjectMap [
@@ -436,115 +423,116 @@ fnml:functionValue [
   ];
 ].
 
-####################################
-# GROUNDWATER BODY OBJ MAPPING
- ####################################
-                               <#GroundWaterBodyObjMapping> a rr:TriplesMap;
-                               rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
-                                 rr:subjectMap [
-                                   fnml:functionValue [
-                                    rr:predicateObjectMap [
-                                      rr:predicate fno:executes ;
-                                      rr:objectMap [ rr:constant grel:array_join ]
-                                    ] ;
-                                    rr:predicateObjectMap [
-                                      rr:predicate grel:p_array_a ;
-                                      rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/water-human-consumption"]
-                                    ];
-                                    rr:predicateObjectMap [
-                                      rr:predicate grel:p_array_a ;
-                                      rr:objectMap  <#MD5PPCoord>
-                                    ];
-                                    rr:predicateObjectMap [
-                                      rr:predicate grel:p_string_sep ;
-                                      rr:objectMap [ rr:constant "/" ]
-                                    ]
-                                   ];
-                                   rr:class hydro:GroundWaterBody
-                                ];
-                                rr:predicateObjectMap [
-                                   rr:predicate rdfs:label ;
-                                   rr:objectMap [ rr:template "Area in proximity of the sampling point {punto_prelievo} in province {provincia_punto_prelievo}, city {comune_punto_prelievo} - (geographical coordinates: {latitudine}-{longitudine})" ; rr:language "en" ]
-                                 ];
-                                 rr:predicateObjectMap [
-                                    rr:predicate rdfs:label ;
-                                    rr:objectMap [ rr:template "Area in prossimità del punto prelievo {punto_prelievo} in provincia di {provincia_punto_prelievo}, comune {comune_punto_prelievo} - (coordinate geografiche: {latitudine}-{longitudine})" ; rr:language "it" ]
-                                 ];
-                                 rr:predicateObjectMap [
-                                    rr:predicate ispra-top:name , l0:name ;
-                                    rr:objectMap [ rr:template "Area in prossimità del punto prelievo {punto_prelievo} in provincia di {provincia_punto_prelievo}, comune {comune_punto_prelievo} - (coordinate geografiche: {latitudine}-{longitudine})" ; rr:language "it" ]
-                                 ];
-                                 rr:predicateObjectMap [
-                                    rr:predicate ispra-top:name , l0:name ;
-                                    rr:objectMap [ rr:template "Area in proximity of the sampling point {punto_prelievo} in province {provincia_punto_prelievo}, city {comune_punto_prelievo} - (geographical coordinates: {latitudine}-{longitudine})" ; rr:language "en" ]
-                                 ].
+
+# ####################################
+# # WATER FEATURE OBJ MAPPING
+# ####################################
+<#WaterFeatureObjMappingPP> a rr:TriplesMap;
+rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
+rr:subjectMap [
+  fnml:functionValue [
+   rr:predicateObjectMap [
+     rr:predicate fno:executes ;
+     rr:objectMap [ rr:constant grel:array_join ]
+   ] ;
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/water-feature"]
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap  <#MD5PPCoord>
+   ];
+   rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+   ]
+  ];
+  rr:class hydro:WaterFeature
+ ];
+  rr:predicateObjectMap [
+     rr:predicate rdfs:label ;
+     rr:objectMap [ rr:template "Area of the sampling point {punto_prelievo} in province {provincia_punto_prelievo}, city {comune_punto_prelievo} - (geographical coordinates: {latitudine}-{longitudine})" ; rr:language "en" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate rdfs:label ;
+      rr:objectMap [ rr:template "Area del punto prelievo {punto_prelievo} in provincia di {provincia_punto_prelievo}, comune {comune_punto_prelievo} - (coordinate geografiche: {latitudine}-{longitudine})" ; rr:language "it" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate ispra-top:name , l0:name ;
+      rr:objectMap [ rr:template "Area del punto prelievo {punto_prelievo} in provincia di {provincia_punto_prelievo}, comune {comune_punto_prelievo} - (coordinate geografiche: {latitudine}-{longitudine})" ; rr:language "it" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate ispra-top:name , l0:name ;
+      rr:objectMap [ rr:template "Area of the sampling point {punto_prelievo} in province {provincia_punto_prelievo}, city {comune_punto_prelievo} - (geographical coordinates: {latitudine}-{longitudine})" ; rr:language "en" ]
+   ].
 
 ################################################
-   # OBSERVATION VALUE OBJECT MAPPING IF RANGE
-   ################################################
+# OBSERVATION VALUE OBJECT MAPPING IF RANGE
+################################################
 
-   <#ObservationValueRangeMappingForHWC> a rr:TriplesMap;
-   rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
-     rr:subjectMap [
-      fnml:functionValue [
-         rr:predicateObjectMap [
-           rr:predicate fno:executes ;
-           rr:objectMap [ rr:constant idlab-fn:trueCondition ]
-         ];
-         rr:predicateObjectMap [
-           rr:predicate idlab-fn:strBoolean ;
-           rr:objectMap <#MinorSegnoMappingForHWC>
-         ];
-         rr:predicateObjectMap [
-           rr:predicate idlab-fn:str ;
-           rr:objectMap <#URIObservableValueObjectForHWC>
-         ]
-       ] ;
-       rr:class w-mon:ObservationValue
-     ];
-     rr:predicateObjectMap [
-       rr:predicate rdfs:label ;
-       rr:objectMap [ rr:template "Observation value {valore_testuale} {unit_misura}" ; rr:language "en" ]
-     ];
-     rr:predicateObjectMap [
-       rr:predicate rdfs:label ;
-       rr:objectMap [ rr:template "Valore dell'osservazione {valore_testuale} {unit_misura}" ; rr:language "it" ]
-     ];
-     rr:predicateObjectMap [
-       rr:predicate w-mon:lowerBound;
-       rr:objectMap [ rr:constant "0" ; rr:datatype xsd:float ]
-     ];
-     rr:predicateObjectMap [
-       rr:predicate w-mon:upperBound;
-       rr:objectMap [ rml:reference "risultato" ; rr:datatype xsd:float ]
-     ];
-     rr:predicateObjectMap [
-       rr:predicate ispra-top:hasUnitOfMeasure;
-       rr:objectMap <#URIforUnitOfMeasureForHWC>
-     ].
+<#ObservationValueRangeMappingForHWC> a rr:TriplesMap;
+rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
+rr:subjectMap [
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant idlab-fn:trueCondition ]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate idlab-fn:strBoolean ;
+   rr:objectMap <#MinorSegnoMappingForHWC>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate idlab-fn:str ;
+   rr:objectMap <#URIObservableValueObjectForHWC>
+ ]
+] ;
+rr:class w-mon:ObservationValue
+];
+rr:predicateObjectMap [
+rr:predicate rdfs:label ;
+rr:objectMap [ rr:template "Observation value {valore_testuale} {unit_misura}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+rr:predicate rdfs:label ;
+rr:objectMap [ rr:template "Valore dell'osservazione {valore_testuale} {unit_misura}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+rr:predicate w-mon:lowerBound;
+rr:objectMap [ rr:constant "0" ; rr:datatype xsd:float ]
+];
+rr:predicateObjectMap [
+rr:predicate w-mon:upperBound;
+rr:objectMap [ rml:reference "risultato" ; rr:datatype xsd:float ]
+];
+rr:predicateObjectMap [
+rr:predicate ispra-top:hasUnitOfMeasure;
+rr:objectMap <#URIforUnitOfMeasureForHWC>
+].
 
-     <#URIObservableValueObjectForHWC>
-       rr:termType rr:IRI ;
-         fnml:functionValue [
-          rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant grel:array_join ]
-          ];
-          rr:predicateObjectMap [
-             rr:predicate grel:p_array_a ;
-             rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/observation-value"]
-          ] ;
-          rr:predicateObjectMap [
-             rr:predicate grel:p_array_a ;
-             rr:objectMap <#MD5ValueUMForHWC>
-          ] ;
-          rr:predicateObjectMap [
-             rr:predicate grel:p_string_sep ;
-             rr:objectMap [ rr:constant "/" ]
-          ];
-         ] .
+<#URIObservableValueObjectForHWC>
+rr:termType rr:IRI ;
+ fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant grel:array_join ]
+  ];
+  rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/observation-value"]
+  ] ;
+  rr:predicateObjectMap [
+     rr:predicate grel:p_array_a ;
+     rr:objectMap <#MD5ValueUMForHWC>
+  ] ;
+  rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/" ]
+  ];
+ ] .
 
-    <#MinorSegnoMappingForHWC>
+<#MinorSegnoMappingForHWC>
   fnml:functionValue [
     rr:predicateObjectMap [
       rr:predicate fno:executes ;
@@ -560,7 +548,7 @@ fnml:functionValue [
     ]
   ] .
 
-      <#MD5ValueUMForHWC>
+<#MD5ValueUMForHWC>
 fnml:functionValue [
   rr:predicateObjectMap [
    rr:predicate fno:executes ;
@@ -592,7 +580,7 @@ fnml:functionValue [
   ]
 ] .
 
-     <#URIforUnitOfMeasureForHWC>
+<#URIforUnitOfMeasureForHWC>
      rr:termType rr:IRI ;
      fnml:functionValue [
       rr:predicateObjectMap [
@@ -613,101 +601,101 @@ fnml:functionValue [
       ];
      ].
 
-     <#SlugifyUMForHWC>
-     fnml:functionValue [
-      rr:predicateObjectMap [
-        rr:predicate fno:executes ;
-        rr:objectMap [ rr:constant idlab-fn:slugify ]
-      ];
-       rr:predicateObjectMap [
-         rr:predicate idlab-fn:str ;
-         rr:objectMap [ rml:reference "unita_di_misura_testuale"]
-       ] ;
-      ] .
+<#SlugifyUMForHWC>
+ fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant idlab-fn:slugify ]
+  ];
+   rr:predicateObjectMap [
+     rr:predicate idlab-fn:str ;
+     rr:objectMap [ rml:reference "unit_misura"]
+   ]
+  ] .
 
 ######################################################
-     # OBSERVATION VALUE OBJECT MAPPING IF NOT RANGE
-     ######################################################
-     <#ObservationValueNotRangeMappingForHWC> a rr:TriplesMap;
-     rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
-      rr:subjectMap [
-        fnml:functionValue [
-           rr:predicateObjectMap [
-             rr:predicate fno:executes ;
-             rr:objectMap [ rr:constant idlab-fn:trueCondition ]
-           ];
-           rr:predicateObjectMap [
-             rr:predicate idlab-fn:strBoolean ;
-             rr:objectMap <#NotMinorSegnoMappingForHWC>
-           ];
-           rr:predicateObjectMap [
-             rr:predicate idlab-fn:str ;
-             rr:objectMap <#URIObservableValueObjectForHWC>
-           ]
-         ];
-         rr:class w-mon:ObservationValue
-      ];
-      rr:predicateObjectMap [
-        rr:predicate rdfs:label ;
-        rr:objectMap [ rr:template "Observation value {risultato} {unit_misura}" ; rr:language "en" ]
-      ];
-      rr:predicateObjectMap [
-        rr:predicate rdfs:label ;
-        rr:objectMap [ rr:template "Valore dell'osservazione {risultato} {unit_misura}" ; rr:language "it" ]
-      ];
-      rr:predicateObjectMap [
-        rr:predicate ispra-top:value;
-        rr:objectMap [ rml:reference "risultato" ; rr:datatype xsd:float ] #non penso
-      ];
-      rr:predicateObjectMap [
-        rr:predicate ispra-top:hasUnitOfMeasure;
-        rr:objectMap <#URIforUnitOfMeasureForHWC>
-      ].
+# OBSERVATION VALUE OBJECT MAPPING IF NOT RANGE
+######################################################
+<#ObservationValueNotRangeMappingForHWCPP> a rr:TriplesMap;
+rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
+rr:subjectMap [
+  fnml:functionValue [
+     rr:predicateObjectMap [
+       rr:predicate fno:executes ;
+       rr:objectMap [ rr:constant idlab-fn:trueCondition ]
+     ];
+     rr:predicateObjectMap [
+       rr:predicate idlab-fn:strBoolean ;
+       rr:objectMap <#NotMinorSegnoMappingForHWC>
+     ];
+     rr:predicateObjectMap [
+       rr:predicate idlab-fn:str ;
+       rr:objectMap <#URIObservableValueObjectForHWC>
+     ]
+   ];
+   rr:class w-mon:ObservationValue
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Observation value {risultato} {unit_misura}" ; rr:language "en" ]
+];
+rr:predicateObjectMap [
+  rr:predicate rdfs:label ;
+  rr:objectMap [ rr:template "Valore dell'osservazione {risultato} {unit_misura}" ; rr:language "it" ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:value;
+  rr:objectMap [ rml:reference "risultato" ; rr:datatype xsd:float ]
+];
+rr:predicateObjectMap [
+  rr:predicate ispra-top:hasUnitOfMeasure;
+  rr:objectMap <#URIforUnitOfMeasureForHWC>
+].
 
-      <#NotMinorSegnoMappingForHWC>
-      fnml:functionValue [
-       rr:predicateObjectMap [
-         rr:predicate fno:executes ;
-         rr:objectMap [ rr:constant idlab-fn:isNull ]
-       ];
-       rr:predicateObjectMap [
-         rr:predicate idlab-fn:str ;
-         rr:objectMap [ rml:reference "segno" ]
-       ]
-     ] .
-
-
-
-  ##################################
-     # UNIF OF MEASURE OBJECT MAPPING
-     ##################################
-     <#UnitOfMeasureMappingForHWC> a rr:TriplesMap;
-     rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
-      rr:subjectMap [
-        fnml:functionValue [
-          rr:predicateObjectMap [
-            rr:predicate fno:executes ;
-            rr:objectMap [ rr:constant idlab-fn:trueCondition ]
-          ];
-          rr:predicateObjectMap [
-            rr:predicate idlab-fn:strBoolean ;
-            rr:objectMap <#IsNotEqualUnita>
-          ];
-          rr:predicateObjectMap [
-            rr:predicate idlab-fn:str ;
-            rr:objectMap <#URIUnitOfMeasureNotUnita>
-          ];
-        ];
-         rr:class ispra-top:UnitOfMeasure
-      ];
-      rr:predicateObjectMap [
-         rr:predicate rdfs:label ;
-         rr:objectMap [ rr:template "Unit of measure {unit_misura}" ; rr:language "en"]
-      ];
-      rr:predicateObjectMap [
-   rr:predicate rdfs:label ;
-   rr:objectMap [ rr:template "Unità di misura {unit_misura}" ; rr:language "it"]
+<#NotMinorSegnoMappingForHWC>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant idlab-fn:isNull ]
  ];
+ rr:predicateObjectMap [
+   rr:predicate idlab-fn:str ;
+   rr:objectMap [ rml:reference "segno" ]
+ ]
+] .
+
+
+
+##################################
+# UNIF OF MEASURE OBJECT MAPPING
+##################################
+<#UnitOfMeasureMappingForHWC> a rr:TriplesMap;
+   rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
+    rr:subjectMap [
+      fnml:functionValue [
+        rr:predicateObjectMap [
+          rr:predicate fno:executes ;
+          rr:objectMap [ rr:constant idlab-fn:trueCondition ]
+        ];
+        rr:predicateObjectMap [
+          rr:predicate idlab-fn:strBoolean ;
+          rr:objectMap <#IsNotEqualUnita>
+        ];
+        rr:predicateObjectMap [
+          rr:predicate idlab-fn:str ;
+          rr:objectMap <#URIUnitOfMeasureNotUnita>
+        ];
+      ];
+       rr:class ispra-top:UnitOfMeasure
+    ];
+    rr:predicateObjectMap [
+       rr:predicate rdfs:label ;
+       rr:objectMap [ rr:template "Unit of measure {unit_misura}" ; rr:language "en"]
+    ];
+    rr:predicateObjectMap [
+ rr:predicate rdfs:label ;
+ rr:objectMap [ rr:template "Unità di misura {unita_di_misura_testuale}" ; rr:language "it"]
+];
 rr:predicateObjectMap [
    rr:predicate l0:name , ispra-top:name ;
    rr:objectMap [ rml:reference "unita_di_misura_testuale" ; rr:language "it" ]
@@ -734,7 +722,7 @@ fnml:functionValue [
   ]
  ].
 
- <#IsNotEqualUnita>
+<#IsNotEqualUnita>
 fnml:functionValue [
     rr:predicateObjectMap [
         rr:predicate fno:executes ;
@@ -751,7 +739,7 @@ fnml:functionValue [
 ] .
 
 ##################################
-# UNIF OF MEASURE OBJECT MAPPING2
+# UNIT OF MEASURE OBJECT MAPPING2
 ##################################
 <#UnitOfMeasureMappingForHWC2> a rr:TriplesMap;
 rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
@@ -779,7 +767,7 @@ rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
  ];
  rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rr:template "Unità di misura {unit_misura}" ; rr:language "it"]
+    rr:objectMap [ rr:template "Unità di misura {unita_di_misura_testuale}" ; rr:language "it"]
  ];
  rr:predicateObjectMap [
     rr:predicate l0:name , ispra-top:name ;
@@ -802,7 +790,7 @@ rml:logicalSource <#LogicalSourceWatersForHumanConsumption>;
     ]
  ] .
 
- ###########################
+###########################
 # HWC SAMPLING POINT MAPPING
 ###########################
 <#HWCSamplingPointMapping> a rr:TriplesMap;
@@ -821,78 +809,154 @@ rr:subjectMap [
 ];
 rr:predicateObjectMap [
  rr:predicate ispra-plc:hasGeometry ;
- rr:objectMap <#URIGeometryforGeometry>
+ rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/geometry/{latitudine}-{longitudine}" ; rr:termType rr:IRI ]
 ];
 rr:predicateObjectMap [
   rr:predicate clv:fullAddress;
-  rr:objectMap [ rml:reference  "indirizzo_punto_prelievo"; xsd:datatype rdfs:literal ]
+  rr:objectMap [ rml:reference "indirizzo_punto_prelievo" ]
 ];
 rr:predicateObjectMap [
   rr:predicate hm:isUnderResponsibility;
-  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/health-agency/{codice_ente}" ;  rr:termType rr:IRI ; ]
+  rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/health-agency/{codice_ente}" ;  rr:termType rr:IRI  ]
 ];
 rr:predicateObjectMap [
-  rr:predicate ispra-plc:hasProvince ;
-  rr:objectMap [
-     rr:parentTriplesMap <#ProvinceMappingForHWC> ;
-     rr:joinCondition [
-        rr:child "provincia_punto_prelievo";
-        rr:parent "provincia.value" ;
-     ] ;
-   ] ;
- ]
- ;
+   rr:predicate ispra-plc:hasProvince ;
+   rr:objectMap <#URIProvinceMapping>
+] ;
  rr:predicateObjectMap [
-  rr:predicate ispra-plc:hasMunicipality ;
-    rr:objectMap [
-       rr:parentTriplesMap <#CityMappingForHWC> ;
-       rr:joinCondition [
-          rr:child "comune_punto_prelievo";
-          rr:parent "nome.value" ;
-       ] ;
-    ]
+    rr:predicate ispra-plc:hasMunicipality ;
+    rr:objectMap [ rr:template "https://w3id.org/italia/lombardia/data/city/{codice_comune}" ; rr:termType rr:IRI ]
 ].
 
-<#URIGeometryforGeometry>
+<#URIProvinceMapping>
 rr:termType rr:IRI ;
-  fnml:functionValue [
-   rr:predicateObjectMap [
-     rr:predicate fno:executes ;
-     rr:objectMap [ rr:constant grel:array_join ]
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap  [ rr:constant "https://w3id.org/italia/lombardia/data/province"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap <#substringCodiceComuneMapping>
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_string_sep ;
+   rr:objectMap [ rr:constant "/" ]
+ ];
+].
+
+<#substringCodiceComuneMapping>
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:string_substring ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:valueParameter ;
+   rr:objectMap  [ rml:reference "codice_comune"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:param_int_i_from ;
+   rr:objectMap [ rr:constant "0"]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:param_int_i_opt_to ;
+   rr:objectMap [ rr:constant "3"]
+ ];
+].
+
+
+#################################
+# COMUNE OBJ MAPPING
+##################################
+<#CityObjMappingPP> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWatersForHumanConsumption> ;
+  rr:subjectMap [
+     rr:template "https://w3id.org/italia/lombardia/data/city/{codice_comune}";
+     rr:class ispra-plc:Municipality , ispra-plc:Feature , clv:Feature , ispra-top:Location
+  ] ;
+  rr:predicateObjectMap [
+     rr:predicate rdfs:label ;
+     rr:objectMap [ rr:template "City: {comune_punto_prelievo}" ; rr:language "en" ]
    ];
    rr:predicateObjectMap [
-      rr:predicate grel:p_array_a ;
-      rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/geometry"]
-   ] ;
+      rr:predicate rdfs:label ;
+      rr:objectMap [ rr:template "Città {comune_punto_prelievo}" ; rr:language "it" ]
+   ];
    rr:predicateObjectMap [
-      rr:predicate grel:p_array_a ;
-      rr:objectMap <#URIGeometryForWaterSample2>
-   ] ;
+      rr:predicate ispra-top:name , l0:name ;
+      rr:objectMap [ rml:reference "comune_punto_prelievo" ; rr:language "it" ]
+   ];
+   ### SAME AS FOR ISPRA
    rr:predicateObjectMap [
-      rr:predicate grel:p_string_sep ;
-      rr:objectMap [ rr:constant "/" ]
-   ]
-  ] .
+      rr:predicate owl:sameAs ;
+      rr:objectMap [ rr:template "https://w3id.org/italia/env/ld/place/municipality/00201_{codice_comune}" ; rr:termType rr:IRI ]
+   ];
+   ### SAME AS ARCO CITY
+   rr:predicateObjectMap [
+      rr:predicate owl:sameAs ;
+      rr:objectMap <#URICityArco>
+   ];
+   #### SAME AS FOR NATIONAL VOC
+   rr:predicateObjectMap [
+     rr:predicateObjectMap [
+        rr:predicate owl:sameAs ;
+        rr:objectMap [
+          rr:parentTriplesMap <#CityMappingForDWPP> ;
+          rr:joinCondition [
+             rr:child "comune_punto_prelievo";
+             rr:parent "nome.value" ;
+          ] ;
+        ]
+      ]
+    ] .
 
-  # ##############################
-  # ## CITY LINKING
-  # ##############################
+<#URICityArco>
+rr:termType rr:IRI ;
+fnml:functionValue [
+ rr:predicateObjectMap [
+   rr:predicate fno:executes ;
+   rr:objectMap [ rr:constant grel:array_join ]
+ ];
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap [ rr:constant "https://w3id.org/arco/resource/City" ]
+ ] ;
+ rr:predicateObjectMap [
+   rr:predicate grel:p_array_a ;
+   rr:objectMap <#slugifyCity2>
+ ];
+ rr:predicateObjectMap [
+     rr:predicate grel:p_string_sep ;
+     rr:objectMap [ rr:constant "/"]
+ ]
+].
 
-  <#CityMappingForHWC> a rr:TriplesMap ;
-  rml:logicalSource <#LogicalSourceCITYRDF> ;
-  rr:subjectMap [
-    rr:template "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/{ID.value}-({starttime.value})" ;  rr:termType rr:IRI ;
-  ].
+<#slugifyCity2>
+fnml:functionValue [
+  rr:predicateObjectMap [
+    rr:predicate fno:executes ;
+    rr:objectMap [ rr:constant idlab-fn:slugify ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate idlab-fn:str ;
+    rr:objectMap [ rml:reference "comune_punto_prelievo"]
+  ] ;
+] .
 
-  # ##############################
-  # ## PROVINCE LINKING
-  # ##############################
+# ##############################
+# ## CITY LINKING
+# ##############################
 
-  <#ProvinceMappingForHWC> a rr:TriplesMap ;
-  rml:logicalSource <#LogicalSourcePROVINCERDF> ;
-  rr:subjectMap [
-    rr:template "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/{ID.value}" ;  rr:termType rr:IRI ;
-  ].
+<#CityMappingForDWPP> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceCITYRDF> ;
+rr:subjectMap [
+  rr:template "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/{ID.value}-({starttime.value})" ;  rr:termType rr:IRI ;
+].
 
   ####################################
   # GEOMETRY MAPPING OBJECT MAPPING
@@ -900,24 +964,7 @@ rr:termType rr:IRI ;
   <#GeometryMappingForHWC> a rr:TriplesMap ;
   rml:logicalSource <#LogicalSourceWatersForHumanConsumption> ;
   rr:subjectMap [
-  fnml:functionValue [
-   rr:predicateObjectMap [
-     rr:predicate fno:executes ;
-     rr:objectMap [ rr:constant grel:array_join ]
-   ];
-   rr:predicateObjectMap [
-      rr:predicate grel:p_array_a ;
-      rr:objectMap [ rr:constant "https://w3id.org/italia/lombardia/data/geometry"]
-   ] ;
-   rr:predicateObjectMap [
-      rr:predicate grel:p_array_a ;
-      rr:objectMap <#URIGeometryForWaterSample2>
-   ] ;
-   rr:predicateObjectMap [
-      rr:predicate grel:p_string_sep ;
-      rr:objectMap [ rr:constant "/" ]
-   ]
-  ];
+   rr:template "https://w3id.org/italia/lombardia/data/geometry/{latitudine}-{longitudine}";
    rr:class ispra-plc:Geometry
   ] ;
   rr:predicateObjectMap [
@@ -941,31 +988,31 @@ rr:termType rr:IRI ;
     rr:objectMap [ rml:reference "longitudine" ]
   ] .
 
-  ############################################
-  # ## GEOMETRY TYPE MAPPING OBJECT MAPPING
-  # ##########################################
-  <#GeometryTypeMappingForHWC> a rr:TriplesMap ;
-  rml:logicalSource <#LogicalSourceWatersForHumanConsumption> ;
-  rr:subjectMap [
-    rr:constant "https://w3id.org/italia/lombardia/data/geometry-type/point";
-    rr:class ispra-plc:GeometryType
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate rdfs:label;
-    rr:objectMap [ rr:constant "Geometry Type: Point" ; rr:language "en" ]
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate rdfs:label;
-    rr:objectMap [ rr:constant "Tipo di Geometria: Punto" ; rr:language "it" ]
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate ispra-top:name;
-    rr:objectMap [ rr:constant "Punto" ; rr:language "it" ]
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate ispra-top:name;
-    rr:objectMap [ rr:constant "Point" ; rr:language "en" ]
-  ] .
+############################################
+# ## GEOMETRY TYPE MAPPING OBJECT MAPPING
+# ##########################################
+<#GeometryTypeMappingForHWC> a rr:TriplesMap ;
+rml:logicalSource <#LogicalSourceWatersForHumanConsumption> ;
+rr:subjectMap [
+  rr:constant "https://w3id.org/italia/lombardia/data/geometry-type/point";
+  rr:class ispra-plc:GeometryType
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:constant "Geometry Type: Point" ; rr:language "en" ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [ rr:constant "Tipo di Geometria: Punto" ; rr:language "it" ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name;
+  rr:objectMap [ rr:constant "Punto" ; rr:language "it" ]
+] ;
+rr:predicateObjectMap [
+  rr:predicate ispra-top:name;
+  rr:objectMap [ rr:constant "Point" ; rr:language "en" ]
+] .
 
   # ##### URI of Observation Value Mapping
   <#URLifyObservationResultForHWC>
@@ -990,9 +1037,9 @@ rr:termType rr:IRI ;
     ]
   ] .
 
-  <#PhysicoChemicalObservationMapping>
-  #rr:termType rr:IRI ;
-  fnml:functionValue [
+<#PPObservationMapping>
+rr:termType rr:IRI ;
+fnml:functionValue [
    rr:predicateObjectMap [
      rr:predicate fno:executes ;
      rr:objectMap [ rr:constant grel:array_join ]
@@ -1003,7 +1050,7 @@ rr:termType rr:IRI ;
    ];
    rr:predicateObjectMap [
      rr:predicate grel:p_array_a ;
-     rr:objectMap  <#MD5ExecutionForWHC>
+     rr:objectMap  <#MD5ExecutionForWHCPP>
    ];
    rr:predicateObjectMap [
      rr:predicate grel:p_string_sep ;
@@ -1011,7 +1058,7 @@ rr:termType rr:IRI ;
    ];
   ].
 
-  <#MD5ExecutionForWHC>
+<#MD5ExecutionForWHCPP>
   fnml:functionValue [
     rr:predicateObjectMap [
      rr:predicate fno:executes ;
@@ -1019,12 +1066,12 @@ rr:termType rr:IRI ;
     ];
     rr:predicateObjectMap [
      rr:predicate grel:valueParameter ;
-     rr:objectMap <#ArrayJoinEntryForWHC>
+     rr:objectMap <#ArrayJoinEntryForWHCPP>
     ];
   ].
 
-  ### Array join intera riga
-  <#ArrayJoinEntryForWHC>
+### Array join intera riga
+<#ArrayJoinEntryForWHCPP>
   fnml:functionValue [
     rr:predicateObjectMap [
       rr:predicate fno:executes ;
@@ -1092,6 +1139,10 @@ rr:termType rr:IRI ;
     ];
     rr:predicateObjectMap [
       rr:predicate grel:p_array_a ;
+      rr:objectMap  [ rml:reference "codice_parametro"]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate grel:p_array_a ;
       rr:objectMap  [ rml:reference "valore_testuale"]
     ];
     rr:predicateObjectMap [
@@ -1115,71 +1166,35 @@ rr:termType rr:IRI ;
       rr:objectMap  [ rml:reference "indirizzo_di_georeferenziazione"]
     ];
     rr:predicateObjectMap [
-  rr:predicate grel:p_array_a ;
-  rr:objectMap  [ rml:reference "segno"]
-  ];
-  rr:predicateObjectMap [
-  rr:predicate grel:p_array_a ;
-  rr:objectMap  [ rml:reference "risultato"]
-  ];
-  rr:predicateObjectMap [
-  rr:predicate grel:p_array_a ;
-  rr:objectMap  [ rml:reference "unit_misura"]
-  ];
-  rr:predicateObjectMap [
-  rr:predicate grel:p_array_a ;
-  rr:objectMap  [ rml:reference "cas"]
-  ];
-    rr:predicateObjectMap [
-      rr:predicate grel:p_string_sep ;
-      rr:objectMap [ rr:constant "-" ]
+      rr:predicate grel:p_array_a ;
+      rr:objectMap  [ rml:reference "segno"]
     ];
+    rr:predicateObjectMap [
+      rr:predicate grel:p_array_a ;
+      rr:objectMap  [ rml:reference "risultato"]
+    ];
+    rr:predicateObjectMap [
+      rr:predicate grel:p_array_a ;
+      rr:objectMap  [ rml:reference "unit_misura"]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate grel:p_string_sep ;
+        rr:objectMap [ rr:constant "" ]
+    ]
   ].
 
-  <#IsNotBiologicalParameter>
-  fnml:functionValue [
-      rr:predicateObjectMap [
-          rr:predicate fno:executes ;
-          rr:objectMap [ rr:constant idlab-fn:notEqual ]
-      ] ;
-      rr:predicateObjectMap [
-          rr:predicate grel:valueParameter ;
-         rr:objectMap [ rr:constant "Microbiologico" ]
-      ] ;
-      rr:predicateObjectMap [
-          rr:predicate grel:valueParameter2 ;
-          rr:objectMap [ rml:reference "macro_categoria_parametro" ]
-     ]
-  ] .
-
-  <#IsChimico>
-  fnml:functionValue [
-      rr:predicateObjectMap [
-          rr:predicate fno:executes ;
-          rr:objectMap [ rr:constant idlab-fn:equal ]
-      ] ;
-      rr:predicateObjectMap [
-          rr:predicate grel:valueParameter ;
-         rr:objectMap [ rr:constant "Fisico" ]
-      ] ;
-      rr:predicateObjectMap [
-          rr:predicate grel:valueParameter2 ;
-          rr:objectMap [ rml:reference "macro_categoria_parametro" ]
-     ]
-  ] .
-
-  <#IsIndicatore>
-  fnml:functionValue [
-      rr:predicateObjectMap [
-          rr:predicate fno:executes ;
-          rr:objectMap [ rr:constant idlab-fn:equal ]
-      ] ;
-      rr:predicateObjectMap [
-          rr:predicate grel:valueParameter ;
-         rr:objectMap [ rr:constant "Indicatore" ]
-      ] ;
-      rr:predicateObjectMap [
-          rr:predicate grel:valueParameter2 ;
-          rr:objectMap [ rml:reference "tipo_parametro" ]
-     ]
-  ] .
+<#IsFisico>
+fnml:functionValue [
+    rr:predicateObjectMap [
+        rr:predicate fno:executes ;
+        rr:objectMap [ rr:constant idlab-fn:equal ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate grel:valueParameter ;
+       rr:objectMap [ rr:constant "Fisico" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate grel:valueParameter2 ;
+        rr:objectMap [ rml:reference "macro_categoria_parametro" ]
+   ]
+] .
