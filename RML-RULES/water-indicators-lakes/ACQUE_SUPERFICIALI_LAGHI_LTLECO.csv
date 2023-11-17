@@ -1,0 +1,110 @@
+bacino_idrografico,lago,provincia,comune,coord_x,coord_y,tipo_di_monitoraggio,trasparenza_(media_annua),oss_ipolimico_(media_ponderata_nell_ipolimnio_a_fine_periodo_di_stratificazione),p_tot_(media_ponderata_sulla_colonna_in_max_circolazione),classe,anno
+Lambro - Olona Meridionale,Alserio,CO,Monguzzo,516781,5070390,operativo,2.10,41,26,SUFFICIENTE,2018
+Adda,Annone Est,LC,Civate,527173,5072980,operativo,2.60,77,29,SUFFICIENTE,2018
+Adda,Annone ovest,LC,Civate,525973,5073780,operativo,1.90,25,27,SUFFICIENTE,2018
+Ticino,Comabbio,VA,Varano Borghi,476034,5067740,operativo,3.20,32,21,BUONO,2018
+Adda,Como,CO,Como,506024,5075040,operativo,4.30,70,28,SUFFICIENTE,2018
+Adda,Como,CO,Argegno,510784,5085544,operativo,5.70,36,56,SUFFICIENTE,2018
+Adda,Como,LC,Dervio,522274,5101979,operativo,7.00,84,18,BUONO,2018
+Adda,Como,CO,Abbadia Lariana,524973,5082980,operativo,6.30,70,32,SUFFICIENTE,2018
+Spol,del Gallo,SO,Livigno,588673,5157677,sorveglianza,-,-,-,-,2018
+Oglio,Endine,BG,Endine Gaiano,573578,5070552,sorveglianza,2.90,45,11,BUONO,2018
+Ticino,Ganna,VA,Valganna,486524,5082660,sorveglianza,2.10,115,6,BUONO,2018
+Adda,Garlate,LC,Lecco,531673,5073980,operativo,5.30,10,22,SUFFICIENTE,2018
+Ticino,Ghirla,VA,Valganna,486324,5084480,operativo,4.20,2,10,BUONO,2018
+Oglio,Idro,BS,Anfo,617507,5070348,operativo,3.00,6,189,SUFFICIENTE,2018
+Lambro - Olona Meridionale,Idroscalo,MI,Segrate,522574,5034534,sorveglianza,2.50,110,9,BUONO,2018
+Oglio,Iseo,BS,Monte Isola,583750,5060289,operativo,3.00,6,119,SUFFICIENTE,2018
+Ticino,Lugano,VA,Lavena – Ponte Tresa,489394,5089980,operativo,3.90,42,7,SUFFICIENTE,2018
+Ticino,Lugano,CO,Claino con Osteno,506017,5096017,operativo,6.00,11,93,SUFFICIENTE,2018
+Ticino,Lugano,VA,Porto Ceresio,492473,5083960,operativo,4.80,32,37,SUFFICIENTE,2018
+Ticino,Maggiore,VA,Ghiffa,471000,5090000,sorveglianza,7.10,45,12,BUONO,2018
+Sarca - Mincio,Mantova di Mezzo,MN,Mantova,641701,5002580,operativo,1.00,81,75,SUFFICIENTE,2018
+Sarca - Mincio,Mantova Inferiore,MN,Mantova,642191,5000930,operativo,0.90,92,100,SUFFICIENTE,2018
+Sarca - Mincio,Mantova Superiore,MN,Mantova,639041,5002500,operativo,1.20,64,82,SUFFICIENTE,2018
+Adda,Mezzola,SO,Verceia,533774,5116679,operativo,2.90,55,12,BUONO,2018
+Ticino,Monate,VA,Osmate Lentate,473484,5071580,sorveglianza,-,-,-,-,2018
+Adda,Montespluga,SO,Madesimo,526824,5148079,sorveglianza,-,-,-,-,2018
+Lambro - Olona Meridionale,Montorfano,CO,Montorfano,510728,5069900,operativo,1.90,37,24,SUFFICIENTE,2018
+Adda,Palabione,SO,Aprica,589708,5108628,sorveglianza,-,-,-,-,2018
+Adda,Palù,SO,Chiesa Valmenco,566858,5127768,sorveglianza,7.00,8,83,ELEVATO,2018
+Ticino,Piano,CO,Carlazzo,512695,5098290,operativo,3.50,32,20,SUFFICIENTE,2018
+Adda,Pozzo di Riva,SO,Novate Mezzola,534047,5119251,operativo,2.10,51,71,SUFFICIENTE,2018
+Lambro - Olona Meridionale,Pusiano,CO,Pusiano,521708,5072285,operativo,3.90,2,19,SUFFICIENTE,2018
+Adda,Sartirana,LC,Merate,533073,5062580,operativo,0.80,59,75,SUFFICIENTE,2018
+Lambro - Olona Meridionale,Segrino,CO,Eupilio,520528,5074690,sorveglianza,-,-,-,-,2018
+Adda,Truzzo,SO,San Giacomo Filippo,524524,5134279,sorveglianza,19.50,2,81,ELEVATO,2018
+Ticino,Varese,VA,Biandronno,479464,5073430,operativo,3.30,2,71,SUFFICIENTE,2018
+Sarca - Mincio,Garda,BS,Brenzone,633947,5061953,sorveglianza,9.50,77,11,BUONO,2018
+Sarca - Mincio,Garda,BS,Bardolino,635063,5023672,sorveglianza,7.60,65,5,BUONO,2018
+Lambro - Olona Meridionale,Alserio,CO,Monguzzo,516781,5070390,operativo,3.00,47.00,24.00,SUFFICIENTE,2019
+Adda,Annone Est,LC,Civate,527173,5072980,operativo,2.80,15.00,20.00,SUFFICIENTE,2019
+Adda,Annone ovest,LC,Civate,525973,5073780,operativo,2.50,77.00,22.00,SUFFICIENTE,2019
+Ticino,Comabbio,VA,Varano Borghi,476034,5067740,operativo,3.30,10.00,12.00,BUONO,2019
+Adda,Como,CO,Como,506024,5075040,operativo,3.90,66.00,29.00,SUFFICIENTE,2019
+Adda,Como,CO,Argegno,510784,5085544,operativo,5.00,57.00,52.00,SUFFICIENTE,2019
+Adda,Como,LC,Dervio,522274,5101979,operativo,5.70,66.00,29.00,SUFFICIENTE,2019
+Adda,Como,CO,Abbadia Lariana,524973,5082980,operativo,6.60,62.00,28.00,SUFFICIENTE,2019
+Spol,del Gallo,SO,Livigno,588673,5157677,sorveglianza,-,-,-,-,2019
+Oglio,Endine,BG,Endine Gaiano,573578,5070552,sorveglianza,4.10,34.00,15.00,SUFFICIENTE,2019
+Ticino,Ganna,VA,Valganna,486524,5082660,sorveglianza,2.10,109.00,6.00,BUONO,2019
+Adda,Garlate,LC,Lecco,531673,5073980,operativo,4.60,57.00,30.00,SUFFICIENTE,2019
+Ticino,Ghirla,VA,Valganna,486324,5084480,operativo,4.50,1.00,11.00,BUONO,2019
+Oglio,Idro,BS,Anfo,617507,5070348,operativo,4.50,11.00,203.00,SUFFICIENTE,2019
+Lambro - Olona Meridionale,Idroscalo,MI,Segrate,522574,5034534,sorveglianza,-,-,-,-,2019
+Oglio,Iseo,BS,Monte Isola,583750,5060289,operativo,4.00,7.00,134.00,SUFFICIENTE,2019
+Ticino,Lugano,VA,Lavena – Ponte Tresa,489394,5089980,operativo,5.50,2.00,37.00,SUFFICIENTE,2019
+Ticino,Lugano,CO,Claino con Osteno,506017,5096017,operativo,7.30,10.00,103.00,SUFFICIENTE,2019
+Ticino,Lugano,VA,Porto Ceresio,492473,5083960,operativo,5.70,31.00,33.00,SUFFICIENTE,2019
+Ticino,Maggiore,VA,Ghiffa,471000,5090000,sorveglianza,-,-,-,-,2019
+Sarca - Mincio,Mantova di Mezzo,MN,Mantova,641701,5002580,operativo,0.80,117.40,64.00,SUFFICIENTE,2019
+Sarca - Mincio,Mantova Inferiore,MN,Mantova,642191,5000930,operativo,0.80,87.00,48.00,SUFFICIENTE,2019
+Sarca - Mincio,Mantova Superiore,MN,Mantova,639041,5002500,operativo,1.30,63.20,71.00,SUFFICIENTE,2019
+Adda,Mezzola,SO,Verceia,533774,5116679,operativo,4.30,73.00,15.00,SUFFICIENTE,2019
+Ticino,Monate,VA,Osmate Lentate,473484,5071580,sorveglianza,-,-,-,-,2019
+Adda,Montespluga,SO,Madesimo,526824,5148079,sorveglianza,-,-,-,-,2019
+Lambro - Olona Meridionale,Montorfano,CO,Montorfano,510728,5069900,operativo,2.20,48.00,34.00,SUFFICIENTE,2020
+Adda,Palabione,SO,Aprica,589708,5108628,sorveglianza,5.70,73.00,5.00,BUONO,2020
+Adda,Palù,SO,chiesa in valmalenco,566858,5127768,sorveglianza,8.30,87.00,10.00,ELEVATO,2020
+Ticino,Piano,CO,Carlazzo,512695,5098290,operativo,4.10,42.00,56.00,SUFFICIENTE,2020
+Adda,Pozzo di Riva,SO,Novate Mezzola,534047,5119251,operativo,2.20,82.00,45.00,SUFFICIENTE,2020
+Lambro - Olona Meridionale,Pusiano,CO,Pusiano,521708,5072285,operativo,3.90,18.00,25.00,SUFFICIENTE,2020
+Adda,San Giacomo di Fraele,SO,Valdidentro,597817,5154517,sorveglianza,-,-,-,-,2020
+Adda,Sartirana,LC,Merate,533073,5062580,operativo,1.20,86.00,53.00,SUFFICIENTE,2020
+Lambro - Olona Meridionale,Segrino,CO,Eupilio,520528,5074690,sorveglianza,-,-,-,-,2020
+Adda,Truzzo,SO,San Giacomo Filippo,524524,5134279,sorveglianza,-,-,-,-,2020
+Oglio,Valvestino,BS,Valvestino,625253,5063761,operativo,-,-,-,-,2020
+Ticino,Varese,VA,Biandronno,479464,5073430,operativo,5.10,1.00,114.00,SUFFICIENTE,2020
+Sarca - Mincio,Garda,BS,Brenzone,633947,5061953,sorveglianza,8.90,40.00,17.00,SUFFICIENTE,2020
+Sarca - Mincio,Garda,BS,Bardolino,635063,5023672,sorveglianza,8.10,28.00,13.00,SUFFICIENTE,2020
+Lambro - Olona Meridionale,Alserio,CO,Monguzzo,516781,5070390,operativo,1.8,64,-,NC,2020
+Adda,Annone Est,LC,Civate,527173,5072980,operativo,1.8,17,27,SUFFICIENTE,2020
+Adda,Annone ovest,LC,Civate,525973,5073780,operativo,1.3,18,-,NC,2020
+Ticino,Comabbio,VA,Varano Borghi,476034,5067740,operativo,4.0,18,20,SUFFICIENTE,2020
+Adda,Como,CO,Como,506024,5075040,operativo,4.0,79,-,NC,2020
+Adda,Como,CO,Argegno,510784,5085544,operativo,5.5,49,31,SUFFICIENTE,2020
+Adda,Como,LC,Dervio,522274,5101979,operativo,6.5,65,19,SUFFICIENTE,2020
+Adda,Como,CO,Abbadia Lariana,524973,5082980,operativo,7.1,73,11,BUONO,2020
+Oglio,Endine,BG,Endine Gaiano,573578,5070552,operativo,3.4,11,2,BUONO,2020
+Ticino,Ganna,VA,Valganna,486524,5082660,sorveglianza,2.5,117,5,ELEVATO,2020
+Adda,Garlate,LC,Lecco,531673,5073980,operativo,4.8,12,13,SUFFICIENTE,2020
+Ticino,Ghirla,VA,Valganna,486324,5084480,operativo,5.2,2,12,BUONO,2020
+Oglio,Idro,BS,Anfo,617507,5070348,operativo,4.9,7,185,SUFFICIENTE,2020
+Oglio,Iseo,BS,Monte Isola,583750,5060289,operativo,6.3,6,107,SUFFICIENTE,2020
+Ticino,Lugano,VA,Lavena – Ponte Tresa,489394,5089980,operativo,4.1,15,19,SUFFICIENTE,2020
+Ticino,Lugano,CO,Claino con Osteno,506017,5096017,operativo,5.2,12,96,SUFFICIENTE,2020
+Ticino,Lugano,VA,Porto Ceresio,492473,5083960,operativo,3.7,12,33,SUFFICIENTE,2020
+Sarca - Mincio,Mantova di Mezzo,MN,Mantova,641701,5002580,operativo,0.8,92,62,SUFFICIENTE,2020
+Sarca - Mincio,Mantova Inferiore,MN,Mantova,642191,5000930,operativo,0.8,91,57,SUFFICIENTE,2020
+Sarca - Mincio,Mantova Superiore,MN,Mantova,639041,5002500,operativo,1.0,118,56,SUFFICIENTE,2020
+Adda,Mezzola,SO,Verceia,533774,5116679,operativo,3.0,67,13,BUONO,2020
+Lambro - Olona Meridionale,Montorfano,CO,Montorfano,510728,5069900,operativo,2.9,16,22,SUFFICIENTE,2020
+Adda,Palù,SO,chiesa in valmalenco,566858,5127768,sorveglianza,6.6,99,8,ELEVATO,2020
+Ticino,Piano,CO,Carlazzo,512695,5098290,operativo,3.4,72,-,NC,2020
+Adda,Pozzo di Riva,SO,Novate Mezzola,534047,5119251,operativo,2.9,14,42,SUFFICIENTE,2020
+Lambro - Olona Meridionale,Pusiano,CO,Pusiano,521708,5072285,operativo,3.3,6,-,NC,2020
+Adda,Sartirana,LC,Merate,533073,5062580,operativo,1.2,73,38,SUFFICIENTE,2020
+Lambro - Olona Meridionale,Segrino,CO,Eupilio,520528,5074690,operativo,3.9,85,3,BUONO,2020
+Ticino,Varese,VA,Biandronno,479464,5073430,operativo,4.1,1,76,SUFFICIENTE,2020
+Sarca - Mincio,Garda,BS,Brenzone,633947,5061953,sorveglianza,10.5,76,18,BUONO,2020
+Sarca - Mincio,Garda,BS,Bardolino,635063,5023672,sorveglianza,8.0,74,11,BUONO,2020

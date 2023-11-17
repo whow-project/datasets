@@ -1,0 +1,1026 @@
+Data,Comune di prelievo,Provincia,Parametro,Unita di misura,Valore testuale,Unita di misura testuale,Segno,Valore numerico
+2020-07-24 00:00:00,SERIATE,BG,RN-222,bq/l,"<1,6",becquerel per litro,<,"1,6"
+2020-07-24 00:00:00,SERIATE,BG,T-ALFA,bq/l,"<0,017",becquerel per litro,<,"0,017"
+2020-07-24 00:00:00,SERIATE,BG,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-07-24 00:00:00,TREVIGLIO,BG,RN-222,bq/l,23.2,becquerel per litro,,23.2
+2020-07-24 00:00:00,TREVIGLIO,BG,T-ALFA,bq/l,0.041,becquerel per litro,,0.041
+2020-07-24 00:00:00,TREVIGLIO,BG,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-07-14 10:00:00,DESENZANO DEL GARDA,BS,RN-222,bq/l,4.1,becquerel per litro,,4.1
+2020-07-14 10:00:00,DESENZANO DEL GARDA,BS,T-ALFA,bq/l,0.03,becquerel per litro,,0.03
+2020-07-14 10:00:00,DESENZANO DEL GARDA,BS,T-BETA,bq/l,0.167,becquerel per litro,,0.167
+2020-07-14 10:45:00,MONTICHIARI,BS,RN-222,bq/l,15,becquerel per litro,,15
+2020-07-14 10:45:00,MONTICHIARI,BS,T-ALFA,bq/l,0.065,becquerel per litro,,0.065
+2020-07-14 10:45:00,MONTICHIARI,BS,T-BETA,bq/l,0.285,becquerel per litro,,0.285
+2020-07-14 11:30:00,PONCARALE,BS,RN-222,bq/l,15.4,becquerel per litro,,15.4
+2020-07-14 11:30:00,PONCARALE,BS,T-ALFA,bq/l,0.053,becquerel per litro,,0.053
+2020-07-14 11:30:00,PONCARALE,BS,T-BETA,bq/l,"<0,14",becquerel per litro,<,"0,14"
+2020-02-18 10:30:00,ROVELLO PORRO,CO,CS-137,bq/l,"<0,014",becquerel per litro,<,"0,014"
+2020-06-16 09:00:00,CASTELGERUNDO,LO,RN-222,bq/l,4.8,becquerel per litro,,4.8
+2020-06-16 09:00:00,CASTELGERUNDO,LO,T-ALFA,bq/l,0.041,becquerel per litro,,0.041
+2020-06-16 09:00:00,CASTELGERUNDO,LO,T-BETA,bq/l,"<0,096",becquerel per litro,<,"0,096"
+2020-10-13 09:00:00,CASTELGERUNDO,LO,H-3,bq/l,"<6,6",becquerel per litro,<,"6,6"
+2020-10-13 09:00:00,CASTELGERUNDO,LO,RN-222,bq/l,0.94,becquerel per litro,,0.94
+2020-10-13 09:00:00,CASTELGERUNDO,LO,T-ALFA,bq/l,"<0,013",becquerel per litro,<,"0,013"
+2020-10-13 09:00:00,CASTELGERUNDO,LO,T-BETA,bq/l,0.142,becquerel per litro,,0.142
+2020-10-13 09:00:00,CASTELGERUNDO,LO,RN-222,bq/l,"<0,9",becquerel per litro,<,"0,9"
+2020-06-10 09:00:00,LODI,LO,RN-222,bq/l,22,becquerel per litro,,22
+2020-06-10 09:00:00,LODI,LO,T-ALFA,bq/l,0.071,becquerel per litro,,0.071
+2020-06-10 09:00:00,LODI,LO,T-BETA,bq/l,"<0,14",becquerel per litro,<,"0,14"
+2020-10-13 09:00:00,LODI,LO,RN-222,bq/l,16.4,becquerel per litro,,16.4
+2020-10-13 09:00:00,LODI,LO,T-ALFA,bq/l,0.087,becquerel per litro,,0.087
+2020-10-13 09:00:00,LODI,LO,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2020-11-11 00:00:00,ARCORE,MB,RN-222,bq/l,11.2,becquerel per litro,,11.2
+2020-11-11 00:00:00,ARCORE,MB,T-ALFA,bq/l,0.038,becquerel per litro,,0.038
+2020-11-11 00:00:00,ARCORE,MB,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2020-11-11 00:00:00,BRUGHERIO,MB,RN-222,bq/l,9.5,becquerel per litro,,9.5
+2020-11-11 00:00:00,BRUGHERIO,MB,T-ALFA,bq/l,0.045,becquerel per litro,,0.045
+2020-11-11 00:00:00,BRUGHERIO,MB,T-BETA,bq/l,"<0,14",becquerel per litro,<,"0,14"
+2020-11-11 00:00:00,CESANO MADERNO,MB,RA-226,bq/l,"<0,0035",becquerel per litro,<,"0,0035"
+2020-11-11 00:00:00,CESANO MADERNO,MB,RN-222,bq/l,16.9,becquerel per litro,,16.9
+2020-11-11 00:00:00,CESANO MADERNO,MB,T-ALFA,bq/l,0.194,becquerel per litro,,0.194
+2020-11-11 00:00:00,CESANO MADERNO,MB,T-BETA,bq/l,0.164,becquerel per litro,,0.164
+2020-11-11 00:00:00,CESANO MADERNO,MB,T-U,bq/l,0.187,becquerel per litro,,0.187
+2020-11-11 00:00:00,CESANO MADERNO,MB,U-234,bq/l,0.105,becquerel per litro,,0.105
+2020-11-11 00:00:00,CESANO MADERNO,MB,U-238,bq/l,0.0823,becquerel per litro,,0.0823
+2020-11-11 00:00:00,CESANO MADERNO,MB,T-ALFA,bq/l,0.229,becquerel per litro,,0.229
+2020-11-11 00:00:00,CESANO MADERNO,MB,T-BETA,bq/l,0.172,becquerel per litro,,0.172
+2020-11-11 00:00:00,DESIO,MB,RA-226,bq/l,"<0,0034",becquerel per litro,<,"0,0034"
+2020-11-11 00:00:00,DESIO,MB,RN-222,bq/l,12.9,becquerel per litro,,12.9
+2020-11-11 00:00:00,DESIO,MB,T-ALFA,bq/l,0.117,becquerel per litro,,0.117
+2020-11-11 00:00:00,DESIO,MB,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2020-11-11 00:00:00,DESIO,MB,T-U,bq/l,0.121,becquerel per litro,,0.121
+2020-11-11 00:00:00,DESIO,MB,U-234,bq/l,0.0715,becquerel per litro,,0.0715
+2020-11-11 00:00:00,DESIO,MB,U-238,bq/l,0.0495,becquerel per litro,,0.0495
+2020-11-11 00:00:00,GIUSSANO,MB,RN-222,bq/l,27,becquerel per litro,,27
+2020-11-11 00:00:00,GIUSSANO,MB,T-ALFA,bq/l,0.05,becquerel per litro,,0.05
+2020-11-11 00:00:00,GIUSSANO,MB,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-11-11 00:00:00,LIMBIATE,MB,RA-226,bq/l,"<0,0042",becquerel per litro,<,"0,0042"
+2020-11-11 00:00:00,LIMBIATE,MB,RN-222,bq/l,11,becquerel per litro,,11
+2020-11-11 00:00:00,LIMBIATE,MB,T-ALFA,bq/l,0.106,becquerel per litro,,0.106
+2020-11-11 00:00:00,LIMBIATE,MB,T-BETA,bq/l,"<0,14",becquerel per litro,<,"0,14"
+2020-11-11 00:00:00,LIMBIATE,MB,T-U,bq/l,0.0893,becquerel per litro,,0.0893
+2020-11-11 00:00:00,LIMBIATE,MB,U-234,bq/l,0.0507,becquerel per litro,,0.0507
+2020-11-11 00:00:00,LIMBIATE,MB,U-238,bq/l,0.0386,becquerel per litro,,0.0386
+2020-11-11 00:00:00,LISSONE,MB,RN-222,bq/l,8.4,becquerel per litro,,8.4
+2020-11-11 00:00:00,LISSONE,MB,T-ALFA,bq/l,0.049,becquerel per litro,,0.049
+2020-11-11 00:00:00,LISSONE,MB,T-BETA,bq/l,"<0,14",becquerel per litro,<,"0,14"
+2020-11-11 00:00:00,MONZA,MB,RN-222,bq/l,17.4,becquerel per litro,,17.4
+2020-11-11 00:00:00,MONZA,MB,T-ALFA,bq/l,0.062,becquerel per litro,,0.062
+2020-11-11 00:00:00,MONZA,MB,T-BETA,bq/l,0.127,becquerel per litro,,0.127
+2020-11-11 00:00:00,MONZA,MB,RN-222,bq/l,19.1,becquerel per litro,,19.1
+2020-11-11 00:00:00,SEREGNO,MB,RN-222,bq/l,17.3,becquerel per litro,,17.3
+2020-11-11 00:00:00,SEREGNO,MB,T-ALFA,bq/l,0.091,becquerel per litro,,0.091
+2020-11-11 00:00:00,SEREGNO,MB,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2020-06-30 09:00:00,ABBIATEGRASSO,MI,RN-222,bq/l,19.2,becquerel per litro,,19.2
+2020-06-30 09:00:00,ABBIATEGRASSO,MI,T-ALFA,bq/l,0.051,becquerel per litro,,0.051
+2020-06-30 09:00:00,ABBIATEGRASSO,MI,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2020-10-26 09:00:00,ABBIATEGRASSO,MI,RN-222,bq/l,20.6,becquerel per litro,,20.6
+2020-10-26 09:00:00,ABBIATEGRASSO,MI,T-ALFA,bq/l,0.055,becquerel per litro,,0.055
+2020-10-26 09:00:00,ABBIATEGRASSO,MI,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2020-06-17 09:00:00,BOLLATE,MI,RN-222,bq/l,8.3,becquerel per litro,,8.3
+2020-06-17 09:00:00,BOLLATE,MI,T-ALFA,bq/l,0.045,becquerel per litro,,0.045
+2020-06-17 09:00:00,BOLLATE,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-10-06 09:00:00,BOLLATE,MI,RN-222,bq/l,15.6,becquerel per litro,,15.6
+2020-10-06 09:00:00,BOLLATE,MI,T-ALFA,bq/l,0.027,becquerel per litro,,0.027
+2020-10-06 09:00:00,BOLLATE,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-05-25 09:30:00,BUCCINASCO,MI,RN-222,bq/l,9.6,becquerel per litro,,9.6
+2020-05-25 09:30:00,BUCCINASCO,MI,T-ALFA,bq/l,0.079,becquerel per litro,,0.079
+2020-05-25 09:30:00,BUCCINASCO,MI,T-BETA,bq/l,"<0,098",becquerel per litro,<,"0,098"
+2020-10-20 09:00:00,BUCCINASCO,MI,RN-222,bq/l,9.9,becquerel per litro,,9.9
+2020-10-20 09:00:00,BUCCINASCO,MI,T-ALFA,bq/l,0.073,becquerel per litro,,0.073
+2020-10-20 09:00:00,BUCCINASCO,MI,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2020-06-17 09:00:00,CERNUSCO SUL NAVIGLIO,MI,RN-222,bq/l,12.9,becquerel per litro,,12.9
+2020-06-17 09:00:00,CERNUSCO SUL NAVIGLIO,MI,T-ALFA,bq/l,0.08,becquerel per litro,,0.08
+2020-06-17 09:00:00,CERNUSCO SUL NAVIGLIO,MI,T-BETA,bq/l,0.157,becquerel per litro,,0.157
+2020-10-29 12:40:00,CERNUSCO SUL NAVIGLIO,MI,RN-222,bq/l,12,becquerel per litro,,12
+2020-10-29 12:40:00,CERNUSCO SUL NAVIGLIO,MI,T-ALFA,bq/l,0.077,becquerel per litro,,0.077
+2020-10-29 12:40:00,CERNUSCO SUL NAVIGLIO,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-01-01 00:00:00,CINISELLO BALSAMO,MI,RN-222,bq/l,10.7,becquerel per litro,,10.7
+2020-01-01 00:00:00,CINISELLO BALSAMO,MI,T-ALFA,bq/l,0.039,becquerel per litro,,0.039
+2020-01-01 00:00:00,CINISELLO BALSAMO,MI,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2020-06-10 09:00:00,CINISELLO BALSAMO,MI,RN-222,bq/l,11.5,becquerel per litro,,11.5
+2020-06-10 09:00:00,CINISELLO BALSAMO,MI,T-ALFA,bq/l,0.043,becquerel per litro,,0.043
+2020-06-10 09:00:00,CINISELLO BALSAMO,MI,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2020-06-10 09:00:00,COLOGNO MONZESE,MI,RN-222,bq/l,9.9,becquerel per litro,,9.9
+2020-06-10 09:00:00,COLOGNO MONZESE,MI,T-ALFA,bq/l,0.098,becquerel per litro,,0.098
+2020-06-10 09:00:00,COLOGNO MONZESE,MI,T-BETA,bq/l,0.127,becquerel per litro,,0.127
+2020-10-01 09:00:00,COLOGNO MONZESE,MI,RA-226,bq/l,"<0,0037",becquerel per litro,<,"0,0037"
+2020-10-01 09:00:00,COLOGNO MONZESE,MI,RN-222,bq/l,10,becquerel per litro,,10
+2020-10-01 09:00:00,COLOGNO MONZESE,MI,T-ALFA,bq/l,0.109,becquerel per litro,,0.109
+2020-10-01 09:00:00,COLOGNO MONZESE,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-10-01 09:00:00,COLOGNO MONZESE,MI,T-U,bq/l,0.1052,becquerel per litro,,0.1052
+2020-10-01 09:00:00,COLOGNO MONZESE,MI,U-234,bq/l,0.0547,becquerel per litro,,0.0547
+2020-10-01 09:00:00,COLOGNO MONZESE,MI,U-238,bq/l,0.0504,becquerel per litro,,0.0504
+2020-05-25 10:00:00,CORSICO,MI,RA-226,bq/l,"<0,0033",becquerel per litro,<,"0,0033"
+2020-05-25 10:00:00,CORSICO,MI,RN-222,bq/l,13,becquerel per litro,,13
+2020-05-25 10:00:00,CORSICO,MI,T-ALFA,bq/l,0.159,becquerel per litro,,0.159
+2020-05-25 10:00:00,CORSICO,MI,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2020-05-25 10:00:00,CORSICO,MI,T-U,bq/l,0.186,becquerel per litro,,0.186
+2020-05-25 10:00:00,CORSICO,MI,U-234,bq/l,0.114,becquerel per litro,,0.114
+2020-05-25 10:00:00,CORSICO,MI,U-238,bq/l,0.0724,becquerel per litro,,0.0724
+2020-10-20 09:00:00,CORSICO,MI,RA-226,bq/l,"<0,0033",becquerel per litro,<,"0,0033"
+2020-10-20 09:00:00,CORSICO,MI,RN-222,bq/l,12.6,becquerel per litro,,12.6
+2020-10-20 09:00:00,CORSICO,MI,T-ALFA,bq/l,0.164,becquerel per litro,,0.164
+2020-10-20 09:00:00,CORSICO,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-10-20 09:00:00,CORSICO,MI,T-U,bq/l,0.152,becquerel per litro,,0.152
+2020-10-20 09:00:00,CORSICO,MI,U-234,bq/l,0.0916,becquerel per litro,,0.0916
+2020-10-20 09:00:00,CORSICO,MI,U-238,bq/l,0.0604,becquerel per litro,,0.0604
+2020-06-16 09:00:00,GARBAGNATE MILANESE,MI,RN-222,bq/l,11.9,becquerel per litro,,11.9
+2020-06-16 09:00:00,GARBAGNATE MILANESE,MI,T-ALFA,bq/l,0.02,becquerel per litro,,0.02
+2020-06-16 09:00:00,GARBAGNATE MILANESE,MI,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2020-10-06 09:00:00,GARBAGNATE MILANESE,MI,RN-222,bq/l,11.8,becquerel per litro,,11.8
+2020-10-06 09:00:00,GARBAGNATE MILANESE,MI,T-ALFA,bq/l,"<0,017",becquerel per litro,<,"0,017"
+2020-10-06 09:00:00,GARBAGNATE MILANESE,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-06-16 09:00:00,LAINATE,MI,RN-222,bq/l,12,becquerel per litro,,12
+2020-06-16 09:00:00,LAINATE,MI,T-ALFA,bq/l,0.082,becquerel per litro,,0.082
+2020-06-16 09:00:00,LAINATE,MI,T-BETA,bq/l,0.208,becquerel per litro,,0.208
+2020-10-06 09:00:00,LAINATE,MI,RN-222,bq/l,9.8,becquerel per litro,,9.8
+2020-10-06 09:00:00,LAINATE,MI,T-ALFA,bq/l,0.091,becquerel per litro,,0.091
+2020-10-06 09:00:00,LAINATE,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-06-24 09:00:00,LEGNANO,MI,RA-226,bq/l,"<0,0029",becquerel per litro,<,"0,0029"
+2020-06-24 09:00:00,LEGNANO,MI,RN-222,bq/l,9.5,becquerel per litro,,9.5
+2020-06-24 09:00:00,LEGNANO,MI,T-ALFA,bq/l,0.177,becquerel per litro,,0.177
+2020-06-24 09:00:00,LEGNANO,MI,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2020-06-24 09:00:00,LEGNANO,MI,T-U,bq/l,0.179,becquerel per litro,,0.179
+2020-06-24 09:00:00,LEGNANO,MI,U-234,bq/l,0.1072,becquerel per litro,,0.1072
+2020-06-24 09:00:00,LEGNANO,MI,U-238,bq/l,0.0716,becquerel per litro,,0.0716
+2020-10-13 09:00:00,LEGNANO,MI,RA-226,bq/l,"<0,0036",becquerel per litro,<,"0,0036"
+2020-10-13 09:00:00,LEGNANO,MI,RN-222,bq/l,12.1,becquerel per litro,,12.1
+2020-10-13 09:00:00,LEGNANO,MI,T-ALFA,bq/l,0.182,becquerel per litro,,0.182
+2020-10-13 09:00:00,LEGNANO,MI,T-BETA,bq/l,0.146,becquerel per litro,,0.146
+2020-10-13 09:00:00,LEGNANO,MI,T-U,bq/l,0.162,becquerel per litro,,0.162
+2020-10-13 09:00:00,LEGNANO,MI,U-234,bq/l,0.099,becquerel per litro,,0.099
+2020-10-13 09:00:00,LEGNANO,MI,U-238,bq/l,0.0628,becquerel per litro,,0.0628
+2020-01-13 11:30:00,MILANO,MI,H-3,bq/l,"<5,5",becquerel per litro,<,"5,5"
+2020-01-13 11:30:00,MILANO,MI,T-ALFA,bq/l,0.106,becquerel per litro,,0.106
+2020-01-13 11:30:00,MILANO,MI,T-BETA,bq/l,"<0,098",becquerel per litro,<,"0,098"
+2020-01-27 10:29:00,MILANO,MI,RN-222,bq/l,5.5,becquerel per litro,,5.5
+2020-01-27 10:31:00,MILANO,MI,RN-222,bq/l,6.2,becquerel per litro,,6.2
+2020-01-27 10:37:00,MILANO,MI,RN-222,bq/l,5.8,becquerel per litro,,5.8
+2020-01-27 10:40:00,MILANO,MI,RN-222,bq/l,6.6,becquerel per litro,,6.6
+2020-01-27 10:44:00,MILANO,MI,RN-222,bq/l,6,becquerel per litro,,6
+2020-01-27 10:50:00,MILANO,MI,RN-222,bq/l,6.3,becquerel per litro,,6.3
+2020-02-03 10:45:00,MILANO,MI,RN-222,bq/l,2.94,becquerel per litro,,2.94
+2020-02-03 10:55:00,MILANO,MI,RN-222,bq/l,4.6,becquerel per litro,,4.6
+2020-02-03 11:07:00,MILANO,MI,RN-222,bq/l,4.5,becquerel per litro,,4.5
+2020-02-05 11:00:00,MILANO,MI,H-3,bq/l,"<5,9",becquerel per litro,<,"5,9"
+2020-02-05 11:00:00,MILANO,MI,T-ALFA,bq/l,0.095,becquerel per litro,,0.095
+2020-02-05 11:00:00,MILANO,MI,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2020-02-05 11:00:00,MILANO,MI,SR-90,bq/l,"<0,0077",becquerel per litro,<,"0,0077"
+2020-03-26 10:10:00,MILANO,MI,H-3,bq/l,"<5,8",becquerel per litro,<,"5,8"
+2020-03-26 10:10:00,MILANO,MI,T-ALFA,bq/l,0.091,becquerel per litro,,0.091
+2020-03-26 10:10:00,MILANO,MI,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2020-04-16 10:30:00,MILANO,MI,H-3,bq/l,"<5,8",becquerel per litro,<,"5,8"
+2020-04-16 10:30:00,MILANO,MI,T-ALFA,bq/l,0.087,becquerel per litro,,0.087
+2020-04-16 10:30:00,MILANO,MI,T-BETA,bq/l,0.117,becquerel per litro,,0.117
+2020-05-25 10:30:00,MILANO,MI,H-3,bq/l,"<5,8",becquerel per litro,<,"5,8"
+2020-05-25 10:30:00,MILANO,MI,T-ALFA,bq/l,0.097,becquerel per litro,,0.097
+2020-05-25 10:30:00,MILANO,MI,T-BETA,bq/l,0.112,becquerel per litro,,0.112
+2020-05-25 10:30:00,MILANO,MI,SR-90,bq/l,"<0,0068",becquerel per litro,<,"0,0068"
+2020-06-18 11:15:00,MILANO,MI,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2020-06-18 11:15:00,MILANO,MI,T-ALFA,bq/l,0.116,becquerel per litro,,0.116
+2020-06-18 11:15:00,MILANO,MI,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2020-07-07 15:40:00,MILANO,MI,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2020-07-07 15:40:00,MILANO,MI,T-ALFA,bq/l,0.105,becquerel per litro,,0.105
+2020-07-07 15:40:00,MILANO,MI,T-BETA,bq/l,"<0,1",becquerel per litro,<,"0,1"
+2020-08-10 11:10:00,MILANO,MI,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2020-08-10 11:10:00,MILANO,MI,T-ALFA,bq/l,0.101,becquerel per litro,,0.101
+2020-08-10 11:10:00,MILANO,MI,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2020-08-10 11:10:00,MILANO,MI,SR-90,bq/l,"<0,004",becquerel per litro,<,"0,004"
+2020-09-16 10:15:00,MILANO,MI,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2020-09-16 10:15:00,MILANO,MI,T-ALFA,bq/l,0.1,becquerel per litro,,0.1
+2020-09-16 10:15:00,MILANO,MI,T-BETA,bq/l,"<0,1",becquerel per litro,<,"0,1"
+2020-10-14 11:00:00,MILANO,MI,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2020-10-14 11:00:00,MILANO,MI,T-ALFA,bq/l,0.116,becquerel per litro,,0.116
+2020-10-14 11:00:00,MILANO,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-11-16 12:25:00,MILANO,MI,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2020-11-16 12:25:00,MILANO,MI,T-ALFA,bq/l,0.11,becquerel per litro,,0.11
+2020-11-16 12:25:00,MILANO,MI,T-BETA,bq/l,"<0,1",becquerel per litro,<,"0,1"
+2020-11-16 12:25:00,MILANO,MI,SR-90,bq/l,"<0,0021",becquerel per litro,<,"0,0021"
+2020-12-14 15:40:00,MILANO,MI,H-3,bq/l,<6,becquerel per litro,<,6
+2020-12-14 15:40:00,MILANO,MI,T-ALFA,bq/l,0.115,becquerel per litro,,0.115
+2020-12-14 15:40:00,MILANO,MI,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2020-06-16 09:00:00,PADERNO DUGNANO,MI,RN-222,bq/l,8.5,becquerel per litro,,8.5
+2020-06-16 09:00:00,PADERNO DUGNANO,MI,T-ALFA,bq/l,0.044,becquerel per litro,,0.044
+2020-06-16 09:00:00,PADERNO DUGNANO,MI,T-BETA,bq/l,0.15,becquerel per litro,,0.15
+2020-10-06 09:00:00,PADERNO DUGNANO,MI,RA-226,bq/l,"<0,0037",becquerel per litro,<,"0,0037"
+2020-10-06 09:00:00,PADERNO DUGNANO,MI,RN-222,bq/l,13,becquerel per litro,,13
+2020-10-06 09:00:00,PADERNO DUGNANO,MI,T-ALFA,bq/l,0.144,becquerel per litro,,0.144
+2020-10-06 09:00:00,PADERNO DUGNANO,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-10-06 09:00:00,PADERNO DUGNANO,MI,T-U,bq/l,0.13,becquerel per litro,,0.13
+2020-10-06 09:00:00,PADERNO DUGNANO,MI,U-234,bq/l,0.0729,becquerel per litro,,0.0729
+2020-10-06 09:00:00,PADERNO DUGNANO,MI,U-238,bq/l,0.0574,becquerel per litro,,0.0574
+2020-06-24 09:00:00,PARABIAGO,MI,RN-222,bq/l,8.1,becquerel per litro,,8.1
+2020-06-24 09:00:00,PARABIAGO,MI,T-ALFA,bq/l,0.077,becquerel per litro,,0.077
+2020-06-24 09:00:00,PARABIAGO,MI,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2020-10-13 09:00:00,PARABIAGO,MI,RA-226,bq/l,"<0,0037",becquerel per litro,<,"0,0037"
+2020-10-13 09:00:00,PARABIAGO,MI,RN-222,bq/l,8.9,becquerel per litro,,8.9
+2020-10-13 09:00:00,PARABIAGO,MI,T-ALFA,bq/l,0.114,becquerel per litro,,0.114
+2020-10-13 09:00:00,PARABIAGO,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-10-13 09:00:00,PARABIAGO,MI,T-U,bq/l,0.0976,becquerel per litro,,0.0976
+2020-10-13 09:00:00,PARABIAGO,MI,U-234,bq/l,0.0598,becquerel per litro,,0.0598
+2020-10-13 09:00:00,PARABIAGO,MI,U-238,bq/l,0.0377,becquerel per litro,,0.0377
+2020-06-16 09:00:00,ROZZANO,MI,RN-222,bq/l,15.1,becquerel per litro,,15.1
+2020-06-16 09:00:00,ROZZANO,MI,T-ALFA,bq/l,0.076,becquerel per litro,,0.076
+2020-06-16 09:00:00,ROZZANO,MI,T-BETA,bq/l,"<0,086",becquerel per litro,<,"0,086"
+2020-06-16 09:00:00,ROZZANO,MI,RN-222,bq/l,14.4,becquerel per litro,,14.4
+2020-10-22 09:00:00,ROZZANO,MI,RN-222,bq/l,17.5,becquerel per litro,,17.5
+2020-10-22 09:00:00,ROZZANO,MI,T-ALFA,bq/l,0.086,becquerel per litro,,0.086
+2020-10-22 09:00:00,ROZZANO,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-06-16 09:00:00,SAN DONATO MILANESE,MI,RN-222,bq/l,"<1,1",becquerel per litro,<,"1,1"
+2020-06-16 09:00:00,SAN DONATO MILANESE,MI,T-ALFA,bq/l,0.064,becquerel per litro,,0.064
+2020-06-16 09:00:00,SAN DONATO MILANESE,MI,T-BETA,bq/l,"<0,092",becquerel per litro,<,"0,092"
+2020-10-22 10:00:00,SAN DONATO MILANESE,MI,RN-222,bq/l,5.2,becquerel per litro,,5.2
+2020-10-22 10:00:00,SAN DONATO MILANESE,MI,T-ALFA,bq/l,0.081,becquerel per litro,,0.081
+2020-10-22 10:00:00,SAN DONATO MILANESE,MI,T-BETA,bq/l,"<0,14",becquerel per litro,<,"0,14"
+2020-06-10 09:00:00,SESTO SAN GIOVANNI,MI,RN-222,bq/l,9.9,becquerel per litro,,9.9
+2020-06-10 09:00:00,SESTO SAN GIOVANNI,MI,T-ALFA,bq/l,0.059,becquerel per litro,,0.059
+2020-06-10 09:00:00,SESTO SAN GIOVANNI,MI,T-BETA,bq/l,"<0,097",becquerel per litro,<,"0,097"
+2020-10-01 09:00:00,SESTO SAN GIOVANNI,MI,RN-222,bq/l,9.3,becquerel per litro,,9.3
+2020-10-01 09:00:00,SESTO SAN GIOVANNI,MI,T-ALFA,bq/l,0.051,becquerel per litro,,0.051
+2020-10-01 09:00:00,SESTO SAN GIOVANNI,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-07-22 11:00:00,MANTOVA,MN,RN-222,bq/l,5.5,becquerel per litro,,5.5
+2020-07-22 11:00:00,MANTOVA,MN,T-ALFA,bq/l,"<0,018",becquerel per litro,<,"0,018"
+2020-07-22 11:00:00,MANTOVA,MN,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-09-28 09:30:00,VIGEVANO,PV,RN-222,bq/l,9,becquerel per litro,,9
+2020-09-28 09:30:00,VIGEVANO,PV,T-ALFA,bq/l,"<0,017",becquerel per litro,<,"0,017"
+2020-09-28 09:30:00,VIGEVANO,PV,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2020-07-21 07:00:00,SONDRIO,SO,RA-226,bq/l,0.0066,becquerel per litro,,0.0066
+2020-07-21 07:00:00,SONDRIO,SO,RN-222,bq/l,19.5,becquerel per litro,,19.5
+2020-07-21 07:00:00,SONDRIO,SO,T-ALFA,bq/l,0.1,becquerel per litro,,0.1
+2020-07-21 07:00:00,SONDRIO,SO,T-BETA,bq/l,0.144,becquerel per litro,,0.144
+2020-07-21 07:00:00,SONDRIO,SO,T-U,bq/l,0.0715,becquerel per litro,,0.0715
+2020-07-21 07:00:00,SONDRIO,SO,U-234,bq/l,0.0381,becquerel per litro,,0.0381
+2020-07-21 07:00:00,SONDRIO,SO,U-238,bq/l,0.0334,becquerel per litro,,0.0334
+2020-07-21 07:00:00,SONDRIO,SO,RN-222,bq/l,21.8,becquerel per litro,,21.8
+2020-07-21 07:20:00,SONDRIO,SO,RN-222,bq/l,8.3,becquerel per litro,,8.3
+2020-07-21 07:20:00,SONDRIO,SO,T-ALFA,bq/l,0.072,becquerel per litro,,0.072
+2020-07-21 07:20:00,SONDRIO,SO,T-BETA,bq/l,0.135,becquerel per litro,,0.135
+2020-06-09 09:30:00,ISPRA,VA,H-3,bq/l,"<6,4",becquerel per litro,<,"6,4"
+2020-06-09 09:30:00,ISPRA,VA,RA-226,bq/l,0.0044,becquerel per litro,,0.0044
+2020-06-09 09:30:00,ISPRA,VA,RN-222,bq/l,28.1,becquerel per litro,,28.1
+2020-06-09 09:30:00,ISPRA,VA,T-ALFA,bq/l,0.272,becquerel per litro,,0.272
+2020-06-09 09:30:00,ISPRA,VA,T-BETA,bq/l,0.184,becquerel per litro,,0.184
+2020-06-09 09:30:00,ISPRA,VA,T-U,bq/l,0.282,becquerel per litro,,0.282
+2020-06-09 09:30:00,ISPRA,VA,U-234,bq/l,0.144,becquerel per litro,,0.144
+2020-06-09 09:30:00,ISPRA,VA,U-238,bq/l,0.137,becquerel per litro,,0.137
+2020-06-09 09:30:00,ISPRA,VA,T-ALFA,bq/l,0.264,becquerel per litro,,0.264
+2020-06-09 09:30:00,ISPRA,VA,T-BETA,bq/l,0.243,becquerel per litro,,0.243
+2020-06-16 00:00:00,SARONNO,VA,CS-137,bq/l,"<0,015",becquerel per litro,<,"0,015"
+2021-01-13 12:05:00,MILANO,MI,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2021-01-13 12:05:00,MILANO,MI,T-ALFA,bq/l,"0,117",becquerel per litro,,"0,117"
+2021-01-13 12:05:00,MILANO,MI,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-02-03 09:00:00,CASALPUSTERLENGO,LO,RN-222,bq/l,"2,56",becquerel per litro,,"2,56"
+2021-02-03 09:00:00,CASALPUSTERLENGO,LO,T-ALFA,bq/l,"0,061",becquerel per litro,,"0,061"
+2021-02-03 09:00:00,CASALPUSTERLENGO,LO,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-02-03 09:20:00,CASTELGERUNDO,LO,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2021-02-03 09:20:00,CASTELGERUNDO,LO,RN-222,bq/l,"<0,75",becquerel per litro,<,"0,75"
+2021-02-03 09:20:00,CASTELGERUNDO,LO,T-ALFA,bq/l,"<0,016",becquerel per litro,<,"0,016"
+2021-02-03 09:20:00,CASTELGERUNDO,LO,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-02-03 10:30:00,CASTIRAGA VIDARDO,LO,RN-222,bq/l,"2,39",becquerel per litro,,"2,39"
+2021-02-03 10:30:00,CASTIRAGA VIDARDO,LO,T-ALFA,bq/l,"0,016",becquerel per litro,,"0,016"
+2021-02-03 10:30:00,CASTIRAGA VIDARDO,LO,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-02-08 11:10:00,MILANO,MI,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2021-02-08 11:10:00,MILANO,MI,T-ALFA,bq/l,"0,107",becquerel per litro,,"0,107"
+2021-02-08 11:10:00,MILANO,MI,T-BETA,bq/l,"0,133",becquerel per litro,,"0,133"
+2021-02-08 11:10:00,MILANO,MI,SR-90,bq/l,"<0,0027",becquerel per litro,<,"0,0027"
+2021-03-02 08:45:00,VIADANA,MN,RN-222,bq/l,"<0,86",becquerel per litro,<,"0,86"
+2021-03-02 08:45:00,VIADANA,MN,T-ALFA,bq/l,"0,0158",becquerel per litro,,"0,0158"
+2021-03-02 08:45:00,VIADANA,MN,T-BETA,bq/l,"<0,1",becquerel per litro,<,"0,1"
+2021-03-02 09:15:00,VIADANA,MN,RN-222,bq/l,"2,35",becquerel per litro,,"2,35"
+2021-03-02 09:15:00,VIADANA,MN,T-ALFA,bq/l,"<0,016",becquerel per litro,<,"0,016"
+2021-03-02 09:15:00,VIADANA,MN,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-03-02 10:40:00,GUIDIZZOLO,MN,RN-222,bq/l,5,becquerel per litro,,5
+2021-03-02 10:40:00,GUIDIZZOLO,MN,T-ALFA,bq/l,"0,041",becquerel per litro,,"0,041"
+2021-03-02 10:40:00,GUIDIZZOLO,MN,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-03-09 08:30:00,BORGO VIRGILIO,MN,RN-222,bq/l,"4,4",becquerel per litro,,"4,4"
+2021-03-09 08:30:00,BORGO VIRGILIO,MN,T-ALFA,bq/l,"<0,018",becquerel per litro,<,"0,018"
+2021-03-09 08:30:00,BORGO VIRGILIO,MN,T-BETA,bq/l,"<0,14",becquerel per litro,<,"0,14"
+2021-03-09 10:40:00,SAN GIOVANNI DEL DOSSO,MN,RN-222,bq/l,"5,4",becquerel per litro,,"5,4"
+2021-03-09 10:40:00,SAN GIOVANNI DEL DOSSO,MN,T-ALFA,bq/l,"0,036",becquerel per litro,,"0,036"
+2021-03-09 10:40:00,SAN GIOVANNI DEL DOSSO,MN,T-BETA,bq/l,"0,136",becquerel per litro,,"0,136"
+2021-03-16 09:00:00,ISPRA,VA,H-3,bq/l,<6,becquerel per litro,<,6
+2021-03-16 09:00:00,ISPRA,VA,RA-226,bq/l,"<0,0036",becquerel per litro,<,"0,0036"
+2021-03-16 09:00:00,ISPRA,VA,RN-222,bq/l,50,becquerel per litro,,50
+2021-03-16 09:00:00,ISPRA,VA,T-ALFA,bq/l,"0,277",becquerel per litro,,"0,277"
+2021-03-16 09:00:00,ISPRA,VA,T-BETA,bq/l,"0,153",becquerel per litro,,"0,153"
+2021-03-16 09:00:00,ISPRA,VA,T-U,bq/l,"0,284",becquerel per litro,,"0,284"
+2021-03-16 09:00:00,ISPRA,VA,U-234,bq/l,"0,144",becquerel per litro,,"0,144"
+2021-03-16 09:00:00,ISPRA,VA,U-238,bq/l,"0,14",becquerel per litro,,"0,14"
+2021-03-18 09:15:00,ARDESIO,BG,RN-222,bq/l,"4,7",becquerel per litro,,"4,7"
+2021-03-18 09:15:00,ARDESIO,BG,T-ALFA,bq/l,"<0,014",becquerel per litro,<,"0,014"
+2021-03-18 09:15:00,ARDESIO,BG,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-03-18 09:15:00,BERGAMO,BG,RN-222,bq/l,"<2,2",becquerel per litro,<,"2,2"
+2021-03-18 09:15:00,BERGAMO,BG,T-ALFA,bq/l,"<0,016",becquerel per litro,<,"0,016"
+2021-03-18 09:15:00,BERGAMO,BG,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-03-18 09:30:00,TERNO D'ISOLA,BG,RN-222,bq/l,"<2,3",becquerel per litro,<,"2,3"
+2021-03-18 09:30:00,TERNO D'ISOLA,BG,T-ALFA,bq/l,"<0,014",becquerel per litro,<,"0,014"
+2021-03-18 09:30:00,TERNO D'ISOLA,BG,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-03-18 10:00:00,BERGAMO,BG,RN-222,bq/l,"4,8",becquerel per litro,,"4,8"
+2021-03-18 10:00:00,BERGAMO,BG,T-ALFA,bq/l,"0,0253",becquerel per litro,,"0,0253"
+2021-03-18 10:00:00,BERGAMO,BG,T-BETA,bq/l,"<0,1",becquerel per litro,<,"0,1"
+2021-03-18 10:40:00,ARCENE,BG,RN-222,bq/l,"10,1",becquerel per litro,,"10,1"
+2021-03-18 10:40:00,ARCENE,BG,T-ALFA,bq/l,"0,051",becquerel per litro,,"0,051"
+2021-03-18 10:40:00,ARCENE,BG,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-03-18 09:00:00,CASTIONE DELLA PRESOLANA,BG,RN-222,bq/l,5,becquerel per litro,,5
+2021-03-18 09:00:00,CASTIONE DELLA PRESOLANA,BG,T-ALFA,bq/l,"<0,016",becquerel per litro,<,"0,016"
+2021-03-18 09:00:00,CASTIONE DELLA PRESOLANA,BG,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-03-24 10:36:00,AGRATE BRIANZA,MB,RN-222,bq/l,"5,4",becquerel per litro,,"5,4"
+2021-03-24 10:36:00,AGRATE BRIANZA,MB,T-ALFA,bq/l,"0,069",becquerel per litro,,"0,069"
+2021-03-24 10:36:00,AGRATE BRIANZA,MB,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-03-24 11:00:00,RONCO BRIANTINO,MB,RN-222,bq/l,"9,1",becquerel per litro,,"9,1"
+2021-03-24 11:00:00,RONCO BRIANTINO,MB,T-ALFA,bq/l,"0,072",becquerel per litro,,"0,072"
+2021-03-24 11:00:00,RONCO BRIANTINO,MB,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-03-24 10:50:00,ALBIATE,MB,RN-222,bq/l,"10,9",becquerel per litro,,"10,9"
+2021-03-24 10:50:00,ALBIATE,MB,T-ALFA,bq/l,"0,044",becquerel per litro,,"0,044"
+2021-03-24 10:50:00,ALBIATE,MB,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-03-24 10:30:00,BRIOSCO,MB,RN-222,bq/l,26,becquerel per litro,,26
+2021-03-24 10:30:00,BRIOSCO,MB,T-ALFA,bq/l,"0,034",becquerel per litro,,"0,034"
+2021-03-24 10:30:00,BRIOSCO,MB,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-03-25 09:20:00,CALCIO,BG,RN-222,bq/l,"18,4",becquerel per litro,,"18,4"
+2021-03-25 09:20:00,CALCIO,BG,T-ALFA,bq/l,"0,026",becquerel per litro,,"0,026"
+2021-03-25 09:20:00,CALCIO,BG,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-03-25 11:25:00,COMUN NUOVO,BG,RN-222,bq/l,"<2,1",becquerel per litro,<,"2,1"
+2021-03-25 11:25:00,COMUN NUOVO,BG,T-ALFA,bq/l,"<0,015",becquerel per litro,<,"0,015"
+2021-03-25 11:25:00,COMUN NUOVO,BG,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-03-25 10:20:00,CAVERNAGO,BG,RN-222,bq/l,"8,2",becquerel per litro,,"8,2"
+2021-03-25 10:20:00,CAVERNAGO,BG,T-ALFA,bq/l,"0,041",becquerel per litro,,"0,041"
+2021-03-25 10:20:00,CAVERNAGO,BG,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-03-25 09:00:00,VIGANO SAN MARTINO,BG,RN-222,bq/l,"3,5",becquerel per litro,,"3,5"
+2021-03-25 09:00:00,VIGANO SAN MARTINO,BG,T-ALFA,bq/l,"0,074",becquerel per litro,,"0,074"
+2021-03-25 09:00:00,VIGANO SAN MARTINO,BG,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-03-25 09:00:00,SEDRINA,BG,RN-222,bq/l,"2,8",becquerel per litro,,"2,8"
+2021-03-25 09:00:00,SEDRINA,BG,T-ALFA,bq/l,"0,029",becquerel per litro,,"0,029"
+2021-03-25 09:00:00,SEDRINA,BG,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-03-30 00:00:00,AIRUNO,LC,RN-222,bq/l,"7,8",becquerel per litro,,"7,8"
+2021-03-30 00:00:00,AIRUNO,LC,T-ALFA,bq/l,"0,042",becquerel per litro,,"0,042"
+2021-03-30 00:00:00,AIRUNO,LC,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-03-30 16:30:00,MILANO,MI,H-3,bq/l,<6,becquerel per litro,<,6
+2021-03-30 16:30:00,MILANO,MI,T-ALFA,bq/l,"0,106",becquerel per litro,,"0,106"
+2021-03-30 16:30:00,MILANO,MI,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-04-06 09:00:00,MILANO,MI,CS-137,bq/l,"<0,00067",becquerel per litro,<,"0,00067"
+2021-04-08 14:45:00,MILANO,MI,H-3,bq/l,<6,becquerel per litro,<,6
+2021-04-08 14:45:00,MILANO,MI,T-ALFA,bq/l,"0,103",becquerel per litro,,"0,103"
+2021-04-08 14:45:00,MILANO,MI,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-04-14 10:44:00,PANTIGLIATE,MI,RA-226,bq/l,"<0,003",becquerel per litro,<,"0,003"
+2021-04-14 10:44:00,PANTIGLIATE,MI,RN-222,bq/l,"8,1",becquerel per litro,,"8,1"
+2021-04-14 10:44:00,PANTIGLIATE,MI,T-ALFA,bq/l,"0,244",becquerel per litro,,"0,244"
+2021-04-14 10:44:00,PANTIGLIATE,MI,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-04-14 10:44:00,PANTIGLIATE,MI,T-U,bq/l,"0,263",becquerel per litro,,"0,263"
+2021-04-14 10:44:00,PANTIGLIATE,MI,U-234,bq/l,"0,143",becquerel per litro,,"0,143"
+2021-04-14 10:44:00,PANTIGLIATE,MI,U-238,bq/l,"0,12",becquerel per litro,,"0,12"
+2021-04-15 10:15:00,POZZUOLO MARTESANA,MI,RN-222,bq/l,"4,2",becquerel per litro,,"4,2"
+2021-04-15 10:15:00,POZZUOLO MARTESANA,MI,T-ALFA,bq/l,"0,084",becquerel per litro,,"0,084"
+2021-04-15 10:15:00,POZZUOLO MARTESANA,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-04-15 10:45:00,CASSANO D'ADDA,MI,RN-222,bq/l,"36,7",becquerel per litro,,"36,7"
+2021-04-15 10:45:00,CASSANO D'ADDA,MI,T-ALFA,bq/l,"<0,018",becquerel per litro,<,"0,018"
+2021-04-15 10:45:00,CASSANO D'ADDA,MI,T-BETA,bq/l,"<0,14",becquerel per litro,<,"0,14"
+2021-04-15 09:00:00,BUSCATE,MI,RA-226,bq/l,"<0,0027",becquerel per litro,<,"0,0027"
+2021-04-15 09:00:00,BUSCATE,MI,RN-222,bq/l,"15,6",becquerel per litro,,"15,6"
+2021-04-15 09:00:00,BUSCATE,MI,T-ALFA,bq/l,"0,26",becquerel per litro,,"0,26"
+2021-04-15 09:00:00,BUSCATE,MI,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-04-15 09:00:00,BUSCATE,MI,T-U,bq/l,"0,254",becquerel per litro,,"0,254"
+2021-04-15 09:00:00,BUSCATE,MI,U-234,bq/l,"0,161",becquerel per litro,,"0,161"
+2021-04-15 09:00:00,BUSCATE,MI,U-238,bq/l,"0,0927",becquerel per litro,,"0,0927"
+2021-04-20 10:00:00,SARONNO,VA,H-3,bq/l,<6,becquerel per litro,<,6
+2021-04-20 10:00:00,SARONNO,VA,RN-222,bq/l,11,becquerel per litro,,11
+2021-04-20 10:00:00,SARONNO,VA,T-ALFA,bq/l,"0,021",becquerel per litro,,"0,021"
+2021-04-20 10:00:00,SARONNO,VA,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-04-27 08:10:00,TIRANO,SO,RN-222,bq/l,"3,8",becquerel per litro,,"3,8"
+2021-04-27 08:10:00,TIRANO,SO,T-ALFA,bq/l,"0,026",becquerel per litro,,"0,026"
+2021-04-27 08:10:00,TIRANO,SO,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-04-27 08:30:00,BORMIO,SO,RA-226,bq/l,"0,0389",becquerel per litro,,"0,0389"
+2021-04-27 08:30:00,BORMIO,SO,RN-222,bq/l,"23,6",becquerel per litro,,"23,6"
+2021-04-27 08:30:00,BORMIO,SO,T-ALFA,bq/l,"0,247",becquerel per litro,,"0,247"
+2021-04-27 08:30:00,BORMIO,SO,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-04-27 08:30:00,BORMIO,SO,T-U,bq/l,"0,184",becquerel per litro,,"0,184"
+2021-04-27 08:30:00,BORMIO,SO,U-234,bq/l,"0,1051",becquerel per litro,,"0,1051"
+2021-04-27 08:30:00,BORMIO,SO,U-238,bq/l,"0,0784",becquerel per litro,,"0,0784"
+2021-04-27 09:00:00,PISOGNE,BS,RN-222,bq/l,"7,5",becquerel per litro,,"7,5"
+2021-04-27 09:00:00,PISOGNE,BS,T-ALFA,bq/l,"<0,015",becquerel per litro,<,"0,015"
+2021-04-27 09:00:00,PISOGNE,BS,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-04-27 09:17:00,MORBEGNO,SO,RN-222,bq/l,"20,2",becquerel per litro,,"20,2"
+2021-04-27 09:17:00,MORBEGNO,SO,T-ALFA,bq/l,"<0,012",becquerel per litro,<,"0,012"
+2021-04-27 09:17:00,MORBEGNO,SO,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-04-27 10:10:00,EDOLO,BS,RN-222,bq/l,"5,7",becquerel per litro,,"5,7"
+2021-04-27 10:10:00,EDOLO,BS,T-ALFA,bq/l,"<0,016",becquerel per litro,<,"0,016"
+2021-04-27 10:10:00,EDOLO,BS,T-BETA,bq/l,"<0,14",becquerel per litro,<,"0,14"
+2021-04-27 11:00:00,LIVIGNO,SO,RN-222,bq/l,"26,5",becquerel per litro,,"26,5"
+2021-04-27 11:00:00,LIVIGNO,SO,T-ALFA,bq/l,"0,093",becquerel per litro,,"0,093"
+2021-04-27 11:00:00,LIVIGNO,SO,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-04-26 09:50:00,CHIAVENNA,SO,RN-222,bq/l,"<3,2",becquerel per litro,<,"3,2"
+2021-04-26 09:50:00,CHIAVENNA,SO,T-ALFA,bq/l,"0,0135",becquerel per litro,,"0,0135"
+2021-04-26 09:50:00,CHIAVENNA,SO,T-BETA,bq/l,"0,122",becquerel per litro,,"0,122"
+2021-04-28 12:10:00,PONCARALE,BS,RN-222,bq/l,"13,2",becquerel per litro,,"13,2"
+2021-04-28 12:10:00,PONCARALE,BS,T-ALFA,bq/l,"0,042",becquerel per litro,,"0,042"
+2021-04-28 12:10:00,PONCARALE,BS,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-04-28 10:20:00,CONCESIO,BS,RN-222,bq/l,"5,5",becquerel per litro,,"5,5"
+2021-04-28 10:20:00,CONCESIO,BS,T-ALFA,bq/l,"0,018",becquerel per litro,,"0,018"
+2021-04-28 10:20:00,CONCESIO,BS,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-04-28 11:30:00,CASTEGNATO,BS,RN-222,bq/l,"6,7",becquerel per litro,,"6,7"
+2021-04-28 11:30:00,CASTEGNATO,BS,T-ALFA,bq/l,"0,022",becquerel per litro,,"0,022"
+2021-04-28 11:30:00,CASTEGNATO,BS,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-04-29 09:00:00,SOLARO,MI,RN-222,bq/l,"13,8",becquerel per litro,,"13,8"
+2021-04-29 09:00:00,SOLARO,MI,T-ALFA,bq/l,"0,027",becquerel per litro,,"0,027"
+2021-04-29 09:00:00,SOLARO,MI,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-04-29 09:00:00,CORNAREDO,MI,RN-222,bq/l,"9,5",becquerel per litro,,"9,5"
+2021-04-29 09:00:00,CORNAREDO,MI,T-ALFA,bq/l,"0,05",becquerel per litro,,"0,05"
+2021-04-29 09:00:00,CORNAREDO,MI,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-04-29 09:20:00,GAVARDO,BS,RN-222,bq/l,"6,2",becquerel per litro,,"6,2"
+2021-04-29 09:20:00,GAVARDO,BS,T-ALFA,bq/l,"0,052",becquerel per litro,,"0,052"
+2021-04-29 09:20:00,GAVARDO,BS,T-BETA,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-04-29 10:40:00,MILZANO,BS,RN-222,bq/l,"4,4",becquerel per litro,,"4,4"
+2021-04-29 10:40:00,MILZANO,BS,T-ALFA,bq/l,"<0,012",becquerel per litro,<,"0,012"
+2021-04-29 10:40:00,MILZANO,BS,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-04-29 11:20:00,ISORELLA,BS,RN-222,bq/l,"6,8",becquerel per litro,,"6,8"
+2021-04-29 11:20:00,ISORELLA,BS,T-ALFA,bq/l,"0,059",becquerel per litro,,"0,059"
+2021-04-29 11:20:00,ISORELLA,BS,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-05-05 09:50:00,MONIGA DEL GARDA,BS,RN-222,bq/l,"<2,1",becquerel per litro,<,"2,1"
+2021-05-05 09:50:00,MONIGA DEL GARDA,BS,T-ALFA,bq/l,"0,022",becquerel per litro,,"0,022"
+2021-05-05 09:50:00,MONIGA DEL GARDA,BS,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-05-05 11:15:00,FLERO,BS,RN-222,bq/l,"8,9",becquerel per litro,,"8,9"
+2021-05-05 11:15:00,FLERO,BS,T-ALFA,bq/l,"0,037",becquerel per litro,,"0,037"
+2021-05-05 11:15:00,FLERO,BS,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-05-06 10:30:00,ROVELLO PORRO,CO,BE-7,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-05-06 10:30:00,ROVELLO PORRO,CO,CS-134,bq/l,"<0,016",becquerel per litro,<,"0,016"
+2021-05-06 10:30:00,ROVELLO PORRO,CO,CS-137,bq/l,"<0,017",becquerel per litro,<,"0,017"
+2021-05-06 10:30:00,ROVELLO PORRO,CO,K-40,bq/l,"<0,28",becquerel per litro,<,"0,28"
+2021-05-06 10:00:00,SARONNO,VA,BE-7,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-05-06 10:00:00,SARONNO,VA,CS-134,bq/l,"<0,016",becquerel per litro,<,"0,016"
+2021-05-06 10:00:00,SARONNO,VA,CS-137,bq/l,"<0,016",becquerel per litro,<,"0,016"
+2021-05-06 10:00:00,SARONNO,VA,K-40,bq/l,"<0,27",becquerel per litro,<,"0,27"
+2021-05-13 12:20:00,MILANO,MI,H-3,bq/l,<6,becquerel per litro,<,6
+2021-05-13 12:20:00,MILANO,MI,T-ALFA,bq/l,"0,117",becquerel per litro,,"0,117"
+2021-05-13 12:20:00,MILANO,MI,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-05-13 12:20:00,MILANO,MI,SR-90,bq/l,"<0,0031",becquerel per litro,<,"0,0031"
+2021-05-20 09:00:00,ROSATE,MI,RA-226,bq/l,"<0,0029",becquerel per litro,<,"0,0029"
+2021-05-20 09:00:00,ROSATE,MI,RN-222,bq/l,"18,5",becquerel per litro,,"18,5"
+2021-05-20 09:00:00,ROSATE,MI,T-ALFA,bq/l,"0,155",becquerel per litro,,"0,155"
+2021-05-20 09:00:00,ROSATE,MI,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-05-20 09:00:00,ROSATE,MI,T-U,bq/l,"0,16",becquerel per litro,,"0,16"
+2021-05-20 09:00:00,ROSATE,MI,U-234,bq/l,"0,0904",becquerel per litro,,"0,0904"
+2021-05-20 09:00:00,ROSATE,MI,U-238,bq/l,"0,0701",becquerel per litro,,"0,0701"
+2021-05-20 09:00:00,MAGENTA,MI,RN-222,bq/l,"13,7",becquerel per litro,,"13,7"
+2021-05-20 09:00:00,MAGENTA,MI,T-ALFA,bq/l,"0,093",becquerel per litro,,"0,093"
+2021-05-20 09:00:00,MAGENTA,MI,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-06-10 15:00:00,MILANO,MI,H-3,bq/l,"<5,9",becquerel per litro,<,"5,9"
+2021-06-10 15:00:00,MILANO,MI,T-ALFA,bq/l,"0,099",becquerel per litro,,"0,099"
+2021-06-10 15:00:00,MILANO,MI,T-BETA,bq/l,"<0,087",becquerel per litro,<,"0,087"
+2021-06-15 09:45:00,CORTEOLONA E GENZONE,PV,RN-222,bq/l,"<2,4",becquerel per litro,<,"2,4"
+2021-06-15 09:45:00,CORTEOLONA E GENZONE,PV,T-ALFA,bq/l,"<0,012",becquerel per litro,<,"0,012"
+2021-06-15 09:45:00,CORTEOLONA E GENZONE,PV,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-06-15 11:15:00,CASORATE PRIMO,PV,RN-222,bq/l,"22,6",becquerel per litro,,"22,6"
+2021-06-15 11:15:00,CASORATE PRIMO,PV,T-ALFA,bq/l,"0,075",becquerel per litro,,"0,075"
+2021-06-15 11:15:00,CASORATE PRIMO,PV,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-06-15 11:30:00,MORTARA,PV,RN-222,bq/l,"4,8",becquerel per litro,,"4,8"
+2021-06-15 11:30:00,MORTARA,PV,T-ALFA,bq/l,"<0,012",becquerel per litro,<,"0,012"
+2021-06-15 11:30:00,MORTARA,PV,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-06-30 11:00:00,BRESCIA,BS,BE-7,bq/l,"<1,4",becquerel per litro,<,"1,4"
+2021-06-30 11:00:00,BRESCIA,BS,CS-134,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-06-30 11:00:00,BRESCIA,BS,CS-137,bq/l,"<0,16",becquerel per litro,<,"0,16"
+2021-06-30 11:00:00,BRESCIA,BS,K-40,bq/l,"<2,5",becquerel per litro,<,"2,5"
+2021-06-30 11:00:00,BRESCIA,BS,RN-222,bq/l,"13,2",becquerel per litro,,"13,2"
+2021-06-30 11:00:00,BRESCIA,BS,T-ALFA,bq/l,"0,052",becquerel per litro,,"0,052"
+2021-06-30 11:00:00,BRESCIA,BS,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-07-05 12:50:00,VALGOGLIO,BG,RN-222,bq/l,"8,4",becquerel per litro,,"8,4"
+2021-07-05 12:50:00,VALGOGLIO,BG,T-ALFA,bq/l,"0,022",becquerel per litro,,"0,022"
+2021-07-05 12:50:00,VALGOGLIO,BG,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-07-05 13:10:00,VALGOGLIO,BG,RN-222,bq/l,"3,3",becquerel per litro,,"3,3"
+2021-07-05 13:10:00,VALGOGLIO,BG,T-ALFA,bq/l,"<0,012",becquerel per litro,<,"0,012"
+2021-07-05 13:10:00,VALGOGLIO,BG,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-07-15 08:50:00,SEDRINA,BG,RN-222,bq/l,"5,3",becquerel per litro,,"5,3"
+2021-07-15 08:50:00,SEDRINA,BG,T-ALFA,bq/l,"0,024",becquerel per litro,,"0,024"
+2021-07-15 08:50:00,SEDRINA,BG,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-07-15 09:30:00,BERGAMO,BG,RN-222,bq/l,"4,7",becquerel per litro,,"4,7"
+2021-07-15 09:30:00,BERGAMO,BG,T-ALFA,bq/l,"0,023",becquerel per litro,,"0,023"
+2021-07-15 09:30:00,BERGAMO,BG,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-07-15 09:35:00,CASTIONE DELLA PRESOLANA,BG,RN-222,bq/l,"7,5",becquerel per litro,,"7,5"
+2021-07-15 09:35:00,CASTIONE DELLA PRESOLANA,BG,T-ALFA,bq/l,"<0,012",becquerel per litro,<,"0,012"
+2021-07-15 09:35:00,CASTIONE DELLA PRESOLANA,BG,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-07-15 09:55:00,ARDESIO,BG,RN-222,bq/l,"7,1",becquerel per litro,,"7,1"
+2021-07-15 09:55:00,ARDESIO,BG,T-ALFA,bq/l,"<0,012",becquerel per litro,<,"0,012"
+2021-07-15 09:55:00,ARDESIO,BG,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-07-15 10:10:00,BERGAMO,BG,RN-222,bq/l,<2,becquerel per litro,<,2
+2021-07-15 10:10:00,BERGAMO,BG,T-ALFA,bq/l,"<0,012",becquerel per litro,<,"0,012"
+2021-07-15 10:10:00,BERGAMO,BG,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-07-22 11:01:00,MILANO,MI,H-3,bq/l,"<5,9",becquerel per litro,<,"5,9"
+2021-07-22 11:01:00,MILANO,MI,T-ALFA,bq/l,"0,105",becquerel per litro,,"0,105"
+2021-07-22 11:01:00,MILANO,MI,T-BETA,bq/l,"<0,076",becquerel per litro,<,"0,076"
+2021-07-22 09:00:00,VIGANO SAN MARTINO,BG,RN-222,bq/l,"3,5",becquerel per litro,,"3,5"
+2021-07-22 09:00:00,VIGANO SAN MARTINO,BG,T-ALFA,bq/l,"0,075",becquerel per litro,,"0,075"
+2021-07-22 09:00:00,VIGANO SAN MARTINO,BG,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-07-22 10:00:00,CAVERNAGO,BG,RN-222,bq/l,"8,3",becquerel per litro,,"8,3"
+2021-07-22 10:00:00,CAVERNAGO,BG,T-ALFA,bq/l,"0,045",becquerel per litro,,"0,045"
+2021-07-22 10:00:00,CAVERNAGO,BG,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-07-22 10:00:00,TERNO D'ISOLA,BG,RN-222,bq/l,"2,7",becquerel per litro,,"2,7"
+2021-07-22 10:00:00,TERNO D'ISOLA,BG,T-ALFA,bq/l,"0,0218",becquerel per litro,,"0,0218"
+2021-07-22 10:00:00,TERNO D'ISOLA,BG,T-BETA,bq/l,"<0,1",becquerel per litro,<,"0,1"
+2021-07-22 10:00:00,ARCENE,BG,RN-222,bq/l,"7,6",becquerel per litro,,"7,6"
+2021-07-22 10:00:00,ARCENE,BG,T-ALFA,bq/l,"0,065",becquerel per litro,,"0,065"
+2021-07-22 10:00:00,ARCENE,BG,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-07-22 10:00:00,CALCIO,BG,T-ALFA,bq/l,"0,026",becquerel per litro,,"0,026"
+2021-07-22 10:00:00,CALCIO,BG,T-BETA,bq/l,"<0,12",becquerel per litro,<,"0,12"
+2021-07-22 10:45:00,COMUN NUOVO,BG,T-ALFA,bq/l,"<0,012",becquerel per litro,<,"0,012"
+2021-07-22 10:45:00,COMUN NUOVO,BG,T-BETA,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-08-24 09:00:00,ISPRA,VA,H-3,bq/l,"<6,6",becquerel per litro,<,"6,6"
+2021-08-24 09:00:00,ISPRA,VA,RA-226,bq/l,"0,0031",becquerel per litro,,"0,0031"
+2021-08-24 09:00:00,ISPRA,VA,RN-222,bq/l,"40,9",becquerel per litro,,"40,9"
+2021-08-24 09:00:00,ISPRA,VA,T-ALFA,bq/l,"0,311",becquerel per litro,,"0,311"
+2021-08-24 09:00:00,ISPRA,VA,T-BETA,bq/l,"0,171",becquerel per litro,,"0,171"
+2021-08-24 09:00:00,ISPRA,VA,T-U,bq/l,"0,284",becquerel per litro,,"0,284"
+2021-08-24 09:00:00,ISPRA,VA,U-234,bq/l,"0,146",becquerel per litro,,"0,146"
+2021-08-24 09:00:00,ISPRA,VA,U-238,bq/l,"0,138",becquerel per litro,,"0,138"
+2021-08-24 09:00:00,ISPRA,VA,T-U,bq/l,"0,269",becquerel per litro,,"0,269"
+2021-08-26 10:00:00,MILANO,MI,H-3,bq/l,"<6,6",becquerel per litro,<,"6,6"
+2021-08-26 10:00:00,MILANO,MI,T-ALFA,bq/l,"0,101",becquerel per litro,,"0,101"
+2021-08-26 10:00:00,MILANO,MI,T-BETA,bq/l,"<0,14",becquerel per litro,<,"0,14"
+2021-08-26 10:00:00,MILANO,MI,SR-90,bq/l,"<0,0034",becquerel per litro,<,"0,0034"
+2021-09-06 09:15:00,CASTELGERUNDO,LO,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2021-09-06 09:15:00,CASTELGERUNDO,LO,RN-222,bq/l,"<1,8",becquerel per litro,<,"1,8"
+2021-09-06 09:15:00,CASTELGERUNDO,LO,T-ALFA,bq/l,"<0,016",becquerel per litro,<,"0,016"
+2021-09-06 09:15:00,CASTELGERUNDO,LO,T-BETA,bq/l,"<0,14",becquerel per litro,<,"0,14"
+2021-09-06 09:45:00,CASALPUSTERLENGO,LO,RN-222,bq/l,"2,06",becquerel per litro,,"2,06"
+2021-09-06 09:45:00,CASALPUSTERLENGO,LO,T-ALFA,bq/l,"0,055",becquerel per litro,,"0,055"
+2021-09-06 09:45:00,CASALPUSTERLENGO,LO,T-BETA,bq/l,"<0,14",becquerel per litro,<,"0,14"
+2021-09-06 10:20:00,CASTIRAGA VIDARDO,LO,RN-222,bq/l,"<1,9",becquerel per litro,<,"1,9"
+2021-09-06 10:20:00,CASTIRAGA VIDARDO,LO,T-ALFA,bq/l,"<0,018",becquerel per litro,<,"0,018"
+2021-09-06 10:20:00,CASTIRAGA VIDARDO,LO,T-BETA,bq/l,"<0,16",becquerel per litro,<,"0,16"
+2021-09-08 11:40:00,MILANO,MI,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2021-09-08 11:40:00,MILANO,MI,T-ALFA,bq/l,"0,105",becquerel per litro,,"0,105"
+2021-09-08 11:40:00,MILANO,MI,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-10-25 10:15:00,MILANO,MI,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2021-10-25 10:15:00,MILANO,MI,T-ALFA,bq/l,"0,137",becquerel per litro,,"0,137"
+2021-10-25 10:15:00,MILANO,MI,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-10-25 12:30:00,MORTARA,PV,RN-222,bq/l,"5,3",becquerel per litro,,"5,3"
+2021-10-25 12:30:00,MORTARA,PV,T-ALFA,bq/l,"<0,021",becquerel per litro,<,"0,021"
+2021-10-25 12:30:00,MORTARA,PV,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-10-25 11:30:00,CASORATE PRIMO,PV,RN-222,bq/l,"12,5",becquerel per litro,,"12,5"
+2021-10-25 11:30:00,CASORATE PRIMO,PV,T-ALFA,bq/l,"<0,021",becquerel per litro,<,"0,021"
+2021-10-25 11:30:00,CASORATE PRIMO,PV,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-10-25 11:30:00,CORTEOLONA E GENZONE,PV,RN-222,bq/l,"2,2",becquerel per litro,,"2,2"
+2021-10-25 11:30:00,CORTEOLONA E GENZONE,PV,T-ALFA,bq/l,"<0,021",becquerel per litro,<,"0,021"
+2021-10-25 11:30:00,CORTEOLONA E GENZONE,PV,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-02 09:00:00,SARONNO,VA,BE-7,bq/l,"<0,9",becquerel per litro,<,"0,9"
+2021-11-02 09:00:00,SARONNO,VA,CS-134,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-02 09:00:00,SARONNO,VA,CS-137,bq/l,"<0,11",becquerel per litro,<,"0,11"
+2021-11-02 09:00:00,SARONNO,VA,K-40,bq/l,"<1,7",becquerel per litro,<,"1,7"
+2021-11-02 09:00:00,SARONNO,VA,RN-222,bq/l,"<1,6",becquerel per litro,<,"1,6"
+2021-11-02 09:00:00,SARONNO,VA,T-ALFA,bq/l,"0,038",becquerel per litro,,"0,038"
+2021-11-02 09:00:00,SARONNO,VA,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-03 09:30:00,FLERO,BS,RN-222,bq/l,"9,3",becquerel per litro,,"9,3"
+2021-11-03 09:30:00,FLERO,BS,T-ALFA,bq/l,"0,025",becquerel per litro,,"0,025"
+2021-11-03 09:30:00,FLERO,BS,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-03 09:50:00,MILZANO,BS,RN-222,bq/l,"4,6",becquerel per litro,,"4,6"
+2021-11-03 09:50:00,MILZANO,BS,T-ALFA,bq/l,"<0,021",becquerel per litro,<,"0,021"
+2021-11-03 09:50:00,MILZANO,BS,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-03 10:20:00,ISORELLA,BS,RN-222,bq/l,"10,8",becquerel per litro,,"10,8"
+2021-11-03 10:20:00,ISORELLA,BS,T-ALFA,bq/l,"0,062",becquerel per litro,,"0,062"
+2021-11-03 10:20:00,ISORELLA,BS,T-BETA,bq/l,"<0,17",becquerel per litro,<,"0,17"
+2021-11-04 09:30:00,CORNAREDO,MI,RN-222,bq/l,"7,3",becquerel per litro,,"7,3"
+2021-11-04 09:30:00,CORNAREDO,MI,T-ALFA,bq/l,"0,037",becquerel per litro,,"0,037"
+2021-11-04 09:30:00,CORNAREDO,MI,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-04 10:40:00,SOLARO,MI,RN-222,bq/l,"13,8",becquerel per litro,,"13,8"
+2021-11-04 10:40:00,SOLARO,MI,T-ALFA,bq/l,"0,033",becquerel per litro,,"0,033"
+2021-11-04 10:40:00,SOLARO,MI,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-08 09:45:00,BRIOSCO,MB,RN-222,bq/l,"28,2",becquerel per litro,,"28,2"
+2021-11-08 09:45:00,BRIOSCO,MB,T-ALFA,bq/l,"0,049",becquerel per litro,,"0,049"
+2021-11-08 09:45:00,BRIOSCO,MB,T-BETA,bq/l,"<0,16",becquerel per litro,<,"0,16"
+2021-11-08 10:15:00,ALBIATE,MB,RN-222,bq/l,"11,3",becquerel per litro,,"11,3"
+2021-11-08 10:15:00,ALBIATE,MB,T-ALFA,bq/l,"0,038",becquerel per litro,,"0,038"
+2021-11-08 10:15:00,ALBIATE,MB,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-08 11:00:00,AGRATE BRIANZA,MB,RN-222,bq/l,"7,6",becquerel per litro,,"7,6"
+2021-11-08 11:00:00,AGRATE BRIANZA,MB,T-ALFA,bq/l,"0,078",becquerel per litro,,"0,078"
+2021-11-08 11:00:00,AGRATE BRIANZA,MB,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-08 12:10:00,RONCO BRIANTINO,MB,RN-222,bq/l,"5,8",becquerel per litro,,"5,8"
+2021-11-08 12:10:00,RONCO BRIANTINO,MB,T-ALFA,bq/l,"0,074",becquerel per litro,,"0,074"
+2021-11-08 12:10:00,RONCO BRIANTINO,MB,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-08 11:50:00,AIRUNO,LC,RA-226,bq/l,"0,0063",becquerel per litro,,"0,0063"
+2021-11-08 11:50:00,AIRUNO,LC,RN-222,bq/l,"1,53",becquerel per litro,,"1,53"
+2021-11-08 11:50:00,AIRUNO,LC,T-ALFA,bq/l,"0,179",becquerel per litro,,"0,179"
+2021-11-08 11:50:00,AIRUNO,LC,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-08 11:50:00,AIRUNO,LC,T-U,bq/l,"0,164",becquerel per litro,,"0,164"
+2021-11-08 11:50:00,AIRUNO,LC,U-234,bq/l,"0,0858",becquerel per litro,,"0,0858"
+2021-11-08 11:50:00,AIRUNO,LC,U-238,bq/l,"0,0786",becquerel per litro,,"0,0786"
+2021-11-09 15:00:00,MILANO,MI,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2021-11-09 15:00:00,MILANO,MI,T-ALFA,bq/l,"0,113",becquerel per litro,,"0,113"
+2021-11-09 15:00:00,MILANO,MI,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-09 15:00:00,MILANO,MI,SR-90,bq/l,"<0,0024",becquerel per litro,<,"0,0024"
+2021-11-09 15:00:00,MILANO,MI,T-ALFA,bq/l,"0,113",becquerel per litro,,"0,113"
+2021-11-09 15:00:00,MILANO,MI,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-10 10:00:00,PONCARALE,BS,BE-7,bq/l,"<0,94",becquerel per litro,<,"0,94"
+2021-11-10 10:00:00,PONCARALE,BS,CS-134,bq/l,"<0,18",becquerel per litro,<,"0,18"
+2021-11-10 10:00:00,PONCARALE,BS,CS-137,bq/l,"<0,073",becquerel per litro,<,"0,073"
+2021-11-10 10:00:00,PONCARALE,BS,K-40,bq/l,"<1,8",becquerel per litro,<,"1,8"
+2021-11-10 10:00:00,PONCARALE,BS,RN-222,bq/l,"9,9",becquerel per litro,,"9,9"
+2021-11-10 10:00:00,PONCARALE,BS,T-ALFA,bq/l,"0,056",becquerel per litro,,"0,056"
+2021-11-10 10:00:00,PONCARALE,BS,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-10 10:40:00,CASTEGNATO,BS,RN-222,bq/l,"8,2",becquerel per litro,,"8,2"
+2021-11-10 10:40:00,CASTEGNATO,BS,T-ALFA,bq/l,"0,039",becquerel per litro,,"0,039"
+2021-11-10 10:40:00,CASTEGNATO,BS,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-10 11:35:00,BRESCIA,BS,BE-7,bq/l,"<0,73",becquerel per litro,<,"0,73"
+2021-11-10 11:35:00,BRESCIA,BS,CS-134,bq/l,"<0,13",becquerel per litro,<,"0,13"
+2021-11-10 11:35:00,BRESCIA,BS,CS-137,bq/l,"<0,093",becquerel per litro,<,"0,093"
+2021-11-10 11:35:00,BRESCIA,BS,K-40,bq/l,"<1,3",becquerel per litro,<,"1,3"
+2021-11-10 11:35:00,BRESCIA,BS,RN-222,bq/l,"11,1",becquerel per litro,,"11,1"
+2021-11-10 11:35:00,BRESCIA,BS,T-ALFA,bq/l,"0,052",becquerel per litro,,"0,052"
+2021-11-10 11:35:00,BRESCIA,BS,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-11 10:00:00,POZZUOLO MARTESANA,MI,RN-222,bq/l,"3,8",becquerel per litro,,"3,8"
+2021-11-11 10:00:00,POZZUOLO MARTESANA,MI,T-ALFA,bq/l,"0,098",becquerel per litro,,"0,098"
+2021-11-11 10:00:00,POZZUOLO MARTESANA,MI,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-11 10:30:00,CASSANO D'ADDA,MI,RN-222,bq/l,"38,5",becquerel per litro,,"38,5"
+2021-11-11 10:30:00,CASSANO D'ADDA,MI,T-ALFA,bq/l,"0,048",becquerel per litro,,"0,048"
+2021-11-11 10:30:00,CASSANO D'ADDA,MI,T-BETA,bq/l,"<0,16",becquerel per litro,<,"0,16"
+2021-11-11 09:30:00,ROSATE,MI,RA-226,bq/l,"<0,0023",becquerel per litro,<,"0,0023"
+2021-11-11 09:30:00,ROSATE,MI,RN-222,bq/l,"18,9",becquerel per litro,,"18,9"
+2021-11-11 09:30:00,ROSATE,MI,T-ALFA,bq/l,"0,144",becquerel per litro,,"0,144"
+2021-11-11 09:30:00,ROSATE,MI,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-11 09:30:00,ROSATE,MI,T-U,bq/l,"0,145",becquerel per litro,,"0,145"
+2021-11-11 09:30:00,ROSATE,MI,U-234,bq/l,"0,0811",becquerel per litro,,"0,0811"
+2021-11-11 09:30:00,ROSATE,MI,U-238,bq/l,"0,0636",becquerel per litro,,"0,0636"
+2021-11-11 10:30:00,MAGENTA,MI,RA-226,bq/l,"<0,0016",becquerel per litro,<,"0,0016"
+2021-11-11 10:30:00,MAGENTA,MI,RN-222,bq/l,"13,5",becquerel per litro,,"13,5"
+2021-11-11 10:30:00,MAGENTA,MI,T-ALFA,bq/l,"0,127",becquerel per litro,,"0,127"
+2021-11-11 10:30:00,MAGENTA,MI,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-11 10:30:00,MAGENTA,MI,T-U,bq/l,"0,117",becquerel per litro,,"0,117"
+2021-11-11 10:30:00,MAGENTA,MI,U-234,bq/l,"0,0722",becquerel per litro,,"0,0722"
+2021-11-11 10:30:00,MAGENTA,MI,U-238,bq/l,"0,0445",becquerel per litro,,"0,0445"
+2021-11-17 12:05:00,CONCESIO,BS,RN-222,bq/l,"13,7",becquerel per litro,,"13,7"
+2021-11-17 12:05:00,CONCESIO,BS,T-ALFA,bq/l,"0,036",becquerel per litro,,"0,036"
+2021-11-17 12:05:00,CONCESIO,BS,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-17 09:50:00,MONIGA DEL GARDA,BS,RN-222,bq/l,"<1,6",becquerel per litro,<,"1,6"
+2021-11-17 09:50:00,MONIGA DEL GARDA,BS,T-ALFA,bq/l,"0,031",becquerel per litro,,"0,031"
+2021-11-17 09:50:00,MONIGA DEL GARDA,BS,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-17 11:30:00,GAVARDO,BS,RN-222,bq/l,"7,5",becquerel per litro,,"7,5"
+2021-11-17 11:30:00,GAVARDO,BS,T-ALFA,bq/l,"0,055",becquerel per litro,,"0,055"
+2021-11-17 11:30:00,GAVARDO,BS,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-18 09:30:00,BUSCATE,MI,RA-226,bq/l,"<0,0024",becquerel per litro,<,"0,0024"
+2021-11-18 09:30:00,BUSCATE,MI,RN-222,bq/l,"16,2",becquerel per litro,,"16,2"
+2021-11-18 09:30:00,BUSCATE,MI,T-ALFA,bq/l,"0,317",becquerel per litro,,"0,317"
+2021-11-18 09:30:00,BUSCATE,MI,T-BETA,bq/l,"<0,15",becquerel per litro,<,"0,15"
+2021-11-18 09:30:00,BUSCATE,MI,T-U,bq/l,"0,291",becquerel per litro,,"0,291"
+2021-11-18 09:30:00,BUSCATE,MI,U-234,bq/l,"0,163",becquerel per litro,,"0,163"
+2021-11-18 09:30:00,BUSCATE,MI,U-238,bq/l,"0,128",becquerel per litro,,"0,128"
+2021-11-22 09:15:00,PANTIGLIATE,MI,RA-226,bq/l,"<0,0021",becquerel per litro,<,"0,0021"
+2021-11-22 09:15:00,PANTIGLIATE,MI,RN-222,bq/l,10,becquerel per litro,,10
+2021-11-22 09:15:00,PANTIGLIATE,MI,T-ALFA,bq/l,"0,224",becquerel per litro,,"0,224"
+2021-11-22 09:15:00,PANTIGLIATE,MI,T-BETA,bq/l,"<0,16",becquerel per litro,<,"0,16"
+2021-11-22 09:15:00,PANTIGLIATE,MI,T-U,bq/l,"0,246",becquerel per litro,,"0,246"
+2021-11-22 09:15:00,PANTIGLIATE,MI,U-234,bq/l,"0,132",becquerel per litro,,"0,132"
+2021-11-22 09:15:00,PANTIGLIATE,MI,U-238,bq/l,"0,114",becquerel per litro,,"0,114"
+2021-11-22 12:00:00,BORMIO,SO,RA-226,bq/l,"0,0238",becquerel per litro,,"0,0238"
+2021-11-22 12:00:00,BORMIO,SO,RN-222,bq/l,"12,5",becquerel per litro,,"12,5"
+2021-11-22 12:00:00,BORMIO,SO,T-ALFA,bq/l,"0,175",becquerel per litro,,"0,175"
+2021-11-22 12:00:00,BORMIO,SO,T-BETA,bq/l,"<0,16",becquerel per litro,<,"0,16"
+2021-11-22 12:00:00,BORMIO,SO,T-U,bq/l,"0,129",becquerel per litro,,"0,129"
+2021-11-22 12:00:00,BORMIO,SO,U-234,bq/l,"0,0676",becquerel per litro,,"0,0676"
+2021-11-22 12:00:00,BORMIO,SO,U-238,bq/l,"0,0618",becquerel per litro,,"0,0618"
+2021-11-23 08:40:00,TIRANO,SO,RN-222,bq/l,"2,02",becquerel per litro,,"2,02"
+2021-11-23 08:40:00,TIRANO,SO,T-ALFA,bq/l,"0,022",becquerel per litro,,"0,022"
+2021-11-23 08:40:00,TIRANO,SO,T-BETA,bq/l,"<0,16",becquerel per litro,<,"0,16"
+2021-11-22 09:00:00,LIVIGNO,SO,RA-226,bq/l,"0,0084",becquerel per litro,,"0,0084"
+2021-11-22 09:00:00,LIVIGNO,SO,RN-222,bq/l,"19,1",becquerel per litro,,"19,1"
+2021-11-22 09:00:00,LIVIGNO,SO,T-ALFA,bq/l,"0,109",becquerel per litro,,"0,109"
+2021-11-22 09:00:00,LIVIGNO,SO,T-BETA,bq/l,"<0,16",becquerel per litro,<,"0,16"
+2021-11-22 09:00:00,LIVIGNO,SO,T-U,bq/l,"0,092",becquerel per litro,,"0,092"
+2021-11-22 09:00:00,LIVIGNO,SO,U-234,bq/l,"0,0452",becquerel per litro,,"0,0452"
+2021-11-22 09:00:00,LIVIGNO,SO,U-238,bq/l,"0,0468",becquerel per litro,,"0,0468"
+2021-11-23 09:20:00,EDOLO,BS,RN-222,bq/l,"6,6",becquerel per litro,,"6,6"
+2021-11-23 09:20:00,EDOLO,BS,T-ALFA,bq/l,"<0,021",becquerel per litro,<,"0,021"
+2021-11-23 09:20:00,EDOLO,BS,T-BETA,bq/l,"<0,16",becquerel per litro,<,"0,16"
+2021-11-23 08:20:00,PISOGNE,BS,RN-222,bq/l,"6,9",becquerel per litro,,"6,9"
+2021-11-23 08:20:00,PISOGNE,BS,T-ALFA,bq/l,"<0,021",becquerel per litro,<,"0,021"
+2021-11-23 08:20:00,PISOGNE,BS,T-BETA,bq/l,"<0,16",becquerel per litro,<,"0,16"
+2021-11-23 08:30:00,MORBEGNO,SO,RN-222,bq/l,"12,7",becquerel per litro,,"12,7"
+2021-11-23 08:30:00,MORBEGNO,SO,T-ALFA,bq/l,"<0,021",becquerel per litro,<,"0,021"
+2021-11-23 08:30:00,MORBEGNO,SO,T-BETA,bq/l,"<0,16",becquerel per litro,<,"0,16"
+2021-11-23 09:05:00,CHIAVENNA,SO,RN-222,bq/l,"<1,8",becquerel per litro,<,"1,8"
+2021-11-23 09:05:00,CHIAVENNA,SO,T-ALFA,bq/l,"<0,021",becquerel per litro,<,"0,021"
+2021-11-23 09:05:00,CHIAVENNA,SO,T-BETA,bq/l,"<0,16",becquerel per litro,<,"0,16"
+2021-12-21 15:00:00,MILANO,MI,H-3,bq/l,"<6,5",becquerel per litro,<,"6,5"
+2021-12-21 15:00:00,MILANO,MI,T-ALFA,bq/l,"0,104",becquerel per litro,,"0,104"
+2021-12-21 15:00:00,MILANO,MI,T-BETA,bq/l,"<0,16",becquerel per litro,<,"0,16"
+2019-02-11 09:35:00,SERIATE,BG,RN-222,bq/l,0.92,becquerel per litro,,0.92
+2019-02-11 09:35:00,SERIATE,BG,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-02-11 09:35:00,SERIATE,BG,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-08-05 09:46:00,SERIATE,BG,RN-222,bq/l,0.94,becquerel per litro,,0.94
+2019-08-05 09:46:00,SERIATE,BG,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-08-05 09:46:00,SERIATE,BG,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-02-11 10:26:00,TREVIGLIO,BG,RN-222,bq/l,17.90,becquerel per litro,,17.90
+2019-02-11 10:26:00,TREVIGLIO,BG,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-02-11 10:26:00,TREVIGLIO,BG,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-08-05 10:38:00,TREVIGLIO,BG,RN-222,bq/l,15.40,becquerel per litro,,15.40
+2019-08-05 10:38:00,TREVIGLIO,BG,T-ALFA,bq/l,0.04,becquerel per litro,,0.04
+2019-08-05 10:38:00,TREVIGLIO,BG,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-02-01 12:00:00,BRESCIA,BS,CS-137,bq/l,n.r.,becquerel per litro,,n.r.
+2019-02-28 08:00:00,BRESCIA,BS,CS-137,bq/l,n.r.,becquerel per litro,,n.r.
+2019-06-26 10:00:00,CAPRIANO DEL COLLE,BS,CS-137,bq/l,n.r.,becquerel per litro,,n.r.
+2019-06-26 10:00:00,CAPRIANO DEL COLLE,BS,T-ALFA,bq/l,0.06,becquerel per litro,,0.06
+2019-06-26 10:00:00,CAPRIANO DEL COLLE,BS,T-BETA,bq/l,0.20,becquerel per litro,,0.20
+2019-06-26 10:45:00,CAPRIANO DEL COLLE,BS,CS-137,bq/l,n.r.,becquerel per litro,,n.r.
+2019-06-26 10:45:00,CAPRIANO DEL COLLE,BS,T-ALFA,bq/l,0.08,becquerel per litro,,0.08
+2019-06-26 10:45:00,CAPRIANO DEL COLLE,BS,T-BETA,bq/l,0.17,becquerel per litro,,0.17
+2019-02-19 10:10:00,DESENZANO DEL GARDA,BS,RN-222,bq/l,7.20,becquerel per litro,,7.20
+2019-02-19 10:10:00,DESENZANO DEL GARDA,BS,T-ALFA,bq/l,0.04,becquerel per litro,,0.04
+2019-02-19 10:10:00,DESENZANO DEL GARDA,BS,T-BETA,bq/l,0.22,becquerel per litro,,0.22
+2019-09-03 09:45:00,DESENZANO DEL GARDA,BS,RN-222,bq/l,4.50,becquerel per litro,,4.50
+2019-09-03 09:45:00,DESENZANO DEL GARDA,BS,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-03 09:45:00,DESENZANO DEL GARDA,BS,T-BETA,bq/l,0.13,becquerel per litro,,0.13
+2019-02-19 11:10:00,MONTICHIARI,BS,RN-222,bq/l,18.10,becquerel per litro,,18.10
+2019-02-19 11:10:00,MONTICHIARI,BS,T-ALFA,bq/l,0.08,becquerel per litro,,0.08
+2019-02-19 11:10:00,MONTICHIARI,BS,T-BETA,bq/l,0.18,becquerel per litro,,0.18
+2019-09-03 10:45:00,MONTICHIARI,BS,RN-222,bq/l,15.60,becquerel per litro,,15.60
+2019-09-03 10:45:00,MONTICHIARI,BS,T-ALFA,bq/l,0.05,becquerel per litro,,0.05
+2019-09-03 10:45:00,MONTICHIARI,BS,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-03 11:20:00,PONCARALE,BS,RN-222,bq/l,10.80,becquerel per litro,,10.80
+2019-09-03 11:20:00,PONCARALE,BS,T-ALFA,bq/l,0.05,becquerel per litro,,0.05
+2019-09-03 11:20:00,PONCARALE,BS,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-12-18 10:55:00,PONCARALE,BS,RN-222,bq/l,18.20,becquerel per litro,,18.20
+2019-12-18 10:55:00,PONCARALE,BS,T-ALFA,bq/l,0.06,becquerel per litro,,0.06
+2019-12-18 10:55:00,PONCARALE,BS,T-BETA,bq/l,0.09,becquerel per litro,,0.09
+2019-02-21 10:15:00,ROVELLO PORRO,CO,CS-137,bq/l,n.r.,becquerel per litro,,n.r.
+2019-02-21 10:15:00,ROVELLO PORRO,CO,RA-226,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-08 10:30:00,OFFANENGO,CR,T-ALFA,bq/l,0.08,becquerel per litro,,0.08
+2019-04-08 10:30:00,OFFANENGO,CR,T-BETA,bq/l,0.12,becquerel per litro,,0.12
+2019-04-08 11:00:00,PANDINO,CR,T-ALFA,bq/l,0.08,becquerel per litro,,0.08
+2019-04-08 11:00:00,PANDINO,CR,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-17 10:15:00,CASTELGERUNDO,LO,RN-222,bq/l,1.90,becquerel per litro,,1.90
+2019-04-17 10:15:00,CASTELGERUNDO,LO,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-17 10:15:00,CASTELGERUNDO,LO,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-15 10:00:00,CASTELGERUNDO,LO,RN-222,bq/l,0.91,becquerel per litro,,0.91
+2019-10-15 10:00:00,CASTELGERUNDO,LO,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-15 10:00:00,CASTELGERUNDO,LO,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-10 09:40:00,LODI,LO,RN-222,bq/l,9.90,becquerel per litro,,9.90
+2019-04-10 09:40:00,LODI,LO,T-ALFA,bq/l,0.06,becquerel per litro,,0.06
+2019-04-10 09:40:00,LODI,LO,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-22 09:30:00,LODI,LO,RN-222,bq/l,27.60,becquerel per litro,,27.60
+2019-10-22 09:30:00,LODI,LO,T-ALFA,bq/l,0.07,becquerel per litro,,0.07
+2019-10-22 09:30:00,LODI,LO,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-02-25 10:00:00,ARCORE,MB,RN-222,bq/l,8.80,becquerel per litro,,8.80
+2019-02-25 10:00:00,ARCORE,MB,T-ALFA,bq/l,0.04,becquerel per litro,,0.04
+2019-02-25 10:00:00,ARCORE,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-10 10:20:00,ARCORE,MB,RN-222,bq/l,10.30,becquerel per litro,,10.30
+2019-09-10 10:20:00,ARCORE,MB,T-ALFA,bq/l,0.04,becquerel per litro,,0.04
+2019-09-10 10:20:00,ARCORE,MB,T-BETA,bq/l,0.27,becquerel per litro,,0.27
+2019-02-25 10:20:00,BRUGHERIO,MB,RN-222,bq/l,11.40,becquerel per litro,,11.40
+2019-02-25 10:20:00,BRUGHERIO,MB,T-ALFA,bq/l,0.06,becquerel per litro,,0.06
+2019-02-25 10:20:00,BRUGHERIO,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-16 10:00:00,BRUGHERIO,MB,RN-222,bq/l,11.60,becquerel per litro,,11.60
+2019-09-16 10:00:00,BRUGHERIO,MB,T-ALFA,bq/l,0.04,becquerel per litro,,0.04
+2019-09-16 10:00:00,BRUGHERIO,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-04 09:20:00,CESANO MADERNO,MB,RN-222,bq/l,12.50,becquerel per litro,,12.50
+2019-03-04 09:20:00,CESANO MADERNO,MB,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-04 09:20:00,CESANO MADERNO,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-25 00:00:00,CESANO MADERNO,MB,RN-222,bq/l,11.70,becquerel per litro,,11.70
+2019-09-25 00:00:00,CESANO MADERNO,MB,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-25 00:00:00,CESANO MADERNO,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-04 09:30:00,DESIO,MB,RA-226,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-04 09:30:00,DESIO,MB,RN-222,bq/l,8.40,becquerel per litro,,8.40
+2019-03-04 09:30:00,DESIO,MB,T-ALFA,bq/l,0.18,becquerel per litro,,0.18
+2019-03-04 09:30:00,DESIO,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-04 09:30:00,DESIO,MB,T-U,bq/l,0.16,becquerel per litro,,0.16
+2019-03-04 09:30:00,DESIO,MB,U-234,bq/l,0.09,becquerel per litro,,0.09
+2019-03-04 09:30:00,DESIO,MB,U-238,bq/l,0.07,becquerel per litro,,0.07
+2019-09-25 00:00:00,DESIO,MB,RA-226,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-25 00:00:00,DESIO,MB,RN-222,bq/l,9.10,becquerel per litro,,9.10
+2019-09-25 00:00:00,DESIO,MB,T-ALFA,bq/l,0.11,becquerel per litro,,0.11
+2019-09-25 00:00:00,DESIO,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-25 00:00:00,DESIO,MB,T-U,bq/l,0.11,becquerel per litro,,0.11
+2019-09-25 00:00:00,DESIO,MB,U-234,bq/l,0.06,becquerel per litro,,0.06
+2019-09-25 00:00:00,DESIO,MB,U-238,bq/l,0.05,becquerel per litro,,0.05
+2019-03-04 10:15:00,GIUSSANO,MB,RN-222,bq/l,14.20,becquerel per litro,,14.20
+2019-03-04 10:15:00,GIUSSANO,MB,T-ALFA,bq/l,0.05,becquerel per litro,,0.05
+2019-03-04 10:15:00,GIUSSANO,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-25 00:00:00,GIUSSANO,MB,RN-222,bq/l,23.60,becquerel per litro,,23.60
+2019-09-25 00:00:00,GIUSSANO,MB,T-ALFA,bq/l,0.04,becquerel per litro,,0.04
+2019-09-25 00:00:00,GIUSSANO,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-04 10:40:00,LIMBIATE,MB,RN-222,bq/l,12.20,becquerel per litro,,12.20
+2019-03-04 10:40:00,LIMBIATE,MB,T-ALFA,bq/l,0.09,becquerel per litro,,0.09
+2019-03-04 10:40:00,LIMBIATE,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-25 00:00:00,LIMBIATE,MB,RA-226,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-25 00:00:00,LIMBIATE,MB,RN-222,bq/l,12.30,becquerel per litro,,12.30
+2019-09-25 00:00:00,LIMBIATE,MB,T-ALFA,bq/l,0.11,becquerel per litro,,0.11
+2019-09-25 00:00:00,LIMBIATE,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-25 00:00:00,LIMBIATE,MB,T-U,bq/l,0.10,becquerel per litro,,0.10
+2019-09-25 00:00:00,LIMBIATE,MB,U-234,bq/l,0.06,becquerel per litro,,0.06
+2019-09-25 00:00:00,LIMBIATE,MB,U-238,bq/l,0.04,becquerel per litro,,0.04
+2019-02-25 11:20:00,LISSONE,MB,RN-222,bq/l,16.10,becquerel per litro,,16.10
+2019-02-25 11:20:00,LISSONE,MB,T-ALFA,bq/l,0.05,becquerel per litro,,0.05
+2019-02-25 11:20:00,LISSONE,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-16 10:00:00,LISSONE,MB,RN-222,bq/l,12.40,becquerel per litro,,12.40
+2019-09-16 10:00:00,LISSONE,MB,T-ALFA,bq/l,0.05,becquerel per litro,,0.05
+2019-09-16 10:00:00,LISSONE,MB,T-BETA,bq/l,0.18,becquerel per litro,,0.18
+2019-02-25 10:50:00,MONZA,MB,RN-222,bq/l,18.80,becquerel per litro,,18.80
+2019-02-25 10:50:00,MONZA,MB,T-ALFA,bq/l,0.07,becquerel per litro,,0.07
+2019-02-25 10:50:00,MONZA,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-16 10:00:00,MONZA,MB,RN-222,bq/l,20.10,becquerel per litro,,20.10
+2019-09-16 10:00:00,MONZA,MB,T-ALFA,bq/l,0.07,becquerel per litro,,0.07
+2019-09-16 10:00:00,MONZA,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-04 09:55:00,SEREGNO,MB,RN-222,bq/l,9.50,becquerel per litro,,9.50
+2019-03-04 09:55:00,SEREGNO,MB,T-ALFA,bq/l,0.09,becquerel per litro,,0.09
+2019-03-04 09:55:00,SEREGNO,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-25 00:00:00,SEREGNO,MB,RN-222,bq/l,11.80,becquerel per litro,,11.80
+2019-09-25 00:00:00,SEREGNO,MB,T-ALFA,bq/l,0.09,becquerel per litro,,0.09
+2019-09-25 00:00:00,SEREGNO,MB,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-05-02 09:55:00,ABBIATEGRASSO,MI,RN-222,bq/l,18.00,becquerel per litro,,18.00
+2019-05-02 09:55:00,ABBIATEGRASSO,MI,T-ALFA,bq/l,0.05,becquerel per litro,,0.05
+2019-05-02 09:55:00,ABBIATEGRASSO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-11-21 09:40:00,ABBIATEGRASSO,MI,RN-222,bq/l,20.90,becquerel per litro,,20.90
+2019-11-21 09:40:00,ABBIATEGRASSO,MI,T-ALFA,bq/l,0.07,becquerel per litro,,0.07
+2019-11-21 09:40:00,ABBIATEGRASSO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-11 10:10:00,BOLLATE,MI,RN-222,bq/l,8.80,becquerel per litro,,8.80
+2019-04-11 10:10:00,BOLLATE,MI,T-ALFA,bq/l,0.04,becquerel per litro,,0.04
+2019-04-11 10:10:00,BOLLATE,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-17 10:25:00,BOLLATE,MI,RN-222,bq/l,3.53,becquerel per litro,,3.53
+2019-10-17 10:25:00,BOLLATE,MI,T-ALFA,bq/l,0.06,becquerel per litro,,0.06
+2019-10-17 10:25:00,BOLLATE,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-08-05 09:45:00,BUCCINASCO,MI,RN-222,bq/l,9.70,becquerel per litro,,9.70
+2019-08-05 09:45:00,BUCCINASCO,MI,T-ALFA,bq/l,0.07,becquerel per litro,,0.07
+2019-08-05 09:45:00,BUCCINASCO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-11-14 09:50:00,BUCCINASCO,MI,RN-222,bq/l,10.20,becquerel per litro,,10.20
+2019-11-14 09:50:00,BUCCINASCO,MI,T-ALFA,bq/l,0.09,becquerel per litro,,0.09
+2019-11-14 09:50:00,BUCCINASCO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-01 10:25:00,CERNUSCO SUL NAVIGLIO,MI,RN-222,bq/l,10.30,becquerel per litro,,10.30
+2019-04-01 10:25:00,CERNUSCO SUL NAVIGLIO,MI,T-ALFA,bq/l,0.09,becquerel per litro,,0.09
+2019-04-01 10:25:00,CERNUSCO SUL NAVIGLIO,MI,T-BETA,bq/l,0.31,becquerel per litro,,0.31
+2019-10-21 00:00:00,CERNUSCO SUL NAVIGLIO,MI,RN-222,bq/l,13.30,becquerel per litro,,13.30
+2019-10-21 00:00:00,CERNUSCO SUL NAVIGLIO,MI,T-ALFA,bq/l,0.08,becquerel per litro,,0.08
+2019-10-21 00:00:00,CERNUSCO SUL NAVIGLIO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-04 09:45:00,CINISELLO BALSAMO,MI,RN-222,bq/l,4.00,becquerel per litro,,4.00
+2019-04-04 09:45:00,CINISELLO BALSAMO,MI,T-ALFA,bq/l,0.03,becquerel per litro,,0.03
+2019-04-04 09:45:00,CINISELLO BALSAMO,MI,T-BETA,bq/l,0.18,becquerel per litro,,0.18
+2019-10-03 10:10:00,CINISELLO BALSAMO,MI,RN-222,bq/l,11.00,becquerel per litro,,11.00
+2019-10-03 10:10:00,CINISELLO BALSAMO,MI,T-ALFA,bq/l,0.05,becquerel per litro,,0.05
+2019-10-03 10:10:00,CINISELLO BALSAMO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-04 10:55:00,COLOGNO MONZESE,MI,RA-226,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-04 10:55:00,COLOGNO MONZESE,MI,RN-222,bq/l,9.80,becquerel per litro,,9.80
+2019-04-04 10:55:00,COLOGNO MONZESE,MI,T-ALFA,bq/l,0.10,becquerel per litro,,0.10
+2019-04-04 10:55:00,COLOGNO MONZESE,MI,T-BETA,bq/l,0.19,becquerel per litro,,0.19
+2019-04-04 10:55:00,COLOGNO MONZESE,MI,T-U,bq/l,0.11,becquerel per litro,,0.11
+2019-04-04 10:55:00,COLOGNO MONZESE,MI,U-234,bq/l,0.06,becquerel per litro,,0.06
+2019-04-04 10:55:00,COLOGNO MONZESE,MI,U-238,bq/l,0.05,becquerel per litro,,0.05
+2019-10-03 11:15:00,COLOGNO MONZESE,MI,RN-222,bq/l,10.40,becquerel per litro,,10.40
+2019-10-03 11:15:00,COLOGNO MONZESE,MI,T-ALFA,bq/l,0.09,becquerel per litro,,0.09
+2019-10-03 11:15:00,COLOGNO MONZESE,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-08-05 08:55:00,CORSICO,MI,RA-226,bq/l,n.r.,becquerel per litro,,n.r.
+2019-08-05 08:55:00,CORSICO,MI,RN-222,bq/l,15.40,becquerel per litro,,15.40
+2019-08-05 08:55:00,CORSICO,MI,T-ALFA,bq/l,0.17,becquerel per litro,,0.17
+2019-08-05 08:55:00,CORSICO,MI,T-BETA,bq/l,0.12,becquerel per litro,,0.12
+2019-08-05 08:55:00,CORSICO,MI,T-U,bq/l,0.16,becquerel per litro,,0.16
+2019-08-05 08:55:00,CORSICO,MI,U-234,bq/l,0.10,becquerel per litro,,0.10
+2019-08-05 08:55:00,CORSICO,MI,U-238,bq/l,0.06,becquerel per litro,,0.06
+2019-11-14 10:10:00,CORSICO,MI,RA-226,bq/l,n.r.,becquerel per litro,,n.r.
+2019-11-14 10:10:00,CORSICO,MI,RN-222,bq/l,16.90,becquerel per litro,,16.90
+2019-11-14 10:10:00,CORSICO,MI,T-ALFA,bq/l,0.18,becquerel per litro,,0.18
+2019-11-14 10:10:00,CORSICO,MI,T-BETA,bq/l,0.15,becquerel per litro,,0.15
+2019-11-14 10:10:00,CORSICO,MI,T-U,bq/l,0.17,becquerel per litro,,0.17
+2019-11-14 10:10:00,CORSICO,MI,U-234,bq/l,0.10,becquerel per litro,,0.10
+2019-11-14 10:10:00,CORSICO,MI,U-238,bq/l,0.07,becquerel per litro,,0.07
+2019-04-11 09:40:00,GARBAGNATE MILANESE,MI,RN-222,bq/l,9.20,becquerel per litro,,9.20
+2019-04-11 09:40:00,GARBAGNATE MILANESE,MI,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-11 09:40:00,GARBAGNATE MILANESE,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-17 10:00:00,GARBAGNATE MILANESE,MI,RN-222,bq/l,4.40,becquerel per litro,,4.40
+2019-10-17 10:00:00,GARBAGNATE MILANESE,MI,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-17 10:00:00,GARBAGNATE MILANESE,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-11 09:15:00,LAINATE,MI,RN-222,bq/l,8.00,becquerel per litro,,8.00
+2019-04-11 09:15:00,LAINATE,MI,T-ALFA,bq/l,0.06,becquerel per litro,,0.06
+2019-04-11 09:15:00,LAINATE,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-17 09:15:00,LAINATE,MI,RN-222,bq/l,6.20,becquerel per litro,,6.20
+2019-10-17 09:15:00,LAINATE,MI,T-ALFA,bq/l,0.05,becquerel per litro,,0.05
+2019-10-17 09:15:00,LAINATE,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-18 09:45:00,LEGNANO,MI,RN-222,bq/l,10.20,becquerel per litro,,10.20
+2019-04-18 09:45:00,LEGNANO,MI,T-ALFA,bq/l,0.16,becquerel per litro,,0.16
+2019-04-18 09:45:00,LEGNANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-18 09:45:00,LEGNANO,MI,T-U,bq/l,0.18,becquerel per litro,,0.18
+2019-04-18 09:45:00,LEGNANO,MI,U-234,bq/l,0.11,becquerel per litro,,0.11
+2019-04-18 09:45:00,LEGNANO,MI,U-238,bq/l,0.07,becquerel per litro,,0.07
+2019-10-24 10:55:00,LEGNANO,MI,RA-226,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-24 10:55:00,LEGNANO,MI,RN-222,bq/l,10.90,becquerel per litro,,10.90
+2019-10-24 10:55:00,LEGNANO,MI,T-ALFA,bq/l,0.16,becquerel per litro,,0.16
+2019-10-24 10:55:00,LEGNANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-24 10:55:00,LEGNANO,MI,T-U,bq/l,0.18,becquerel per litro,,0.18
+2019-10-24 10:55:00,LEGNANO,MI,U-234,bq/l,0.10,becquerel per litro,,0.10
+2019-10-24 10:55:00,LEGNANO,MI,U-238,bq/l,0.08,becquerel per litro,,0.08
+2019-01-11 11:00:00,MILANO,MI,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-01-11 11:00:00,MILANO,MI,T-ALFA,bq/l,0.10,becquerel per litro,,0.10
+2019-01-11 11:00:00,MILANO,MI,T-BETA,bq/l,0.12,becquerel per litro,,0.12
+2019-02-06 11:45:00,MILANO,MI,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-02-06 11:45:00,MILANO,MI,T-ALFA,bq/l,0.10,becquerel per litro,,0.10
+2019-02-06 11:45:00,MILANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-11 10:00:00,MILANO,MI,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-11 10:00:00,MILANO,MI,SR-90,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-11 10:00:00,MILANO,MI,T-ALFA,bq/l,0.09,becquerel per litro,,0.09
+2019-03-11 10:00:00,MILANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-10 11:30:00,MILANO,MI,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-10 11:30:00,MILANO,MI,T-ALFA,bq/l,0.09,becquerel per litro,,0.09
+2019-04-10 11:30:00,MILANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-05-10 11:00:00,MILANO,MI,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-05-10 11:00:00,MILANO,MI,SR-90,bq/l,n.r.,becquerel per litro,,n.r.
+2019-05-10 11:00:00,MILANO,MI,T-ALFA,bq/l,0.09,becquerel per litro,,0.09
+2019-05-10 11:00:00,MILANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-06-11 12:00:00,MILANO,MI,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-06-11 12:00:00,MILANO,MI,T-ALFA,bq/l,0.12,becquerel per litro,,0.12
+2019-06-11 12:00:00,MILANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-07-19 00:00:00,MILANO,MI,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-07-19 00:00:00,MILANO,MI,T-ALFA,bq/l,0.09,becquerel per litro,,0.09
+2019-07-19 00:00:00,MILANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-08-21 11:00:00,MILANO,MI,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-08-21 11:00:00,MILANO,MI,SR-90,bq/l,n.r.,becquerel per litro,,n.r.
+2019-08-21 11:00:00,MILANO,MI,T-ALFA,bq/l,0.10,becquerel per litro,,0.10
+2019-08-21 11:00:00,MILANO,MI,T-BETA,bq/l,0.09,becquerel per litro,,0.09
+2019-09-12 10:50:00,MILANO,MI,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-12 10:50:00,MILANO,MI,T-ALFA,bq/l,0.09,becquerel per litro,,0.09
+2019-09-12 10:50:00,MILANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-09 11:50:00,MILANO,MI,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-09 11:50:00,MILANO,MI,T-ALFA,bq/l,0.10,becquerel per litro,,0.10
+2019-10-09 11:50:00,MILANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-11-05 11:30:00,MILANO,MI,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-11-05 11:30:00,MILANO,MI,SR-90,bq/l,n.r.,becquerel per litro,,n.r.
+2019-11-05 11:30:00,MILANO,MI,T-ALFA,bq/l,0.06,becquerel per litro,,0.06
+2019-11-05 11:30:00,MILANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-12-12 11:15:00,MILANO,MI,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-12-12 11:15:00,MILANO,MI,T-ALFA,bq/l,0.10,becquerel per litro,,0.10
+2019-12-12 11:15:00,MILANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-11 10:35:00,PADERNO DUGNANO,MI,RN-222,bq/l,6.10,becquerel per litro,,6.10
+2019-04-11 10:35:00,PADERNO DUGNANO,MI,T-ALFA,bq/l,0.06,becquerel per litro,,0.06
+2019-04-11 10:35:00,PADERNO DUGNANO,MI,T-BETA,bq/l,0.29,becquerel per litro,,0.29
+2019-12-17 10:00:00,PADERNO DUGNANO,MI,RN-222,bq/l,1.16,becquerel per litro,,1.16
+2019-12-17 10:00:00,PADERNO DUGNANO,MI,T-ALFA,bq/l,0.06,becquerel per litro,,0.06
+2019-12-17 10:00:00,PADERNO DUGNANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-04-18 09:00:00,PARABIAGO,MI,RN-222,bq/l,9.00,becquerel per litro,,9.00
+2019-04-18 09:00:00,PARABIAGO,MI,T-ALFA,bq/l,0.09,becquerel per litro,,0.09
+2019-04-18 09:00:00,PARABIAGO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-24 10:20:00,PARABIAGO,MI,RA-226,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-24 10:20:00,PARABIAGO,MI,RN-222,bq/l,6.10,becquerel per litro,,6.10
+2019-10-24 10:20:00,PARABIAGO,MI,T-ALFA,bq/l,0.14,becquerel per litro,,0.14
+2019-10-24 10:20:00,PARABIAGO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-24 10:20:00,PARABIAGO,MI,T-U,bq/l,0.16,becquerel per litro,,0.16
+2019-10-24 10:20:00,PARABIAGO,MI,U-234,bq/l,0.06,becquerel per litro,,0.06
+2019-10-24 10:20:00,PARABIAGO,MI,U-238,bq/l,0.10,becquerel per litro,,0.10
+2019-04-08 09:45:00,ROZZANO,MI,RN-222,bq/l,12.20,becquerel per litro,,12.20
+2019-04-08 09:45:00,ROZZANO,MI,T-ALFA,bq/l,0.08,becquerel per litro,,0.08
+2019-04-08 09:45:00,ROZZANO,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-14 10:00:00,ROZZANO,MI,RN-222,bq/l,14.10,becquerel per litro,,14.10
+2019-10-14 10:00:00,ROZZANO,MI,T-ALFA,bq/l,0.08,becquerel per litro,,0.08
+2019-10-14 10:00:00,ROZZANO,MI,T-BETA,bq/l,0.15,becquerel per litro,,0.15
+2019-04-08 09:00:00,SAN DONATO MILANESE,MI,RN-222,bq/l,6.30,becquerel per litro,,6.30
+2019-04-08 09:00:00,SAN DONATO MILANESE,MI,T-ALFA,bq/l,0.08,becquerel per litro,,0.08
+2019-04-08 09:00:00,SAN DONATO MILANESE,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-10-14 00:00:00,SAN DONATO MILANESE,MI,RN-222,bq/l,6.70,becquerel per litro,,6.70
+2019-10-14 00:00:00,SAN DONATO MILANESE,MI,T-ALFA,bq/l,0.08,becquerel per litro,,0.08
+2019-10-14 00:00:00,SAN DONATO MILANESE,MI,T-BETA,bq/l,0.18,becquerel per litro,,0.18
+2019-04-04 10:55:00,SESTO SAN GIOVANNI,MI,RN-222,bq/l,8.80,becquerel per litro,,8.80
+2019-04-04 10:55:00,SESTO SAN GIOVANNI,MI,T-ALFA,bq/l,0.06,becquerel per litro,,0.06
+2019-04-04 10:55:00,SESTO SAN GIOVANNI,MI,T-BETA,bq/l,0.37,becquerel per litro,,0.37
+2019-10-03 11:55:00,SESTO SAN GIOVANNI,MI,RN-222,bq/l,11.50,becquerel per litro,,11.50
+2019-10-03 11:55:00,SESTO SAN GIOVANNI,MI,T-ALFA,bq/l,0.05,becquerel per litro,,0.05
+2019-10-03 11:55:00,SESTO SAN GIOVANNI,MI,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-19 10:00:00,MANTOVA,MN,RN-222,bq/l,6.10,becquerel per litro,,6.10
+2019-03-19 10:00:00,MANTOVA,MN,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-19 10:00:00,MANTOVA,MN,T-BETA,bq/l,0.15,becquerel per litro,,0.15
+2019-09-10 14:30:00,MANTOVA,MN,RN-222,bq/l,6.50,becquerel per litro,,6.50
+2019-09-10 14:30:00,MANTOVA,MN,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-10 14:30:00,MANTOVA,MN,T-BETA,bq/l,0.24,becquerel per litro,,0.24
+2019-03-18 10:25:00,VIGEVANO,PV,RN-222,bq/l,9.40,becquerel per litro,,9.40
+2019-03-18 10:25:00,VIGEVANO,PV,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-18 10:25:00,VIGEVANO,PV,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-30 09:30:00,VIGEVANO,PV,RN-222,bq/l,7.00,becquerel per litro,,7.00
+2019-09-30 09:30:00,VIGEVANO,PV,T-ALFA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-30 09:30:00,VIGEVANO,PV,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-02-18 08:45:00,SONDRIO,SO,RA-226,bq/l,0.01,becquerel per litro,,0.01
+2019-02-18 08:45:00,SONDRIO,SO,RN-222,bq/l,17.90,becquerel per litro,,17.90
+2019-02-18 08:45:00,SONDRIO,SO,T-ALFA,bq/l,0.12,becquerel per litro,,0.12
+2019-02-18 08:45:00,SONDRIO,SO,T-BETA,bq/l,0.12,becquerel per litro,,0.12
+2019-02-18 08:45:00,SONDRIO,SO,T-U,bq/l,0.10,becquerel per litro,,0.10
+2019-02-18 08:45:00,SONDRIO,SO,U-234,bq/l,0.05,becquerel per litro,,0.05
+2019-02-18 08:45:00,SONDRIO,SO,U-238,bq/l,0.05,becquerel per litro,,0.05
+2019-02-18 09:00:00,SONDRIO,SO,RN-222,bq/l,11.70,becquerel per litro,,11.70
+2019-02-18 09:00:00,SONDRIO,SO,T-ALFA,bq/l,0.06,becquerel per litro,,0.06
+2019-02-18 09:00:00,SONDRIO,SO,T-BETA,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-11 09:00:00,SONDRIO,SO,RN-222,bq/l,10.60,becquerel per litro,,10.60
+2019-09-11 09:00:00,SONDRIO,SO,T-ALFA,bq/l,0.09,becquerel per litro,,0.09
+2019-09-11 09:00:00,SONDRIO,SO,T-BETA,bq/l,0.18,becquerel per litro,,0.18
+2019-09-11 09:30:00,SONDRIO,SO,RA-226,bq/l,0.01,becquerel per litro,,0.01
+2019-09-11 09:30:00,SONDRIO,SO,RN-222,bq/l,17.10,becquerel per litro,,17.10
+2019-09-11 09:30:00,SONDRIO,SO,T-ALFA,bq/l,0.12,becquerel per litro,,0.12
+2019-09-11 09:30:00,SONDRIO,SO,T-BETA,bq/l,0.13,becquerel per litro,,0.13
+2019-09-11 09:30:00,SONDRIO,SO,T-U,bq/l,0.12,becquerel per litro,,0.12
+2019-09-11 09:30:00,SONDRIO,SO,U-234,bq/l,0.06,becquerel per litro,,0.06
+2019-09-11 09:30:00,SONDRIO,SO,U-238,bq/l,0.06,becquerel per litro,,0.06
+2019-03-12 10:30:00,ISPRA,VA,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-03-12 10:30:00,ISPRA,VA,RA-226,bq/l,0.00,becquerel per litro,,0.00
+2019-03-12 10:30:00,ISPRA,VA,RN-222,bq/l,50.00,becquerel per litro,,50.00
+2019-03-12 10:30:00,ISPRA,VA,T-ALFA,bq/l,0.29,becquerel per litro,,0.29
+2019-03-12 10:30:00,ISPRA,VA,T-BETA,bq/l,0.37,becquerel per litro,,0.37
+2019-03-12 10:30:00,ISPRA,VA,T-U,bq/l,0.28,becquerel per litro,,0.28
+2019-03-12 10:30:00,ISPRA,VA,U-234,bq/l,0.14,becquerel per litro,,0.14
+2019-03-12 10:30:00,ISPRA,VA,U-238,bq/l,0.14,becquerel per litro,,0.14
+2019-09-17 08:30:00,ISPRA,VA,H-3,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-17 08:30:00,ISPRA,VA,RA-226,bq/l,n.r.,becquerel per litro,,n.r.
+2019-09-17 08:30:00,ISPRA,VA,T-ALFA,bq/l,0.28,becquerel per litro,,0.28
+2019-09-17 08:30:00,ISPRA,VA,T-BETA,bq/l,0.23,becquerel per litro,,0.23
+2019-09-17 08:30:00,ISPRA,VA,T-U,bq/l,0.32,becquerel per litro,,0.32
+2019-09-17 08:30:00,ISPRA,VA,U-234,bq/l,0.16,becquerel per litro,,0.16
+2019-09-17 08:30:00,ISPRA,VA,U-238,bq/l,0.16,becquerel per litro,,0.16
+2019-09-24 08:50:00,ISPRA,VA,RN-222,bq/l,42.80,becquerel per litro,,42.80
+2019-02-21 10:00:00,SARONNO,VA,CS-137,bq/l,n.r.,becquerel per litro,,n.r.
+2019-02-21 10:00:00,SARONNO,VA,RA-226,bq/l,n.r.,becquerel per litro,,n.r.

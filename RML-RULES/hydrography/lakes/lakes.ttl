@@ -167,6 +167,12 @@
   l0:name "MONTORFANO"@it;
   hydro:belongsToWaterBasin <https://w3id.org/italia/lombardia/data/water-basin/lambro> .
 
+<https://w3id.org/italia/lombardia/data/lake-water-body/del-gallo> a hydro:LakeWaterBody ;
+  rdfs:label "Lago del Gallo"@it, "Lake water body del Gallo"@en;
+  owl:sameAs <http://www.wikidata.org/entity/Q672495> ;
+  top:name "del Gallo"@it;
+  l0:name "del Gallo"@it.
+
 <https://w3id.org/italia/lombardia/data/lake-water-body/palabione> a hydro:LakeWaterBody;
   rdfs:label "Lago PALABIONE"@it, "Lake water body PALABIONE"@en;
   top:name "PALABIONE"@it;

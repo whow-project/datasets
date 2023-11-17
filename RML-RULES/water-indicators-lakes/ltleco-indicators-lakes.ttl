@@ -1,0 +1,1024 @@
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix idlab-fn: <http://example.com/idlab/function/> .
+@prefix ispra-emf: <https://w3id.org/italia/env/onto/inspire-mf/> .
+@prefix ispra-top: <https://w3id.org/italia/env/onto/top/> .
+@prefix l0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix ti: <https://w3id.org/italia/onto/TI/> .
+@prefix w-ind: <https://w3id.org/whow/onto/water-indicator/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/italia/lombardia/data/value/BUONO> a ispra-top:Value;
+  rdfs:label "Valore BUONO"@it;
+  ispra-top:value "BUONO" .
+
+<https://w3id.org/italia/lombardia/data/value/ELEVATO> a ispra-top:Value;
+  rdfs:label "Valore ELEVATO"@it;
+  ispra-top:value "ELEVATO" .
+
+<https://w3id.org/italia/lombardia/data/value/NC> a ispra-top:Value;
+  rdfs:label "Valore NC"@it;
+  ispra-top:value "NC" .
+
+<https://w3id.org/italia/lombardia/data/value/SUFFICIENTE> a ispra-top:Value;
+  rdfs:label "Valore SUFFICIENTE"@it;
+  ispra-top:value "SUFFICIENTE" .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-01782b23b1f6a56162729752ef310797>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Annone ovest - comune Civate - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/annone-ovest> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-02ddc757ce425f8fae7a0497333530c0>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Ghirla - comune Valganna - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/ghirla> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-04bf9ac6912bbb16c9739ca3a8b36336>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Lugano - comune Lavena – Ponte Tresa - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/lugano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-056b321ab48c8913c5212b41c0aa5753>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago del Gallo - comune Livigno - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/del-gallo> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-061dea69b309e83916fcbe857888c572>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Maggiore - comune Ghiffa - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/maggiore> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-0e691486c39c4a1ad201a9eea18a4a69>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago Montespluga - comune Madesimo - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/montespluga> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-13ecce5ba9db360f966f7d19bd42ccf4>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Montorfano - comune Montorfano - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/montorfano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-143c9d613426884fe21148d7a64c1c96>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Como - comune Argegno - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/como> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-17b4d7c06269e3e94adbb8bcfedae8e6>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Mezzola - comune Verceia - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/mezzola> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-17efa976ec9f98deea642bf96a209a92>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Segrino - comune Eupilio - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/segrino> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-192344e388ac387b0e1c9f014f8a594d>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Garda - comune Brenzone - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/garda> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-19518bddc747ce048bac09183eefaa1b>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago del Gallo - comune Livigno - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/del-gallo> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-1b90ca6139e15a5c4ebf42cb190fc574>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago San Giacomo di Fraele - comune Valdidentro - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/san-giacomo-di-fraele> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-1c63bc271f57d1c056fa4cecd3455703>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Lugano - comune Claino con Osteno - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/lugano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-1d907fded385b0c64982349ef91e4b64>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Mantova di Mezzo - comune Mantova - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/mantova-di-mezzo> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-1dec9142c92e1f33be5d356715b58268>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Garda - comune Bardolino - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/garda> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-1e6f55e67edad317542381459010e7b6>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago Palabione - comune Aprica - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/palabione> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-1eae606348d52d7c6fb3dfe165f09e74>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Sartirana - comune Merate - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/sartirana> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-2028343c7d7c3d0c8cf94e30b4c1ca2a>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Mantova di Mezzo - comune Mantova - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/mantova-di-mezzo> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-23f71e31eda978ea0a3bd01dd183bab1>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO NC per il lago Como - comune Como - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/NC>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/como> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-292a1af9ad3aafe05e905de022c22b93>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Ghirla - comune Valganna - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/ghirla> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-296e6b8a3680485a82f2b0e3a6f132db>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO NC per il lago Annone ovest - comune Civate - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/NC>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/annone-ovest> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-2f6b5baa6fb85fdaad49f20f0a442feb>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO ELEVATO per il lago Palù - comune chiesa in valmalenco - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/ELEVATO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/palu> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-3260f363f3a0470f9c91325af592d816>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO ELEVATO per il lago Truzzo - comune San Giacomo Filippo - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/ELEVATO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/truzzo> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-33b04c1a02e222cbfcb97b73546062b8>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago Idroscalo - comune Segrate - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/idroscalo> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-33c8a6c8e42583e19a8854b0474d4613>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago Segrino - comune Eupilio - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/segrino> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-34364e37d64caa6aabdba8a5d5eb5bc6>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Lugano - comune Claino con Osteno - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/lugano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-35a9d9dbaabd0f43ad2f839acf4228b7>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Annone Est - comune Civate - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/annone-est> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-35c35f5762fe5dbc80fbff758aeefe06>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Garlate - comune Lecco - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/garlate> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-39acc1a5a1846af99fcdd3def8675a69>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago Montespluga - comune Madesimo - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/montespluga> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-3a2914dc89f059541309c949376a6dd6>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO ELEVATO per il lago Palù - comune chiesa in valmalenco - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/ELEVATO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/palu> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-3b274fb487d3305a083fcb3f3c5cf6b5>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Garda - comune Bardolino - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/garda> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-3b6df542b78c9d636ade10383a97ea97>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Mantova Inferiore - comune Mantova - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/mantova-inferiore> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-3ed63d97ab095cbd8e6d54971a807018>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Garda - comune Brenzone - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/garda> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-3fb8cf3fd701c2cc2390ff05480e44b6>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Mantova Superiore - comune Mantova - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/mantova-superiore> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-40575461b9b3d84485994fc7efd9caae>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Endine - comune Endine Gaiano - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/endine> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-4542ca09a5f6da2d97210aea40e19440>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Idroscalo - comune Segrate - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/idroscalo> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-463c64f8a8c638c3be1cc22f83649c82>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Sartirana - comune Merate - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/sartirana> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-4e6f14bb137ffb781b864ced94b286ca>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO NC per il lago Pusiano - comune Pusiano - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/NC>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/pusiano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-4f8677e03107fbc5dc30d6baa8b0513f>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Endine - comune Endine Gaiano - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/endine> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-5445af2bc713b65f75cf2ff4a67314a9>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago Monate - comune Osmate Lentate - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/monate> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-556b6e5e9d5dad6c20f91dc37c8ad28f>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Annone Est - comune Civate - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/annone-est> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-5deaf570834aef8a257403015faa77e9>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Ganna - comune Valganna - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/ganna> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-61df7bed24cc0b2754c4aada05bd4c16>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Como - comune Dervio - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/como> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-639e65e9d8040b09546bcd8432a1bbb5>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Mezzola - comune Verceia - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/mezzola> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-651568ad2fba5e87d84398b59d45f3ee>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Lugano - comune Lavena – Ponte Tresa - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/lugano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-6b0620ecda58e611f2bbcc42378b410d>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Pozzo di Riva - comune Novate Mezzola - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/pozzo-di-riva> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-74df778749143b6135551f14ea77b225>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Iseo - comune Monte Isola - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/iseo> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-75c56f3a7d2aaf7c0e93b85d9d784c01>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Mantova Inferiore - comune Mantova - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/mantova-inferiore> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-7641ec14318d6ce1aae2288b04627773>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Como - comune Abbadia Lariana - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/como> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-764b4374702e6b5b4ec945d183cdba5d>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Idro - comune Anfo - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/idro> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-771ba6dc6d7ee8f854c1a74cd76b7631>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Annone Est - comune Civate - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/annone-est> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-7ad3c3ae7d4fe052e131cb1a3d59e69a>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Pozzo di Riva - comune Novate Mezzola - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/pozzo-di-riva> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-7db1b0165ebefe2aa65d7a0d016b8fc1>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO ELEVATO per il lago Palù - comune Chiesa Valmenco - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/ELEVATO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/palu> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-8133d37ade2e4060ece668cda4e38edd>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Varese - comune Biandronno - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/varese> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-8190202640a853501bf8e7ed17dda73c>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Como - comune Como - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/como> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-81cc7717c6f593a68ef2d28f2dff71a2>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Alserio - comune Monguzzo - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/alserio> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-82d5545e867367f8338ec53246c20ea6>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Idro - comune Anfo - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/idro> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-82f06e7cf040c25b104010158caf9f06>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Mezzola - comune Verceia - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/mezzola> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-833fc0078bd73bf659c7135f61df4ede>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Ghirla - comune Valganna - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/ghirla> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-8589369b9d685f6382d67eff2f3890ad>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Montorfano - comune Montorfano - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/montorfano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-876a295a759d14cd359c7ddff7b8638f>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Lugano - comune Lavena – Ponte Tresa - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/lugano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-8937b7f442caf013299e509b8cdbc6d8>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Ganna - comune Valganna - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/ganna> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-89d4c6b557550c6c96012cd93eb40319>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Alserio - comune Monguzzo - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/alserio> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-8a3141796449f181d40d22bf5d292675>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Como - comune Argegno - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/como> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-90b9b95f8a74dbb2e0712aa2c6ca70c3>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago Truzzo - comune San Giacomo Filippo - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/truzzo> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-92e4b86e5044ee17050f89452c5d22e5>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Palabione - comune Aprica - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/palabione> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-933bcfa1868c19c732aa2e307efb9730>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Como - comune Abbadia Lariana - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/como> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-943e53cabedc29965d36f46f5b24ea50>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Sartirana - comune Merate - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/sartirana> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-95325ae06f2ecc921e5a5324b62c8693>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Pozzo di Riva - comune Novate Mezzola - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/pozzo-di-riva> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-97f3ccffb08979fccc125ef6a9cd3874>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago Maggiore - comune Ghiffa - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/maggiore> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-9dc9ba650691090c739075939458f978>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Como - comune Abbadia Lariana - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/como> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-9f585abc1fea3eb28df1e56a28fc0e5d>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Pusiano - comune Pusiano - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/pusiano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-a0daa50e7ff0313efdc0a96023ec028c>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Como - comune Dervio - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/como> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-a0f5d58c79ba66f6eecc6a4b28537892>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago Monate - comune Osmate Lentate - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/monate> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-a29480d29a673da7b3761468d34856dd>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago Segrino - comune Eupilio - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/segrino> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-a493df29d96f0606a02bc3ed8fcbf411>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Piano - comune Carlazzo - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/piano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-a7968b80972bdce0d3c5bb167e3827eb>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Garlate - comune Lecco - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/garlate> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-adff8bf7646ef2fc1c39133c69c09c3b>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Comabbio - comune Varano Borghi - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/comabbio> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-b0725693495e238d906c09ffef43c9d8>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO ELEVATO per il lago Ganna - comune Valganna - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/ELEVATO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/ganna> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-bc753e04f7cd38a7c741276d1275a221>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO NC per il lago Piano - comune Carlazzo - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/NC>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/piano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-bd365168f508125d3fbe7cb6321b4791>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Mantova Superiore - comune Mantova - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/mantova-superiore> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-bfd4fc4334ef5374847c677100993d0d>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Como - comune Dervio - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/como> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-c226f4a4e15fa687828ab85d503d518b>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Varese - comune Biandronno - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/varese> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-c6b60f33c150ea6553bcbe27e576c831>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Piano - comune Carlazzo - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/piano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-cb976ef76951072b9bdacae41997a966>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Garda - comune Brenzone - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/garda> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-cc28e5d73acf3e7d38c23ee83ad6a69f>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Garda - comune Bardolino - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/garda> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-cc7d778117a8de3f7955853bf3c7e5d9>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Annone ovest - comune Civate - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/annone-ovest> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-d43f6624a5f202732abb13db6c7e0aff>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Montorfano - comune Montorfano - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/montorfano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-d5e8ebf92b0d0f2f18e48b660f61b45a>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Garlate - comune Lecco - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/garlate> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-d8417f82f90993c32b226389ac7894d7>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Lugano - comune Claino con Osteno - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/lugano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-dbd27636b9f9a7e7a58a7dc83ea35c2e>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Varese - comune Biandronno - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/varese> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-ddb49f90b1df50b7152257474dce0413>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Idro - comune Anfo - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/idro> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-e18f95d5a2fffe7d5ed63597fc2745fb>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Mantova Superiore - comune Mantova - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/mantova-superiore> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-e1a18a642b598e01c384f5c5adc12d01>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Pusiano - comune Pusiano - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/pusiano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-e2fed790ac1ad491cf32df9a21c1cf96>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Lugano - comune Porto Ceresio - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/lugano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-e7a8b818b695e9024bc3bc2c0ad6ff3f>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Mantova Inferiore - comune Mantova - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/mantova-inferiore> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-ecdc7bfcffc5857b40af8600a9109e71>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Como - comune Argegno - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/como> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-ed28ed1f0db0b9627ae770768bc902fd>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO - per il lago Valvestino - comune Valvestino - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/valvestino> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-efc94b4c47d67f67d11353761eb190c4>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Comabbio - comune Varano Borghi - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/comabbio> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-f289e99d0cef3b662d62f1ae1d5966ae>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Iseo - comune Monte Isola - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/iseo> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-f2a76e076fda3d82a6fc5fc20b768361>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Comabbio - comune Varano Borghi - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/comabbio> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-f3b1f4cf3e5184125ab8d241386ab780>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Iseo - comune Monte Isola - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/iseo> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-f5ba3687b3086accabbaeca84e24fe9f>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Mantova di Mezzo - comune Mantova - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/mantova-di-mezzo> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-f621eba0ce6f725ef65c46232920b181>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO BUONO per il lago Endine - comune Endine Gaiano - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/BUONO>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/endine> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-f9378f744650ebe9e76e72a55ec104e8>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO NC per il lago Alserio - comune Monguzzo - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/NC>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/alserio> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-fe2468085d99e59e1587d0bbad1dbc82>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Lugano - comune Porto Ceresio - anno 2020"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2020>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2020>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/lugano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-ff2535ae6ede826bacdf2652304a07ed>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Lugano - comune Porto Ceresio - anno 2018"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2018>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2018>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/lugano> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator-calculation/lt-ff576da8aeb27670672c2cb8abc98ddf>
+  a w-ind:WaterIndicatorCalculation;
+  rdfs:label "Indicatore LTLECO SUFFICIENTE per il lago Como - comune Como - anno 2019"@it;
+  ispra-top:atTime <https://w3id.org/italia/lombardia/data/year/2019>;
+  ispra-top:hasValue <https://w3id.org/italia/lombardia/data/value/SUFFICIENTE>;
+  ti:hasTemporalCoverage <https://w3id.org/italia/lombardia/data/year/2019>;
+  w-ind:forWaterIndicator <https://w3id.org/italia/lombardia/data/water-indicator/ltleco>;
+  w-ind:isWaterIndicatorCalculationOf <https://w3id.org/italia/lombardia/data/lake-water-body/como> .
+
+<https://w3id.org/italia/lombardia/data/water-indicator/ltleco> a w-ind:WaterIndicator;
+  rdfs:label "Indicatore LTLECO"@it;
+  ispra-top:name "Indicatore LTLECO"@it;
+  l0:description "L'LTLeco è un descrittore che integra i valori di 3 parametri: fosforo totale misurato alla circolazione primaverile, trasparenza media annua e ossigeno ipolimnico alla fine del periodo di massima stratificazione. Quando il monitoraggio di un Corpo Idrico si effettua per più anni (di solito tre), per la classificazione dell'LTLeco si utilizzano le medie dei valori misurati in ciascun anno per ogni singolo parametro. Quando si dispone di misure per più di un anno, l'LTLeco può anche essere calcolato annualmente a scopo conoscitivo e senza una valenza di classificazione; in tal caso possono essere visualizzate le tendenze temporali dei valori dell'indice."@it;
+  l0:name "Indicatore LTLECO"@it .
+
+<https://w3id.org/italia/lombardia/data/year/2018> a ispra-top:Year, ti:Year;
+  rdfs:label "Year: 2018"@en, "Anno: 2018"@it;
+  owl:sameAs <https://dati.isprambiente.it/ld/common/year/2018>, <https://w3id.org/arco/resource/TimeInterval/2018>;
+  ispra-top:year "2018"^^xsd:gYear;
+  ti:year "2018"^^xsd:gYear .
+
+<https://w3id.org/italia/lombardia/data/year/2019> a ispra-top:Year, ti:Year;
+  rdfs:label "Year: 2019"@en, "Anno: 2019"@it;
+  owl:sameAs <https://dati.isprambiente.it/ld/common/year/2019>, <https://w3id.org/arco/resource/TimeInterval/2019>;
+  ispra-top:year "2019"^^xsd:gYear;
+  ti:year "2019"^^xsd:gYear .
+
+<https://w3id.org/italia/lombardia/data/year/2020> a ispra-top:Year, ti:Year;
+  rdfs:label "Year: 2020"@en, "Anno: 2020"@it;
+  owl:sameAs <https://dati.isprambiente.it/ld/common/year/2020>, <https://w3id.org/arco/resource/TimeInterval/2020>;
+  ispra-top:year "2020"^^xsd:gYear;
+  ti:year "2020"^^xsd:gYear .

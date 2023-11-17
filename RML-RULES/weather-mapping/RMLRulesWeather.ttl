@@ -25,7 +25,7 @@
 #### LOGICAL SOURCES
 # #LogicalSourceWeatherSensorData
 <#LogicalSourceWeatherSensorData> a rml:BaseSource ;
-    rml:source  "2019-10-ats-brianza.csv";
+    rml:source  "2019-12-ats-montagna.csv";
     rml:referenceFormulation ql:CSV .
 
 # #LogicalSourceWeatherStations
